@@ -57,44 +57,41 @@ void slNRF24_GetRegister(uint8_t reg, uint8_t *dataIn, uint8_t len) {
 
 
 //initierar nrf'en (obs nrfen måste vala i vila när detta sker CE-låg)
-void slNRF24_Init(uint8_t adress) {
-    _delay_ms(100);    //allow radio to reach power down if shut down
+void slNRF24_Init(uint8_t adress) {    _delay_ms(100);  //allow radio to reach power down if shut down
     uint8_t val[5];
 
     //SETUP_RETR (the setup for "EN_AA")
-    val[0] = 0x3F;    //0b0010 00011 "2" sets it up to 750uS delay between every retry (at least 500us at 250kbps and if payload >5bytes in 1Mbps, and if payload >15byte in 2Mbps) "F" is number of retries (1-15, now 15)
+    val[0]=0x2F;    //0b0010 00011 "2" sets it up to 750uS delay between every retry (at least 500us at 250kbps and if payload >5bytes in 1Mbps, and if payload >15byte in 2Mbps) "F" is number of retries (1-15, now 15)
     slNRF24_SetRegister(SETUP_RETR, val, 1);
 
-    //Enable ‘Auto Acknowledgment’ Function on data pipe 0 and pipe 1 pipe 2
-    val[0] = 0x3f;
+    //Enable ‘Auto Acknowledgment’ Function on data pipe 0 and pipe 1
+    val[0]=0x03;
     slNRF24_SetRegister(EN_AA, val, 1);
 
-    //enable data pipe 1 for RX pipe 2
-    val[0] = 0x3f;
-    slNRF24_SetRegister(EN_RXADDR, val, 1);
+    //enable data pipe 1 for RX
+    val[0]=0x03;
+    slNRF24_SetRegister(EN_RXADDR, val, 1); 
 
     //Setup of Address Widths 5 bytes
-    val[0] = 0x03;
+    val[0]=0x03;
     slNRF24_SetRegister(SETUP_AW, val, 1);
 
     //RF channel setup - 2,400-2,527GHz 1MHz/chanel
-    val[0] = 0x1;//2,401Ghz
+    val[0]=0x1;//2,401Ghz
     slNRF24_SetRegister(RF_CH, val, 1);
 
-    //RF setup	- 2Mbps spped and 0dBm
-    val[0] = 0x0e;
+    //RF setup  - 2Mbps spped and 0dBm
+    val[0]=0x1e;
     slNRF24_SetRegister(RF_SETUP, val, 1);
 
-    slNRF24_ChangeAddress(adress, 1);
+    //slNRF24_ChangeAddress(adress, 1);
 
-    val[0] = 9;
+    val[0]=9;
     slNRF24_SetRegister(RX_PW_P0, val, 1);
     slNRF24_SetRegister(RX_PW_P1, val, 1);
-    slNRF24_SetRegister(RX_PW_P2, val, 1);
-    slNRF24_SetRegister(RX_PW_P3, val, 1);
 
     //CONFIG reg setup - Mask interrupt caused by MAX_RT disabled enable CRC CRC 2 byte scheme power up
-    val[0] = 0x1E;
+    val[0]=0x1E;
     slNRF24_SetRegister(CONFIG, val, 1);
 
 
@@ -102,30 +99,18 @@ void slNRF24_Init(uint8_t adress) {
     _delay_ms(100);
 
 }
-
+//TODO
+// 1.communication via pipe 0 and 2 and the same addreses
+// 2.communication via pipe 0 and 2 and different addreses
 void slNRF24_ChangeAddress(uint8_t adress, uint8_t pipe) {
     _delay_ms(100);
     uint8_t val[5];
-    for (uint8_t i = 0; i < 5; i++) {
-        //val[i]=0xAA;
-        val[i] = adress;
+    for(uint8_t i=0; i<5; i++){
+        val[i]=adress;
     }
-    slNRF24_SetRegister(RX_ADDR_P0, val, 5);
+    slNRF24_SetRegister(RX_ADDR_P0, val, 5); 
     slNRF24_SetRegister(TX_ADDR, val, 5);
-    // for(uint8_t i=0; i<5; i++){
-    //     val[i]=adress;
-    // }
-    slNRF24_SetRegister(RX_ADDR_P1, val, 5);
-    // slUART_WriteString("Pipe: ");
-    // slUART_LogDecNl(pipe);
-    // switch(pipe){
-    //     case 1:
-    //         slNRF24_SetRegister(RX_ADDR_P1, val, 5);
-    //         break;
-    //     case 2:
-    //         slNRF24_SetRegister(RX_ADDR_P2, val, 5);
-    //         break;
-    // }
+    slNRF24_SetRegister(RX_ADDR_P1, val, 5); 
     _delay_ms(100);
 }
 
