@@ -1,0 +1,1267 @@
+Archive member included because of file (symbol)
+
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__muluhisi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__mulshisi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__mulsi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+                              CMakeFiles/atmega328p.elf.dir/slAdc.c.o (__divmodhi4)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+                              CMakeFiles/atmega328p.elf.dir/slAdc.c.o (__udivmodsi4)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__divdi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+                              /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o) (__udivdi3_umoddi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__muldi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+                              /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o) (__muldi3_6)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+                              /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o) (__udivmod64)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+                              /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o) (__negdi2)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+                              /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o) (__prologue_saves__)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+                              /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o) (__epilogue_restores__)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o (exit)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+                              CMakeFiles/atmega328p.elf.dir/main.c.o (__do_copy_data)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+                              CMakeFiles/atmega328p.elf.dir/main.c.o (__do_clear_bss)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__ashldi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__ashrdi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__adddi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__subdi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__cmpdi2_s8)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+                              /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o) (__umulhisi3)
+/usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+                              /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o) (__udivmodhi4)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3.o)
+                              CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o (__subsf3)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3.o) (__addsf3x)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3.o)
+                              CMakeFiles/atmega328p.elf.dir/main.c.o (__divsf3)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3x.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3.o) (__divsf3x)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfdi.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__fixsfdi)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                              CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o (__fixsfsi)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                              CMakeFiles/atmega328p.elf.dir/main.c.o (__fixunssfsi)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatdisf.o)
+                              CMakeFiles/atmega328p.elf.dir/BME280.c.o (__floatdisf)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatsisf.o)
+                              CMakeFiles/atmega328p.elf.dir/main.c.o (__floatunsisf)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatundisf.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatdisf.o) (__fp_di2sf)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_inf.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_inf)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_nan.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_nan)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_negdi.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfdi.o) (__fp_negdi)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_pscA)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_pscB)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_round.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3.o) (__fp_round)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_split3)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_zero)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                              CMakeFiles/atmega328p.elf.dir/main.c.o (__mulsf3)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3.o) (__mulsf3x)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(itoa.o)
+                              CMakeFiles/atmega328p.elf.dir/slUart.c.o (itoa)
+/usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(strrev.o)
+                              /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(itoa.o) (strrev)
+
+Allocating common symbols
+Common symbol       size              file
+
+arr                 0x2               CMakeFiles/atmega328p.elf.dir/main.c.o
+stage               0x1               CMakeFiles/atmega328p.elf.dir/main.c.o
+data                0x9               CMakeFiles/atmega328p.elf.dir/main.c.o
+status              0x1               CMakeFiles/atmega328p.elf.dir/main.c.o
+t_fine              0x4               CMakeFiles/atmega328p.elf.dir/BME280.c.o
+
+Discarded input sections
+
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/main.c.o
+ .text.goSleep  0x0000000000000000       0x24 CMakeFiles/atmega328p.elf.dir/main.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text.slUART_Init
+                0x0000000000000000       0x16 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text.slUART_LogBinary
+                0x0000000000000000       0x3c CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text.slUART_LogBinaryNl
+                0x0000000000000000        0xc CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text.slUART_LogDec
+                0x0000000000000000       0x3c CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text.slUART_LogDecWithSign
+                0x0000000000000000       0x3c CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text.slUART_LogDecNl
+                0x0000000000000000        0xc CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text.slUART_LogHex
+                0x0000000000000000       0x3c CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text.slUART_WriteBuffer
+                0x0000000000000000       0x72 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text.slUART_LogHexNl
+                0x0000000000000000        0xc CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+ .text.returnMEASUREFromBuffer
+                0x0000000000000000       0x10 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+ .text.calculateVoltage
+                0x0000000000000000       0x14 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slAdc.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slAdc.c.o
+ .text.get_vol  0x0000000000000000       0xe0 CMakeFiles/atmega328p.elf.dir/slAdc.c.o
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.div
+                0x0000000000000000       0x28 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.div
+                0x0000000000000000       0x44 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x0000000000000000       0x28 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfdi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfdi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatdisf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatdisf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatundisf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatundisf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_negdi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_negdi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_round.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_round.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(itoa.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(itoa.o)
+ .text.avr-libc
+                0x0000000000000000       0x42 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(itoa.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(strrev.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(strrev.o)
+ .text.avr-libc
+                0x0000000000000000       0x20 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(strrev.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+LOAD CMakeFiles/atmega328p.elf.dir/main.c.o
+LOAD CMakeFiles/atmega328p.elf.dir/slUart.c.o
+LOAD CMakeFiles/atmega328p.elf.dir/slSPI.c.o
+LOAD CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+LOAD CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+LOAD CMakeFiles/atmega328p.elf.dir/BME280.c.o
+LOAD CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+LOAD CMakeFiles/atmega328p.elf.dir/slAdc.c.o
+START GROUP
+LOAD /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a
+END GROUP
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x2016
+ *(.vectors)
+ .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x0000000000000068                . = ALIGN (0x2)
+                0x0000000000000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000068        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000068                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000068                __ctors_start = .
+ *(.ctors)
+                0x0000000000000068                __ctors_end = .
+                0x0000000000000068                __dtors_start = .
+ *(.dtors)
+                0x0000000000000068                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000068        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+                0x0000000000000068                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000068        0xc /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000000000000074       0x16 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000074                __do_copy_data
+ .init4         0x000000000000008a       0x10 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+                0x000000000000008a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000000000009a        0x6 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000a0        0x2 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+                0x00000000000000a0                __vector_22
+                0x00000000000000a0                __vector_24
+                0x00000000000000a0                __vector_12
+                0x00000000000000a0                __bad_interrupt
+                0x00000000000000a0                __vector_6
+                0x00000000000000a0                __vector_3
+                0x00000000000000a0                __vector_23
+                0x00000000000000a0                __vector_25
+                0x00000000000000a0                __vector_11
+                0x00000000000000a0                __vector_13
+                0x00000000000000a0                __vector_17
+                0x00000000000000a0                __vector_19
+                0x00000000000000a0                __vector_7
+                0x00000000000000a0                __vector_5
+                0x00000000000000a0                __vector_4
+                0x00000000000000a0                __vector_9
+                0x00000000000000a0                __vector_2
+                0x00000000000000a0                __vector_21
+                0x00000000000000a0                __vector_15
+                0x00000000000000a0                __vector_8
+                0x00000000000000a0                __vector_14
+                0x00000000000000a0                __vector_10
+                0x00000000000000a0                __vector_18
+                0x00000000000000a0                __vector_20
+                0x00000000000000a2                . = ALIGN (0x2)
+ *(.text.*)
+ .text.clearData
+                0x00000000000000a2       0x10 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x00000000000000a2                clearData
+ .text.setupTimer
+                0x00000000000000b2       0x12 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x00000000000000b2                setupTimer
+ .text.setupInt0
+                0x00000000000000c4       0x1a CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x00000000000000c4                setupInt0
+ .text.goReset  0x00000000000000de       0x38 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x00000000000000de                goReset
+ .text.startup.main
+                0x0000000000000116       0x4e CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x0000000000000116                main
+ .text.setBME280Mode
+                0x0000000000000164       0x28 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x0000000000000164                setBME280Mode
+ .text.getDataFromBME280
+                0x000000000000018c       0x96 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x000000000000018c                getDataFromBME280
+ .text.measuerADC
+                0x0000000000000222       0xa6 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x0000000000000222                measuerADC
+ .text.sendVianRF24L01
+                0x00000000000002c8       0x6c CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x00000000000002c8                sendVianRF24L01
+ .text.compareStrings
+                0x0000000000000334       0x66 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x0000000000000334                compareStrings
+ .text.__vector_16
+                0x000000000000039a       0xc6 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x000000000000039a                __vector_16
+ .text.__vector_1
+                0x0000000000000460       0x82 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x0000000000000460                __vector_1
+ .text.slUART_SimpleTransmitInit
+                0x00000000000004e2       0x12 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x00000000000004e2                slUART_SimpleTransmitInit
+ .text.slUART_WriteByte
+                0x00000000000004f4        0xe CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x00000000000004f4                slUART_WriteByte
+ .text.slUART_WriteString
+                0x0000000000000502       0x16 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x0000000000000502                slUART_WriteString
+ .text.slUART_WriteStringNl
+                0x0000000000000518        0x8 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x0000000000000518                slUART_WriteStringNl
+ .text.slSPI_Init
+                0x0000000000000520       0x32 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
+                0x0000000000000520                slSPI_Init
+ .text.slSPI_TransferInt
+                0x0000000000000552        0xe CMakeFiles/atmega328p.elf.dir/slSPI.c.o
+                0x0000000000000552                slSPI_TransferInt
+ .text.slNRF24_IoInit
+                0x0000000000000560        0xa CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x0000000000000560                slNRF24_IoInit
+ .text.slNRF24_SetRegister
+                0x000000000000056a       0x72 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x000000000000056a                slNRF24_SetRegister
+ .text.slNRF24_GetRegister
+                0x00000000000005dc       0x72 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000005dc                slNRF24_GetRegister
+ .text.slNRF24_ChangeAddress
+                0x000000000000064e       0x70 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x000000000000064e                slNRF24_ChangeAddress
+ .text.slNRF24_Init
+                0x00000000000006be       0xd2 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000006be                slNRF24_Init
+ .text.slNRF24_Reset
+                0x0000000000000790       0x2e CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x0000000000000790                slNRF24_Reset
+ .text.slNRF24_TransmitPayload
+                0x00000000000007be       0x94 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000007be                slNRF24_TransmitPayload
+ .text.slNRF24_TxPowerUp
+                0x0000000000000852       0x38 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x0000000000000852                slNRF24_TxPowerUp
+ .text.slNRF24_PowerDown
+                0x000000000000088a       0x32 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x000000000000088a                slNRF24_PowerDown
+ .text.slNRF24_FlushTx
+                0x00000000000008bc       0x22 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000008bc                slNRF24_FlushTx
+ .text.slNRF24_RxPowerUp
+                0x00000000000008de       0x38 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000008de                slNRF24_RxPowerUp
+ .text.slNRF24_FlushRx
+                0x0000000000000916       0x22 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x0000000000000916                slNRF24_FlushRx
+ .text.fillBuferFromMEASURE
+                0x0000000000000938       0x58 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+                0x0000000000000938                fillBuferFromMEASURE
+ .text.calculateTemperature
+                0x0000000000000990       0x14 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+                0x0000000000000990                calculateTemperature
+ .text.calculateHumidity
+                0x00000000000009a4       0x14 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+                0x00000000000009a4                calculateHumidity
+ .text.calculatePressure
+                0x00000000000009b8       0x14 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+                0x00000000000009b8                calculatePressure
+ .text.I2C_WriteData
+                0x00000000000009cc       0x64 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x00000000000009cc                I2C_WriteData
+ .text.I2C_ReadData
+                0x0000000000000a30       0xa8 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x0000000000000a30                I2C_ReadData
+ .text.BME280_getCalibrationData
+                0x0000000000000ad8      0x20e CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x0000000000000ad8                BME280_getCalibrationData
+ .text.BME280_Init
+                0x0000000000000ce6       0xcc CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x0000000000000ce6                BME280_Init
+ .text.BME280_CompensateT
+                0x0000000000000db2      0x102 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x0000000000000db2                BME280_CompensateT
+ .text.BME280_CompensateP
+                0x0000000000000eb4      0x448 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x0000000000000eb4                BME280_CompensateP
+ .text.BME280_CompensateH
+                0x00000000000012fc      0x1ba CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x00000000000012fc                BME280_CompensateH
+ .text.BME280_ReadAll
+                0x00000000000014b6      0x148 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x00000000000014b6                BME280_ReadAll
+ .text.BME280_SetMode
+                0x00000000000015fe       0x4a CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x00000000000015fe                BME280_SetMode
+ .text.slI2C_WaitForComplete
+                0x0000000000001648        0xa CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+ .text.slI2C_returnReadValue
+                0x0000000000001652        0x6 CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+                0x0000000000001652                slI2C_returnReadValue
+ .text.slI2C_SetSLA
+                0x0000000000001658       0x40 CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+                0x0000000000001658                slI2C_SetSLA
+ .text.slI2C_Init
+                0x0000000000001698       0x18 CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+                0x0000000000001698                slI2C_Init
+ .text.slI2C_Start
+                0x00000000000016b0       0x2c CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+                0x00000000000016b0                slI2C_Start
+ .text.slI2C_Stop
+                0x00000000000016dc       0x18 CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+                0x00000000000016dc                slI2C_Stop
+ .text.slI2C_WriteByte
+                0x00000000000016f4       0x40 CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+                0x00000000000016f4                slI2C_WriteByte
+ .text.slI2C_ReadByte_NACK
+                0x0000000000001734       0x2a CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+                0x0000000000001734                slI2C_ReadByte_NACK
+ .text.slI2C_ReadByte_ACK
+                0x000000000000175e       0x2a CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+                0x000000000000175e                slI2C_ReadByte_ACK
+ .text.slADC_init
+                0x0000000000001788       0x1c CMakeFiles/atmega328p.elf.dir/slAdc.c.o
+                0x0000000000001788                slADC_init
+ .text.slADC_measure
+                0x00000000000017a4       0x30 CMakeFiles/atmega328p.elf.dir/slAdc.c.o
+                0x00000000000017a4                slADC_measure
+ .text.libgcc.mul
+                0x00000000000017d4       0x14 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+                0x00000000000017d4                __muluhisi3
+ .text.libgcc.mul
+                0x00000000000017e8        0xc /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+                0x00000000000017e8                __mulshisi3
+                0x00000000000017ec                __mulohisi3
+ .text.libgcc.mul
+                0x00000000000017f4       0x1e /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+                0x00000000000017f4                __mulsi3
+ .text.libgcc.div
+                0x0000000000001812       0x56 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+                0x0000000000001812                __moddi3
+                0x0000000000001816                __divdi3
+                0x0000000000001818                __divdi3_moddi3
+ .text.libgcc.div
+                0x0000000000001868       0x1a /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+                0x0000000000001868                __umoddi3
+                0x000000000000186c                __udivdi3
+                0x000000000000186e                __udivdi3_umoddi3
+ .text.libgcc.mul
+                0x0000000000001882       0x92 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+                0x0000000000001882                __muldi3
+ .text.libgcc.mul
+                0x0000000000001914       0x10 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+                0x0000000000001914                __muldi3_6
+ .text.libgcc.div
+                0x0000000000001924       0xa2 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+                0x0000000000001924                __udivmod64
+ .text.libgcc   0x00000000000019c6       0x20 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+                0x00000000000019c6                __negdi2
+ .text.libgcc.prologue
+                0x00000000000019e6       0x38 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+                0x00000000000019e6                __prologue_saves__
+ .text.libgcc.prologue
+                0x0000000000001a1e       0x36 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+                0x0000000000001a1e                __epilogue_restores__
+ .text.libgcc.builtins
+                0x0000000000001a54       0x32 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+                0x0000000000001a54                __ashldi3
+ .text.libgcc.builtins
+                0x0000000000001a86       0x3c /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+                0x0000000000001a86                __ashrdi3
+                0x0000000000001a8a                __lshrdi3
+ .text.libgcc   0x0000000000001ac2       0x12 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+                0x0000000000001ac2                __adddi3
+ .text.libgcc   0x0000000000001ad4       0x12 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+                0x0000000000001ad4                __subdi3
+ .text.libgcc   0x0000000000001ae6       0x18 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+                0x0000000000001ae6                __cmpdi2_s8
+ .text.libgcc.mul
+                0x0000000000001afe       0x1e /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+                0x0000000000001afe                __umulhisi3
+ .text.avr-libc.fplib
+                0x0000000000001b1c        0xa /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3.o)
+                0x0000000000001b1c                __subsf3
+                0x0000000000001b1e                __addsf3
+ .text.avr-libc.fplib
+                0x0000000000001b26       0xc0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o)
+                0x0000000000001b40                __addsf3x
+ .text.avr-libc.fplib
+                0x0000000000001be6        0x4 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3.o)
+                0x0000000000001be6                __divsf3
+ .text.avr-libc.fplib
+                0x0000000000001bea       0xcc /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3x.o)
+                0x0000000000001c00                __divsf3x
+                0x0000000000001c04                __divsf3_pse
+ .text.avr-libc.fplib
+                0x0000000000001cb6       0x74 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfdi.o)
+                0x0000000000001cb6                __fixsfdi
+                0x0000000000001cc0                __fixunssfdi
+ .text.avr-libc.fplib
+                0x0000000000001d2a        0xa /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                0x0000000000001d2a                __fixsfsi
+ .text.avr-libc.fplib
+                0x0000000000001d34       0x58 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                0x0000000000001d34                __fixunssfsi
+ .text.avr-libc.fplib
+                0x0000000000001d8c        0x8 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatdisf.o)
+                0x0000000000001d8c                __floatdisf
+ .text.avr-libc.fplib
+                0x0000000000001d94       0x7a /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatsisf.o)
+                0x0000000000001d94                __floatunsisf
+                0x0000000000001d98                __floatsisf
+ .text.avr-libc.fplib
+                0x0000000000001e0e       0x7c /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatundisf.o)
+                0x0000000000001e0e                __floatundisf
+                0x0000000000001e10                __fp_di2sf
+ .text.avr-libc.fplib
+                0x0000000000001e8a        0xc /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_inf.o)
+                0x0000000000001e8a                __fp_inf
+ .text.avr-libc.fplib
+                0x0000000000001e96        0x6 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_nan.o)
+                0x0000000000001e96                __fp_nan
+ .text.avr-libc.fplib
+                0x0000000000001e9c       0x20 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_negdi.o)
+                0x0000000000001e9c                __fp_negdi
+ .text.avr-libc.fplib
+                0x0000000000001ebc        0xe /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                0x0000000000001ebc                __fp_pscA
+ .text.avr-libc.fplib
+                0x0000000000001eca        0xe /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                0x0000000000001eca                __fp_pscB
+ .text.avr-libc.fplib
+                0x0000000000001ed8       0x22 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_round.o)
+                0x0000000000001ed8                __fp_round
+ .text.avr-libc.fplib
+                0x0000000000001efa       0x44 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                0x0000000000001efa                __fp_split3
+                0x0000000000001f0a                __fp_splitA
+ .text.avr-libc.fplib
+                0x0000000000001f3e        0xe /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                0x0000000000001f3e                __fp_zero
+                0x0000000000001f40                __fp_szero
+ .text.avr-libc.fplib
+                0x0000000000001f4c        0x4 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                0x0000000000001f4c                __mulsf3
+ .text.avr-libc.fplib
+                0x0000000000001f50       0xc2 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                0x0000000000001f64                __mulsf3x
+                0x0000000000001f68                __mulsf3_pse
+                0x0000000000002012                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000002012        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+                0x0000000000002012                exit
+                0x0000000000002012                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000002012        0x4 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000002016                _etext = .
+
+.data           0x0000000000800100       0xdc load address 0x0000000000002016
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+ .data          0x0000000000800100        0x9 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x0000000000800100                BME180measure
+ .data          0x0000000000800109        0x0 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .data          0x0000000000800109        0x0 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
+ .data          0x0000000000800109        0x0 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+ .data          0x0000000000800109        0x0 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+ .data          0x0000000000800109        0x0 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+ .data          0x0000000000800109        0x0 CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+ .data          0x0000000000800109        0x0 CMakeFiles/atmega328p.elf.dir/slAdc.c.o
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muluhisi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulshisi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_mulsi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divmodhi4.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodsi4.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_divdi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivdi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_muldi3_6.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmod64.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_negdi2.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_prologue.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_epilogue.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_exit.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_copy_data.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_clear_bss.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashldi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_ashrdi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_adddi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_subdi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_cmpdi2_s8.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_umulhisi3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/avr5/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfdi.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatdisf.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatundisf.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_negdi.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_round.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(itoa.o)
+ .data          0x0000000000800109        0x0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(strrev.o)
+ *(.data*)
+ *(.rodata)
+ .rodata        0x0000000000800109        0x9 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x0000000000800109                startStringSensor11
+ *(.rodata*)
+ .rodata.str1.1
+                0x0000000000800112       0xc9 CMakeFiles/atmega328p.elf.dir/main.c.o
+ .rodata.str1.1
+                0x0000000000000000       0xc9 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                                          0x3 (size before relaxing)
+ *(.gnu.linkonce.d*)
+                0x00000000008001dc                . = ALIGN (0x2)
+ *fill*         0x00000000008001db        0x1 
+                0x00000000008001dc                _edata = .
+                0x00000000008001dc                PROVIDE (__data_end, .)
+
+.bss            0x00000000008001dc       0x3a
+                0x00000000008001dc                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00000000008001dc        0x5 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x00000000008001dc                sendOk
+                0x00000000008001dd                counter2
+                0x00000000008001df                counter
+ .bss           0x00000000008001e1       0x21 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+ .bss           0x0000000000800202        0x3 CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+                0x0000000000800202                slI2C_statusFlags
+                0x0000000000800203                I2C_Error
+                0x0000000000800204                slI2C_readByteValue
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0000000000800205        0xd CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x0000000000800205                arr
+                0x0000000000800207                stage
+                0x0000000000800208                data
+                0x0000000000800211                status
+ COMMON         0x0000000000800212        0x4 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+                0x0000000000800212                t_fine
+                0x0000000000800216                PROVIDE (__bss_end, .)
+                0x0000000000002016                __data_load_start = LOADADDR (.data)
+                0x00000000000020f2                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800216        0x0
+                0x0000000000800216                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0000000000800216                PROVIDE (__noinit_end, .)
+                0x0000000000800216                _end = .
+                0x0000000000800216                PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab           0x0000000000000000     0x29c4
+ *(.stab)
+ .stab          0x0000000000000000      0x6cc /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+ .stab          0x00000000000006cc       0x78 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3.o)
+                                         0x84 (size before relaxing)
+ .stab          0x0000000000000744      0x4bc /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(addsf3x.o)
+                                        0x4c8 (size before relaxing)
+ .stab          0x0000000000000c00       0x48 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3.o)
+                                         0x54 (size before relaxing)
+ .stab          0x0000000000000c48      0x510 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                        0x51c (size before relaxing)
+ .stab          0x0000000000001158      0x2f4 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfdi.o)
+                                        0x300 (size before relaxing)
+ .stab          0x000000000000144c       0x6c /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                                         0x78 (size before relaxing)
+ .stab          0x00000000000014b8      0x240 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                                        0x24c (size before relaxing)
+ .stab          0x00000000000016f8       0x60 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatdisf.o)
+                                         0x6c (size before relaxing)
+ .stab          0x0000000000001758      0x318 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatsisf.o)
+                                        0x324 (size before relaxing)
+ .stab          0x0000000000001a70      0x324 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(floatundisf.o)
+                                        0x330 (size before relaxing)
+ .stab          0x0000000000001d94       0x78 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_inf.o)
+                                         0x84 (size before relaxing)
+ .stab          0x0000000000001e0c       0x54 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_nan.o)
+                                         0x60 (size before relaxing)
+ .stab          0x0000000000001e60       0xf0 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_negdi.o)
+                                         0xfc (size before relaxing)
+ .stab          0x0000000000001f50       0x84 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                                         0x90 (size before relaxing)
+ .stab          0x0000000000001fd4       0x84 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                                         0x90 (size before relaxing)
+ .stab          0x0000000000002058       0xfc /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_round.o)
+                                        0x108 (size before relaxing)
+ .stab          0x0000000000002154      0x1d4 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                                        0x1e0 (size before relaxing)
+ .stab          0x0000000000002328       0x90 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                                         0x9c (size before relaxing)
+ .stab          0x00000000000023b8       0x48 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                                         0x54 (size before relaxing)
+ .stab          0x0000000000002400      0x4d4 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                        0x4e0 (size before relaxing)
+ .stab          0x00000000000028d4       0x18 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(itoa.o)
+                                        0x1bc (size before relaxing)
+ .stab          0x00000000000028ec       0xd8 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/libc.a(strrev.o)
+                                         0xe4 (size before relaxing)
+
+.stabstr        0x0000000000000000      0x456
+ *(.stabstr)
+ .stabstr       0x0000000000000000      0x456 /usr/lib/gcc/avr/4.8.2/../../../avr/lib/avr5/crtm328p.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 CMakeFiles/atmega328p.elf.dir/main.c.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000000       0x12 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+ .comment       0x0000000000000000       0x12 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
+ .comment       0x0000000000000000       0x12 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+ .comment       0x0000000000000000       0x12 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+ .comment       0x0000000000000000       0x12 CMakeFiles/atmega328p.elf.dir/BME280.c.o
+ .comment       0x0000000000000000       0x12 CMakeFiles/atmega328p.elf.dir/slI2C.c.o
+ .comment       0x0000000000000000       0x12 CMakeFiles/atmega328p.elf.dir/slAdc.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(bin/atmega328p.elf elf32-avr)
+LOAD linker stubs

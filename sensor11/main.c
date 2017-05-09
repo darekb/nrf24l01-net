@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
+//https://www.youtube.com/watch?v=38h4-5FDdV4
 
 #ifndef F_CPU
 #define F_CPU 16000000UL
@@ -52,6 +52,7 @@ uint8_t status;
 struct MEASURE BME180measure = {0, 0, 0, 0, SENSOR_ID};
 volatile uint8_t stage;
 volatile uint16_t counter = 0;
+volatile uint16_t counter2 = 0;
 volatile uint8_t sendOk = 0;
 const char startStringSensor11[] = {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'};
 uint8_t *arr;
@@ -137,11 +138,13 @@ void goSleep() {
     slNRF24_PowerDown();
     sendOk = 1;
     stage = 0;
+    counter2 = 0;
 }
 
 //stage 10
 void goReset() {
     counter = 0;
+    slNRF24_PowerDown();
     clearData();
     slUART_WriteStringNl("Sensor11 Reset");
     slNRF24_Reset();
@@ -152,13 +155,18 @@ void goReset() {
     //wait for inerupt
     stage = 0;
     sendOk = 0;
+    counter2 = 0;
 }
 
 
 //stage 12
 void compareStrings() {
     counter = 0;
+    counter2 = 0;
     slNRF24_GetRegister(R_RX_PAYLOAD, data, 9);
+    slNRF24_Reset();
+    slNRF24_FlushTx();
+    slNRF24_FlushRx();
     uint8_t go = 0;
     uint8_t i = sizeof(data);
     while (i--) {
@@ -169,7 +177,7 @@ void compareStrings() {
     }
     //slUART_WriteStringNl("-");
     if (go == sizeof(data)) {
-        //slUART_WriteStringNl("Sensor11 got start command");
+        slUART_WriteStringNl("Sensor11 got start command");
         clearData();
         //stage = 13;
         setBME280Mode();
@@ -186,6 +194,7 @@ void compareStrings() {
 //stage13
 uint8_t setBME280Mode() {
     counter = 0;
+    counter2 = 0;
     //slUART_WriteStringNl("Sensor11 reset BME280");
     if (BME280_SetMode(BME280_MODE_FORCED)) {
         slUART_WriteString("BME280 set forced mode error!\r\n");
@@ -198,6 +207,7 @@ uint8_t setBME280Mode() {
 //stage 14
 uint8_t getDataFromBME280() {
     counter = 0;
+    counter2 = 0;
     float temperature, humidity, pressure;
     if (BME280_ReadAll(&temperature, &pressure, &humidity)) {
 
@@ -208,7 +218,7 @@ uint8_t getDataFromBME280() {
     BME180measure.humidity = calculateHumidity(humidity);
     BME180measure.pressure = calculatePressure(pressure);
     BME180measure.sensorId = SENSOR_ID;
-    //slUART_WriteStringNl("Sensor11 got data from BME280");
+    // slUART_WriteStringNl("Sensor11 got data from BME280");
     // slUART_LogDecNl(BME180measure.temperature);
     // slUART_LogDecNl(BME180measure.humidity);
     // slUART_LogDecNl(BME180measure.pressure);
@@ -219,6 +229,7 @@ uint8_t getDataFromBME280() {
 //stage 15
 void measuerADC() {
     counter = 0;
+    counter2 = 0;
     //slUART_WriteStringNl("Sensor11 measure ADC");
     float wynik = 0;
     for (uint8_t i = 0; i < 12; i++) {
@@ -232,16 +243,19 @@ void measuerADC() {
 //stage16
 uint8_t sendVianRF24L01() {
     counter = 0;
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
-    slNRF24_Reset();
+    counter2 = 0;
+    clearData();
     fillBuferFromMEASURE(BME180measure, data);
-    //slUART_WriteStringNl("Sensor11 Sending data");
-    slNRF24_TxPowerUp();
-    _delay_ms(100);
-    slNRF24_TransmitPayload(&data, 9);
+    slNRF24_FlushTx();
+    //slNRF24_FlushRx();
+    slNRF24_Reset();
     //_delay_ms(1000);
+    slNRF24_TxPowerUp();
+    slNRF24_TransmitPayload(&data, 9);
+    //slUART_WriteStringNl("Sensor11 Sending data");
+    slNRF24_Reset();
     stage = 0;//goReset
+    sendOk = 1;
     return 0;
 }
 
@@ -250,10 +264,19 @@ ISR(TIMER0_OVF_vect) {
     if (sendOk == 1) {
         counter = counter + 1;
     }
+    counter2 = counter2 + 1;
     if (counter == 1465) {//24.00256 sek Next mesurements
         counter = 0;
         sendOk = 0;
         stage = 10;
+        counter2 = 0;
+    }
+    if (counter2 >= 2500) {//24.00256 sek Next mesurements
+        counter = 0;
+        sendOk = 0;
+        stage = 10;
+        counter2 = 0;
+        slUART_WriteStringNl("Sensor11 FAIL");
     }
 }
 
@@ -270,12 +293,10 @@ ISR(INT0_vect) {
         compareStrings();
     }
     if ((status & (1 << 5)) != 0) {//send ok
-        slNRF24_Reset();
-        slNRF24_PowerDown();
-        slNRF24_FlushTx();
-        slNRF24_FlushRx();
+        //slNRF24_PowerDown();
         sendOk = 1;
         stage = 0;
+        slNRF24_Reset();
         //slUART_WriteStringNl("Sensor11 send ok");
         //goSleep();
         //stage = 9;//goSleep

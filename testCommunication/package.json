@@ -1,0 +1,29 @@
+{
+  "name": "sensors_recivier",
+  "version": "1.0.0",
+  "description": "recievie data from  sensor BME280 by RF 433 and send to api",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darekb/weatherStation.git"
+  },
+  "keywords": [
+    "arduino",
+    "nodejs"
+  ],
+  "author": "Dariusz Biedrzycki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darekb/weatherStation/issues"
+  },
+  "homepage": "https://github.com/darekb/weatherStation#readme",
+  "dependencies": {
+    "q": "^1.4.1",
+    "request-promise": "^2.0.1",
+    "serialport": "^4.0.6"
+  }
+}

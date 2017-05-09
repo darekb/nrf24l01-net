@@ -1,0 +1,11 @@
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/atmega328p.elf.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/build_all.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/build_atmega328p.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/disassemble_atmega328p.elf.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/get_calibration.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/get_fuses.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/get_status.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/set_calibration.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/set_fuses.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/upload_atmega328p.dir
+/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/upload_eeprom.dir
