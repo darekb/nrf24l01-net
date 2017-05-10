@@ -36,22 +36,6 @@ slSPI.h
 
 /home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.h
 
-/home/dariusz/Arduino/nrf24l01-net/server/slNRF24.c
-avr/io.h
--
-stdio.h
--
-util/delay.h
--
-avr/interrupt.h
--
-slNRF24.h
-/home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h
-slSPI.h
-/home/dariusz/Arduino/nrf24l01-net/server/slSPI.h
-slUart.h
-/home/dariusz/Arduino/nrf24l01-net/server/slUart.h
-
 /home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h
 
 /home/dariusz/Arduino/nrf24l01-net/server/slSPI.h

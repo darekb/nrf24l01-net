@@ -55,7 +55,6 @@ void slNRF24_GetRegister(uint8_t reg, uint8_t *dataIn, uint8_t len){
 
 
 
-//initierar nrf'en (obs nrfen måste vala i vila när detta sker CE-låg)
 void slNRF24_Init(void)
 {
     _delay_ms(100); //allow radio to reach power down if shut down
@@ -70,7 +69,7 @@ void slNRF24_Init(void)
     slNRF24_SetRegister(EN_AA, val, 1);
 
     //enable data pipe 1 for RX
-    val[0]=0x07;
+    val[0]=0x03;
     slNRF24_SetRegister(EN_RXADDR, val, 1); 
 
     //Setup of Address Widths 5 bytes
@@ -127,7 +126,6 @@ void slNRF24_Reset(void)
     CSN_HIGH();
 }
 
-//Sänd data
 void slNRF24_TransmitPayload(void *dataIn, uint8_t len)
 {
     uint8_t *data = dataIn;

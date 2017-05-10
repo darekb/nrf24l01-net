@@ -50,13 +50,13 @@ volatile uint16_t counter3 = 0;
 volatile uint8_t sensorNr = 0;
 //nr of sensor from sensorsStrings
 char sensorsStrings[sensorsCount][9] = {
-        {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'},
         {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'},
+        {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'},
         {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'}
 };
 uint8_t sensorsAdresses[sensorsCount][1] = {
-        {0x11},
         {0x21},
+        {0x11},
         {0x12}
 };
 
@@ -138,6 +138,9 @@ void sensor11start() {
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
+    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+    slNRF24_FlushTx();
+    slNRF24_FlushRx();
     slNRF24_Reset();
     clearData();
     stage = 0;//wait for interupt
@@ -147,8 +150,8 @@ void sensor11start() {
 void getDataFromSensor() {
     counter = 0;
     counter3 = 0;
-    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
-    clearData();
+    // slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+    // clearData();
     slNRF24_GetRegister(R_RX_PAYLOAD, data, 9);
     stage = 4;
     //slUART_WriteStringNl("server getDataFromSensor");
@@ -229,10 +232,10 @@ ISR(INT0_vect) {
         counter3 = 0;
     }
     if ((status & (1 << 5)) != 0) {//send ok
-        slNRF24_FlushTx();
-        slNRF24_FlushRx();
-        slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
-        slNRF24_Reset();
+        // slNRF24_FlushTx();
+        // slNRF24_FlushRx();
+        // slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+        // slNRF24_Reset();
         //slUART_WriteStringNl("server sent ok ");
         stage = 0;
         //stage = 2;

@@ -2,7 +2,7 @@ var Q = require("q");
 var rp = require('request-promise');
 var fs = require('fs');
 var SerialPort = require("serialport");
-var _sockedLog = fs.createWriteStream('log-09-05-2017-test02.dat', {
+var _sockedLog = fs.createWriteStream('log-09-05-2017-test02-server.dat', {
 			'flags': 'a'
 		});
 var _sockedErrorLog = fs.createWriteStream('error.dat', {

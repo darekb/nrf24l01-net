@@ -6,7 +6,7 @@ function makePlot() {
   }
 	var server = '';
 	//server = '-server';
-  fs.readFile('log-09-05-2017-test02'+ server +'.dat', 'utf8', function (err, data) {
+  fs.readFile('log-10-05-2017-test01'+ server +'.dat', 'utf8', function (err, data) {
     if (err) {
       return console.log(err);
     }
