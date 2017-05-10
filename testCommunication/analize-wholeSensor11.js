@@ -31,11 +31,15 @@ function showStats() {
       var elems = line.split('|');
       if (elems[2] && ((elems[2] * 1) > 1493906870026)) {
          if (actTime3 > 0 && elems.length > 5 &&  elems[7]*1 == 21) {
-           var diff = elems[2] * 1 - actTime3 * 1;
-           times.sensor21Measure.push(diff);
-           actTime3 = 0;
-           lastIndex3 = 0;
-         }
+            if(elems[6] == 0 &&  elems[5] == 0 && elems[4] == 0 && elems[3] == 0){
+              fails3++;
+            } else {
+              var diff = elems[2] * 1 - actTime3 * 1;
+              times.sensor21Measure.push(diff);
+              actTime3 = 0;
+              lastIndex3 = 0;
+            }
+           }
          if (elems[3] && lastIndex3 > 0 && elems[3].trim() == 'F21') {
            //if(index - lastIndex == 1){
            fails3++;
@@ -48,10 +52,14 @@ function showStats() {
            }
          }
         if (actTime > 0 && elems.length > 5 &&  elems[7]*1 == 11) {
-          var diff = elems[2] * 1 - actTime * 1;
-          times.sensor11Measure.push(diff);
-          actTime = 0;
-          lastIndex = 0;
+          if(elems[6] == 0 &&  elems[5] == 0 && elems[4] == 0 && elems[3] == 0){
+            fails++;
+          } else {
+            var diff = elems[2] * 1 - actTime * 1;
+            times.sensor11Measure.push(diff);
+            actTime = 0;
+            lastIndex = 0;
+          }
         }
         if (elems[3] && lastIndex > 0 && elems[3].trim() == 'F11') {
           //if(index - lastIndex == 1){
@@ -64,23 +72,27 @@ function showStats() {
             lastIndex = index;
           }
         }
-        // if (actTime2 > 0 && elems.length > 5 &&  elems[7]*1 == 12) {
-        //   var diff = elems[2] * 1 - actTime2 * 1;
-        //   times.sensor12Measure.push(diff);
-        //   actTime2 = 0;
-        //   lastIndex2 = 0;
-        // }
-        // if (elems[3] && lastIndex2 > 0 && elems[3].trim() == 'F12') {
-        //   //if(index - lastIndex == 1){
-        //   fails2++;
-        //   //}
-        // }
-        // if (elems[3] && actTime2 == 0) {
-        //   if (elems[3].trim() == 'S12') {
-        //     actTime2 = elems[2] * 1;
-        //     lastIndex2 = index;
-        //   }
-        // }
+        if (actTime2 > 0 && elems.length > 5 &&  elems[7]*1 == 12) {
+          if(elems[6] == 0 &&  elems[5] == 0 && elems[4] == 0 && elems[3] == 0){
+            fails2++;
+          } else {
+            var diff = elems[2] * 1 - actTime2 * 1;
+            times.sensor12Measure.push(diff);
+            actTime2 = 0;
+            lastIndex2 = 0;
+          }
+        }
+        if (elems[3] && lastIndex2 > 0 && elems[3].trim() == 'F12') {
+          //if(index - lastIndex == 1){
+          fails2++;
+          //}
+        }
+        if (elems[3] && actTime2 == 0) {
+          if (elems[3].trim() == 'S12') {
+            actTime2 = elems[2] * 1;
+            lastIndex2 = index;
+          }
+        }
 
       }
     });
@@ -95,8 +107,7 @@ function showStats() {
     });
     console.log('sensor11Measure;');
     sortData(t);
-    console.log('Fails: ')
-    console.log(fails);
+    console.log('Fails: ' + fails + '; ' + Math.round((fails/(times.sensor11Measure.length+fails))*100)+'%');
     // t = {};
     var t = {};
     times.sensor12Measure.map(function(val) {
@@ -109,8 +120,7 @@ function showStats() {
     });
     console.log('sensor12Measure;');
     sortData(t);
-    console.log('Fails: ')
-    console.log(fails2);
+    console.log('Fails: ' + fails2 + '; ' + Math.round((fails2/(times.sensor12Measure.length+fails2))*100)+'%');
      var t = {};
      times.sensor21Measure.map(function(val) {
        var t1 = Math.round((val / 10)) * 10;
@@ -122,8 +132,7 @@ function showStats() {
      });
      console.log('sensor21Measure;');
      sortData(t);
-     console.log('Fails: ')
-     console.log(fails3);
+      console.log('Fails: ' + fails3 + '; ' + Math.round((fails3/(times.sensor21Measure.length+fails3))*100)+'%');
   });
 }
 

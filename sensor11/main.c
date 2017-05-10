@@ -246,14 +246,17 @@ uint8_t sendVianRF24L01() {
     counter2 = 0;
     clearData();
     fillBuferFromMEASURE(BME180measure, data);
-    slNRF24_FlushTx();
-    //slNRF24_FlushRx();
     slNRF24_Reset();
-    //_delay_ms(1000);
+    slNRF24_FlushTx();
+    slNRF24_FlushRx();
     slNRF24_TxPowerUp();
     slNRF24_TransmitPayload(&data, 9);
     //slUART_WriteStringNl("Sensor11 Sending data");
+    slNRF24_RxPowerUp();
+    // slNRF24_FlushTx();
+    // slNRF24_FlushRx();
     slNRF24_Reset();
+    clearData();
     stage = 0;//goReset
     sendOk = 1;
     return 0;
@@ -296,7 +299,7 @@ ISR(INT0_vect) {
         //slNRF24_PowerDown();
         sendOk = 1;
         stage = 0;
-        slNRF24_Reset();
+        //slNRF24_Reset();
         //slUART_WriteStringNl("Sensor11 send ok");
         //goSleep();
         //stage = 9;//goSleep
