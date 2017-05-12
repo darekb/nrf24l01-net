@@ -1,4 +1,5 @@
 var fs = require('fs');
+var config = require('./config.js');
 
 function showStats() {
 
@@ -20,9 +21,7 @@ function showStats() {
   var lastIndex = 0;
   var lastIndex2 = 0;
   var lastIndex3 = 0;
-  var server = '';
-  //server = '-server';
-  fs.readFile('log-10-05-2017-test01'+ server +'.dat', 'utf8', function(err, data) {
+  fs.readFile(config.filename, 'utf8', function(err, data) {
     if (err) {
       return console.log(err);
     }
@@ -105,9 +104,10 @@ function showStats() {
         t[t1] = 1;
       }
     });
+    console.log("=======================================================");
     console.log('sensor11Measure;');
     sortData(t);
-    console.log('Fails: ' + fails + '; ' + Math.round((fails/(times.sensor11Measure.length+fails))*100)+'%');
+    console.log('Fails: ' + fails + '; ' + Number(Math.round((fails/(times.sensor11Measure.length+fails))*10000)/100).toFixed(2)+'%');
     // t = {};
     var t = {};
     times.sensor12Measure.map(function(val) {
@@ -120,7 +120,7 @@ function showStats() {
     });
     console.log('sensor12Measure;');
     sortData(t);
-    console.log('Fails: ' + fails2 + '; ' + Math.round((fails2/(times.sensor12Measure.length+fails2))*100)+'%');
+    console.log('Fails: ' + fails2 + '; ' + Number(Math.round((fails2/(times.sensor12Measure.length+fails2))*10000)/100).toFixed(2)+'%');
      var t = {};
      times.sensor21Measure.map(function(val) {
        var t1 = Math.round((val / 10)) * 10;
@@ -132,7 +132,7 @@ function showStats() {
      });
      console.log('sensor21Measure;');
      sortData(t);
-      console.log('Fails: ' + fails3 + '; ' + Math.round((fails3/(times.sensor21Measure.length+fails3))*100)+'%');
+      console.log('Fails: ' + fails3 + '; ' + Number(Math.round((fails3/(times.sensor21Measure.length+fails3))*10000)/100).toFixed(2)+'%');
   });
 }
 

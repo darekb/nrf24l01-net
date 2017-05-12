@@ -122,7 +122,6 @@ uint8_t nextSensorNr() {
 void sensor11start() {
     counter = 0;
     counter3 = 1;
-    slNRF24_PowerDown();
     nextSensorNr();
     slNRF24_Reset();
     slNRF24_FlushTx();

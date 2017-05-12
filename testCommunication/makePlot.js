@@ -1,12 +1,11 @@
 var fs = require('fs');
+var config = require('./config.js');
 function makePlot() {
   var m = {
     sensor11: [],
     sensor21: []
   }
-	var server = '';
-	//server = '-server';
-  fs.readFile('log-10-05-2017-test01'+ server +'.dat', 'utf8', function (err, data) {
+  fs.readFile(config.filename, 'utf8', function (err, data) {
     if (err) {
       return console.log(err);
     }
