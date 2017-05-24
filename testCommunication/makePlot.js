@@ -28,7 +28,7 @@ function makePlot() {
       }
     });
     var out = '';
-    out = out + ('<!DOCTYPE html><html><head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <title></title>    <link rel="stylesheet" href=""></head><body><h2>Sensor11 (green) Sensor21 (blue) temperature</h2>');
+    out = out + ('<!DOCTYPE html><html><head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <title></title>    <link rel="stylesheet" href=""><meta http-equiv="refresh" content="5" /></head><body><h2>Sensor11 (green) Sensor21 (blue) temperature</h2>');
     makeSvg.reset();
     out = out + ('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 100"  >');
     makeSvg.calculateXY(m.sensor11, 't');
@@ -78,7 +78,7 @@ function makePlot() {
     out = out + ('</svg>');
     out = out + ('</body></html>');
     var buffer = new Buffer(out);
-    fs.open('index.html', 'w', function(err, fd) {
+    fs.open(config.filename.replace(/dat/,'html'), 'w', function(err, fd) {
         if (err) {
             console.log('error opening file: ' + err);
         }

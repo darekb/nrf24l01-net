@@ -32,8 +32,6 @@ void setupInt0();
 //server
 void sensor11start();
 
-void getDataFromSensor();
-
 void sendingSensorDataViaUart();
 
 uint8_t data[9];
@@ -50,14 +48,14 @@ volatile uint16_t counter3 = 0;
 volatile uint8_t sensorNr = 0;
 //nr of sensor from sensorsStrings
 char sensorsStrings[sensorsCount][9] = {
-    {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'},
-    {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'},
-    {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'}
+        {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'},
+        {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'},
+        {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'}
 };
 uint8_t sensorsAdresses[sensorsCount][1] = {
-    {0x21},
-    {0x11},
-    {0x12}
+        {0x21},
+        {0x11},
+        {0x12}
 };
 
 int main(void) {
@@ -78,9 +76,9 @@ int main(void) {
     slNRF24_Reset();
     while (1) {
         switch (stage) {
-        case 1:
-            sensor11start();
-            break;
+            case 1:
+                sensor11start();
+                break;
         }
     }
     return 0;
@@ -138,20 +136,13 @@ void sensor11start() {
     stage = 0;//wait for interupt
 }
 
-//stage 3
-void getDataFromSensor() {
-    counter = 0;
-    counter3 = 0;
-    slNRF24_GetRegister(R_RX_PAYLOAD, data, 9);
-}
 
 //stage 4
 void sendingSensorDataViaUart() {
-    counter = 0;
-    counter3 = 0;
-    #if showDebugDataMain == 1
-        slUART_WriteStringNl("server sendingSensorDataViaUart");
-    #endif
+#if showDebugDataMain == 1
+    slUART_WriteStringNl("server sendingSensorDataViaUart");
+#endif
+    slNRF24_GetRegister(R_RX_PAYLOAD, data, 9);
     BME180measure = returnMEASUREFromBuffer(data);
     slUART_LogDecWithSign(BME180measure.temperature);
     slUART_WriteString("|");
@@ -209,25 +200,24 @@ ISR(TIMER0_OVF_vect) {
 ISR(INT0_vect) {
     status = 0;
     slNRF24_GetRegister(STATUS, &status, 1);
-    #if showDebugDataMain == 1
-        slUART_WriteString("server STATUS: ");
-        slUART_LogBinaryNl(status);
-    #endif
+#if showDebugDataMain == 1
+    slUART_WriteString("server STATUS: ");
+    slUART_LogBinaryNl(status);
+#endif
     cli();
     if ((status & (1 << 6)) != 0) {//got data
-        #if showDebugDataMain == 1
-                slUART_WriteStringNl("server got data ");
-        #endif
-        getDataFromSensor();
+#if showDebugDataMain == 1
+        slUART_WriteStringNl("server got data ");
+#endif
         sendingSensorDataViaUart();
         counter = 0;
         counter2 = 0;
         counter3 = 0;
     }
     if ((status & (1 << 5)) != 0) {//send ok
-        #if showDebugDataMain == 1
-                slUART_WriteStringNl("server sent ok ");
-        #endif
+#if showDebugDataMain == 1
+        slUART_WriteStringNl("server sent ok ");
+#endif
         stage = 0;
     }
     sei();
