@@ -32,11 +32,19 @@ void setupInt0();
 //server
 void sensor11start();
 
+void saveDataFromNRF();
+
+void saveErrorData();
+
 void sendingSensorDataViaUart();
 
 uint8_t data[9];
 uint8_t status;
-struct MEASURE BME180measure = {0, 0, 0, 0, 11};
+struct MEASURE BME180measure[sensorsCount] = {
+        {0, 0, 0, 0, 21},
+        {0, 0, 0, 0, 11},
+        {0, 0, 0, 0, 12}
+};
 volatile uint8_t stage = 0;
 //stage
 volatile uint16_t counter = 0;
@@ -56,6 +64,11 @@ uint8_t sensorsAdresses[sensorsCount][1] = {
         {0x21},
         {0x11},
         {0x12}
+};
+uint8_t sensorsId[sensorsCount][1] = {
+        {21},
+        {11},
+        {12}
 };
 
 int main(void) {
@@ -136,30 +149,63 @@ void sensor11start() {
     stage = 0;//wait for interupt
 }
 
+void saveDataFromNRF(){
+    slNRF24_GetRegister(R_RX_PAYLOAD, data, 9);
+    BME180measure[(sensorNr - 1)] = returnMEASUREFromBuffer(data);
+    slUART_WriteString("OK");
+    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+    if (sensorNr < sensorsCount) {
+        stage = 1;
+    } else {
+        stage = 0;//all sensors wills be requested
+        sendingSensorDataViaUart();
+    }
+    clearData();
+}
+
+void saveErrorData(){
+    BME180measure[(sensorNr - 1)].temperature = 0;
+    BME180measure[(sensorNr - 1)].humidity = 0;
+    BME180measure[(sensorNr - 1)].pressure = 0;
+    BME180measure[(sensorNr - 1)].voltage = 0;
+    BME180measure[(sensorNr - 1)].sensorId = *sensorsId[(sensorNr - 1)];
+    slUART_WriteString("F");
+    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+    if (sensorNr < sensorsCount) {
+        stage = 1;
+    } else {
+        stage = 0;
+        sendingSensorDataViaUart();
+    }
+}
+
 
 //stage 4
 void sendingSensorDataViaUart() {
 #if showDebugDataMain == 1
     slUART_WriteStringNl("server sendingSensorDataViaUart");
 #endif
-    slNRF24_GetRegister(R_RX_PAYLOAD, data, 9);
-    BME180measure = returnMEASUREFromBuffer(data);
-    slUART_LogDecWithSign(BME180measure.temperature);
-    slUART_WriteString("|");
-    slUART_LogDec(BME180measure.humidity);
-    slUART_WriteString("|");
-    slUART_LogDecWithSign(BME180measure.pressure);
-    slUART_WriteString("|");
-    slUART_LogDecWithSign(BME180measure.voltage);
-    slUART_WriteString("|");
-    slUART_LogDec(BME180measure.sensorId);
-    slUART_WriteStringNl("");
-    if (sensorNr < sensorsCount) {
-        stage = 1;
-    } else {
-        stage = 0;//all sensors wills be requested
+    for(uint8_t i = 0; i < sensorsCount; i++){
+        slUART_LogDecWithSign(BME180measure[i].temperature);
+        slUART_WriteString("|");
+        slUART_LogDec(BME180measure[i].humidity);
+        slUART_WriteString("|");
+        slUART_LogDecWithSign(BME180measure[i].pressure);
+        slUART_WriteString("|");
+        slUART_LogDecWithSign(BME180measure[i].voltage);
+        slUART_WriteString("|");
+        slUART_LogDec(BME180measure[i].sensorId);
+        slUART_WriteString("~");
     }
-    clearData();
+    slUART_WriteStringNl("");
+
+    for(uint8_t i = 0; i < sensorsCount; i++) {
+        BME180measure[i].temperature = 0;
+        BME180measure[i].humidity = 0;
+        BME180measure[i].pressure = 0;
+        BME180measure[i].voltage = 0;
+        BME180measure[i].sensorId = *sensorsId[i];
+    }
 }
 
 ISR(TIMER0_OVF_vect) {
@@ -173,13 +219,9 @@ ISR(TIMER0_OVF_vect) {
         counter2 = counter2 + 1;
     }
     if (counter3 > 123) {//2sek. failed get sensor data
-        slUART_WriteString("0|0|0|0|");
-        slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
-        if (sensorNr < sensorsCount) {
-            stage = 1;
-        } else {
-            stage = 0;
-        }
+        //slUART_WriteString("0|0|0|0|");
+        //slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+        saveErrorData();
         counter3 = 0;
     }
     if (counter == 2100) {//34.4064 sek Next mesurements
@@ -209,7 +251,7 @@ ISR(INT0_vect) {
 #if showDebugDataMain == 1
         slUART_WriteStringNl("server got data ");
 #endif
-        sendingSensorDataViaUart();
+        saveDataFromNRF();
         counter = 0;
         counter2 = 0;
         counter3 = 0;
