@@ -7,9 +7,9 @@
 
 
 struct MEASURE {
-    int16_t temperature;
-    uint16_t humidity;
-    int16_t pressure;
+    int32_t temperature;
+    int32_t humidity;
+    int64_t pressure;
     //(pressure - 1000)*100
     uint16_t voltage;
     uint8_t sensorId;
@@ -19,13 +19,13 @@ void fillBuferFromMEASURE(const struct MEASURE structure, uint8_t *buffer);
 
 struct MEASURE returnMEASUREFromBuffer(uint8_t *buffer);
 
-int16_t calculateTemperature(float temperature);
+int32_t calculateTemperature(int32_t temperature);
 
-uint16_t calculateHumidity(float humidity);
+uint32_t calculateHumidity(int32_t humidity);
 
-int16_t calculatePressure(float pressure);
+int64_t calculatePressure(int64_t pressure);
 
-uint16_t calculateVoltage(float voltage);
+uint16_t calculateVoltage(int16_t voltage);
 //void testBME180Measure(void);
 
 #endif //CMAKE_AVR_SLBME180MEASURE_H

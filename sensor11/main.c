@@ -208,7 +208,8 @@ uint8_t setBME280Mode() {
 uint8_t getDataFromBME280() {
     counter = 0;
     counter2 = 0;
-    float temperature, humidity, pressure;
+    int32_t temperature, humidity;
+    int64_t pressure;
     if (BME280_ReadAll(&temperature, &pressure, &humidity)) {
 
         slUART_WriteString("BME280 read error!\r\n");
@@ -231,11 +232,11 @@ void measuerADC() {
     counter = 0;
     counter2 = 0;
     //slUART_WriteStringNl("Sensor11 measure ADC");
-    float wynik = 0;
+    uint16_t wynik = 0;
     for (uint8_t i = 0; i < 12; i++) {
         wynik = wynik + slADC_measure(PC1);
     }
-    wynik = (((110 * ((wynik / 12) * 100)) / 102300) * 350) / 110;
+    //wynik = (((110 * ((wynik / 12) * 100)) / 102300) * 350) / 110;
     BME180measure.voltage = (uint16_t) wynik;
     //stage = 16;
 }

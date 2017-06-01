@@ -12,24 +12,24 @@ void fillBuferFromMEASURE(const struct MEASURE structure, uint8_t *buffer) {
 
 struct MEASURE returnMEASUREFromBuffer(uint8_t *buffer) {
     struct MEASURE tmp;
-    memcpy(&tmp, buffer, 9 * sizeof(uint8_t));
+    memcpy(&tmp, buffer, 19 * sizeof(uint8_t));
     return tmp;
 }
 
-int16_t calculateTemperature(float temperature) {
-    return (int16_t) ((float) temperature * (int16_t) 100);
+int32_t calculateTemperature(int32_t temperature) {
+    return (int32_t) ((int32_t) temperature * (int16_t) 100);
 }
 
-uint16_t calculateHumidity(float humidity) {
-    return (uint16_t) ((float) humidity * (uint16_t) 100);
+uint32_t calculateHumidity(int32_t humidity) {
+    return (uint16_t) ((int32_t) humidity * (uint16_t) 100);
 }
 
-int16_t calculatePressure(float pressure) {
-    return (int16_t) ((float) pressure - (float) 100000);
+int64_t calculatePressure(int64_t pressure) {
+    return (int16_t) ((int64_t) pressure - (int64_t) 100000);
 }
 
-uint16_t calculateVoltage(float voltage) {
-    return (uint16_t) ((float) voltage * (uint16_t) 100);
+uint16_t calculateVoltage(int16_t voltage) {
+    return (uint16_t) ((int16_t) voltage * (uint16_t) 100);
 }
 
 //void testBME180Measure(void) {
