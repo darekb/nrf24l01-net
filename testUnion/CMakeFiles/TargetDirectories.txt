@@ -1,0 +1,13 @@
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/rebuild_cache.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/edit_cache.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/disassemble_atmega8.elf.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/atmega8.elf.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/build_all.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/upload_eeprom.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/upload_atmega8.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/get_calibration.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/get_status.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/get_fuses.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/build_atmega8.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/set_fuses.dir
+/home/dariusz/Arduino/nrf24l01-net/testUnion/CMakeFiles/set_calibration.dir

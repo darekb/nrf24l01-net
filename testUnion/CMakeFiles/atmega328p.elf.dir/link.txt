@@ -1,0 +1,1 @@
+/usr/bin/avr-gcc -Os  -mmcu=atmega328p -Wl,--gc-sections -mrelax -Wl,-Map,atmega328p.map CMakeFiles/atmega328p.elf.dir/main.c.o CMakeFiles/atmega328p.elf.dir/slUart.c.o  -o bin/atmega328p.elf 

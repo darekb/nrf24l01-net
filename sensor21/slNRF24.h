@@ -22,7 +22,7 @@
     DEALINGS IN THE SOFTWARE.
 */
 
-#define SENSOR_ADDR   0x21
+#define SENSOR_ADDR   0x22
 
 #define CE_PIN        PB1
 #define CE_OUTPUT()   DDRB |= (1 << CE_PIN)

@@ -1,0 +1,1 @@
+/usr/bin/avr-gcc -Os  -mmcu=atmega8 -Wl,--gc-sections -mrelax -Wl,-Map,atmega8.map CMakeFiles/atmega8.elf.dir/main.c.o CMakeFiles/atmega8.elf.dir/slUart.c.o  -o bin/atmega8.elf 
