@@ -8,19 +8,6 @@
 #include "main.h"
 #include "slUart.h"
 
-struct test {
-    int32_t temperature;
-    int32_t humidity;
-    int64_t pressure;
-    uint16_t voltage;
-    uint8_t sensorId;
-};
-
-union MEASURE {
-    struct test data;
-    uint8_t bytes[19];
-};
-
 int main(void) {
     slUART_Init();
     slUART_WriteString("start.\r\n");

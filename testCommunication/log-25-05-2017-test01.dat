@@ -96,3 +96,5 @@ server  |Thu May 25 2017 19:03:01 GMT+0200 (CEST)|1495731781811| OK11
 server  |Thu May 25 2017 19:03:01 GMT+0200 (CEST)|1495731781811| S12
 server  |Thu May 25 2017 19:03:04 GMT+0200 (CEST)|1495731784240| F12
 server  |Thu May 25 2017 19:03:04 GMT+0200 (CEST)|1495731784244| 2019|3991|608|301|21~2292|3680|482|274|11~0|0|0|0|12~
+index.js [Thu Jun 15 2017 22:44:07 GMT+0200 (CEST)] SerialPort: Open serial port: /dev/ttyUSB0
+index.js [Thu Jun 15 2017 22:44:12 GMT+0200 (CEST)] SerialPort: Open serial port: /dev/ttyUSB0

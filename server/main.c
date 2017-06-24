@@ -72,28 +72,53 @@ uint8_t sensorsId[sensorsCount][1] = {
 };
 
 int main(void) {
-    //*
     slUART_SimpleTransmitInit();
-    /*/
-    slUART_Init();
-    //*/
-    slSPI_Init();
-    slNRF24_IoInit();
-    slNRF24_Init(*sensorsAdresses[0]);
-    setupTimer();
-    setupInt0();
-    sei();
-    stage = 1;
-    slUART_WriteStringNl("\nStart server");
-    _delay_ms(500);
-    slNRF24_Reset();
-    while (1) {
-        switch (stage) {
-            case 1:
-                sensor11start();
-                break;
-        }
-    }
+    float t,h,p,v;
+
+    int16_t wynik;
+    t = 2758/100.0;
+    h = 0xb50f/1024.0;
+    p = (float) 0x86e4;
+    wynik = 6119;
+    v = (((110 * ((wynik / 12) * 100)) / 102300) * 350) / 110;
+    BME180measure[0].temperature = calculateTemperature(t);;
+    BME180measure[0].humidity = calculateHumidity(h);
+    BME180measure[0].pressure = calculatePressure(p);
+    BME180measure[0].voltage = (uint16_t) v;
+    BME180measure[0].sensorId = *sensorsId[(sensorNr - 1)];
+    uint8_t i =0;
+    slUART_LogDecWithSign(BME180measure[i].temperature);
+    slUART_WriteString("|");
+    slUART_LogDec(BME180measure[i].humidity);
+    slUART_WriteString("|");
+    slUART_LogDecWithSign(BME180measure[i].pressure);
+    slUART_WriteString("|");
+    slUART_LogDecWithSign(BME180measure[i].voltage);
+    slUART_WriteString("|");
+    slUART_LogDec(BME180measure[i].sensorId);
+    slUART_WriteStringNl("~");
+    //*
+//    slUART_SimpleTransmitInit();
+//    /*/
+//    slUART_Init();
+//    //*/
+//    slSPI_Init();
+//    slNRF24_IoInit();
+//    slNRF24_Init(*sensorsAdresses[0]);
+//    setupTimer();
+//    setupInt0();
+//    sei();
+//    stage = 1;
+//    slUART_WriteStringNl("\nStart server");
+//    _delay_ms(500);
+//    slNRF24_Reset();
+//    while (1) {
+//        switch (stage) {
+//            case 1:
+//                sensor11start();
+//                break;
+//        }
+//    }
     return 0;
 }
 

@@ -305,7 +305,7 @@ uint8_t BME280_Init(uint8_t os_t, uint8_t os_p, uint8_t os_h,
 
 
 // Returns temperature in DegC, resolution is 0.01 DegC. Output value of �5123� equals 51.23 DegC.
-float BME280_CompensateT(int32_t adc_T) {
+int32_t BME280_CompensateT(int32_t adc_T) {
   int32_t var1, var2, T;
   var1 = ((((adc_T >> 3) - ((int32_t) CalibParam.dig_T1 << 1))) * ((int32_t) CalibParam.dig_T2)) >> 11;
   var2 = (((((adc_T >> 4) - ((int32_t) CalibParam.dig_T1)) * ((adc_T >> 4) - ((int32_t) CalibParam.dig_T1))) >> 12) *
@@ -319,7 +319,8 @@ float BME280_CompensateT(int32_t adc_T) {
   slUART_LogBinary((uint8_t) ((T >> 16) & 0xFF));
   slUART_LogBinary((uint8_t) ((T >> 24)));
 #endif
-  return T / 100.0;
+  //return T / 100.0;
+  return T;
 }
 
 // Returns pressure in Pa as unsigned 32 bit integer in Q24.8 format (24 integer bits and 8 fractional bits).
@@ -355,7 +356,7 @@ int64_t BME280_CompensateP(int32_t adc_P) {
 
 // Returns humidity in %RH as unsigned 32 bit integer in Q22.10 format (22 integer and 10 fractional bits).
 // Output value of �47445� represents 47445/1024 = 46.333 %RH
-float BME280_CompensateH(int32_t adc_H) {
+int32_t BME280_CompensateH(int32_t adc_H) {
   int32_t v_x1_u32;
   v_x1_u32 = (t_fine - ((int32_t) 76800));
   v_x1_u32 = (
@@ -375,7 +376,8 @@ float BME280_CompensateH(int32_t adc_H) {
   slUART_LogBinary((uint8_t) ((v_x1_u32 >> 16) & 0xFF));
   slUART_LogBinary((uint8_t) ((v_x1_u32 >> 24)));
 #endif
-  return v_x1_u32 / 1024.0;
+  //return v_x1_u32 / 1024.0;
+  return v_x1_u32;
 }
 
 /**********************************************************************
@@ -386,7 +388,7 @@ Parameters:	t - Pointer to variable in which to write the temperature
 			h - Pointer to variable in which to write the humidity
 **********************************************************************/
 
-uint8_t BME280_ReadAll(float *t, float *p, float *h) {
+uint8_t BME280_ReadAll(int32_t *t, int64_t *p, int32_t *h) {
   uint8_t Buff[8] = {0};
   uint32_t UncT, UncP, UncH;
 #if showDebugDataBME280 == 1

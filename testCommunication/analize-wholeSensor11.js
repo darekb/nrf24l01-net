@@ -28,8 +28,18 @@ function showStats() {
     var lines = data.split("\n");
     lines.map(function(line, index) {
       var elems = line.split('|');
-      if (elems[2] && ((elems[2] * 1) > 1493906870026)) {
+      if (elems[2] && ((elems[2] * 1) > 1497559755983)) {
          if (actTime3 > 0 && elems.length > 5 &&  elems[7]*1 == 21) {
+            if(elems[6] == 0 &&  elems[5] == 0 && elems[4] == 0 && elems[3] == 0){
+              fails3++;
+            } else {
+              var diff = elems[2] * 1 - actTime3 * 1;
+              times.sensor21Measure.push(diff);
+              actTime3 = 0;
+              lastIndex3 = 0;
+            }
+           }
+         if (elems[3] && lastIndex3 > 0 && elems[3].trim() == 'OK21') {
             if(elems[6] == 0 &&  elems[5] == 0 && elems[4] == 0 && elems[3] == 0){
               fails3++;
             } else {
@@ -60,6 +70,16 @@ function showStats() {
             lastIndex = 0;
           }
         }
+        if (elems[3] && lastIndex > 0 && elems[3].trim() == 'OK11') {
+          if(elems[6] == 0 &&  elems[5] == 0 && elems[4] == 0 && elems[3] == 0){
+            fails++;
+          } else {
+            var diff = elems[2] * 1 - actTime * 1;
+            times.sensor11Measure.push(diff);
+            actTime = 0;
+            lastIndex = 0;
+          }
+        }
         if (elems[3] && lastIndex > 0 && elems[3].trim() == 'F11') {
           //if(index - lastIndex == 1){
           fails++;
@@ -72,6 +92,16 @@ function showStats() {
           }
         }
         if (actTime2 > 0 && elems.length > 5 &&  elems[7]*1 == 12) {
+          if(elems[6] == 0 &&  elems[5] == 0 && elems[4] == 0 && elems[3] == 0){
+            fails2++;
+          } else {
+            var diff = elems[2] * 1 - actTime2 * 1;
+            times.sensor12Measure.push(diff);
+            actTime2 = 0;
+            lastIndex2 = 0;
+          }
+        }
+        if (elems[3] && lastIndex2 > 0 && elems[3].trim() == 'OK12') {
           if(elems[6] == 0 &&  elems[5] == 0 && elems[4] == 0 && elems[3] == 0){
             fails2++;
           } else {

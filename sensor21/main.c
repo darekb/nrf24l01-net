@@ -25,7 +25,7 @@
 #include "slSPI.h"
 #include "slAdc.h"
 
-#define SENSOR_ID 21
+#define SENSOR_ID 12
 
 void clearData();
 
@@ -49,13 +49,12 @@ uint8_t sendVianRF24L01();
 
 uint8_t data[9];
 uint8_t status;
-struct MEASURE BME180measure = {0, 0, 0, 0, SENSOR_ID};
+union MEASURE BME180measure;
 volatile uint8_t stage;
 volatile uint16_t counter = 0;
 volatile uint16_t counter2 = 0;
 volatile uint8_t sendOk = 0;
-const char startStringSensor21[] = {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'};
-uint8_t *arr;
+const char startStringSensor21[] = {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'};
 
 int main(void) {
     slUART_SimpleTransmitInit();
@@ -114,8 +113,8 @@ void clearData() {
 
 
 void setupTimer() {
-    TCCR0B |= (1 << CS02) | (1 << CS00);//prescaler 1024
-    TIMSK0 |= (1 << TOIE0);//przerwanie przy przepłnieniu timera0
+    TCCR0 |= (1 << CS02) | (1 << CS00);//prescaler 1024
+    TIMSK |= (1 << TOIE0);//przerwanie przy przepłnieniu timera0
 }
 
 void setupInt1() {
@@ -123,9 +122,9 @@ void setupInt1() {
     // PD2 (PCINT0 pin) is now an input
     PORTD |= (1 << PORTD3);    // turn On the Pull-up
     // PD2 is now an input with pull-up enabled
-    EICRA |= (1 << ISC11);// INT0 falling edge PD2
-    EICRA &= ~(1 << ISC10);// INT0 falling edge PD2
-    EIMSK |= (1 << INT1);     // Turns on INT0
+    MCUCR |= (1 << ISC11);// INT0 falling edge PD2
+    MCUCR &= ~(1 << ISC10);// INT0 falling edge PD2
+    GICR |= (1 << INT1);     // Turns on INT0
     sei();
 }
 
@@ -206,20 +205,32 @@ uint8_t setBME280Mode() {
 uint8_t getDataFromBME280() {
     counter = 0;
     counter2 = 0;
-    float temperature, humidity, pressure;
+    int32_t temperature, humidity;
+    int64_t pressure;
     if (BME280_ReadAll(&temperature, &pressure, &humidity)) {
 
         slUART_WriteString("BME280 read error!\r\n");
         return 1;
     }
-    BME180measure.temperature = calculateTemperature(temperature);
-    BME180measure.humidity = calculateHumidity(humidity);
-    BME180measure.pressure = calculatePressure(pressure);
-    BME180measure.sensorId = SENSOR_ID;
-    //slUART_WriteStringNl("Sensor21 got data from BME280");
-    // slUART_LogDecNl(BME180measure.temperature);
-    // slUART_LogDecNl(BME180measure.humidity);
-    // slUART_LogDecNl(BME180measure.pressure);
+    BME180measure.data.temperature = temperature;
+    BME180measure.data.humidity = humidity;
+    BME180measure.data.pressure = pressure;
+    BME180measure.data.sensorId = SENSOR_ID;
+    slUART_WriteStringNl("Sensor21 got data from BME280");
+//     slUART_LogDecNl(BME180measure.data.temperature);
+//     slUART_LogDecNl(BME180measure.data.humidity);
+//     slUART_LogDecNl(BME180measure.data.pressure);
+    measuerADC();
+    slUART_LogDecWithSign(BME180measure.data.temperature);
+    slUART_WriteString("|");
+    slUART_LogHex(BME180measure.data.humidity);
+    slUART_WriteString("|");
+    slUART_LogHex(BME180measure.data.pressure);
+    slUART_WriteString("|");
+    slUART_LogDec(BME180measure.data.voltage);
+    slUART_WriteString("|");
+    slUART_LogDec(BME180measure.data.sensorId);
+    slUART_WriteStringNl("~");
     //stage = 15;
     return 0;
 }
@@ -229,12 +240,12 @@ void measuerADC() {
     counter = 0;
     counter2 = 0;
     //slUART_WriteStringNl("Sensor21 measure ADC");
-    float wynik = 0;
+    int16_t wynik = 0;
     for (uint8_t i = 0; i < 12; i++) {
         wynik = wynik + slADC_measure(PC1);
     }
-    wynik = (((110 * ((wynik / 12) * 100)) / 102300) * 350) / 110;
-    BME180measure.voltage = (uint16_t) wynik;
+    //wynik = (((110 * ((wynik / 12) * 100)) / 102300) * 350) / 110;
+    BME180measure.data.voltage = (uint16_t) wynik;
     //stage = 16;
 }
 
@@ -263,15 +274,20 @@ uint8_t sendVianRF24L01() {
 
 ISR(TIMER0_OVF_vect) {
     //co 0.032768sek.
-    if (sendOk == 1) {
+    //if (sendOk == 1) {
         counter = counter + 1;
-    }
+    //}
     counter2 = counter2 + 1;
-    if (counter == 732) {//24.00256 sek Next mesurements
+    //if (counter == 732) {//24.00256 sek Next mesurements
+    if (counter == 200) {//24.00256 sek Next mesurements
         counter = 0;
         sendOk = 0;
         stage = 10;
         counter2 = 0;
+        setBME280Mode();
+        getDataFromBME280();
+        fillBuferFromMEASURE(BME180measure, data);
+
     }
     if (counter2 >= 1250) {//24.00256 sek Next mesurements
         counter = 0;
