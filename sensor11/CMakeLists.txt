@@ -3,13 +3,17 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8.4)
 PROJECT(cmake-avr)
 
 #SET(MCU_SPEED "16000000")
-SET(AVR_MCU "atmega328p")
-set(AVR_L_FUSE 0x62)
-set(AVR_H_FUSE 0xD9)
+#SET(AVR_MCU "atmega328p")
+#set(AVR_L_FUSE 0x62)
+#set(AVR_H_FUSE 0xD9)
 # SET(AVR_MCU "atmega168")
 # set(AVR_L_FUSE 0xFF)
 # set(AVR_H_FUSE 0xDD)
-#
+
+SET(AVR_MCU "atmega8")
+set(AVR_L_FUSE 0xFF)
+set(AVR_H_FUSE 0xC4)
+
 set(AVR_UPLOADTOOL avrdude)
 SET(F_CPU "16000000UL")
 set(AVR_PROGRAMMER arduino)

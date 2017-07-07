@@ -25,12 +25,7 @@ void slUART_Init() {
     UCSRB |= (1 << RXEN);
 
     //Set frame format: 8data, 1stop bit
-    //UCSRC = ((1 << URSEL) | (3 << UCSZ0)) & ~(1 << USBS);
-#ifdef URSEL
-    UCSRC = (1<<URSEL) | (3<<UCSZ0) & ~(1 << USBS);
-#else
-    UCSRC = (3 << UCSZ0) & ~(1 << USBS);
-#endif
+    UCSRC = ((1 << URSEL) | (3 << UCSZ0)) & ~(1 << USBS);
 
     // (1 << URSEL) bo rejestr UCSRC jest współdzielony i musimy wskazać co zmieniamy
     //taki ficzer ATmegi8
