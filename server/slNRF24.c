@@ -78,7 +78,7 @@ void slNRF24_Init(uint8_t adress) {
     slNRF24_SetRegister(SETUP_AW, val, 1);
 
     //RF channel setup - 2,400-2,527GHz 1MHz/chanel
-    val[0]=0x1;//2,401Ghz
+    val[0]=0x5b;//2,401Ghz
     slNRF24_SetRegister(RF_CH, val, 1);
 
     //RF setup  - 2Mbps spped and 0dBm

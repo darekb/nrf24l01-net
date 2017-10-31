@@ -29,7 +29,8 @@ void setupTimer();
 
 void setupInt0();
 
-//server
+uint8_t nextSensorNr();
+
 void sensor11start();
 
 void saveDataFromNRF();
@@ -45,6 +46,7 @@ struct MEASURE BME180measure[sensorsCount] = {
         {0, 0, 0, 0, 11},
         {0, 0, 0, 0, 12}
 };
+volatile uint8_t errorCount = 0;
 volatile uint8_t stage = 0;
 //stage
 volatile uint16_t counter = 0;
@@ -90,6 +92,7 @@ int main(void) {
     while (1) {
         switch (stage) {
             case 1:
+                nextSensorNr();
                 sensor11start();
                 break;
         }
@@ -133,7 +136,6 @@ uint8_t nextSensorNr() {
 void sensor11start() {
     counter = 0;
     counter3 = 1;
-    nextSensorNr();
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
@@ -221,7 +223,13 @@ ISR(TIMER0_OVF_vect) {
     if (counter3 > 123) {//2sek. failed get sensor data
         //slUART_WriteString("0|0|0|0|");
         //slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
-        saveErrorData();
+        errorCount = errorCount +1;
+        if(errorCount > 3){
+            errorCount = 0;
+            saveErrorData();
+        } else {
+            sensor11start();
+        }
         counter3 = 0;
     }
     if (counter == 2100) {//34.4064 sek Next mesurements

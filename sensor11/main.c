@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <avr/wdt.h>
 //https://www.youtube.com/watch?v=38h4-5FDdV4
 
 #ifndef F_CPU
@@ -33,6 +34,8 @@ void setupTimer();
 
 void setupInt0();
 
+void goHardReset();
+
 void goSleep();
 
 void goReset();
@@ -54,6 +57,7 @@ volatile uint8_t stage;
 volatile uint16_t counter = 0;
 volatile uint16_t counter2 = 0;
 volatile uint8_t sendOk = 0;
+volatile uint8_t failsCounter = 0;
 const char startStringSensor11[] = {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'};
 uint8_t *arr;
 
@@ -75,10 +79,14 @@ int main(void) {
     slADC_init();
     sei();
     stage = 10;
+    wdt_disable();
     goReset();
 
     while (1) {
         switch (stage) {
+            case 1:
+                goHardReset();
+                break;
             //     case 9:
             //         goSleep();
             //         break;
@@ -130,6 +138,17 @@ void setupInt0() {
     sei();
 }
 
+
+void goHardReset(){
+    wdt_enable(WDTO_15MS);
+    _delay_ms(200);
+    failsCounter = 0;
+    stage = 10;
+    counter = 0;
+    stage = 0;
+    sendOk = 0;
+    counter2 = 0;
+}
 
 //stage 9
 void goSleep() {
@@ -253,8 +272,6 @@ uint8_t sendVianRF24L01() {
     slNRF24_TransmitPayload(&data, 9);
     //slUART_WriteStringNl("Sensor11 Sending data");
     slNRF24_RxPowerUp();
-    // slNRF24_FlushTx();
-    // slNRF24_FlushRx();
     slNRF24_Reset();
     clearData();
     stage = 0;//goReset
@@ -280,6 +297,11 @@ ISR(TIMER0_OVF_vect) {
         stage = 10;
         counter2 = 0;
         slUART_WriteStringNl("Sensor11 FAIL");
+        failsCounter = failsCounter + 1;
+        if(failsCounter > 3){
+            stage = 1;
+            goHardReset();
+        }
     }
 }
 
@@ -292,11 +314,13 @@ ISR(INT0_vect) {
     cli();
     if ((status & (1 << 6)) != 0) {//got data
         //slUART_WriteStringNl("Sensor11 got data");
+        failsCounter = 0;
         stage = 12;//CompareStrings
         compareStrings();
     }
     if ((status & (1 << 5)) != 0) {//send ok
         //slNRF24_PowerDown();
+        failsCounter = 0;
         sendOk = 1;
         stage = 0;
         //slNRF24_Reset();
