@@ -22,18 +22,18 @@ void slSPI_Init() {
     //SPI Most Significant Bit First
     slSPI_SetMsb();
 
-    //Mode 0 Rising edge of data, keep clock low
+    //Mode 0 Rising edge of dataFromNRF24L01, keep clock low
     slSPI_SetMode0();
 
-    //Run the data in at 16MHz/4 - 4MHz
+    //Run the dataFromNRF24L01 in at 16MHz/4 - 4MHz
     slSPI_SetClockDiv2();
 
 }
 
 uint8_t slSPI_TransferInt(uint8_t data) {
     /* Start transmission */
-//    slUART_WriteString("slSPI_TransferInt data: ");
-//    slUART_LogBinary(data);
+//    slUART_WriteString("slSPI_TransferInt dataFromNRF24L01: ");
+//    slUART_LogBinary(dataFromNRF24L01);
     SPDR = data;
     asm volatile("nop");
     /* Wait for transmission complete */

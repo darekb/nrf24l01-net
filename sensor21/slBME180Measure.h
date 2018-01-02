@@ -16,19 +16,11 @@ struct measureStruct {
 
 union MEASURE {
     struct measureStruct data;
-    uint8_t bytes[19];
+    uint8_t bytesData[19];
 };
 
-void fillBuferFromMEASURE(const union MEASURE structure, uint8_t *buffer);
+void fillBuferFromMEASURE(union MEASURE *structure, uint8_t *buffer);
 
 union MEASURE returnMEASUREFromBuffer(uint8_t *buffer);
-
-int16_t calculateTemperature(float temperature);
-
-uint16_t calculateHumidity(float humidity);
-
-int16_t calculatePressure(float pressure);
-
-uint16_t calculateVoltage(float voltage);
 
 #endif //CMAKE_AVR_SLBME180MEASURE_H

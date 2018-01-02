@@ -1,4 +1,4 @@
-FILE(REMOVE_RECURSE
+file(REMOVE_RECURSE
   "atmega328p.map"
   "CMakeFiles/atmega328p.elf.dir/main.c.o"
   "CMakeFiles/atmega328p.elf.dir/slUart.c.o"
@@ -10,6 +10,6 @@ FILE(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang C)
-  INCLUDE(CMakeFiles/atmega328p.elf.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang C)
+  include(CMakeFiles/atmega328p.elf.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <avr/wdt.h>
 
 
 #ifndef F_CPU
@@ -27,6 +28,8 @@
 
 #define SENSOR_ID 12
 
+void stage12();
+
 void clearData();
 
 void setupTimer();
@@ -35,7 +38,11 @@ void setupInt1();
 
 void goSleep();
 
+void restart();
+
 void goReset();
+
+void getDataFromNRF24L01();
 
 void compareStrings();
 
@@ -43,18 +50,18 @@ uint8_t setBME280Mode();
 
 uint8_t getDataFromBME280();
 
-void measuerADC();
+void getDataFromADC();
 
 uint8_t sendVianRF24L01();
 
-uint8_t data[9];
+uint8_t dataFromNRF24L01[9];
 uint8_t status;
 union MEASURE BME180measure;
 volatile uint8_t stage;
+volatile uint8_t errors = 0;
 volatile uint16_t counter = 0;
-volatile uint16_t counter2 = 0;
-volatile uint8_t sendOk = 0;
-const char startStringSensor21[] = {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'};
+volatile uint16_t isTimeoutError = 0;
+const char startStringSensor12[] = {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'};
 
 int main(void) {
     slUART_SimpleTransmitInit();
@@ -78,36 +85,40 @@ int main(void) {
 
     while (1) {
         switch (stage) {
-            //     case 9:
-            //         goSleep();
-            //         break;
             case 10:
                 goReset();
                 break;
-                //     case 12:
-                //         compareStrings();
-                //         break;
-                //     case 13:
-                //         setBME280Mode();
-                //         break;
-                //     case 14:
-                //         getDataFromBME280();
-                //         break;
-                //     case 15:
-                //         measuerADC();
-                //         break;
-                //     case 16:
-                //         sendVianRF24L01();
-                //         break;
+            case 12://get measures
+                stage12();
+                break;
         }
     }
     return 0;
 }
 
+void stage12(){
+    counter = 0;
+    setBME280Mode();
+    getDataFromBME280();
+    getDataFromADC();
+    slUART_WriteStringNl("Sensor12 got data from BME280");
+    slUART_LogDecWithSign(BME180measure.data.temperature);
+    slUART_WriteString("|");
+    slUART_LogHex32(BME180measure.data.humidity);
+    slUART_WriteString("|");
+    slUART_LogHex32(BME180measure.data.pressure);
+    slUART_WriteString("|");
+    slUART_LogDec(BME180measure.data.voltage);
+    slUART_WriteString("|");
+    slUART_LogDec(BME180measure.data.sensorId);
+    slUART_WriteStringNl("~");
+    stage = 0;
+}
+
 
 void clearData() {
     for (uint8_t i = 0; i < 9; i++) {
-        data[i] = 0;
+        dataFromNRF24L01[i] = 0;
     };
 }
 
@@ -125,25 +136,27 @@ void setupInt1() {
     MCUCR |= (1 << ISC11);// INT0 falling edge PD2
     MCUCR &= ~(1 << ISC10);// INT0 falling edge PD2
     GICR |= (1 << INT1);     // Turns on INT0
-    sei();
 }
 
 //stage 9
 void goSleep() {
-    slUART_WriteStringNl("Sensor21 sleep");
+    slUART_WriteStringNl("Sensor12 sleep");
     slNRF24_Reset();
     slNRF24_PowerDown();
-    sendOk = 1;
     stage = 0;
-    counter2 = 0;
 }
 
-//stage 10
+void restart(){
+    slUART_WriteString("Total restart.\r\n");
+    wdt_enable(WDTO_15MS);
+    //wdt_disable();
+}
+
 void goReset() {
     counter = 0;
     slNRF24_PowerDown();
     clearData();
-    slUART_WriteStringNl("Sensor21 Reset");
+    slUART_WriteStringNl("Sensor12 Reset");
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
@@ -151,60 +164,52 @@ void goReset() {
     _delay_ms(10);
     //wait for inerupt
     stage = 0;
-    sendOk = 0;
-    counter2 = 0;
+    isTimeoutError = 0;
 }
 
-
-//stage 12
-void compareStrings() {
-    counter = 0;
-    counter2 = 0;
-    slNRF24_GetRegister(R_RX_PAYLOAD, data, 9);
+void getDataFromNRF24L01(){
+    slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 9);
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
+}
+
+void compareStrings() {
+    counter = 0;
     uint8_t go = 0;
-    uint8_t i = sizeof(data);
+    uint8_t i = sizeof(dataFromNRF24L01);
     while (i--) {
-        //slUART_WriteByte((char)data[i]);
-        if (data[i] == startStringSensor21[i]) {
+        //slUART_WriteByte((char)dataFromNRF24L01[i]);
+        if (dataFromNRF24L01[i] == startStringSensor12[i]) {
             go++;
         }
     }
     //slUART_WriteStringNl("-");
-    if (go == sizeof(data)) {
-        slUART_WriteStringNl("Sensor21 got start command");
+    if (go == sizeof(dataFromNRF24L01)) {
+        slUART_WriteStringNl("Sensor12 got start command");
         clearData();
         //stage = 13;
-        setBME280Mode();
-        getDataFromBME280();
-        measuerADC();
         sendVianRF24L01();
+        errors = 0;
     } else {
-        slUART_WriteStringNl("Sensor21 got false command");
+        slUART_WriteStringNl("Sensor12 got false command");
         goReset();
-        stage = 0;//wait for interupt from got data
+        stage = 0;//wait for interupt from got dataFromNRF24L01
     }
 }
 
 //stage13
 uint8_t setBME280Mode() {
-    counter = 0;
-    counter2 = 0;
-    //slUART_WriteStringNl("Sensor21 reset BME280");
+    //slUART_WriteStringNl("Sensor12 reset BME280");
     if (BME280_SetMode(BME280_MODE_FORCED)) {
         slUART_WriteString("BME280 set forced mode error!\r\n");
         return 1;
     }
-    //stage = 14;
     return 0;
 }
 
 //stage 14
 uint8_t getDataFromBME280() {
-    counter = 0;
-    counter2 = 0;
     int32_t temperature, humidity;
     int64_t pressure;
     if (BME280_ReadAll(&temperature, &pressure, &humidity)) {
@@ -216,85 +221,61 @@ uint8_t getDataFromBME280() {
     BME180measure.data.humidity = humidity;
     BME180measure.data.pressure = pressure;
     BME180measure.data.sensorId = SENSOR_ID;
-    slUART_WriteStringNl("Sensor21 got data from BME280");
-//     slUART_LogDecNl(BME180measure.data.temperature);
-//     slUART_LogDecNl(BME180measure.data.humidity);
-//     slUART_LogDecNl(BME180measure.data.pressure);
-    measuerADC();
-    slUART_LogDecWithSign(BME180measure.data.temperature);
-    slUART_WriteString("|");
-    slUART_LogHex(BME180measure.data.humidity);
-    slUART_WriteString("|");
-    slUART_LogHex(BME180measure.data.pressure);
-    slUART_WriteString("|");
-    slUART_LogDec(BME180measure.data.voltage);
-    slUART_WriteString("|");
-    slUART_LogDec(BME180measure.data.sensorId);
-    slUART_WriteStringNl("~");
-    //stage = 15;
     return 0;
 }
 
 //stage 15
-void measuerADC() {
+void getDataFromADC() {
     counter = 0;
-    counter2 = 0;
-    //slUART_WriteStringNl("Sensor21 measure ADC");
+    //slUART_WriteStringNl("Sensor12 measure ADC");
     int16_t wynik = 0;
     for (uint8_t i = 0; i < 12; i++) {
         wynik = wynik + slADC_measure(PC1);
     }
     //wynik = (((110 * ((wynik / 12) * 100)) / 102300) * 350) / 110;
     BME180measure.data.voltage = (uint16_t) wynik;
-    //stage = 16;
 }
 
 //stage16
 uint8_t sendVianRF24L01() {
+    cli();
     counter = 0;
-    counter2 = 0;
-    clearData();
-    fillBuferFromMEASURE(BME180measure, data);
+    isTimeoutError = 0;
+    uint8_t buffer[19];
+    fillBuferFromMEASURE(&BME180measure, buffer);
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
     slNRF24_TxPowerUp();
-    slNRF24_TransmitPayload(&data, 9);
-    //slUART_WriteStringNl("Sensor21 Sending data");
+    slNRF24_TransmitPayload(&buffer, 19);
+    //slUART_WriteStringNl("Sensor12 Sending data");
     slNRF24_RxPowerUp();
-    // slNRF24_FlushTx();
-    // slNRF24_FlushRx();
     slNRF24_Reset();
     clearData();
-    stage = 0;//goReset
-    sendOk = 1;
+    stage = 0;
+    sei();
     return 0;
 }
 
 
 ISR(TIMER0_OVF_vect) {
     //co 0.032768sek.
-    //if (sendOk == 1) {
-        counter = counter + 1;
-    //}
-    counter2 = counter2 + 1;
-    //if (counter == 732) {//24.00256 sek Next mesurements
-    if (counter == 200) {//24.00256 sek Next mesurements
+    counter = counter + 1;
+    if (counter == 200) {//6.55 sek Next mesurements
         counter = 0;
-        sendOk = 0;
-        stage = 10;
-        counter2 = 0;
-        setBME280Mode();
-        getDataFromBME280();
-        fillBuferFromMEASURE(BME180measure, data);
-
+        stage = 12;//make measure
     }
-    if (counter2 >= 1250) {//24.00256 sek Next mesurements
+    isTimeoutError = isTimeoutError + 1;
+    if (isTimeoutError >= 1250) {//40.96 sek after reset
         counter = 0;
-        sendOk = 0;
-        stage = 10;
-        counter2 = 0;
-        slUART_WriteStringNl("Sensor21 FAIL");
+        errors = errors + 1;
+        isTimeoutError = 0;
+        slUART_WriteStringNl("Sensor12 FAIL");
+        if(errors > 3){
+            restart();
+            errors =0;
+            wdt_disable();
+        }
     }
 }
 
@@ -302,22 +283,14 @@ ISR(INT1_vect) {
     status = 0;
     counter = 0;
     slNRF24_GetRegister(STATUS, &status, 1);
-    // slUART_WriteString("Sensor21 STATUS: ");
-    // slUART_LogBinaryNl(status);
     cli();
     if ((status & (1 << 6)) != 0) {//got data
-        //slUART_WriteStringNl("Sensor21 got data");
-        stage = 12;//CompareStrings
+        getDataFromNRF24L01();
         compareStrings();
     }
     if ((status & (1 << 5)) != 0) {//send ok
-        //slNRF24_PowerDown();
-        sendOk = 1;
         stage = 0;
-        //slNRF24_Reset();
-        //slUART_WriteStringNl("Sensor21 send ok");
-        //goSleep();
-        //stage = 9;//goSleep
+        errors = 0;
     }
     sei();
 }

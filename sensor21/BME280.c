@@ -390,7 +390,7 @@ Parameters:	t - Pointer to variable in which to write the temperature
 
 uint8_t BME280_ReadAll(int32_t *t, int64_t *p, int32_t *h) {
   uint8_t Buff[8] = {0};
-  uint32_t UncT, UncP, UncH;
+  int32_t UncT, UncP, UncH;
 #if showDebugDataBME280 == 1
   uint8_t cnt;
 #endif

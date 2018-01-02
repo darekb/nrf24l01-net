@@ -63,11 +63,11 @@ void slNRF24_Init(void) {
     val[0] = 0x2F;    //0b0010 00011 "2" sets it up to 750uS delay between every retry (at least 500us at 250kbps and if payload >5bytes in 1Mbps, and if payload >15byte in 2Mbps) "F" is number of retries (1-15, now 15)
     slNRF24_SetRegister(SETUP_RETR, val, 1);
 
-    //Enable ‘Auto Acknowledgment’ Function on data pipe 0 and pipe 1
+    //Enable ‘Auto Acknowledgment’ Function on dataFromNRF24L01 pipe 0 and pipe 1
     val[0] = 0x03;
     slNRF24_SetRegister(EN_AA, val, 1);
 
-    //enable data pipe 1 for RX
+    //enable dataFromNRF24L01 pipe 1 for RX
     val[0] = 0x03;
     slNRF24_SetRegister(EN_RXADDR, val, 1);
 

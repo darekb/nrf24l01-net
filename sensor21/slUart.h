@@ -59,6 +59,7 @@ void slUART_LogDecWithSign(int16_t dataIn);
 void slUART_LogDecNl(uint16_t dataIn);
 
 void slUART_LogHex(uint16_t dataIn);
+void slUART_LogHex32(int32_t dataIn);
 
 void slUART_LogHexNl(uint16_t dataIn);
 

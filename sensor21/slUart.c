@@ -98,6 +98,11 @@ void slUART_LogHex(uint16_t dataIn) {
     itoa(dataIn, buff, 16);
     slUART_WriteString(buff);
 }
+void slUART_LogHex32(int32_t dataIn) {
+    char buff[34];
+    itoa(dataIn, buff, 16);
+    slUART_WriteString(buff);
+}
 
 void slUART_LogHexNl(uint16_t dataIn) {
     slUART_LogHex(dataIn);
