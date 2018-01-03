@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cmake-avr"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="disassemble_atmega8.elf">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 disassemble_atmega8.elf"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="atmega8.elf">
+				<Option output="/home/dariusz/Arduino/nrf24l01-net/sensor11/bin/atmega8.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DF_CPU=16000000UL"/>
+					<Add directory="/home/dariusz/Arduino/nrf24l01-net/sensor11/../common"/>
+					<Add directory="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 atmega8.elf"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="atmega8.elf/fast">
+				<Option output="/home/dariusz/Arduino/nrf24l01-net/sensor11/bin/atmega8.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DF_CPU=16000000UL"/>
+					<Add directory="/home/dariusz/Arduino/nrf24l01-net/sensor11/../common"/>
+					<Add directory="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 atmega8.elf/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="build_all">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 build_all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="upload_eeprom">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 upload_eeprom"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="upload_atmega8">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 upload_atmega8"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="get_calibration">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 get_calibration"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="get_status">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 get_status"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="get_fuses">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 get_fuses"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="build_atmega8">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 build_atmega8"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="set_fuses">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 set_fuses"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="set_calibration">
+				<Option working_dir="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 set_calibration"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dariusz/Arduino/nrf24l01-net/sensor11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/BME280.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/BME280.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/main.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/main.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slAdc.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slAdc.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slBME180Measure.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slBME180Measure.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slI2C.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slI2C.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slNRF24.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slNRF24.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slSPI.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slSPI.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slUart.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slUart.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/avr-gcc.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/main.h.in">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

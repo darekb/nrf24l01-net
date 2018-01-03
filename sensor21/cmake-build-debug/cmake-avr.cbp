@@ -199,6 +199,12 @@
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor21/main.c">
 			<Option target="atmega8.elf"/>
 		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor21/slAdc.c">
 			<Option target="atmega8.elf"/>
 		</Unit>

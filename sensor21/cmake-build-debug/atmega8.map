@@ -46,43 +46,24 @@ Archive member included to satisfy reference by file (symbol)
                               /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_divmodhi4.o) (__udivmodhi4)
 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_umulhisi3.o)
                               /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muluhisi3.o) (__umulhisi3)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fixsfdi.o)
-                              CMakeFiles/atmega8.elf.dir/BME280.c.o (__fixsfdi)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(floatsisf.o)
-                              CMakeFiles/atmega8.elf.dir/BME280.c.o (__floatunsisf)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_negdi.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fixsfdi.o) (__fp_negdi)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_split3.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fixsfdi.o) (__fp_splitA)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3.o)
-                              CMakeFiles/atmega8.elf.dir/BME280.c.o (__mulsf3)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3.o) (__mulsf3x)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_inf.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o) (__fp_inf)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_nan.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o) (__fp_nan)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscA.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o) (__fp_pscA)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscB.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o) (__fp_pscB)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_round.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3.o) (__fp_round)
-/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_zero.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o) (__fp_szero)
 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(itoa_ncheck.o)
                               CMakeFiles/atmega8.elf.dir/slUart.c.o (__itoa_ncheck)
+/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ltoa_ncheck.o)
+                              CMakeFiles/atmega8.elf.dir/slUart.c.o (__ltoa_ncheck)
+/usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ultoa_ncheck.o)
+                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ltoa_ncheck.o) (__ultoa_common)
 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(utoa_ncheck.o)
                               /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(itoa_ncheck.o) (__utoa_common)
 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(strrev.o)
-                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(utoa_ncheck.o) (strrev)
+                              /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ultoa_ncheck.o) (strrev)
 
 Allocating common symbols
 Common symbol       size              file
 
 dataFromNRF24L01    0x9               CMakeFiles/atmega8.elf.dir/main.c.o
 stage               0x1               CMakeFiles/atmega8.elf.dir/main.c.o
-BME180measure       0x13              CMakeFiles/atmega8.elf.dir/main.c.o
+buffer              0xf               CMakeFiles/atmega8.elf.dir/main.c.o
+BME180measure       0xf               CMakeFiles/atmega8.elf.dir/main.c.o
 status              0x1               CMakeFiles/atmega8.elf.dir/main.c.o
 t_fine              0x4               CMakeFiles/atmega8.elf.dir/BME280.c.o
 
@@ -92,22 +73,17 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/crtatmega8.o
  .text          0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/main.c.o
  .data          0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/main.c.o
- .text.goSleep  0x0000000000000000       0x10 CMakeFiles/atmega8.elf.dir/main.c.o
  .text          0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/slUart.c.o
  .data          0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/slUart.c.o
  .bss           0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/slUart.c.o
  .text.slUART_Init
                 0x0000000000000000        0xa CMakeFiles/atmega8.elf.dir/slUart.c.o
- .text.slUART_LogBinary
+ .text.slUART_LogDecWithSign
                 0x0000000000000000       0x36 CMakeFiles/atmega8.elf.dir/slUart.c.o
- .text.slUART_LogBinaryNl
-                0x0000000000000000        0x8 CMakeFiles/atmega8.elf.dir/slUart.c.o
  .text.slUART_LogDecNl
                 0x0000000000000000        0x8 CMakeFiles/atmega8.elf.dir/slUart.c.o
- .text.slUART_LogHex
-                0x0000000000000000       0x36 CMakeFiles/atmega8.elf.dir/slUart.c.o
  .text.slUART_WriteBuffer
-                0x0000000000000000       0x6c CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x0000000000000000       0x42 CMakeFiles/atmega8.elf.dir/slUart.c.o
  .text.slUART_LogHexNl
                 0x0000000000000000        0x8 CMakeFiles/atmega8.elf.dir/slUart.c.o
  .text          0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/slSPI.c.o
@@ -129,6 +105,11 @@ Discarded input sections
  .data          0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/slAdc.c.o
  .bss           0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/slAdc.c.o
  .text.get_vol  0x0000000000000000       0xde CMakeFiles/atmega8.elf.dir/slAdc.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/main_functions.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/main_functions.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles/atmega8.elf.dir/main_functions.c.o
+ .text.clearData
+                0x0000000000000000       0x14 CMakeFiles/atmega8.elf.dir/main_functions.c.o
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulsi3.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulsi3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulsi3.o)
@@ -467,45 +448,15 @@ Discarded input sections
                 0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_umulhisi3.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_umulhisi3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fixsfdi.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fixsfdi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fixsfdi.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(floatsisf.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(floatsisf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(floatsisf.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_negdi.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_negdi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_negdi.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_split3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_split3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_split3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_inf.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_inf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_inf.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_nan.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_nan.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_nan.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscA.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscA.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscA.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscB.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscB.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscB.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_round.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_round.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_round.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_zero.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_zero.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_zero.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(itoa_ncheck.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(itoa_ncheck.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(itoa_ncheck.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ltoa_ncheck.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ltoa_ncheck.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ltoa_ncheck.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ultoa_ncheck.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ultoa_ncheck.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ultoa_ncheck.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(utoa_ncheck.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(utoa_ncheck.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(utoa_ncheck.o)
@@ -536,6 +487,7 @@ LOAD CMakeFiles/atmega8.elf.dir/slBME180Measure.c.o
 LOAD CMakeFiles/atmega8.elf.dir/BME280.c.o
 LOAD CMakeFiles/atmega8.elf.dir/slI2C.c.o
 LOAD CMakeFiles/atmega8.elf.dir/slAdc.c.o
+LOAD CMakeFiles/atmega8.elf.dir/main_functions.c.o
 START GROUP
 LOAD /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a
 LOAD /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a
@@ -633,7 +585,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x1d32
+.text           0x0000000000000000     0x1b02
  *(.vectors)
  .vectors       0x0000000000000000       0x26 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/crtatmega8.o
                 0x0000000000000000                __vectors
@@ -709,282 +661,258 @@ END GROUP
                 0x000000000000005c                __vector_18
                 0x000000000000005e                . = ALIGN (0x2)
  *(.text.*)
- .text.clearData
-                0x000000000000005e       0x10 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x000000000000005e                clearData
  .text.setupTimer
-                0x000000000000006e        0xe CMakeFiles/atmega8.elf.dir/main.c.o
-                0x000000000000006e                setupTimer
+                0x000000000000005e        0xe CMakeFiles/atmega8.elf.dir/main.c.o
+                0x000000000000005e                setupTimer
+ .text.setupResetPin
+                0x000000000000006c        0x6 CMakeFiles/atmega8.elf.dir/main.c.o
+                0x000000000000006c                setupResetPin
  .text.setupInt1
-                0x000000000000007c       0x18 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x000000000000007c                setupInt1
- .text.restart  0x0000000000000094       0x18 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x0000000000000094                restart
- .text.goReset  0x00000000000000ac       0x34 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x00000000000000ac                goReset
- .text.getDataFromNRF24L01
-                0x00000000000000e0       0x10 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x00000000000000e0                getDataFromNRF24L01
- .text.setBME280Mode
-                0x00000000000000f0       0x12 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x00000000000000f0                setBME280Mode
- .text.getDataFromBME280
-                0x0000000000000102       0xac CMakeFiles/atmega8.elf.dir/main.c.o
-                0x0000000000000102                getDataFromBME280
- .text.getDataFromADC
-                0x00000000000001ae       0x30 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x00000000000001ae                getDataFromADC
- .text.stage12  0x00000000000001de       0x6a CMakeFiles/atmega8.elf.dir/main.c.o
-                0x00000000000001de                stage12
+                0x0000000000000072       0x18 CMakeFiles/atmega8.elf.dir/main.c.o
+                0x0000000000000072                setupInt1
  .text.startup.main
-                0x0000000000000248       0x50 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x0000000000000248                main
- .text.sendVianRF24L01
-                0x0000000000000298       0x62 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x0000000000000298                sendVianRF24L01
- .text.compareStrings
-                0x00000000000002fa       0x4e CMakeFiles/atmega8.elf.dir/main.c.o
-                0x00000000000002fa                compareStrings
+                0x000000000000008a       0x5c CMakeFiles/atmega8.elf.dir/main.c.o
+                0x000000000000008a                main
  .text.__vector_9
-                0x0000000000000348       0xd0 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x0000000000000348                __vector_9
+                0x00000000000000e6       0xc4 CMakeFiles/atmega8.elf.dir/main.c.o
+                0x00000000000000e6                __vector_9
  .text.__vector_2
-                0x0000000000000418       0x7a CMakeFiles/atmega8.elf.dir/main.c.o
-                0x0000000000000418                __vector_2
+                0x00000000000001aa       0xca CMakeFiles/atmega8.elf.dir/main.c.o
+                0x00000000000001aa                __vector_2
  .text.slUART_SimpleTransmitInit
-                0x0000000000000492        0xc CMakeFiles/atmega8.elf.dir/slUart.c.o
-                0x0000000000000492                slUART_SimpleTransmitInit
+                0x0000000000000274        0xc CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x0000000000000274                slUART_SimpleTransmitInit
  .text.slUART_WriteByte
-                0x000000000000049e        0x8 CMakeFiles/atmega8.elf.dir/slUart.c.o
-                0x000000000000049e                slUART_WriteByte
+                0x0000000000000280        0x8 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x0000000000000280                slUART_WriteByte
  .text.slUART_WriteString
-                0x00000000000004a6       0x16 CMakeFiles/atmega8.elf.dir/slUart.c.o
-                0x00000000000004a6                slUART_WriteString
+                0x0000000000000288       0x16 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x0000000000000288                slUART_WriteString
  .text.slUART_WriteStringNl
-                0x00000000000004bc        0x8 CMakeFiles/atmega8.elf.dir/slUart.c.o
-                0x00000000000004bc                slUART_WriteStringNl
+                0x000000000000029e        0x8 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x000000000000029e                slUART_WriteStringNl
+ .text.slUART_LogBinary
+                0x00000000000002a6       0x36 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x00000000000002a6                slUART_LogBinary
+ .text.slUART_LogBinaryNl
+                0x00000000000002dc        0x8 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x00000000000002dc                slUART_LogBinaryNl
  .text.slUART_LogDec
-                0x00000000000004c4       0x36 CMakeFiles/atmega8.elf.dir/slUart.c.o
-                0x00000000000004c4                slUART_LogDec
- .text.slUART_LogDecWithSign
-                0x00000000000004fa       0x36 CMakeFiles/atmega8.elf.dir/slUart.c.o
-                0x00000000000004fa                slUART_LogDecWithSign
+                0x00000000000002e4       0x36 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x00000000000002e4                slUART_LogDec
+ .text.slUART_LogHex
+                0x000000000000031a       0x36 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x000000000000031a                slUART_LogHex
+ .text.slUART_LogHex32WithSign
+                0x0000000000000350       0x36 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x0000000000000350                slUART_LogHex32WithSign
  .text.slUART_LogHex32
-                0x0000000000000530       0x3a CMakeFiles/atmega8.elf.dir/slUart.c.o
-                0x0000000000000530                slUART_LogHex32
+                0x0000000000000386       0x36 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x0000000000000386                slUART_LogHex32
  .text.slSPI_Init
-                0x000000000000056a       0x22 CMakeFiles/atmega8.elf.dir/slSPI.c.o
-                0x000000000000056a                slSPI_Init
+                0x00000000000003bc       0x22 CMakeFiles/atmega8.elf.dir/slSPI.c.o
+                0x00000000000003bc                slSPI_Init
  .text.slSPI_TransferInt
-                0x000000000000058c        0xc CMakeFiles/atmega8.elf.dir/slSPI.c.o
-                0x000000000000058c                slSPI_TransferInt
+                0x00000000000003de        0xc CMakeFiles/atmega8.elf.dir/slSPI.c.o
+                0x00000000000003de                slSPI_TransferInt
  .text.slNRF24_IoInit
-                0x0000000000000598        0xa CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x0000000000000598                slNRF24_IoInit
+                0x00000000000003ea        0xa CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x00000000000003ea                slNRF24_IoInit
  .text.slNRF24_SetRegister
-                0x00000000000005a2       0x72 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x00000000000005a2                slNRF24_SetRegister
+                0x00000000000003f4       0x6e CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x00000000000003f4                slNRF24_SetRegister
  .text.slNRF24_GetRegister
-                0x0000000000000614       0x72 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x0000000000000614                slNRF24_GetRegister
+                0x0000000000000462       0x6e CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x0000000000000462                slNRF24_GetRegister
  .text.slNRF24_ChangeAddress
-                0x0000000000000686       0x70 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x0000000000000686                slNRF24_ChangeAddress
+                0x00000000000004d0       0x70 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x00000000000004d0                slNRF24_ChangeAddress
  .text.slNRF24_Init
-                0x00000000000006f6       0xd2 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x00000000000006f6                slNRF24_Init
+                0x0000000000000540       0xd4 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x0000000000000540                slNRF24_Init
  .text.slNRF24_Reset
-                0x00000000000007c8       0x2e CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x00000000000007c8                slNRF24_Reset
+                0x0000000000000614       0x2e CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x0000000000000614                slNRF24_Reset
  .text.slNRF24_TransmitPayload
-                0x00000000000007f6       0x94 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x00000000000007f6                slNRF24_TransmitPayload
+                0x0000000000000642       0x90 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x0000000000000642                slNRF24_TransmitPayload
  .text.slNRF24_TxPowerUp
-                0x000000000000088a       0x38 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x000000000000088a                slNRF24_TxPowerUp
+                0x00000000000006d2       0x38 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x00000000000006d2                slNRF24_TxPowerUp
  .text.slNRF24_PowerDown
-                0x00000000000008c2       0x32 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x00000000000008c2                slNRF24_PowerDown
+                0x000000000000070a       0x32 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x000000000000070a                slNRF24_PowerDown
  .text.slNRF24_FlushTx
-                0x00000000000008f4       0x22 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x00000000000008f4                slNRF24_FlushTx
+                0x000000000000073c       0x22 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x000000000000073c                slNRF24_FlushTx
  .text.slNRF24_RxPowerUp
-                0x0000000000000916       0x38 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x0000000000000916                slNRF24_RxPowerUp
+                0x000000000000075e       0x38 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x000000000000075e                slNRF24_RxPowerUp
  .text.slNRF24_FlushRx
-                0x000000000000094e       0x22 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
-                0x000000000000094e                slNRF24_FlushRx
+                0x0000000000000796       0x22 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
+                0x0000000000000796                slNRF24_FlushRx
  .text.fillBuferFromMEASURE
-                0x0000000000000970       0x18 CMakeFiles/atmega8.elf.dir/slBME180Measure.c.o
-                0x0000000000000970                fillBuferFromMEASURE
+                0x00000000000007b8       0x18 CMakeFiles/atmega8.elf.dir/slBME180Measure.c.o
+                0x00000000000007b8                fillBuferFromMEASURE
  .text.I2C_WriteData
-                0x0000000000000988       0x64 CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x0000000000000988                I2C_WriteData
+                0x00000000000007d0       0x64 CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x00000000000007d0                I2C_WriteData
  .text.I2C_ReadData
-                0x00000000000009ec       0xac CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x00000000000009ec                I2C_ReadData
+                0x0000000000000834       0xac CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x0000000000000834                I2C_ReadData
  .text.BME280_getCalibrationData
-                0x0000000000000a98      0x204 CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x0000000000000a98                BME280_getCalibrationData
+                0x00000000000008e0      0x204 CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x00000000000008e0                BME280_getCalibrationData
  .text.BME280_Init
-                0x0000000000000c9c       0xcc CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x0000000000000c9c                BME280_Init
+                0x0000000000000ae4       0xcc CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x0000000000000ae4                BME280_Init
  .text.BME280_CompensateT
-                0x0000000000000d68       0xfe CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x0000000000000d68                BME280_CompensateT
+                0x0000000000000bb0       0xfe CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x0000000000000bb0                BME280_CompensateT
  .text.BME280_CompensateP
-                0x0000000000000e66      0x41e CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x0000000000000e66                BME280_CompensateP
+                0x0000000000000cae      0x408 CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x0000000000000cae                BME280_CompensateP
  .text.BME280_CompensateH
-                0x0000000000001284      0x1c6 CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x0000000000001284                BME280_CompensateH
+                0x00000000000010b6      0x1c6 CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x00000000000010b6                BME280_CompensateH
  .text.BME280_ReadAll
-                0x000000000000144a      0x160 CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x000000000000144a                BME280_ReadAll
+                0x000000000000127c      0x158 CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x000000000000127c                BME280_ReadAll
  .text.BME280_SetMode
-                0x00000000000015aa       0x4a CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x00000000000015aa                BME280_SetMode
+                0x00000000000013d4       0x4a CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x00000000000013d4                BME280_SetMode
  .text.slI2C_WaitForComplete
-                0x00000000000015f4        0x8 CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x000000000000141e        0x8 CMakeFiles/atmega8.elf.dir/slI2C.c.o
  .text.slI2C_returnReadValue
-                0x00000000000015fc        0x6 CMakeFiles/atmega8.elf.dir/slI2C.c.o
-                0x00000000000015fc                slI2C_returnReadValue
+                0x0000000000001426        0x6 CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x0000000000001426                slI2C_returnReadValue
  .text.slI2C_SetSLA
-                0x0000000000001602       0x3a CMakeFiles/atmega8.elf.dir/slI2C.c.o
-                0x0000000000001602                slI2C_SetSLA
+                0x000000000000142c       0x3a CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x000000000000142c                slI2C_SetSLA
  .text.slI2C_Init
-                0x000000000000163c       0x14 CMakeFiles/atmega8.elf.dir/slI2C.c.o
-                0x000000000000163c                slI2C_Init
+                0x0000000000001466       0x14 CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x0000000000001466                slI2C_Init
  .text.slI2C_Start
-                0x0000000000001650       0x26 CMakeFiles/atmega8.elf.dir/slI2C.c.o
-                0x0000000000001650                slI2C_Start
+                0x000000000000147a       0x26 CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x000000000000147a                slI2C_Start
  .text.slI2C_Stop
-                0x0000000000001676       0x14 CMakeFiles/atmega8.elf.dir/slI2C.c.o
-                0x0000000000001676                slI2C_Stop
+                0x00000000000014a0       0x14 CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x00000000000014a0                slI2C_Stop
  .text.slI2C_WriteByte
-                0x000000000000168a       0x3a CMakeFiles/atmega8.elf.dir/slI2C.c.o
-                0x000000000000168a                slI2C_WriteByte
+                0x00000000000014b4       0x3a CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x00000000000014b4                slI2C_WriteByte
  .text.slI2C_ReadByte_NACK
-                0x00000000000016c4       0x24 CMakeFiles/atmega8.elf.dir/slI2C.c.o
-                0x00000000000016c4                slI2C_ReadByte_NACK
+                0x00000000000014ee       0x24 CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x00000000000014ee                slI2C_ReadByte_NACK
  .text.slI2C_ReadByte_ACK
-                0x00000000000016e8       0x24 CMakeFiles/atmega8.elf.dir/slI2C.c.o
-                0x00000000000016e8                slI2C_ReadByte_ACK
+                0x0000000000001512       0x24 CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x0000000000001512                slI2C_ReadByte_ACK
  .text.slADC_init
-                0x000000000000170c       0x10 CMakeFiles/atmega8.elf.dir/slAdc.c.o
-                0x000000000000170c                slADC_init
+                0x0000000000001536       0x10 CMakeFiles/atmega8.elf.dir/slAdc.c.o
+                0x0000000000001536                slADC_init
  .text.slADC_measure
-                0x000000000000171c       0x18 CMakeFiles/atmega8.elf.dir/slAdc.c.o
-                0x000000000000171c                slADC_measure
+                0x0000000000001546       0x18 CMakeFiles/atmega8.elf.dir/slAdc.c.o
+                0x0000000000001546                slADC_measure
+ .text.restart  0x000000000000155e        0xa CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x000000000000155e                restart
+ .text.setBME280Mode
+                0x0000000000001568       0x12 CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x0000000000001568                setBME280Mode
+ .text.getDataFromBME280
+                0x000000000000157a       0x86 CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x000000000000157a                getDataFromBME280
+ .text.getDataFromADC
+                0x0000000000001600       0x30 CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x0000000000001600                getDataFromADC
+ .text.getMesurements
+                0x0000000000001630       0x62 CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x0000000000001630                getMesurements
+ .text.goReset  0x0000000000001692       0x1e CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x0000000000001692                goReset
+ .text.isStartStringMatch
+                0x00000000000016b0       0x30 CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x00000000000016b0                isStartStringMatch
+ .text.getDataFromNRF24L01
+                0x00000000000016e0        0xe CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x00000000000016e0                getDataFromNRF24L01
+ .text.sendVianRF24L01
+                0x00000000000016ee       0x2e CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x00000000000016ee                sendVianRF24L01
  .text.libgcc.mul
-                0x0000000000001734       0x1e /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulsi3.o)
-                0x0000000000001734                __mulsi3
+                0x000000000000171c       0x1e /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulsi3.o)
+                0x000000000000171c                __mulsi3
  .text.libgcc.mul
-                0x0000000000001752       0x14 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muluhisi3.o)
-                0x0000000000001752                __muluhisi3
+                0x000000000000173a       0x14 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muluhisi3.o)
+                0x000000000000173a                __muluhisi3
  .text.libgcc.mul
-                0x0000000000001766        0xc /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulshisi3.o)
-                0x0000000000001766                __mulshisi3
-                0x000000000000176a                __mulohisi3
+                0x000000000000174e        0xc /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulshisi3.o)
+                0x000000000000174e                __mulshisi3
+                0x0000000000001752                __mulohisi3
  .text.libgcc.mul
-                0x0000000000001772       0x92 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muldi3.o)
-                0x0000000000001772                __muldi3
+                0x000000000000175a       0x92 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muldi3.o)
+                0x000000000000175a                __muldi3
  .text.libgcc.mul
-                0x0000000000001804       0x10 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muldi3_6.o)
-                0x0000000000001804                __muldi3_6
+                0x00000000000017ec       0x10 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muldi3_6.o)
+                0x00000000000017ec                __muldi3_6
  .text.libgcc.div
-                0x0000000000001814       0x56 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_divdi3.o)
-                0x0000000000001814                __moddi3
-                0x0000000000001818                __divdi3
-                0x000000000000181a                __divdi3_moddi3
+                0x00000000000017fc       0x56 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_divdi3.o)
+                0x00000000000017fc                __moddi3
+                0x0000000000001800                __divdi3
+                0x0000000000001802                __divdi3_moddi3
  .text.libgcc.div
-                0x000000000000186a       0x1a /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_udivdi3.o)
-                0x000000000000186a                __umoddi3
-                0x000000000000186e                __udivdi3
-                0x0000000000001870                __udivdi3_umoddi3
+                0x0000000000001852       0x1a /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_udivdi3.o)
+                0x0000000000001852                __umoddi3
+                0x0000000000001856                __udivdi3
+                0x0000000000001858                __udivdi3_umoddi3
  .text.libgcc.div
-                0x0000000000001884       0x7e /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_udivmod64.o)
-                0x0000000000001884                __udivmod64
- .text.libgcc   0x0000000000001902       0x20 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_negdi2.o)
-                0x0000000000001902                __negdi2
+                0x000000000000186c       0x7e /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_udivmod64.o)
+                0x000000000000186c                __udivmod64
+ .text.libgcc   0x00000000000018ea       0x20 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_negdi2.o)
+                0x00000000000018ea                __negdi2
  .text.libgcc.prologue
-                0x0000000000001922       0x38 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_prologue.o)
-                0x0000000000001922                __prologue_saves__
+                0x000000000000190a       0x38 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_prologue.o)
+                0x000000000000190a                __prologue_saves__
  .text.libgcc.prologue
-                0x000000000000195a       0x36 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_epilogue.o)
-                0x000000000000195a                __epilogue_restores__
+                0x0000000000001942       0x36 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_epilogue.o)
+                0x0000000000001942                __epilogue_restores__
  .text.libgcc.builtins
-                0x0000000000001990       0x32 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_ashldi3.o)
-                0x0000000000001990                __ashldi3
+                0x0000000000001978       0x32 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_ashldi3.o)
+                0x0000000000001978                __ashldi3
  .text.libgcc.builtins
-                0x00000000000019c2       0x3c /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_ashrdi3.o)
-                0x00000000000019c2                __ashrdi3
-                0x00000000000019c6                __lshrdi3
- .text.libgcc   0x00000000000019fe       0x12 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_adddi3.o)
-                0x00000000000019fe                __adddi3
- .text.libgcc   0x0000000000001a10       0x12 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_subdi3.o)
-                0x0000000000001a10                __subdi3
- .text.libgcc   0x0000000000001a22       0x18 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_cmpdi2_s8.o)
-                0x0000000000001a22                __cmpdi2_s8
+                0x00000000000019aa       0x3c /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_ashrdi3.o)
+                0x00000000000019aa                __ashrdi3
+                0x00000000000019ae                __lshrdi3
+ .text.libgcc   0x00000000000019e6       0x12 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_adddi3.o)
+                0x00000000000019e6                __adddi3
+ .text.libgcc   0x00000000000019f8       0x12 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_subdi3.o)
+                0x00000000000019f8                __subdi3
+ .text.libgcc   0x0000000000001a0a       0x18 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_cmpdi2_s8.o)
+                0x0000000000001a0a                __cmpdi2_s8
  .text.libgcc.mul
-                0x0000000000001a3a       0x18 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_umulhisi3.o)
-                0x0000000000001a3a                __umulhisi3
- .text.avr-libc.fplib
-                0x0000000000001a52       0x74 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fixsfdi.o)
-                0x0000000000001a52                __fixsfdi
-                0x0000000000001a5c                __fixunssfdi
- .text.avr-libc.fplib
-                0x0000000000001ac6       0x7a /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(floatsisf.o)
-                0x0000000000001ac6                __floatunsisf
-                0x0000000000001aca                __floatsisf
- .text.avr-libc.fplib
-                0x0000000000001b40       0x20 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_negdi.o)
-                0x0000000000001b40                __fp_negdi
- .text.avr-libc.fplib
-                0x0000000000001b60       0x44 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_split3.o)
-                0x0000000000001b60                __fp_split3
-                0x0000000000001b70                __fp_splitA
- .text.avr-libc.fplib
-                0x0000000000001ba4        0x4 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3.o)
-                0x0000000000001ba4                __mulsf3
- .text.avr-libc.fplib
-                0x0000000000001ba8       0xc2 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(mulsf3x.o)
-                0x0000000000001bbc                __mulsf3x
-                0x0000000000001bc0                __mulsf3_pse
- .text.avr-libc.fplib
-                0x0000000000001c6a        0xc /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_inf.o)
-                0x0000000000001c6a                __fp_inf
- .text.avr-libc.fplib
-                0x0000000000001c76        0x6 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_nan.o)
-                0x0000000000001c76                __fp_nan
- .text.avr-libc.fplib
-                0x0000000000001c7c        0xe /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscA.o)
-                0x0000000000001c7c                __fp_pscA
- .text.avr-libc.fplib
-                0x0000000000001c8a        0xe /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_pscB.o)
-                0x0000000000001c8a                __fp_pscB
- .text.avr-libc.fplib
-                0x0000000000001c98       0x22 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_round.o)
-                0x0000000000001c98                __fp_round
- .text.avr-libc.fplib
-                0x0000000000001cba        0xe /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libm.a(fp_zero.o)
-                0x0000000000001cba                __fp_zero
-                0x0000000000001cbc                __fp_szero
+                0x0000000000001a22       0x18 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_umulhisi3.o)
+                0x0000000000001a22                __umulhisi3
  .text.avr-libc
-                0x0000000000001cc8       0x14 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(itoa_ncheck.o)
-                0x0000000000001cc8                __itoa_ncheck
+                0x0000000000001a3a       0x14 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(itoa_ncheck.o)
+                0x0000000000001a3a                __itoa_ncheck
  .text.avr-libc
-                0x0000000000001cdc       0x32 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(utoa_ncheck.o)
-                0x0000000000001cdc                __utoa_ncheck
-                0x0000000000001cde                __utoa_common
+                0x0000000000001a4e       0x1c /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ltoa_ncheck.o)
+                0x0000000000001a4e                __ltoa_ncheck
  .text.avr-libc
-                0x0000000000001d0e       0x20 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(strrev.o)
-                0x0000000000001d0e                strrev
-                0x0000000000001d2e                . = ALIGN (0x2)
+                0x0000000000001a6a       0x42 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ultoa_ncheck.o)
+                0x0000000000001a6a                __ultoa_ncheck
+                0x0000000000001a6c                __ultoa_common
+ .text.avr-libc
+                0x0000000000001aac       0x32 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(utoa_ncheck.o)
+                0x0000000000001aac                __utoa_ncheck
+                0x0000000000001aae                __utoa_common
+ .text.avr-libc
+                0x0000000000001ade       0x20 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(strrev.o)
+                0x0000000000001ade                strrev
+                0x0000000000001afe                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000001d2e        0x0 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_exit.o)
-                0x0000000000001d2e                exit
-                0x0000000000001d2e                _exit
+ .fini9         0x0000000000001afe        0x0 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_exit.o)
+                0x0000000000001afe                exit
+                0x0000000000001afe                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1003,60 +931,63 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000001d2e        0x4 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_exit.o)
+ .fini0         0x0000000000001afe        0x4 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000001d32                _etext = .
+                0x0000000000001b02                _etext = .
 
-.data           0x0000000000800060       0xfc load address 0x0000000000001d32
+.data           0x0000000000800060      0x15a load address 0x0000000000001b02
                 0x0000000000800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
  *(.rodata)
- .rodata        0x0000000000800060        0x9 CMakeFiles/atmega8.elf.dir/main.c.o
+ .rodata        0x0000000000800060        0x9 CMakeFiles/atmega8.elf.dir/main_functions.c.o
                 0x0000000000800060                startStringSensor12
  *(.rodata*)
  .rodata.str1.1
-                0x0000000000800069       0xf3 CMakeFiles/atmega8.elf.dir/main.c.o
-                                         0xfc (size before relaxing)
+                0x0000000000800069       0xd1 CMakeFiles/atmega8.elf.dir/main.c.o
+                                         0xda (size before relaxing)
  .rodata.str1.1
-                0x000000000080015c       0xf3 CMakeFiles/atmega8.elf.dir/slUart.c.o
+                0x000000000080013a       0xd1 CMakeFiles/atmega8.elf.dir/slUart.c.o
                                           0x3 (size before relaxing)
+ .rodata.str1.1
+                0x000000000080013a       0x80 CMakeFiles/atmega8.elf.dir/main_functions.c.o
  *(.gnu.linkonce.d*)
-                0x0000000000800250                . = ALIGN (0x2)
-                0x0000000000800250                _edata = .
-                0x0000000000800250                PROVIDE (__data_end, .)
+                0x000000000080020c                . = ALIGN (0x2)
+                0x000000000080020c                _edata = .
+                0x000000000080020c                PROVIDE (__data_end, .)
 
-.bss            0x000000000080015c       0x4b
-                0x000000000080015c                PROVIDE (__bss_start, .)
+.bss            0x00000000008001ba       0x56
+                0x00000000008001ba                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x000000000080015c        0x5 CMakeFiles/atmega8.elf.dir/main.c.o
-                0x000000000080015c                isTimeoutError
-                0x000000000080015e                counter
-                0x0000000000800160                errors
- .bss           0x0000000000800161       0x21 CMakeFiles/atmega8.elf.dir/BME280.c.o
- .bss           0x0000000000800182        0x3 CMakeFiles/atmega8.elf.dir/slI2C.c.o
-                0x0000000000800182                slI2C_statusFlags
-                0x0000000000800183                I2C_Error
-                0x0000000000800184                slI2C_readByteValue
+ .bss           0x00000000008001ba        0x5 CMakeFiles/atmega8.elf.dir/main.c.o
+                0x00000000008001ba                isTimeoutError
+                0x00000000008001bc                counter
+                0x00000000008001be                errors
+ .bss           0x00000000008001bf       0x21 CMakeFiles/atmega8.elf.dir/BME280.c.o
+ .bss           0x00000000008001e0        0x3 CMakeFiles/atmega8.elf.dir/slI2C.c.o
+                0x00000000008001e0                slI2C_statusFlags
+                0x00000000008001e1                I2C_Error
+                0x00000000008001e2                slI2C_readByteValue
  *(.bss*)
  *(COMMON)
- COMMON         0x0000000000800185       0x1e CMakeFiles/atmega8.elf.dir/main.c.o
-                0x0000000000800185                dataFromNRF24L01
-                0x000000000080018e                stage
-                0x000000000080018f                BME180measure
-                0x00000000008001a2                status
- COMMON         0x00000000008001a3        0x4 CMakeFiles/atmega8.elf.dir/BME280.c.o
-                0x00000000008001a3                t_fine
-                0x00000000008001a7                PROVIDE (__bss_end, .)
-                0x0000000000001d32                __data_load_start = LOADADDR (.data)
-                0x0000000000001e2e                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00000000008001e3       0x29 CMakeFiles/atmega8.elf.dir/main.c.o
+                0x00000000008001e3                dataFromNRF24L01
+                0x00000000008001ec                stage
+                0x00000000008001ed                buffer
+                0x00000000008001fc                BME180measure
+                0x000000000080020b                status
+ COMMON         0x000000000080020c        0x4 CMakeFiles/atmega8.elf.dir/BME280.c.o
+                0x000000000080020c                t_fine
+                0x0000000000800210                PROVIDE (__bss_end, .)
+                0x0000000000001b02                __data_load_start = LOADADDR (.data)
+                0x0000000000001c5c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00000000008001a7        0x0
-                0x00000000008001a7                PROVIDE (__noinit_start, .)
+.noinit         0x0000000000800210        0x0
+                0x0000000000800210                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00000000008001a7                PROVIDE (__noinit_end, .)
-                0x00000000008001a7                _end = .
-                0x00000000008001a7                PROVIDE (__heap_start, .)
+                0x0000000000800210                PROVIDE (__noinit_end, .)
+                0x0000000000800210                _end = .
+                0x0000000000800210                PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)
@@ -1106,6 +1037,7 @@ END GROUP
  .comment       0x0000000000000011       0x12 CMakeFiles/atmega8.elf.dir/BME280.c.o
  .comment       0x0000000000000011       0x12 CMakeFiles/atmega8.elf.dir/slI2C.c.o
  .comment       0x0000000000000011       0x12 CMakeFiles/atmega8.elf.dir/slAdc.c.o
+ .comment       0x0000000000000011       0x12 CMakeFiles/atmega8.elf.dir/main_functions.c.o
 
 .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c

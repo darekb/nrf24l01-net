@@ -326,9 +326,9 @@ int32_t BME280_CompensateT(int32_t adc_T) {
 // Returns pressure in Pa as unsigned 32 bit integer in Q24.8 format (24 integer bits and 8 fractional bits).
 // Output value of �24674867� represents 24674867/256 = 96386.2 Pa = 963.862 hPa
 
-int64_t BME280_CompensateP(int32_t adc_P) {
+uint32_t BME280_CompensateP(int32_t adc_P) {
   int64_t var1, var2, p;
-  int64_t final;
+  //int64_t final;
   var1 = (int64_t) t_fine - 128000;
   var2 = var1 * var1 * (int64_t) CalibParam.dig_P6;
   var2 = var2 + ((var1 * (int64_t) CalibParam.dig_P5) << 17);
@@ -342,7 +342,7 @@ int64_t BME280_CompensateP(int32_t adc_P) {
   var2 = (((int64_t) CalibParam.dig_P8) * p) >> 19;
   p = ((p + var1 + var2) >> 8) + (((int64_t) CalibParam.dig_P7) << 4);
 
-  final = ((uint32_t) p) / 256.0;
+  //final = ((uint32_t) p) / 256.0;
 
 #if showDebugDataBME280 == 1
   slUART_WriteString("BME280_CompensateP: ");
@@ -351,7 +351,8 @@ int64_t BME280_CompensateP(int32_t adc_P) {
   slUART_LogBinary((uint8_t) ((p >> 16) & 0xFF));
   slUART_LogBinary((uint8_t) ((p >> 24)));
 #endif
-  return final;
+  //return final;
+  return ((uint32_t) p);
 }
 
 // Returns humidity in %RH as unsigned 32 bit integer in Q22.10 format (22 integer and 10 fractional bits).
@@ -388,7 +389,7 @@ Parameters:	t - Pointer to variable in which to write the temperature
 			h - Pointer to variable in which to write the humidity
 **********************************************************************/
 
-uint8_t BME280_ReadAll(int32_t *t, int64_t *p, int32_t *h) {
+uint8_t BME280_ReadAll(int32_t *t, uint32_t *p, int32_t *h) {
   uint8_t Buff[8] = {0};
   int32_t UncT, UncP, UncH;
 #if showDebugDataBME280 == 1

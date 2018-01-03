@@ -66,12 +66,12 @@ CMAKE_BINARY_DIR = /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug
 CMakeFiles/disassemble_atmega8.elf.dir/all: CMakeFiles/atmega8.elf.dir/all
 	$(MAKE) -f CMakeFiles/disassemble_atmega8.elf.dir/build.make CMakeFiles/disassemble_atmega8.elf.dir/depend
 	$(MAKE) -f CMakeFiles/disassemble_atmega8.elf.dir/build.make CMakeFiles/disassemble_atmega8.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=14 "Built target disassemble_atmega8.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=15 "Built target disassemble_atmega8.elf"
 .PHONY : CMakeFiles/disassemble_atmega8.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/disassemble_atmega8.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/disassemble_atmega8.elf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/disassemble_atmega8.elf.dir/rule
@@ -98,7 +98,7 @@ clean: CMakeFiles/disassemble_atmega8.elf.dir/clean
 CMakeFiles/atmega8.elf.dir/all:
 	$(MAKE) -f CMakeFiles/atmega8.elf.dir/build.make CMakeFiles/atmega8.elf.dir/depend
 	$(MAKE) -f CMakeFiles/atmega8.elf.dir/build.make CMakeFiles/atmega8.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target atmega8.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target atmega8.elf"
 .PHONY : CMakeFiles/atmega8.elf.dir/all
 
 # Include target in all.
@@ -108,7 +108,7 @@ all: CMakeFiles/atmega8.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/atmega8.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/atmega8.elf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/atmega8.elf.dir/rule
@@ -135,7 +135,7 @@ clean: CMakeFiles/atmega8.elf.dir/clean
 CMakeFiles/build_all.dir/all: CMakeFiles/atmega8.elf.dir/all
 	$(MAKE) -f CMakeFiles/build_all.dir/build.make CMakeFiles/build_all.dir/depend
 	$(MAKE) -f CMakeFiles/build_all.dir/build.make CMakeFiles/build_all.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target build_all"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target build_all"
 .PHONY : CMakeFiles/build_all.dir/all
 
 # Include target in all.
@@ -145,7 +145,7 @@ all: CMakeFiles/build_all.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/build_all.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/build_all.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/build_all.dir/rule
@@ -172,12 +172,12 @@ clean: CMakeFiles/build_all.dir/clean
 CMakeFiles/upload_eeprom.dir/all: CMakeFiles/atmega8.elf.dir/all
 	$(MAKE) -f CMakeFiles/upload_eeprom.dir/build.make CMakeFiles/upload_eeprom.dir/depend
 	$(MAKE) -f CMakeFiles/upload_eeprom.dir/build.make CMakeFiles/upload_eeprom.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target upload_eeprom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=23,24 "Built target upload_eeprom"
 .PHONY : CMakeFiles/upload_eeprom.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/upload_eeprom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/upload_eeprom.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/upload_eeprom.dir/rule
@@ -204,12 +204,12 @@ clean: CMakeFiles/upload_eeprom.dir/clean
 CMakeFiles/upload_atmega8.dir/all: CMakeFiles/atmega8.elf.dir/all
 	$(MAKE) -f CMakeFiles/upload_atmega8.dir/build.make CMakeFiles/upload_atmega8.dir/depend
 	$(MAKE) -f CMakeFiles/upload_atmega8.dir/build.make CMakeFiles/upload_atmega8.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target upload_atmega8"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target upload_atmega8"
 .PHONY : CMakeFiles/upload_atmega8.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/upload_atmega8.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/upload_atmega8.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/upload_atmega8.dir/rule
@@ -236,7 +236,7 @@ clean: CMakeFiles/upload_atmega8.dir/clean
 CMakeFiles/get_calibration.dir/all:
 	$(MAKE) -f CMakeFiles/get_calibration.dir/build.make CMakeFiles/get_calibration.dir/depend
 	$(MAKE) -f CMakeFiles/get_calibration.dir/build.make CMakeFiles/get_calibration.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=15 "Built target get_calibration"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=16 "Built target get_calibration"
 .PHONY : CMakeFiles/get_calibration.dir/all
 
 # Build rule for subdir invocation for target.
@@ -268,7 +268,7 @@ clean: CMakeFiles/get_calibration.dir/clean
 CMakeFiles/get_status.dir/all:
 	$(MAKE) -f CMakeFiles/get_status.dir/build.make CMakeFiles/get_status.dir/depend
 	$(MAKE) -f CMakeFiles/get_status.dir/build.make CMakeFiles/get_status.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=17 "Built target get_status"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=18 "Built target get_status"
 .PHONY : CMakeFiles/get_status.dir/all
 
 # Build rule for subdir invocation for target.
@@ -300,7 +300,7 @@ clean: CMakeFiles/get_status.dir/clean
 CMakeFiles/get_fuses.dir/all:
 	$(MAKE) -f CMakeFiles/get_fuses.dir/build.make CMakeFiles/get_fuses.dir/depend
 	$(MAKE) -f CMakeFiles/get_fuses.dir/build.make CMakeFiles/get_fuses.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=16 "Built target get_fuses"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=17 "Built target get_fuses"
 .PHONY : CMakeFiles/get_fuses.dir/all
 
 # Build rule for subdir invocation for target.
@@ -332,12 +332,12 @@ clean: CMakeFiles/get_fuses.dir/clean
 CMakeFiles/build_atmega8.dir/all: CMakeFiles/atmega8.elf.dir/all
 	$(MAKE) -f CMakeFiles/build_atmega8.dir/build.make CMakeFiles/build_atmega8.dir/depend
 	$(MAKE) -f CMakeFiles/build_atmega8.dir/build.make CMakeFiles/build_atmega8.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target build_atmega8"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target build_atmega8"
 .PHONY : CMakeFiles/build_atmega8.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/build_atmega8.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/build_atmega8.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/build_atmega8.dir/rule
@@ -364,7 +364,7 @@ clean: CMakeFiles/build_atmega8.dir/clean
 CMakeFiles/set_fuses.dir/all:
 	$(MAKE) -f CMakeFiles/set_fuses.dir/build.make CMakeFiles/set_fuses.dir/depend
 	$(MAKE) -f CMakeFiles/set_fuses.dir/build.make CMakeFiles/set_fuses.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=19 "Built target set_fuses"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=20 "Built target set_fuses"
 .PHONY : CMakeFiles/set_fuses.dir/all
 
 # Build rule for subdir invocation for target.
@@ -396,7 +396,7 @@ clean: CMakeFiles/set_fuses.dir/clean
 CMakeFiles/set_calibration.dir/all:
 	$(MAKE) -f CMakeFiles/set_calibration.dir/build.make CMakeFiles/set_calibration.dir/depend
 	$(MAKE) -f CMakeFiles/set_calibration.dir/build.make CMakeFiles/set_calibration.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=18 "Built target set_calibration"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=19 "Built target set_calibration"
 .PHONY : CMakeFiles/set_calibration.dir/all
 
 # Build rule for subdir invocation for target.

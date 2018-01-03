@@ -9,14 +9,14 @@
 struct measureStruct {
     int32_t temperature;
     int32_t humidity;
-    int64_t pressure;
+    uint32_t pressure;
     uint16_t voltage;
     uint8_t sensorId;
 };
 
 union MEASURE {
     struct measureStruct data;
-    uint8_t bytesData[19];
+    uint8_t bytesData[15];
 };
 
 void fillBuferFromMEASURE(union MEASURE *structure, uint8_t *buffer);

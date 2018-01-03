@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/dariusz/Arduino/nrf24l01-net/sensor21/BME280.c" "/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles/atmega8.elf.dir/BME280.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/sensor21/main.c" "/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles/atmega8.elf.dir/main.c.o"
+  "/home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.c" "/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles/atmega8.elf.dir/main_functions.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/sensor21/slAdc.c" "/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles/atmega8.elf.dir/slAdc.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/sensor21/slBME180Measure.c" "/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles/atmega8.elf.dir/slBME180Measure.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/sensor21/slI2C.c" "/home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles/atmega8.elf.dir/slI2C.c.o"
