@@ -56,5 +56,5 @@
 
 void slSPI_Init();
 uint8_t slSPI_TransferInt(uint8_t data);
-//void slSPI_WriteString(const char myString[], char *buffOut);
+void slSPI_WriteString(char *myString, char *buffOut);
 #endif //CMAKE_AVR_SPLSPI_H

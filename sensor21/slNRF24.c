@@ -1,11 +1,3 @@
-/*
- * RF_Tranceiver.c
- *
- * Created: 2012-08-10 15:24:35
- *  Author: Kalle
- *  Atmega88
- */
-
 #include <avr/io.h>
 #include <stdio.h>
 #include <util/delay.h>
@@ -25,7 +17,6 @@ void slNRF24_IoInit(void) {
 
 void slNRF24_SetRegister(uint8_t reg, void *dataIn, uint8_t len){
     uint8_t *data = dataIn;
-    //cli();
     _delay_us(10);
     CSN_LOW();
     _delay_us(10);
@@ -36,10 +27,8 @@ void slNRF24_SetRegister(uint8_t reg, void *dataIn, uint8_t len){
         _delay_us(10);
     }
     CSN_HIGH();
-    //sei();
 }
 void slNRF24_GetRegister(uint8_t reg, uint8_t *dataIn, uint8_t len){
-    //cli();
     _delay_us(10);
     CSN_LOW();
     _delay_us(10);
@@ -49,8 +38,13 @@ void slNRF24_GetRegister(uint8_t reg, uint8_t *dataIn, uint8_t len){
         dataIn[i] = slSPI_TransferInt(0x00);
         _delay_us(10);
     }
+    // if(len < PAYLOAD_SIZE && len > 5){//propably get data from other nRf24L01
+    //     for(uint8_t i=len; i<PAYLOAD_SIZE; i++){
+    //         slSPI_TransferInt(0x00);
+    //         _delay_us(10);
+    //     }
+    // }
     CSN_HIGH();
-    //sei();
 }
 
 
@@ -77,7 +71,7 @@ void slNRF24_Init(void)
     slNRF24_SetRegister(SETUP_AW, val, 1);
 
     //RF channel setup - 2,400-2,527GHz 1MHz/chanel
-    val[0]=0x1;//2,401Ghz
+    val[0]=0x10;//2,401Ghz
     slNRF24_SetRegister(RF_CH, val, 1);
 
     //RF setup	- 2Mbps spped and 0dBm
@@ -86,7 +80,7 @@ void slNRF24_Init(void)
 
     slNRF24_ChangeAddress(SENSOR_ADDR);
 
-    val[0]=9;
+    val[0]=PAYLOAD_SIZE;
     slNRF24_SetRegister(RX_PW_P0, val, 1);
     slNRF24_SetRegister(RX_PW_P1, val, 1);
 
@@ -128,8 +122,6 @@ void slNRF24_Reset(void)
 void slNRF24_TransmitPayload(void *dataIn, uint8_t len)
 {
     uint8_t *data = dataIn;
-
-    //cli();
     slNRF24_SetRegister(RX_PW_P0, &len, 1);
     _delay_us(10);
     CSN_LOW();
@@ -146,8 +138,6 @@ void slNRF24_TransmitPayload(void *dataIn, uint8_t len)
     _delay_us(20);
     CE_LOW();
     _delay_ms(10);
-    //sei();
-    //cli();    //Disable global interrupt...
 
 }
 

@@ -1,50 +1,31 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <avr/wdt.h>
 
 #ifndef F_CPU
-#define F_CPU 16000000UL
+#define F_CPU 8000000UL
 #endif
 
-#define showDebugDataMain 0
-#define sensorsCount 3
+#define showDebugDataMain 1
+
+#if showDebugDataMain == 1
+
+#include "slUart.h"
+
+#endif
 
 #include "main.h"
-#include "slUart.h"
 #include "slNRF24.h"
-#include "slBME180Measure.h"
 #include "slSPI.h"
+#include "main_functions.h"
 
-#define LED (1 << PB0)
-#define LED_TOG PORTB ^= LED
-
-
-void clearData();
 
 void setupTimer();
 
 void setupInt0();
 
-//server
-void sensor11start();
 
-void saveDataFromNRF();
-
-void saveErrorData();
-
-void sendingSensorDataViaUart();
-
-uint8_t data[9];
 uint8_t status;
-struct MEASURE BME180measure[sensorsCount] = {
-        {0, 0, 0, 0, 21},
-        {0, 0, 0, 0, 11},
-        {0, 0, 0, 0, 12}
-};
 volatile uint8_t stage = 0;
 //stage
 volatile uint16_t counter = 0;
@@ -52,82 +33,62 @@ volatile uint16_t counter = 0;
 volatile uint16_t counter2 = 0;
 //counter for reset mesurements
 volatile uint16_t counter3 = 0;
+
 //counter for fail response form sensor
-volatile uint8_t sensorNr = 0;
-//nr of sensor from sensorsStrings
-char sensorsStrings[sensorsCount][9] = {
-        {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'},
-        {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'},
-        {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'}
-};
-uint8_t sensorsAdresses[sensorsCount][1] = {
-        {0x21},
-        {0x11},
-        {0x12}
-};
-uint8_t sensorsId[sensorsCount][1] = {
-        {21},
-        {11},
-        {12}
-};
-
 int main(void) {
-    slUART_SimpleTransmitInit();
-    float t,h,p,v;
+    // slUART_SimpleTransmitInit();
+    // float t,h,p,v;
 
-    int16_t wynik;
-    t = 2758/100.0;
-    h = 0xb50f/1024.0;
-    p = (float) 0x86e4;
-    wynik = 6119;
-    v = (((110 * ((wynik / 12) * 100)) / 102300) * 350) / 110;
-    BME180measure[0].temperature = calculateTemperature(t);;
-    BME180measure[0].humidity = calculateHumidity(h);
-    BME180measure[0].pressure = calculatePressure(p);
-    BME180measure[0].voltage = (uint16_t) v;
-    BME180measure[0].sensorId = *sensorsId[(sensorNr - 1)];
-    uint8_t i =0;
-    slUART_LogDecWithSign(BME180measure[i].temperature);
-    slUART_WriteString("|");
-    slUART_LogDec(BME180measure[i].humidity);
-    slUART_WriteString("|");
-    slUART_LogDecWithSign(BME180measure[i].pressure);
-    slUART_WriteString("|");
-    slUART_LogDecWithSign(BME180measure[i].voltage);
-    slUART_WriteString("|");
-    slUART_LogDec(BME180measure[i].sensorId);
-    slUART_WriteStringNl("~");
+    // int16_t wynik;
+    // t = 2758/100.0;
+    // h = 0xb50f/1024.0;
+    // p = (float) 0x86e4;
+    // wynik = 6119;
+    // v = (((110 * ((wynik / 12) * 100)) / 102300) * 350) / 110;
+    // BME180measure[0].temperature = calculateTemperature(t);;
+    // BME180measure[0].humidity = calculateHumidity(h);
+    // BME180measure[0].pressure = calculatePressure(p);
+    // BME180measure[0].voltage = (uint16_t) v;
+    // BME180measure[0].sensorId = *sensorsId[(sensorNr - 1)];
+    // uint8_t i =0;
+    // slUART_LogDecWithSign(BME180measure[i].temperature);
+    // slUART_WriteString("|");
+    // slUART_LogDec(BME180measure[i].humidity);
+    // slUART_WriteString("|");
+    // slUART_LogDecWithSign(BME180measure[i].pressure);
+    // slUART_WriteString("|");
+    // slUART_LogDecWithSign(BME180measure[i].voltage);
+    // slUART_WriteString("|");
+    // slUART_LogDec(BME180measure[i].sensorId);
+    // slUART_WriteStringNl("~");
     //*
-//    slUART_SimpleTransmitInit();
-//    /*/
-//    slUART_Init();
-//    //*/
-//    slSPI_Init();
-//    slNRF24_IoInit();
-//    slNRF24_Init(*sensorsAdresses[0]);
-//    setupTimer();
-//    setupInt0();
-//    sei();
-//    stage = 1;
-//    slUART_WriteStringNl("\nStart server");
-//    _delay_ms(500);
-//    slNRF24_Reset();
-//    while (1) {
-//        switch (stage) {
-//            case 1:
-//                sensor11start();
-//                break;
-//        }
-//    }
+
+    #if showDebugDataMain == 1
+    slUART_SimpleTransmitInit();
+    slUART_Init();
+    #endif
+    slSPI_Init();
+    slNRF24_IoInit();
+    nRF24L01Start();
+    setupTimer();
+    setupInt0();
+    sei();
+    stage = 1;
+    #if showDebugDataMain == 1
+    slUART_WriteStringNl("\nStart server");
+    #endif
+    _delay_ms(500);
+    slNRF24_Reset();
+    while (1) {
+        switch (stage) {
+            case 1:
+                sensorStart();
+                break;
+        }
+    }
     return 0;
 }
 
-
-void clearData() {
-    for (uint8_t i = 0; i < 9; i++) {
-        data[i] = 0;
-    };
-}
 
 void setupTimer() {
     TCCR0B |= (1 << CS02) | (1 << CS00);//prescaler 1024
@@ -144,94 +105,6 @@ void setupInt0() {
     EIMSK |= (1 << INT0);     // Turns on INT0
 }
 
-uint8_t nextSensorNr() {
-    sensorNr = sensorNr + 1;
-    if (sensorNr > sensorsCount) {
-        sensorNr = 1;
-    }
-    return sensorNr;
-}
-
-//server
-
-//stage1
-void sensor11start() {
-    counter = 0;
-    counter3 = 1;
-    nextSensorNr();
-    slNRF24_Reset();
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
-    slUART_WriteString("S");
-    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
-    slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
-    slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
-    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
-    slNRF24_Reset();
-    clearData();
-    stage = 0;//wait for interupt
-}
-
-void saveDataFromNRF(){
-    slNRF24_GetRegister(R_RX_PAYLOAD, data, 9);
-    BME180measure[(sensorNr - 1)] = returnMEASUREFromBuffer(data);
-    slUART_WriteString("OK");
-    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
-    if (sensorNr < sensorsCount) {
-        stage = 1;
-    } else {
-        stage = 0;//all sensors wills be requested
-        sendingSensorDataViaUart();
-    }
-    clearData();
-}
-
-void saveErrorData(){
-    BME180measure[(sensorNr - 1)].temperature = 0;
-    BME180measure[(sensorNr - 1)].humidity = 0;
-    BME180measure[(sensorNr - 1)].pressure = 0;
-    BME180measure[(sensorNr - 1)].voltage = 0;
-    BME180measure[(sensorNr - 1)].sensorId = *sensorsId[(sensorNr - 1)];
-    slUART_WriteString("F");
-    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
-    if (sensorNr < sensorsCount) {
-        stage = 1;
-    } else {
-        stage = 0;
-        sendingSensorDataViaUart();
-    }
-}
-
-
-//stage 4
-void sendingSensorDataViaUart() {
-#if showDebugDataMain == 1
-    slUART_WriteStringNl("server sendingSensorDataViaUart");
-#endif
-    for(uint8_t i = 0; i < sensorsCount; i++){
-        slUART_LogDecWithSign(BME180measure[i].temperature);
-        slUART_WriteString("|");
-        slUART_LogDec(BME180measure[i].humidity);
-        slUART_WriteString("|");
-        slUART_LogDecWithSign(BME180measure[i].pressure);
-        slUART_WriteString("|");
-        slUART_LogDecWithSign(BME180measure[i].voltage);
-        slUART_WriteString("|");
-        slUART_LogDec(BME180measure[i].sensorId);
-        slUART_WriteString("~");
-    }
-    slUART_WriteStringNl("");
-
-    for(uint8_t i = 0; i < sensorsCount; i++) {
-        BME180measure[i].temperature = 0;
-        BME180measure[i].humidity = 0;
-        BME180measure[i].pressure = 0;
-        BME180measure[i].voltage = 0;
-        BME180measure[i].sensorId = *sensorsId[i];
-    }
-}
 
 ISR(TIMER0_OVF_vect) {
     //co 0.01632sek.
@@ -244,20 +117,24 @@ ISR(TIMER0_OVF_vect) {
         counter2 = counter2 + 1;
     }
     if (counter3 > 123) {//2sek. failed get sensor data
-        //slUART_WriteString("0|0|0|0|");
-        //slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
         saveErrorData();
+        stage = returnNextStage();
+        sendingSensorDataViaUart();
         counter3 = 0;
     }
     if (counter == 2100) {//34.4064 sek Next mesurements
         counter = 0;
         counter2 = 0;
         stage = 1;
+        #if showDebugDataMain == 1
         slUART_WriteStringNl("----------------");
+        #endif
     }
     if (counter2 == 2840) {//46.348 sek Reset to sending
+        #if showDebugDataMain == 1
         slUART_WriteString("server Fail at stage: ");
         slUART_LogDecNl(stage);
+        #endif
         counter = 0;
         counter2 = 0;
         stage = 1;
@@ -267,24 +144,26 @@ ISR(TIMER0_OVF_vect) {
 ISR(INT0_vect) {
     status = 0;
     slNRF24_GetRegister(STATUS, &status, 1);
-#if showDebugDataMain == 1
+    #if showDebugDataMain == 1
     slUART_WriteString("server STATUS: ");
     slUART_LogBinaryNl(status);
-#endif
+    #endif
     cli();
     if ((status & (1 << 6)) != 0) {//got data
-#if showDebugDataMain == 1
+        #if showDebugDataMain == 1
         slUART_WriteStringNl("server got data ");
-#endif
+        #endif
         saveDataFromNRF();
+        stage = returnNextStage();
+        sendingSensorDataViaUart();
         counter = 0;
         counter2 = 0;
         counter3 = 0;
     }
     if ((status & (1 << 5)) != 0) {//send ok
-#if showDebugDataMain == 1
+        #if showDebugDataMain == 1
         slUART_WriteStringNl("server sent ok ");
-#endif
+        #endif
         stage = 0;
     }
     sei();

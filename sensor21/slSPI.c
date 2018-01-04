@@ -3,7 +3,6 @@
 //
 #include <avr/io.h>
 #include "slSPI.h"
-//#include "slUart.h"
 
 void slSPI_Init() {
     //Set MOSI and SCK output, all others input
@@ -32,19 +31,17 @@ void slSPI_Init() {
 
 uint8_t slSPI_TransferInt(uint8_t data) {
     /* Start transmission */
-//    slUART_WriteString("slSPI_TransferInt dataFromNRF24L01: ");
-//    slUART_LogBinary(dataFromNRF24L01);
     SPDR = data;
     asm volatile("nop");
     /* Wait for transmission complete */
     while (!(SPSR & _BV(SPIF))) ;
     return SPDR;
 }
-//
-//void slSPI_WriteString(const char myString[], char *buffOut) {
-//    uint8_t i = 0;
-//    while (myString[i]) {
-//        buffOut[i] = slSPI_TransferInt(myString[i]);
-//        i++;
-//    }
-//}
+
+void slSPI_WriteString(char *myString, char *buffOut) {
+   uint8_t i = 0;
+   while (myString[i]) {
+       buffOut[i] = slSPI_TransferInt(myString[i]);
+       i++;
+   }
+}

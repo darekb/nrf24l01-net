@@ -67,7 +67,7 @@ uint8_t slI2C_SetSLA(uint8_t byte) {
   if ((twst != TW_MT_SLA_ACK) && (twst != TW_MR_SLA_ACK)) {
     slI2C_SetError(slI2C_NoACKError);
   }
-#if showDebugDataI2C == 1
+  #if showDebugDataI2C == 1
   showErrors("slI2C_SetSLA");
   if (I2C_Error) {
       slUART_WriteString("byte:  ");
@@ -75,7 +75,7 @@ uint8_t slI2C_SetSLA(uint8_t byte) {
       slUART_WriteString("TW_STATUS:  ");
       slUART_LogBinary(TW_STATUS);
   }
-#endif
+  #endif
   return I2C_Error;
 }
 
@@ -93,13 +93,13 @@ uint8_t slI2C_Start() {
   if ((TW_STATUS != TW_START) && (TW_STATUS != TW_REP_START)) {
     slI2C_SetError(slI2C_STARTError);
   }
-#if showDebugDataI2C == 1
+  #if showDebugDataI2C == 1
   showErrors("slI2C_Start");
   if (I2C_Error) {
       slUART_WriteString("TW_STATUS:  ");
       slUART_LogBinary(TW_STATUS);
   }
-#endif
+  #endif
   return I2C_Error;
 }
 
@@ -107,9 +107,9 @@ uint8_t slI2C_Stop() {
   I2C_Error = 0;
   TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWSTO);
   slI2C_WaitTillStopWasSent();
-#if showDebugDataI2C == 1
+  #if showDebugDataI2C == 1
   showErrors("slI2C_Stop");
-#endif
+  #endif
   return I2C_Error;
 }
 
@@ -124,7 +124,7 @@ uint8_t slI2C_WriteByte(uint8_t byte) {
   if ((twst != TW_MT_DATA_ACK) && (twst != TW_MR_DATA_ACK)) {
     slI2C_SetError(slI2C_NoACKError);
   }
-#if showDebugDataI2C == 1
+  #if showDebugDataI2C == 1
   showErrors("slI2C_WriteByte");
   if (I2C_Error) {
       slUART_WriteString("byte:  ");
@@ -132,7 +132,7 @@ uint8_t slI2C_WriteByte(uint8_t byte) {
       slUART_WriteString("TW_STATUS:  ");
       slUART_LogBinary(TW_STATUS);
   }
-#endif
+  #endif
   return I2C_Error;
 }
 
@@ -143,11 +143,11 @@ uint8_t slI2C_ReadByte_NACK() {
   TWCR = (1 << TWINT) | (1 << TWEN);
   slI2C_WaitForComplete();
   if (TW_STATUS != TW_MR_DATA_NACK) slI2C_SetError(slI2C_NoNACKError);
-#if showDebugDataI2C == 1
+  #if showDebugDataI2C == 1
   showErrors("slI2C_ReadByte_NACK");
   slUART_WriteString("ReadByte_NACK:  ");
   slUART_LogBinary(TWDR);
-#endif
+  #endif
   slI2C_readByteValue = TWDR;
   return I2C_Error;
 }
@@ -157,11 +157,11 @@ uint8_t slI2C_ReadByte_ACK() {
   TWCR = (1 << TWEA) | (1 << TWINT) | (1 << TWEN);
   slI2C_WaitForComplete();
   if (TW_STATUS != TW_MR_DATA_ACK) slI2C_SetError(slI2C_NoACKError);
-#if showDebugDataI2C == 1
+  #if showDebugDataI2C == 1
   showErrors("slI2C_ReadByte_ACK");
   slUART_WriteString("ReadByte_ACK:  ");
   slUART_LogBinary(TWDR);
-#endif
+  #endif
   slI2C_readByteValue = TWDR;
   return I2C_Error;
 }

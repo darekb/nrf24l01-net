@@ -4,9 +4,15 @@
 CMakeFiles/atmega328p.elf.dir/main.c.o
  /home/dariusz/Arduino/nrf24l01-net/server/main.c
  /home/dariusz/Arduino/nrf24l01-net/server/main.h
- /home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.h
+ /home/dariusz/Arduino/nrf24l01-net/server/main_functions.h
  /home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h
  /home/dariusz/Arduino/nrf24l01-net/server/slSPI.h
+ /home/dariusz/Arduino/nrf24l01-net/server/slUart.h
+CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+ /home/dariusz/Arduino/nrf24l01-net/server/main_functions.c
+ /home/dariusz/Arduino/nrf24l01-net/server/main_functions.h
+ /home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.h
+ /home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h
  /home/dariusz/Arduino/nrf24l01-net/server/slUart.h
 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
  /home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.c

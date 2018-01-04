@@ -1,23 +1,22 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include <util/delay.h>
-#include <stdlib.h>
 
 
 #ifndef F_CPU
 #define F_CPU 8000000UL
 #endif
-
 #define showDebugDataMain 1
 
 #include "main.h"
 
 
+#if showDebugDataMain == 1
+
 #include "slUart.h"
 
+#endif
 
 #include "slNRF24.h"
-#include "slBME180Measure.h"
 #include "slI2C.h"
 #include "BME280.h"
 #include "slSPI.h"
@@ -36,20 +35,23 @@ volatile uint8_t errors = 0;
 volatile uint16_t counter = 0;
 volatile uint16_t isTimeoutError = 0;
 
-uint8_t dataFromNRF24L01[9];
-union MEASURE BME180measure;
-uint8_t buffer[15];
 
 int main(void) {
     setupResetPin();
+    #if showDebugDataMain == 1
     slUART_SimpleTransmitInit();
     slUART_WriteString("start.\r\n");
+    #endif
     slI2C_Init();
     if (BME280_Init(BME280_OS_T_1, BME280_OS_P_1, BME280_OS_H_1, BME280_FILTER_OFF, BME280_MODE_FORCED,
                     BME280_TSB_1000)) {
+        #if showDebugDataMain == 1
         slUART_WriteString("BMP280 init error.\r\n");
+        #endif
     } else {
+        #if showDebugDataMain == 1
         slUART_WriteString("BMP280 init done.\r\n");
+        #endif
     }
     slSPI_Init();
     slNRF24_IoInit();
@@ -57,17 +59,18 @@ int main(void) {
     setupInt1();
     slNRF24_Init();
     slADC_init();
+    initADCData();
     sei();
     stage = 10;
 
     while (1) {
         switch (stage) {
             case 10:
-                goReset();
+                resetNRF24L01();
                 stage = 0;
                 break;
             case 12://get measures
-                getMesurements(&BME180measure);
+                getMesurements();
                 stage = 0;
                 break;
         }
@@ -81,7 +84,7 @@ void setupTimer() {
     TIMSK |= (1 << TOIE0);//przerwanie przy przepłnieniu timera0
 }
 
-void setupResetPin(){
+void setupResetPin() {
     DDRD |= (1 << DDD7);//set DDD7 as output
     PORTD &= ~(1 << DDD7);// set as 0
 }
@@ -100,7 +103,7 @@ void setupInt1() {
 ISR(TIMER0_OVF_vect) {
     //co 0.032768sek.
     counter = counter + 1;
-    if (counter == 200) {//6.55 sek Next mesurements
+    if (counter == 100) {//3.27 sek Next mesurements
         counter = 0;
         stage = 12;//make measure
     }
@@ -109,7 +112,9 @@ ISR(TIMER0_OVF_vect) {
         counter = 0;
         errors = errors + 1;
         isTimeoutError = 0;
+        #if showDebugDataMain == 1
         slUART_WriteStringNl("Sensor12 FAIL");
+        #endif
         if (errors > 3) {
             restart();
             errors = 0;
@@ -124,14 +129,18 @@ ISR(INT1_vect) {
     slNRF24_GetRegister(STATUS, &status, 1);
     cli();
     if ((status & (1 << 6)) != 0) {//got data
-        getDataFromNRF24L01(dataFromNRF24L01);
-        if (isStartStringMatch(dataFromNRF24L01)) {
+        getDataFromNRF24L01();
+        if (isStartStringMatch()) {
+            #if showDebugDataMain == 1
             slUART_WriteStringNl("Sensor12 got start command from nRF24L01");
-            fillBuferFromMEASURE(&BME180measure, buffer);
-            sendVianRF24L01(buffer);
+            #endif
+            prepeareBuffer();
+            sendVianRF24L01();
             stage = 0;
         } else {
+            #if showDebugDataMain == 1
             slUART_WriteStringNl("Sensor12 got false command from nRF24L01");
+            #endif
             stage = 10;
         }
     }
@@ -139,7 +148,9 @@ ISR(INT1_vect) {
         stage = 0;
         errors = 0;
         isTimeoutError = 0;
+        #if showDebugDataMain == 1
         slUART_WriteStringNl("Sensor12 sent data via nRF24L01 without errors");
+        #endif
     }
     sei();
 }

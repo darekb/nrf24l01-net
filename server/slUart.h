@@ -20,7 +20,6 @@
 #define UBRRH UBRR0H
 #define UCSRB UCSR0B
 #define UCSRA UCSR0A
-#define UCSRB UCSR0B
 #define UCSRC UCSR0C
 #define UDRE  UDRE0
 #define UDR   UDR0

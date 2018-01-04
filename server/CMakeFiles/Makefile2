@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/dariusz/Arduino/nrf24l01-net/server
 CMakeFiles/atmega328p.elf.dir/all:
 	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/depend
 	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target atmega328p.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target atmega328p.elf"
 .PHONY : CMakeFiles/atmega328p.elf.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/atmega328p.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/atmega328p.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/atmega328p.elf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 0
 .PHONY : CMakeFiles/atmega328p.elf.dir/rule
@@ -103,12 +103,12 @@ clean: CMakeFiles/atmega328p.elf.dir/clean
 CMakeFiles/upload_atmega328p.dir/all: CMakeFiles/atmega328p.elf.dir/all
 	$(MAKE) -f CMakeFiles/upload_atmega328p.dir/build.make CMakeFiles/upload_atmega328p.dir/depend
 	$(MAKE) -f CMakeFiles/upload_atmega328p.dir/build.make CMakeFiles/upload_atmega328p.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=17,18 "Built target upload_atmega328p"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=18,19 "Built target upload_atmega328p"
 .PHONY : CMakeFiles/upload_atmega328p.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/upload_atmega328p.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/upload_atmega328p.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 0
 .PHONY : CMakeFiles/upload_atmega328p.dir/rule
@@ -135,7 +135,7 @@ clean: CMakeFiles/upload_atmega328p.dir/clean
 CMakeFiles/set_calibration.dir/all:
 	$(MAKE) -f CMakeFiles/set_calibration.dir/build.make CMakeFiles/set_calibration.dir/depend
 	$(MAKE) -f CMakeFiles/set_calibration.dir/build.make CMakeFiles/set_calibration.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=15 "Built target set_calibration"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=16 "Built target set_calibration"
 .PHONY : CMakeFiles/set_calibration.dir/all
 
 # Build rule for subdir invocation for target.
@@ -167,7 +167,7 @@ clean: CMakeFiles/set_calibration.dir/clean
 CMakeFiles/build_all.dir/all: CMakeFiles/atmega328p.elf.dir/all
 	$(MAKE) -f CMakeFiles/build_all.dir/build.make CMakeFiles/build_all.dir/depend
 	$(MAKE) -f CMakeFiles/build_all.dir/build.make CMakeFiles/build_all.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=7,8 "Built target build_all"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=8,9 "Built target build_all"
 .PHONY : CMakeFiles/build_all.dir/all
 
 # Include target in all.
@@ -177,7 +177,7 @@ all: CMakeFiles/build_all.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/build_all.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/build_all.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 0
 .PHONY : CMakeFiles/build_all.dir/rule
@@ -204,12 +204,12 @@ clean: CMakeFiles/build_all.dir/clean
 CMakeFiles/build_atmega328p.dir/all: CMakeFiles/atmega328p.elf.dir/all
 	$(MAKE) -f CMakeFiles/build_atmega328p.dir/build.make CMakeFiles/build_atmega328p.dir/depend
 	$(MAKE) -f CMakeFiles/build_atmega328p.dir/build.make CMakeFiles/build_atmega328p.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=9,10 "Built target build_atmega328p"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=10,11 "Built target build_atmega328p"
 .PHONY : CMakeFiles/build_atmega328p.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/build_atmega328p.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/build_atmega328p.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 0
 .PHONY : CMakeFiles/build_atmega328p.dir/rule
@@ -236,12 +236,12 @@ clean: CMakeFiles/build_atmega328p.dir/clean
 CMakeFiles/disassemble_atmega328p.elf.dir/all: CMakeFiles/atmega328p.elf.dir/all
 	$(MAKE) -f CMakeFiles/disassemble_atmega328p.elf.dir/build.make CMakeFiles/disassemble_atmega328p.elf.dir/depend
 	$(MAKE) -f CMakeFiles/disassemble_atmega328p.elf.dir/build.make CMakeFiles/disassemble_atmega328p.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=11 "Built target disassemble_atmega328p.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=12 "Built target disassemble_atmega328p.elf"
 .PHONY : CMakeFiles/disassemble_atmega328p.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/disassemble_atmega328p.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/disassemble_atmega328p.elf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 0
 .PHONY : CMakeFiles/disassemble_atmega328p.elf.dir/rule
@@ -268,12 +268,12 @@ clean: CMakeFiles/disassemble_atmega328p.elf.dir/clean
 CMakeFiles/upload_eeprom.dir/all: CMakeFiles/atmega328p.elf.dir/all
 	$(MAKE) -f CMakeFiles/upload_eeprom.dir/build.make CMakeFiles/upload_eeprom.dir/depend
 	$(MAKE) -f CMakeFiles/upload_eeprom.dir/build.make CMakeFiles/upload_eeprom.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=19,20 "Built target upload_eeprom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=20,21 "Built target upload_eeprom"
 .PHONY : CMakeFiles/upload_eeprom.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/upload_eeprom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/upload_eeprom.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles 0
 .PHONY : CMakeFiles/upload_eeprom.dir/rule
@@ -300,7 +300,7 @@ clean: CMakeFiles/upload_eeprom.dir/clean
 CMakeFiles/get_calibration.dir/all:
 	$(MAKE) -f CMakeFiles/get_calibration.dir/build.make CMakeFiles/get_calibration.dir/depend
 	$(MAKE) -f CMakeFiles/get_calibration.dir/build.make CMakeFiles/get_calibration.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=12 "Built target get_calibration"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=13 "Built target get_calibration"
 .PHONY : CMakeFiles/get_calibration.dir/all
 
 # Build rule for subdir invocation for target.
@@ -332,7 +332,7 @@ clean: CMakeFiles/get_calibration.dir/clean
 CMakeFiles/get_status.dir/all:
 	$(MAKE) -f CMakeFiles/get_status.dir/build.make CMakeFiles/get_status.dir/depend
 	$(MAKE) -f CMakeFiles/get_status.dir/build.make CMakeFiles/get_status.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=14 "Built target get_status"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=15 "Built target get_status"
 .PHONY : CMakeFiles/get_status.dir/all
 
 # Build rule for subdir invocation for target.
@@ -364,7 +364,7 @@ clean: CMakeFiles/get_status.dir/clean
 CMakeFiles/get_fuses.dir/all:
 	$(MAKE) -f CMakeFiles/get_fuses.dir/build.make CMakeFiles/get_fuses.dir/depend
 	$(MAKE) -f CMakeFiles/get_fuses.dir/build.make CMakeFiles/get_fuses.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=13 "Built target get_fuses"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=14 "Built target get_fuses"
 .PHONY : CMakeFiles/get_fuses.dir/all
 
 # Build rule for subdir invocation for target.
@@ -396,7 +396,7 @@ clean: CMakeFiles/get_fuses.dir/clean
 CMakeFiles/set_fuses.dir/all:
 	$(MAKE) -f CMakeFiles/set_fuses.dir/build.make CMakeFiles/set_fuses.dir/depend
 	$(MAKE) -f CMakeFiles/set_fuses.dir/build.make CMakeFiles/set_fuses.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=16 "Built target set_fuses"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dariusz/Arduino/nrf24l01-net/server/CMakeFiles --progress-num=17 "Built target set_fuses"
 .PHONY : CMakeFiles/set_fuses.dir/all
 
 # Build rule for subdir invocation for target.

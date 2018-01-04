@@ -280,6 +280,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/main.c.s
 .PHONY : main.c.s
 
+main_functions.o: main_functions.c.o
+
+.PHONY : main_functions.o
+
+# target to build an object file
+main_functions.c.o:
+	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+.PHONY : main_functions.c.o
+
+main_functions.i: main_functions.c.i
+
+.PHONY : main_functions.i
+
+# target to preprocess a source file
+main_functions.c.i:
+	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/main_functions.c.i
+.PHONY : main_functions.c.i
+
+main_functions.s: main_functions.c.s
+
+.PHONY : main_functions.s
+
+# target to generate assembly for a file
+main_functions.c.s:
+	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/main_functions.c.s
+.PHONY : main_functions.c.s
+
 slBME180Measure.o: slBME180Measure.c.o
 
 .PHONY : slBME180Measure.o
@@ -410,6 +437,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... main_functions.o"
+	@echo "... main_functions.i"
+	@echo "... main_functions.s"
 	@echo "... slBME180Measure.o"
 	@echo "... slBME180Measure.i"
 	@echo "... slBME180Measure.s"

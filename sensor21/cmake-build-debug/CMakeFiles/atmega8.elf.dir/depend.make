@@ -10,7 +10,6 @@ CMakeFiles/atmega8.elf.dir/main.c.o: ../BME280.h
 CMakeFiles/atmega8.elf.dir/main.c.o: ../main.c
 CMakeFiles/atmega8.elf.dir/main.c.o: ../main_functions.h
 CMakeFiles/atmega8.elf.dir/main.c.o: ../slAdc.h
-CMakeFiles/atmega8.elf.dir/main.c.o: ../slBME180Measure.h
 CMakeFiles/atmega8.elf.dir/main.c.o: ../slI2C.h
 CMakeFiles/atmega8.elf.dir/main.c.o: ../slNRF24.h
 CMakeFiles/atmega8.elf.dir/main.c.o: ../slSPI.h
@@ -22,9 +21,7 @@ CMakeFiles/atmega8.elf.dir/main_functions.c.o: ../main_functions.c
 CMakeFiles/atmega8.elf.dir/main_functions.c.o: ../main_functions.h
 CMakeFiles/atmega8.elf.dir/main_functions.c.o: ../slAdc.h
 CMakeFiles/atmega8.elf.dir/main_functions.c.o: ../slBME180Measure.h
-CMakeFiles/atmega8.elf.dir/main_functions.c.o: ../slI2C.h
 CMakeFiles/atmega8.elf.dir/main_functions.c.o: ../slNRF24.h
-CMakeFiles/atmega8.elf.dir/main_functions.c.o: ../slSPI.h
 CMakeFiles/atmega8.elf.dir/main_functions.c.o: ../slUart.h
 
 CMakeFiles/atmega8.elf.dir/slAdc.c.o: ../slAdc.c

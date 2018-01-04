@@ -8,24 +8,21 @@
 
 #define SENSOR_ID 12
 
+void initADCData();
 
 void restart();
 
-void goReset();
+void resetNRF24L01();
 
-void getDataFromNRF24L01(uint8_t *dataFromNRF24L01);
+void getDataFromNRF24L01();
 
-uint8_t isStartStringMatch(uint8_t *dataFromNRF24L01);
+uint8_t isStartStringMatch();
 
-uint8_t setBME280Mode();
+void getMesurements();
 
-uint8_t getDataFromBME280(union MEASURE *BME180measure);
+void prepeareBuffer();
 
-void getDataFromADC(union MEASURE *BME180measure);
-
-void getMesurements(union MEASURE *BME180measure);
-
-uint8_t sendVianRF24L01(uint8_t *buffer);
+uint8_t sendVianRF24L01();
 
 
 #endif //CMAKE_AVR_MAIN_FUNCTIONS_H
