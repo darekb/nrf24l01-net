@@ -1,0 +1,30 @@
+* /home/dariusz/Arduino/nrf24l01-net/pcb/sensor21.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: pią, 5 sty 2018, 16:45:10
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+IC1  RESET ? PD1 PD2 INT1 ? +3V3 +3V3 Net-_C1-Pad2_ Net-_C3-Pad2_ ? ? PD7 ? CE CSN MOSI MISO SCK +3V3 Net-_C2-Pad1_ +3V3 ? ? ? ? SDA SCL ATMEGA8-P		
+Y1  Net-_C3-Pad2_ Net-_C1-Pad2_ 8Mhz		
+C3  +3V3 Net-_C3-Pad2_ 22n		
+C1  +3V3 Net-_C1-Pad2_ 22n		
+R7  +3V3 RESET 10k		
+C2  Net-_C2-Pad1_ +3V3 100n		
+C4  +3V3 +3V3 100n		
+C6  +3V3 +3V3 10u		
+C7  ? ? 10u		
+C5  +3V3 +3V3 100n		
+P1  +3V3 +3V3 CE CSN SCK MOSI MISO INT1 nRF24L01		
+P2  +3V3 +3V3 SCL SDA BME280		
+Q1  RESET PD7 +3V3 BC548		
+R6  +3V3 SCL 4k7		
+R5  +3V3 SDA 4k7		
+C8  +3V3 +3V3 470u		
+R1  +3V3 PD1 12k		
+R2  PD1 +3V3 33k		
+R3  +3V3 PD2 12k		
+R4  PD2 +3V3 5k-10k		
+
+.end

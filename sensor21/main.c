@@ -113,7 +113,7 @@ ISR(TIMER0_OVF_vect) {
         errors = errors + 1;
         isTimeoutError = 0;
         #if showDebugDataMain == 1
-        slUART_WriteStringNl("Sensor12 FAIL");
+        slUART_WriteStringNl("Sensor21 FAIL");
         #endif
         if (errors > 3) {
             restart();
@@ -132,14 +132,14 @@ ISR(INT1_vect) {
         getDataFromNRF24L01();
         if (isStartStringMatch()) {
             #if showDebugDataMain == 1
-            slUART_WriteStringNl("Sensor12 got start command from nRF24L01");
+            slUART_WriteStringNl("Sensor21 got start command from nRF24L01");
             #endif
             prepeareBuffer();
             sendVianRF24L01();
             stage = 0;
         } else {
             #if showDebugDataMain == 1
-            slUART_WriteStringNl("Sensor12 got false command from nRF24L01");
+            slUART_WriteStringNl("Sensor21 got false command from nRF24L01");
             #endif
             stage = 10;
         }
@@ -149,7 +149,7 @@ ISR(INT1_vect) {
         errors = 0;
         isTimeoutError = 0;
         #if showDebugDataMain == 1
-        slUART_WriteStringNl("Sensor12 sent data via nRF24L01 without errors");
+        slUART_WriteStringNl("Sensor21 sent data via nRF24L01 without errors");
         #endif
     }
     sei();

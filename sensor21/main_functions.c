@@ -19,8 +19,8 @@
 #include "main_functions.h"
 
 
-char startStringSensor[] = {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'};
-char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '1', '2'};
+char startStringSensor[] = {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'};
+char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'};
 
 
 uint8_t dataFromNRF24L01[9];
@@ -96,7 +96,7 @@ void getMesurements() {
     getDataFromADC();
     getDataFromFotorezistor();
     #if showDebugDataMainFunctions == 1
-    slUART_WriteStringNl("Sensor12 got data from BME280");
+    slUART_WriteStringNl("Sensor21 got data from BME280");
     slUART_LogHex32WithSign(BME180measure.data.temperature);
     slUART_WriteString("|");
     slUART_LogHex32WithSign(BME180measure.data.humidity);
@@ -114,7 +114,7 @@ void getMesurements() {
 void resetNRF24L01() {
     slNRF24_PowerDown();
     #if showDebugDataMainFunctions == 1
-    slUART_WriteStringNl("Sensor12 nRF24L01 Reset");
+    slUART_WriteStringNl("Sensor21 nRF24L01 Reset");
     #endif
     slNRF24_Reset();
     slNRF24_FlushTx();

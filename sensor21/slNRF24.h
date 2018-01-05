@@ -22,7 +22,7 @@
     DEALINGS IN THE SOFTWARE.
 */
 
-#define SENSOR_ADDR   0x12
+#define SENSOR_ADDR   0x21
 
 #define PAYLOAD_SIZE 17
 

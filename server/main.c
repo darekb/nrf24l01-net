@@ -83,6 +83,7 @@ int main(void) {
         switch (stage) {
             case 1:
                 sensorStart();
+                stage = 0;//wait for intrrupt
                 break;
         }
     }
