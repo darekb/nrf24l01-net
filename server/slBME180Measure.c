@@ -20,23 +20,23 @@ union MEASURE returnMEASUREFromBuffer(uint8_t *buffer) {
     return tmp;
 }
 
-int16_t calculateTemperature(float temperature) {
+int16_t calculateTemperature(int32_t temperature) {
     return (int16_t) ((float) temperature/100 * (int16_t) 100);
 }
 
-uint16_t calculateHumidity(float humidity) {
+uint16_t calculateHumidity(int32_t humidity) {
     return (uint16_t) ((float) humidity/1024 * (uint16_t) 100);
 }
 
-int16_t calculatePressure(float pressure) {
+int16_t calculatePressure(uint32_t pressure) {
     return (int16_t) ((float) pressure/256 - (float) 100000);
 }
 
-uint16_t calculateVoltage(float voltage) {
-    float v = (((((voltage/16)*100 * 256)/102400) * 350)/256);
-    return (uint16_t) ((float) v * (uint16_t) 100);
+uint16_t calculateVoltage(uint16_t voltage) {
+    float v = ((((((float)voltage/16.0)*100.0 * 256.0)/102400.0) * 350.0)/256.0);
+    return (uint16_t) ((float) v);
 }
-uint16_t calculateFotorezistor(float fotorezistor) {
-    float f = (((((fotorezistor/16)*100 * 256)/102400) * 350)/256);
-    return (uint16_t) ((float) f * (uint16_t) 100);
+uint16_t calculateFotorezistor(uint16_t fotorezistor) {
+    float f = ((((((float)fotorezistor/16.0)*100.0 * 256.0)/102400.0) * 350.0)/256.0);
+    return (uint16_t) ((float) f);
 }

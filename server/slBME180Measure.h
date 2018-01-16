@@ -23,14 +23,14 @@ void fillBuferFromMEASURE(union MEASURE *structure, uint8_t *buffer);
 
 union MEASURE returnMEASUREFromBuffer(uint8_t *buffer);
 
-int16_t calculateTemperature(float temperature);
+int16_t calculateTemperature(int32_t temperature);
 
-uint16_t calculateHumidity(float humidity);
+uint16_t calculateHumidity(int32_t humidity);
 
-int16_t calculatePressure(float pressure);
+int16_t calculatePressure(uint32_t pressure);
 
-uint16_t calculateVoltage(float voltage);
+uint16_t calculateVoltage(uint16_t voltage);
 
-uint16_t calculateFotorezistor(float fotorezistor);
+uint16_t calculateFotorezistor(uint16_t fotorezistor);
 
 #endif //CMAKE_AVR_SLBME180MEASURE_H

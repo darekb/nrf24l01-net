@@ -93,10 +93,26 @@ void sensorStart() {
 
 void saveDataFromNRF() {
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 17);
+    slNRF24_Reset();
+    slNRF24_FlushTx();
+    slNRF24_FlushRx();
     BME180measure[(sensorNr - 1)] = returnMEASUREFromBuffer(dataFromNRF24L01);
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("OK");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+    slUART_WriteStringNl("Sensor21 got data from BME280");
+    slUART_LogHex32WithSign(BME180measure[(sensorNr - 1)].data.temperature);
+    slUART_WriteString("|");
+    slUART_LogHex32WithSign(BME180measure[(sensorNr - 1)].data.humidity);
+    slUART_WriteString("|");
+    slUART_LogHex32(BME180measure[(sensorNr - 1)].data.pressure);
+    slUART_WriteString("|");
+    slUART_LogHex(BME180measure[(sensorNr - 1)].data.voltage);
+    slUART_WriteString("|");
+    slUART_LogHex(BME180measure[(sensorNr - 1)].data.fotorezistor);
+    slUART_WriteString("|");
+    slUART_LogDec(BME180measure[(sensorNr - 1)].data.sensorId);
+    slUART_WriteStringNl("~");
     #endif
     clearData();
 }
@@ -118,30 +134,34 @@ void saveErrorData() {
     #endif
 }
 
+uint8_t ifCheckEverySensor() {
+    if (sensorNr >= sensorsCount) {
+        return 1;
+    }
+    return 0;
+}
 
 void sendingSensorDataViaUart() {
-    if (sensorNr >= sensorsCount) {
-        #if showDebugDataMainFunctions == 1
-        slUART_WriteStringNl("server sendingSensorDataViaUart");
-        #endif
-        for (uint8_t i = 0; i < sensorsCount; i++) {
-            slUART_LogDecWithSign(calculateTemperature(BME180measure[i].data.temperature));
-            slUART_WriteString("|");
-            slUART_LogDec(calculateHumidity(BME180measure[i].data.humidity));
-            slUART_WriteString("|");
-            slUART_LogDecWithSign(calculatePressure(BME180measure[i].data.pressure));
-            slUART_WriteString("|");
-            slUART_LogDec(calculateVoltage(BME180measure[i].data.voltage));
-            slUART_WriteString("|");
-            slUART_LogDec(calculateFotorezistor(BME180measure[i].data.fotorezistor));
-            slUART_WriteString("|");
-            slUART_LogDec(BME180measure[i].data.sensorId);
-            slUART_WriteString("~");
-        }
-        slUART_WriteStringNl("");
+    #if showDebugDataMainFunctions == 1
+    slUART_WriteStringNl("server sendingSensorDataViaUart");
+    #endif
+    for (uint8_t i = 0; i < sensorsCount; i++) {
+        slUART_LogDecWithSign(calculateTemperature(BME180measure[i].data.temperature));
+        slUART_WriteString("|");
+        slUART_LogDec(calculateHumidity(BME180measure[i].data.humidity));
+        slUART_WriteString("|");
+        slUART_LogDecWithSign(calculatePressure(BME180measure[i].data.pressure));
+        slUART_WriteString("|");
+        slUART_LogDec(calculateVoltage(BME180measure[i].data.voltage));
+        slUART_WriteString("|");
+        slUART_LogDec(calculateFotorezistor(BME180measure[i].data.fotorezistor));
+        slUART_WriteString("|");
+        slUART_LogDec(BME180measure[i].data.sensorId);
+        slUART_WriteString("~");
+    }
+    slUART_WriteStringNl("");
 
-        for (uint8_t i = 0; i < sensorsCount; i++) {
-            resetBMEData(i);
-        }
+    for (uint8_t i = 0; i < sensorsCount; i++) {
+        resetBMEData(i);
     }
 }

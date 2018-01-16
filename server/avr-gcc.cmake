@@ -147,7 +147,7 @@ set(hex_file ${MCU_TYPE_FOR_FILENAME}.hex)
 set(map_file ${MCU_TYPE_FOR_FILENAME}.map)
 set(eeprom_image ${MCU_TYPE_FOR_FILENAME}.eep)
 
-ADD_EXECUTABLE(${elf_file} ${SOURCE_EXE} slSPI.c slSPI.h slNRF24.c slNRF24.h slBME180Measure.c slBME180Measure.h main_functions.c main_functions.h)
+ADD_EXECUTABLE(${elf_file} ${SOURCE_EXE} slUart.c slUart.h slSPI.c slSPI.h slNRF24.c slNRF24.h slBME180Measure.c slBME180Measure.h main_functions.c main_functions.h)
 
 #ADD_LIBRARY(foo STATIC ${SOURCE_LIB})
 #target_link_libraries(${PROJECT_NAME} foo)

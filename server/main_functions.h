@@ -15,6 +15,8 @@ void saveErrorData();
 
 uint8_t returnNextStage();
 
+uint8_t ifCheckEverySensor();
+
 void sendingSensorDataViaUart();
 
 #endif //CMAKE_AVR_MAIN_FUNCTIONS_H

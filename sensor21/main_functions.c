@@ -105,6 +105,8 @@ void getMesurements() {
     slUART_WriteString("|");
     slUART_LogHex(BME180measure.data.voltage);
     slUART_WriteString("|");
+    slUART_LogHex(BME180measure.data.fotorezistor);
+    slUART_WriteString("|");
     slUART_LogDec(BME180measure.data.sensorId);
     slUART_WriteStringNl("~");
     #endif
@@ -116,10 +118,10 @@ void resetNRF24L01() {
     #if showDebugDataMainFunctions == 1
     slUART_WriteStringNl("Sensor21 nRF24L01 Reset");
     #endif
-    slNRF24_Reset();
+    slNRF24_RxPowerUp();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
-    slNRF24_RxPowerUp();
+    slNRF24_Reset();
     _delay_ms(10);
 }
 
@@ -162,12 +164,16 @@ void getDataFromNRF24L01() {
 }
 
 uint8_t sendVianRF24L01() {
+    //slUART_WriteStringNl("Try sent data: ");
+    //slUART_WriteBuffer(buffer, 17);
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
     slNRF24_TxPowerUp();
     slNRF24_TransmitPayload(&buffer, 17);
     slNRF24_RxPowerUp();
+    slNRF24_FlushTx();
+    slNRF24_FlushRx();
     slNRF24_Reset();
     return 0;
 }

@@ -10,22 +10,22 @@ var _sockedLog = fs.createWriteStream(config.filename, {
 var _sockedErrorLog = fs.createWriteStream('error.dat', {
 			'flags': 'a'
 		});
-var sensor11 = new SerialPort('/dev/ttyUSB0', {
+var sensor21 = new SerialPort('/dev/ttyUSB0', {
 				baudrate: 38400,
 				parser: SerialPort.parsers.readline('\n')
 });
-sensor11.on('open', function (error) {
+sensor21.on('open', function (error) {
 				if (error) {
 				  _sockedLog.write(new Date() + ' SensorRecivier: SerialPort: Failed to open serial port: /dev/ttyUSB0 ' + error + '\n');
 				} else {
 				_sockedLog.write('index.js [' + new Date() + '] SerialPort: Open serial port: /dev/ttyUSB0\n');
 				}
 			});
-sensor11.on('data', function(dataIn){
-	_sockedLog.write('sensor11|' + new Date() + '|' + new Date().getTime() + '|' + ' ' + dataIn + '\n');
+sensor21.on('data', function(dataIn){
+	_sockedLog.write('sensor21|' + new Date() + '|' + new Date().getTime() + '|' + ' ' + dataIn + '\n');
 });
 var server = new SerialPort('/dev/ttyUSB1', {
-				baudrate: 115200,
+				baudrate: 38400,
 				parser: SerialPort.parsers.readline('\n')
 });
 server.on('open', function (error) {

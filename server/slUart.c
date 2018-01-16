@@ -20,24 +20,10 @@ void slUART_SimpleTransmitInit() {
 
 void slUART_Init() {
     slUART_SimpleTransmitInit();
-
     //Enable receiver
-    UCSRB |= (1 << RXEN);
-
-    //Set frame format: 8data, 1stop bit
-    //UCSRC = ((1 << URSEL) | (3 << UCSZ0)) & ~(1 << USBS);
-#ifdef URSEL
-    UCSRC = (1<<URSEL) | (3<<UCSZ0) & ~(1 << USBS);
-#else
-    UCSRC = (3 << UCSZ0) & ~(1 << USBS);
-#endif
-
-    // (1 << URSEL) bo rejestr UCSRC jest współdzielony i musimy wskazać co zmieniamy
-    //taki ficzer ATmegi8
-
-    // | (3 << UCSZ0) UCSZ2=0 UCSZ1=1 UCSZ0=1 czyli transfer 8bitowy
-
-    // & ~(1 << USBS) USBS = 0 jednobitowy koniec ramki
+    //UCSRB |= (1 << RXEN);
+    UCSRC = (1 << USBS) | (3 << UCSZ0);
+    //UCSRC = (3 << UCSZ0) & ~(1 << USBS);
 }
 
 void slUART_WriteByte(char data) {
@@ -47,7 +33,7 @@ void slUART_WriteByte(char data) {
 }
 
 void slUART_WriteString(const char myString[]) {
-    uint16_t i = 0;
+    uint8_t i = 0;
     while (myString[i]) {
         slUART_WriteByte(myString[i]);
         i++;
@@ -106,4 +92,15 @@ void slUART_LogHex(uint16_t dataIn) {
 void slUART_LogHexNl(uint16_t dataIn) {
     slUART_LogHex(dataIn);
     slUART_WriteString("\r\n");
+}
+
+void slUART_LogHex32WithSign(int32_t dataIn) {
+    char buff[16];
+    ltoa(dataIn, buff, 16);
+    slUART_WriteString(buff);
+}
+void slUART_LogHex32(uint32_t dataIn) {
+    char buff[16];
+    ltoa(dataIn, buff, 16);
+    slUART_WriteString(buff);
 }

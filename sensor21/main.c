@@ -115,6 +115,7 @@ ISR(TIMER0_OVF_vect) {
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Sensor21 FAIL");
         #endif
+        resetNRF24L01();
         if (errors > 3) {
             restart();
             errors = 0;
