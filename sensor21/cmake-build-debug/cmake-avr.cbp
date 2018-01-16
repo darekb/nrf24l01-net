@@ -196,6 +196,9 @@
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor21/BME280.h">
 			<Option target="atmega8.elf"/>
 		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor21/globals.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor21/main.c">
 			<Option target="atmega8.elf"/>
 		</Unit>

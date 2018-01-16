@@ -13,19 +13,19 @@
 #include "main_functions.h"
 
 
-uint8_t dataFromNRF24L01[17];
+uint8_t dataFromNRF24L01[DATA_UPLOAD_SIZE];
 union MEASURE BME180measure[sensorsCount];
 
 
 volatile uint8_t sensorNr = 0;
 //nr of sensor from sensorsStrings
 
-char sensorsStrings[sensorsCount][17] = {
+char sensorsStrings[sensorsCount][DATA_UPLOAD_SIZE] = {
         {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'},
         {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'},
         {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'}
 };
-char resetSensorsStrings[sensorsCount][17] = {
+char resetSensorsStrings[sensorsCount][DATA_UPLOAD_SIZE] = {
         {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'},
         {'r', 'e', 's', 'e', 't', '-', 's', '1', '1'},
         {'r', 'e', 's', 'e', 't', '-', 's', '1', '2'}
@@ -45,7 +45,7 @@ uint8_t sensorsAdresses[sensorsCount][1] = {
 };
 
 void clearData() {
-    for (uint8_t i = 0; i < 17; i++) {
+    for (uint8_t i = 0; i < DATA_UPLOAD_SIZE; i++) {
         dataFromNRF24L01[i] = 0;
     };
 }
@@ -92,7 +92,7 @@ void sensorStart() {
 }
 
 void saveDataFromNRF() {
-    slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 17);
+    slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, DATA_UPLOAD_SIZE);
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();

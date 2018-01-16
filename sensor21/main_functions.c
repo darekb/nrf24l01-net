@@ -12,11 +12,11 @@
 
 #endif
 
+#include "main_functions.h"
 #include "slNRF24.h"
-#include "slBME180Measure.h"
 #include "BME280.h"
 #include "slAdc.h"
-#include "main_functions.h"
+#include "slBME180Measure.h"
 
 
 char startStringSensor[] = {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'};
@@ -25,7 +25,7 @@ char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'};
 
 uint8_t dataFromNRF24L01[9];
 union MEASURE BME180measure;
-uint8_t buffer[15];
+uint8_t buffer[DATA_UPLOAD_SIZE];
 
 TVOL voltage;
 TVOL light;
@@ -165,12 +165,12 @@ void getDataFromNRF24L01() {
 
 uint8_t sendVianRF24L01() {
     //slUART_WriteStringNl("Try sent data: ");
-    //slUART_WriteBuffer(buffer, 17);
+    //slUART_WriteBuffer(buffer, DATA_UPLOAD_SIZE);
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
     slNRF24_TxPowerUp();
-    slNRF24_TransmitPayload(&buffer, 17);
+    slNRF24_TransmitPayload(&buffer, DATA_UPLOAD_SIZE);
     slNRF24_RxPowerUp();
     slNRF24_FlushTx();
     slNRF24_FlushRx();

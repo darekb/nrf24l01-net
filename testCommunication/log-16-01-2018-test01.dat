@@ -5075,4 +5075,219 @@ server  |Tue Jan 16 2018 07:08:04 GMT+0100 (CET)|1516082884836| S11
 sensor21|Tue Jan 16 2018 07:08:08 GMT+0100 (CET)|1516082888276| Sensor21 got data from BME280
 sensor21|Tue Jan 16 2018 07:08:08 GMT+0100 (CET)|1516082888286| a40|80b9|184b228|e2b|ce7|21~
 sensor21|Tue Jan 16 2018 07:08:09 GMT+0100 (CET)|1516082889955| start.
-sensor21|Tue Jan 16 2018 07:08:09 GMT+0100 (CET)|1516082889965| BMP280 init done.
+sensor21|Tue Jan 16 2018 07:08:09 GMT+0100 (CET)|1516082889965| BMP280 init done.index.js [Wed Jan 17 2018 00:06:42 GMT+0100 (CET)] SerialPort: Open serial port: /dev/ttyUSB1
+index.js [Wed Jan 17 2018 00:06:42 GMT+0100 (CET)] SerialPort: Open serial port: /dev/ttyUSB0
+server  |Wed Jan 17 2018 00:06:45 GMT+0100 (CET)|1516144005035| ta from BME280
+server  |Wed Jan 17 2018 00:06:45 GMT+0100 (CET)|1516144005045| 968|17e5a2d|1045|eba|21~
+sensor21|Wed Jan 17 2018 00:06:45 GMT+0100 (CET)|1516144005674|   ----------------
+sensor21|Wed Jan 17 2018 00:06:45 GMT+0100 (CET)|1516144005674| S21
+sensor21|Wed Jan 17 2018 00:06:45 GMT+0100 (CET)|1516144005897| server sent ok 
+sensor21|Wed Jan 17 2018 00:06:48 GMT+0100 (CET)|1516144008129| F21
+sensor21|Wed Jan 17 2018 00:06:48 GMT+0100 (CET)|1516144008129| S11
+sensor21|Wed Jan 17 2018 00:06:50 GMT+0100 (CET)|1516144010552| F11
+sensor21|Wed Jan 17 2018 00:06:50 GMT+0100 (CET)|1516144010552| S12
+sensor21|Wed Jan 17 2018 00:06:52 GMT+0100 (CET)|1516144012991| F12
+sensor21|Wed Jan 17 2018 00:06:52 GMT+0100 (CET)|1516144012991| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:06:53 GMT+0100 (CET)|1516144013007| 0|0|31072|0|0|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+sensor21|Wed Jan 17 2018 00:07:03 GMT+0100 (CET)|1516144023051| ----------------
+sensor21|Wed Jan 17 2018 00:07:03 GMT+0100 (CET)|1516144023051| S21
+sensor21|Wed Jan 17 2018 00:07:03 GMT+0100 (CET)|1516144023274| server sent ok 
+sensor21|Wed Jan 17 2018 00:07:03 GMT+0100 (CET)|1516144023481| OK21
+sensor21|Wed Jan 17 2018 00:07:03 GMT+0100 (CET)|1516144023497| Sensor21 got data from BME280
+sensor21|Wed Jan 17 2018 00:07:03 GMT+0100 (CET)|1516144023513| 940|8b03|17e563d|feb|e57|21~
+sensor21|Wed Jan 17 2018 00:07:03 GMT+0100 (CET)|1516144023513| server got data 
+sensor21|Wed Jan 17 2018 00:07:03 GMT+0100 (CET)|1516144023513| S11
+sensor21|Wed Jan 17 2018 00:07:05 GMT+0100 (CET)|1516144025968| F11
+sensor21|Wed Jan 17 2018 00:07:05 GMT+0100 (CET)|1516144025968| S12
+server  |Wed Jan 17 2018 00:07:06 GMT+0100 (CET)|1516144026976| � ���� � ��� ����  �   �    � ���� ��    �� � ��� �    �  ��������    ��� ��� �       ��  � �  �    � �    � � �   ��  �� �� ����   �� ��� � ��    �  ��  ��� ��� �� � �   �   ���  �  ���� � ��� ����  �   �    � ��� ��    �� � ��� �    �  �������    ��� ��� �       ��  � �  �   � �    � � �   ��  �� �� ���   �  ���  ��    � ��   ��� �  ��  �   �   ���  � ���'<?##$��'������<?�'��$��$ �����;�����;$���d�1,�����?'�������������'� �9�#$�����#$�� U�ͽ��|:�сdata from �����0|�>�������d��������s�������׍�Ѱ��and���x�����x��W:����,W�f�KMEr���'S�����L"��n�
+sensor21|Wed Jan 17 2018 00:07:08 GMT+0100 (CET)|1516144028391| F12
+sensor21|Wed Jan 17 2018 00:07:08 GMT+0100 (CET)|1516144028407| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:07:08 GMT+0100 (CET)|1516144028423| 2368|3475|-2121|87|78|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:07:13 GMT+0100 (CET)|1516144033525| ������������7���/�|r�����H����^X�ſ6���7�����f���{����21����V�~��������w
+sensor21|Wed Jan 17 2018 00:07:20 GMT+0100 (CET)|1516144040716| ----------------
+sensor21|Wed Jan 17 2018 00:07:20 GMT+0100 (CET)|1516144040732| S21
+sensor21|Wed Jan 17 2018 00:07:20 GMT+0100 (CET)|1516144040939| server sent ok 
+sensor21|Wed Jan 17 2018 00:07:23 GMT+0100 (CET)|1516144043171| F21
+sensor21|Wed Jan 17 2018 00:07:23 GMT+0100 (CET)|1516144043171| S11
+sensor21|Wed Jan 17 2018 00:07:25 GMT+0100 (CET)|1516144045611| F11
+sensor21|Wed Jan 17 2018 00:07:25 GMT+0100 (CET)|1516144045611| S12
+sensor21|Wed Jan 17 2018 00:07:28 GMT+0100 (CET)|1516144048034| F12
+sensor21|Wed Jan 17 2018 00:07:28 GMT+0100 (CET)|1516144048034| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:07:28 GMT+0100 (CET)|1516144048050| 0|0|31072|0|0|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:07:29 GMT+0100 (CET)|1516144049916| o����6����2���~����1���������֟6��������>���Ϗ��������"��|�ɿ�������������gs��n���v�������������|��޸��������L5�����3����da�|�rom BS�jo����|���o��a��&n2s���������~��
+sensor21|Wed Jan 17 2018 00:07:38 GMT+0100 (CET)|1516144058095| ----------------
+sensor21|Wed Jan 17 2018 00:07:38 GMT+0100 (CET)|1516144058095| S21
+sensor21|Wed Jan 17 2018 00:07:38 GMT+0100 (CET)|1516144058318| server sent ok 
+sensor21|Wed Jan 17 2018 00:07:40 GMT+0100 (CET)|1516144060550| F21
+sensor21|Wed Jan 17 2018 00:07:40 GMT+0100 (CET)|1516144060550| S11
+server  |Wed Jan 17 2018 00:07:42 GMT+0100 (CET)|1516144062590| 94�����f��n����������|2��	�����������37������J��сdone.
+sensor21|Wed Jan 17 2018 00:07:42 GMT+0100 (CET)|1516144062973| F11
+sensor21|Wed Jan 17 2018 00:07:42 GMT+0100 (CET)|1516144062973| S12
+server  |Wed Jan 17 2018 00:07:42 GMT+0100 (CET)|1516144062998| S_����F�
+sensor21|Wed Jan 17 2018 00:07:45 GMT+0100 (CET)|1516144065413| F12
+sensor21|Wed Jan 17 2018 00:07:45 GMT+0100 (CET)|1516144065413| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:07:45 GMT+0100 (CET)|1516144065429| 0|0|31072|0|0|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:07:46 GMT+0100 (CET)|1516144066250| ���g����s��7�ot�����[ME280
+server  |Wed Jan 17 2018 00:07:46 GMT+0100 (CET)|1516144066256| ������b����5b|86a|7cb�21~
+sensor21|Wed Jan 17 2018 00:07:55 GMT+0100 (CET)|1516144075473| ----------------
+sensor21|Wed Jan 17 2018 00:07:55 GMT+0100 (CET)|1516144075473| S21
+sensor21|Wed Jan 17 2018 00:07:55 GMT+0100 (CET)|1516144075696| server sent ok 
+sensor21|Wed Jan 17 2018 00:07:55 GMT+0100 (CET)|1516144075904| OK21
+sensor21|Wed Jan 17 2018 00:07:55 GMT+0100 (CET)|1516144075919| Sensor21 got data from BME280
+sensor21|Wed Jan 17 2018 00:07:55 GMT+0100 (CET)|1516144075936| 947|8a53|17e56b2|fba|e3e|21~
+sensor21|Wed Jan 17 2018 00:07:55 GMT+0100 (CET)|1516144075936| server got data 
+sensor21|Wed Jan 17 2018 00:07:55 GMT+0100 (CET)|1516144075936| S11
+sensor21|Wed Jan 17 2018 00:07:58 GMT+0100 (CET)|1516144078390| F11
+sensor21|Wed Jan 17 2018 00:07:58 GMT+0100 (CET)|1516144078390| S12
+sensor21|Wed Jan 17 2018 00:08:00 GMT+0100 (CET)|1516144080814| F12
+sensor21|Wed Jan 17 2018 00:08:00 GMT+0100 (CET)|1516144080830| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:08:00 GMT+0100 (CET)|1516144080846| 2375|3458|-2121|86|77|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:08:09 GMT+0100 (CET)|1516144089203| S�k���n���_���������o�x���������`���������������f������������嶯�ٓ����S��������������?��������&������������������7��������n��7���7��������f��s������o����쾐�Q����w|��*=��|������7
+server  |Wed Jan 17 2018 00:08:12 GMT+0100 (CET)|1516144092475| ������n���V|����B���j
+sensor21|Wed Jan 17 2018 00:08:13 GMT+0100 (CET)|1516144093138| ----------------
+sensor21|Wed Jan 17 2018 00:08:13 GMT+0100 (CET)|1516144093154| S21
+sensor21|Wed Jan 17 2018 00:08:13 GMT+0100 (CET)|1516144093361| server sent ok 
+sensor21|Wed Jan 17 2018 00:08:15 GMT+0100 (CET)|1516144095593| F21
+sensor21|Wed Jan 17 2018 00:08:15 GMT+0100 (CET)|1516144095609| S11
+server  |Wed Jan 17 2018 00:08:15 GMT+0100 (CET)|1516144095760| N���X���~�����������1�H�Se����L:����,W��SQ7��N3��X��q?e52�7�7b|d>��L5
+sensor21|Wed Jan 17 2018 00:08:18 GMT+0100 (CET)|1516144098033| F11
+sensor21|Wed Jan 17 2018 00:08:18 GMT+0100 (CET)|1516144098033| S12
+server  |Wed Jan 17 2018 00:08:19 GMT+0100 (CET)|1516144099031| S���������V�|r����j
+sensor21|Wed Jan 17 2018 00:08:20 GMT+0100 (CET)|1516144100456| F12
+sensor21|Wed Jan 17 2018 00:08:20 GMT+0100 (CET)|1516144100456| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:08:20 GMT+0100 (CET)|1516144100472| 0|0|31072|0|0|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+sensor21|Wed Jan 17 2018 00:08:30 GMT+0100 (CET)|1516144110517| ----------------
+sensor21|Wed Jan 17 2018 00:08:30 GMT+0100 (CET)|1516144110517| S21
+sensor21|Wed Jan 17 2018 00:08:30 GMT+0100 (CET)|1516144110740| server sent ok 
+sensor21|Wed Jan 17 2018 00:08:30 GMT+0100 (CET)|1516144110963| OK21
+sensor21|Wed Jan 17 2018 00:08:30 GMT+0100 (CET)|1516144110963| Sensor21 got data from BME280
+sensor21|Wed Jan 17 2018 00:08:30 GMT+0100 (CET)|1516144110963| 0|0|0|0|0|0~
+sensor21|Wed Jan 17 2018 00:08:30 GMT+0100 (CET)|1516144110979| server got data 
+sensor21|Wed Jan 17 2018 00:08:30 GMT+0100 (CET)|1516144110979| S11
+sensor21|Wed Jan 17 2018 00:08:33 GMT+0100 (CET)|1516144113402| F11
+sensor21|Wed Jan 17 2018 00:08:33 GMT+0100 (CET)|1516144113402| S12
+sensor21|Wed Jan 17 2018 00:08:35 GMT+0100 (CET)|1516144115825| F12
+sensor21|Wed Jan 17 2018 00:08:35 GMT+0100 (CET)|1516144115841| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:08:35 GMT+0100 (CET)|1516144115859| 0|0|31072|0|0|0~0|0|31072|0|0|11~0|0|31072|0|0|12~
+sensor21|Wed Jan 17 2018 00:08:48 GMT+0100 (CET)|1516144128161| ----------------
+sensor21|Wed Jan 17 2018 00:08:48 GMT+0100 (CET)|1516144128161| S21
+sensor21|Wed Jan 17 2018 00:08:48 GMT+0100 (CET)|1516144128368| server sent ok 
+sensor21|Wed Jan 17 2018 00:08:50 GMT+0100 (CET)|1516144130615| F21
+sensor21|Wed Jan 17 2018 00:08:50 GMT+0100 (CET)|1516144130615| S11
+sensor21|Wed Jan 17 2018 00:08:53 GMT+0100 (CET)|1516144133037| F11
+sensor21|Wed Jan 17 2018 00:08:53 GMT+0100 (CET)|1516144133037| S12
+sensor21|Wed Jan 17 2018 00:08:55 GMT+0100 (CET)|1516144135459| F12
+sensor21|Wed Jan 17 2018 00:08:55 GMT+0100 (CET)|1516144135475| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:08:55 GMT+0100 (CET)|1516144135475| 0|0|31072|0|0|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:08:59 GMT+0100 (CET)|1516144139670| 9�|�'v�����f���8�����n�Wen��.:�����X2����28�{o�|�6���SV_���S����1~�W��r�L2��4U�ͽ��n�[�&b�n�es�����������]�k���L�O�4�03 �Y�WH�����L:���,.�������������U�ͽ��1 got data from BME280á������xg��������n�W�n��:����ߐ߯��}ټ��o��������w�Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:08:59 GMT+0100 (CET)|1516144139680| 952|92a3|17e4dcb|c3e|b1d|21~
+server  |Wed Jan 17 2018 00:09:02 GMT+0100 (CET)|1516144142947| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:02 GMT+0100 (CET)|1516144142957| 953|8c50|17e470e|14ef|1171|21~
+sensor21|Wed Jan 17 2018 00:09:05 GMT+0100 (CET)|1516144145514| ----------------
+sensor21|Wed Jan 17 2018 00:09:05 GMT+0100 (CET)|1516144145530| S21
+sensor21|Wed Jan 17 2018 00:09:05 GMT+0100 (CET)|1516144145737| server sent ok 
+server  |Wed Jan 17 2018 00:09:05 GMT+0100 (CET)|1516144145738| Sensor21 got start command from nRF24L01
+sensor21|Wed Jan 17 2018 00:09:05 GMT+0100 (CET)|1516144145960| OK21
+sensor21|Wed Jan 17 2018 00:09:05 GMT+0100 (CET)|1516144145961| Sensor21 got data from BME280
+sensor21|Wed Jan 17 2018 00:09:05 GMT+0100 (CET)|1516144145976| 953|8c50|17e470e|14ef|1171|21~
+sensor21|Wed Jan 17 2018 00:09:05 GMT+0100 (CET)|1516144145976| server got data 
+sensor21|Wed Jan 17 2018 00:09:05 GMT+0100 (CET)|1516144145976| S11
+sensor21|Wed Jan 17 2018 00:09:08 GMT+0100 (CET)|1516144148430| F11
+sensor21|Wed Jan 17 2018 00:09:08 GMT+0100 (CET)|1516144148430| S12
+server  |Wed Jan 17 2018 00:09:09 GMT+0100 (CET)|1516144149402| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:09 GMT+0100 (CET)|1516144149411| 958|8df6|17e4db1|fee|d36|21~
+sensor21|Wed Jan 17 2018 00:09:10 GMT+0100 (CET)|1516144150853| F12
+sensor21|Wed Jan 17 2018 00:09:10 GMT+0100 (CET)|1516144150868| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:09:10 GMT+0100 (CET)|1516144150884| 2387|3507|-2136|114|95|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:09:12 GMT+0100 (CET)|1516144152678| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:12 GMT+0100 (CET)|1516144152687| 95b|8db5|17e537f|e84|d9e|21~
+server  |Wed Jan 17 2018 00:09:15 GMT+0100 (CET)|1516144155954| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:15 GMT+0100 (CET)|1516144155964| 959|8ad3|17e4d62|e82|d5d|21~
+server  |Wed Jan 17 2018 00:09:19 GMT+0100 (CET)|1516144159231| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:19 GMT+0100 (CET)|1516144159240| 959|8a78|17e5226|e58|d1c|21~
+server  |Wed Jan 17 2018 00:09:22 GMT+0100 (CET)|1516144162507| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:22 GMT+0100 (CET)|1516144162516| 95a|89da|17e53cf|dd6|ca3|21~
+sensor21|Wed Jan 17 2018 00:09:23 GMT+0100 (CET)|1516144163187| ----------------
+sensor21|Wed Jan 17 2018 00:09:23 GMT+0100 (CET)|1516144163187| S21
+sensor21|Wed Jan 17 2018 00:09:23 GMT+0100 (CET)|1516144163393| server sent ok 
+sensor21|Wed Jan 17 2018 00:09:25 GMT+0100 (CET)|1516144165640| F21
+sensor21|Wed Jan 17 2018 00:09:25 GMT+0100 (CET)|1516144165641| S11
+server  |Wed Jan 17 2018 00:09:25 GMT+0100 (CET)|1516144165784| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:25 GMT+0100 (CET)|1516144165793| 95a|898b|17e5a3c|d97|c6c|21~
+sensor21|Wed Jan 17 2018 00:09:28 GMT+0100 (CET)|1516144168062| F11
+sensor21|Wed Jan 17 2018 00:09:28 GMT+0100 (CET)|1516144168062| S12
+server  |Wed Jan 17 2018 00:09:29 GMT+0100 (CET)|1516144169061| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:29 GMT+0100 (CET)|1516144169070| 95b|8952|17e5577|dbc|c7c|21~
+sensor21|Wed Jan 17 2018 00:09:30 GMT+0100 (CET)|1516144170484| F12
+sensor21|Wed Jan 17 2018 00:09:30 GMT+0100 (CET)|1516144170500| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:09:30 GMT+0100 (CET)|1516144170516| 0|0|31072|0|0|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:09:32 GMT+0100 (CET)|1516144172337| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:32 GMT+0100 (CET)|1516144172346| 95a|893c|17e5103|dbf|c7e|21~
+server  |Wed Jan 17 2018 00:09:35 GMT+0100 (CET)|1516144175613| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:35 GMT+0100 (CET)|1516144175623| 959|898a|17e52fa|d8b|c57|21~
+server  |Wed Jan 17 2018 00:09:37 GMT+0100 (CET)|1516144177732| Sensor21 FAIL
+server  |Wed Jan 17 2018 00:09:37 GMT+0100 (CET)|1516144177736| Sensor21 nRF24L01 Reset
+sensor21|Wed Jan 17 2018 00:09:40 GMT+0100 (CET)|1516144180555| ----------------
+sensor21|Wed Jan 17 2018 00:09:40 GMT+0100 (CET)|1516144180555| S21
+sensor21|Wed Jan 17 2018 00:09:40 GMT+0100 (CET)|1516144180763| server sent ok 
+server  |Wed Jan 17 2018 00:09:40 GMT+0100 (CET)|1516144180768| Sensor21 got start command from nRF24L01
+sensor21|Wed Jan 17 2018 00:09:40 GMT+0100 (CET)|1516144180985| OK21
+sensor21|Wed Jan 17 2018 00:09:41 GMT+0100 (CET)|1516144181001| Sensor21 got data from BME280
+sensor21|Wed Jan 17 2018 00:09:41 GMT+0100 (CET)|1516144181001| 959|898a|17e52fa|d8b|c57|21~
+sensor21|Wed Jan 17 2018 00:09:41 GMT+0100 (CET)|1516144181017| server got data 
+sensor21|Wed Jan 17 2018 00:09:41 GMT+0100 (CET)|1516144181017| S11
+sensor21|Wed Jan 17 2018 00:09:43 GMT+0100 (CET)|1516144183455| F11
+sensor21|Wed Jan 17 2018 00:09:43 GMT+0100 (CET)|1516144183471| S12
+server  |Wed Jan 17 2018 00:09:44 GMT+0100 (CET)|1516144184427| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:44 GMT+0100 (CET)|1516144184437| 959|89c3|17e52fa|e06|cd1|21~
+sensor21|Wed Jan 17 2018 00:09:45 GMT+0100 (CET)|1516144185894| F12
+sensor21|Wed Jan 17 2018 00:09:45 GMT+0100 (CET)|1516144185894| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:09:45 GMT+0100 (CET)|1516144185909| 2393|3438|-2125|74|67|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:09:47 GMT+0100 (CET)|1516144187704| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:47 GMT+0100 (CET)|1516144187713| 95b|8952|17e5577|e62|d20|21~
+server  |Wed Jan 17 2018 00:09:50 GMT+0100 (CET)|1516144190981| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:50 GMT+0100 (CET)|1516144190990| 959|895c|17e49c1|e08|cb2|21~
+server  |Wed Jan 17 2018 00:09:54 GMT+0100 (CET)|1516144194257| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:54 GMT+0100 (CET)|1516144194266| 959|892f|17e5226|d81|c4d|21~
+server  |Wed Jan 17 2018 00:09:57 GMT+0100 (CET)|1516144197534| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:09:57 GMT+0100 (CET)|1516144197543| 95b|895e|17e52ab|dae|c72|21~
+sensor21|Wed Jan 17 2018 00:09:58 GMT+0100 (CET)|1516144198211| ----------------
+sensor21|Wed Jan 17 2018 00:09:58 GMT+0100 (CET)|1516144198211| S21
+sensor21|Wed Jan 17 2018 00:09:58 GMT+0100 (CET)|1516144198434| server sent ok 
+sensor21|Wed Jan 17 2018 00:10:00 GMT+0100 (CET)|1516144200665| F21
+sensor21|Wed Jan 17 2018 00:10:00 GMT+0100 (CET)|1516144200665| S11
+server  |Wed Jan 17 2018 00:10:00 GMT+0100 (CET)|1516144200810| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:10:00 GMT+0100 (CET)|1516144200820| 95a|8980|17e51d6|edb|d57|21~
+sensor21|Wed Jan 17 2018 00:10:03 GMT+0100 (CET)|1516144203087| F11
+sensor21|Wed Jan 17 2018 00:10:03 GMT+0100 (CET)|1516144203088| S12
+server  |Wed Jan 17 2018 00:10:04 GMT+0100 (CET)|1516144204087| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:10:04 GMT+0100 (CET)|1516144204096| 95a|89fc|17e4e35|f75|dfb|21~
+sensor21|Wed Jan 17 2018 00:10:05 GMT+0100 (CET)|1516144205509| F12
+sensor21|Wed Jan 17 2018 00:10:05 GMT+0100 (CET)|1516144205525| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:10:05 GMT+0100 (CET)|1516144205541| 0|0|31072|0|0|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:10:07 GMT+0100 (CET)|1516144207363| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:10:07 GMT+0100 (CET)|1516144207372| 959|89e5|17e4d62|f90|e2b|21~
+server  |Wed Jan 17 2018 00:10:10 GMT+0100 (CET)|1516144210640| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:10:10 GMT+0100 (CET)|1516144210649| 95a|89c4|17e4f0a|fa6|e28|21~
+server  |Wed Jan 17 2018 00:10:13 GMT+0100 (CET)|1516144213916| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:10:13 GMT+0100 (CET)|1516144213926| 95a|8980|17e51d6|fb9|e40|21~
+sensor21|Wed Jan 17 2018 00:10:15 GMT+0100 (CET)|1516144215580| ----------------
+sensor21|Wed Jan 17 2018 00:10:15 GMT+0100 (CET)|1516144215580| S21
+server  |Wed Jan 17 2018 00:10:15 GMT+0100 (CET)|1516144215797| Sensor21 got start command from nRF24L01
+sensor21|Wed Jan 17 2018 00:10:15 GMT+0100 (CET)|1516144215803| server sent ok 
+sensor21|Wed Jan 17 2018 00:10:16 GMT+0100 (CET)|1516144216010| OK21
+sensor21|Wed Jan 17 2018 00:10:16 GMT+0100 (CET)|1516144216026| Sensor21 got data from BME280
+sensor21|Wed Jan 17 2018 00:10:16 GMT+0100 (CET)|1516144216026| 95a|8980|17e51d6|fb9|e40|21~
+sensor21|Wed Jan 17 2018 00:10:16 GMT+0100 (CET)|1516144216042| server got data 
+sensor21|Wed Jan 17 2018 00:10:16 GMT+0100 (CET)|1516144216042| S11
+sensor21|Wed Jan 17 2018 00:10:18 GMT+0100 (CET)|1516144218496| F11
+sensor21|Wed Jan 17 2018 00:10:18 GMT+0100 (CET)|1516144218496| S12
+server  |Wed Jan 17 2018 00:10:19 GMT+0100 (CET)|1516144219454| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:10:19 GMT+0100 (CET)|1516144219463| 95a|8930|17e4f0a|f9e|e4e|21~
+server  |Wed Jan 17 2018 00:10:19 GMT+0100 (CET)|1516144219639| Sensor21 FAIL
+server  |Wed Jan 17 2018 00:10:19 GMT+0100 (CET)|1516144219642| Sensor21 nRF24L01 Reset
+sensor21|Wed Jan 17 2018 00:10:20 GMT+0100 (CET)|1516144220925| F12
+sensor21|Wed Jan 17 2018 00:10:20 GMT+0100 (CET)|1516144220935| server sendingSensorDataViaUart
+sensor21|Wed Jan 17 2018 00:10:20 GMT+0100 (CET)|1516144220950| 2394|3437|-2126|85|77|21~0|0|31072|0|0|11~0|0|31072|0|0|12~
+server  |Wed Jan 17 2018 00:10:23 GMT+0100 (CET)|1516144223090| Sensor21 got data from BME280
+server  |Wed Jan 17 2018 00:10:23 GMT+0100 (CET)|1516144223100| 95a|88b4|17e4e35|1034|eaf|21~

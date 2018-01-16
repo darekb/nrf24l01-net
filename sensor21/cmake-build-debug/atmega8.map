@@ -58,7 +58,7 @@ dataFromNRF24L01    0x9               CMakeFiles/atmega8.elf.dir/main_functions.
 voltage             0x23              CMakeFiles/atmega8.elf.dir/main_functions.c.o
 light               0x23              CMakeFiles/atmega8.elf.dir/main_functions.c.o
 stage               0x1               CMakeFiles/atmega8.elf.dir/main.c.o
-buffer              0xf               CMakeFiles/atmega8.elf.dir/main_functions.c.o
+buffer              0x11              CMakeFiles/atmega8.elf.dir/main_functions.c.o
 BME180measure       0x11              CMakeFiles/atmega8.elf.dir/main_functions.c.o
 status              0x1               CMakeFiles/atmega8.elf.dir/main.c.o
 t_fine              0x4               CMakeFiles/atmega8.elf.dir/BME280.c.o
@@ -535,7 +535,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x1b8a
+.text           0x0000000000000000     0x1b7e
  *(.vectors)
  .vectors       0x0000000000000000       0x26 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/crtatmega8.o
                 0x0000000000000000                __vectors
@@ -802,83 +802,83 @@ END GROUP
                 0x000000000000176a       0x12 CMakeFiles/atmega8.elf.dir/main_functions.c.o
                 0x000000000000176a                getDataFromNRF24L01
  .text.sendVianRF24L01
-                0x000000000000177c       0x28 CMakeFiles/atmega8.elf.dir/main_functions.c.o
+                0x000000000000177c       0x1c CMakeFiles/atmega8.elf.dir/main_functions.c.o
                 0x000000000000177c                sendVianRF24L01
  .text.libgcc.mul
-                0x00000000000017a4       0x1e /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulsi3.o)
-                0x00000000000017a4                __mulsi3
+                0x0000000000001798       0x1e /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulsi3.o)
+                0x0000000000001798                __mulsi3
  .text.libgcc.mul
-                0x00000000000017c2       0x14 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muluhisi3.o)
-                0x00000000000017c2                __muluhisi3
+                0x00000000000017b6       0x14 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muluhisi3.o)
+                0x00000000000017b6                __muluhisi3
  .text.libgcc.mul
-                0x00000000000017d6        0xc /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulshisi3.o)
-                0x00000000000017d6                __mulshisi3
-                0x00000000000017da                __mulohisi3
+                0x00000000000017ca        0xc /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_mulshisi3.o)
+                0x00000000000017ca                __mulshisi3
+                0x00000000000017ce                __mulohisi3
  .text.libgcc.mul
-                0x00000000000017e2       0x92 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muldi3.o)
-                0x00000000000017e2                __muldi3
+                0x00000000000017d6       0x92 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muldi3.o)
+                0x00000000000017d6                __muldi3
  .text.libgcc.mul
-                0x0000000000001874       0x10 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muldi3_6.o)
-                0x0000000000001874                __muldi3_6
+                0x0000000000001868       0x10 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_muldi3_6.o)
+                0x0000000000001868                __muldi3_6
  .text.libgcc.div
-                0x0000000000001884       0x56 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_divdi3.o)
-                0x0000000000001884                __moddi3
-                0x0000000000001888                __divdi3
-                0x000000000000188a                __divdi3_moddi3
+                0x0000000000001878       0x56 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_divdi3.o)
+                0x0000000000001878                __moddi3
+                0x000000000000187c                __divdi3
+                0x000000000000187e                __divdi3_moddi3
  .text.libgcc.div
-                0x00000000000018da       0x1a /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_udivdi3.o)
-                0x00000000000018da                __umoddi3
-                0x00000000000018de                __udivdi3
-                0x00000000000018e0                __udivdi3_umoddi3
+                0x00000000000018ce       0x1a /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_udivdi3.o)
+                0x00000000000018ce                __umoddi3
+                0x00000000000018d2                __udivdi3
+                0x00000000000018d4                __udivdi3_umoddi3
  .text.libgcc.div
-                0x00000000000018f4       0x7e /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_udivmod64.o)
-                0x00000000000018f4                __udivmod64
- .text.libgcc   0x0000000000001972       0x20 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_negdi2.o)
-                0x0000000000001972                __negdi2
+                0x00000000000018e8       0x7e /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_udivmod64.o)
+                0x00000000000018e8                __udivmod64
+ .text.libgcc   0x0000000000001966       0x20 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_negdi2.o)
+                0x0000000000001966                __negdi2
  .text.libgcc.prologue
-                0x0000000000001992       0x38 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_prologue.o)
-                0x0000000000001992                __prologue_saves__
+                0x0000000000001986       0x38 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_prologue.o)
+                0x0000000000001986                __prologue_saves__
  .text.libgcc.prologue
-                0x00000000000019ca       0x36 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_epilogue.o)
-                0x00000000000019ca                __epilogue_restores__
+                0x00000000000019be       0x36 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_epilogue.o)
+                0x00000000000019be                __epilogue_restores__
  .text.libgcc.builtins
-                0x0000000000001a00       0x32 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_ashldi3.o)
-                0x0000000000001a00                __ashldi3
+                0x00000000000019f4       0x32 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_ashldi3.o)
+                0x00000000000019f4                __ashldi3
  .text.libgcc.builtins
-                0x0000000000001a32       0x3c /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_ashrdi3.o)
-                0x0000000000001a32                __ashrdi3
-                0x0000000000001a36                __lshrdi3
- .text.libgcc   0x0000000000001a6e       0x12 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_adddi3.o)
-                0x0000000000001a6e                __adddi3
- .text.libgcc   0x0000000000001a80       0x12 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_subdi3.o)
-                0x0000000000001a80                __subdi3
- .text.libgcc   0x0000000000001a92       0x18 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_cmpdi2_s8.o)
-                0x0000000000001a92                __cmpdi2_s8
+                0x0000000000001a26       0x3c /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_ashrdi3.o)
+                0x0000000000001a26                __ashrdi3
+                0x0000000000001a2a                __lshrdi3
+ .text.libgcc   0x0000000000001a62       0x12 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_adddi3.o)
+                0x0000000000001a62                __adddi3
+ .text.libgcc   0x0000000000001a74       0x12 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_subdi3.o)
+                0x0000000000001a74                __subdi3
+ .text.libgcc   0x0000000000001a86       0x18 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_cmpdi2_s8.o)
+                0x0000000000001a86                __cmpdi2_s8
  .text.libgcc.mul
-                0x0000000000001aaa       0x18 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_umulhisi3.o)
-                0x0000000000001aaa                __umulhisi3
+                0x0000000000001a9e       0x18 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_umulhisi3.o)
+                0x0000000000001a9e                __umulhisi3
  .text.avr-libc
-                0x0000000000001ac2       0x14 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(itoa_ncheck.o)
-                0x0000000000001ac2                __itoa_ncheck
+                0x0000000000001ab6       0x14 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(itoa_ncheck.o)
+                0x0000000000001ab6                __itoa_ncheck
  .text.avr-libc
-                0x0000000000001ad6       0x1c /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ltoa_ncheck.o)
-                0x0000000000001ad6                __ltoa_ncheck
+                0x0000000000001aca       0x1c /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ltoa_ncheck.o)
+                0x0000000000001aca                __ltoa_ncheck
  .text.avr-libc
-                0x0000000000001af2       0x42 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ultoa_ncheck.o)
-                0x0000000000001af2                __ultoa_ncheck
-                0x0000000000001af4                __ultoa_common
+                0x0000000000001ae6       0x42 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(ultoa_ncheck.o)
+                0x0000000000001ae6                __ultoa_ncheck
+                0x0000000000001ae8                __ultoa_common
  .text.avr-libc
-                0x0000000000001b34       0x32 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(utoa_ncheck.o)
-                0x0000000000001b34                __utoa_ncheck
-                0x0000000000001b36                __utoa_common
+                0x0000000000001b28       0x32 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(utoa_ncheck.o)
+                0x0000000000001b28                __utoa_ncheck
+                0x0000000000001b2a                __utoa_common
  .text.avr-libc
-                0x0000000000001b66       0x20 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(strrev.o)
-                0x0000000000001b66                strrev
-                0x0000000000001b86                . = ALIGN (0x2)
+                0x0000000000001b5a       0x20 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr4/libc.a(strrev.o)
+                0x0000000000001b5a                strrev
+                0x0000000000001b7a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000001b86        0x0 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_exit.o)
-                0x0000000000001b86                exit
-                0x0000000000001b86                _exit
+ .fini9         0x0000000000001b7a        0x0 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_exit.o)
+                0x0000000000001b7a                exit
+                0x0000000000001b7a                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -897,11 +897,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000001b86        0x4 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_exit.o)
+ .fini0         0x0000000000001b7a        0x4 /usr/lib/gcc/avr/4.9.2/avr4/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000001b8a                _etext = .
+                0x0000000000001b7e                _etext = .
 
-.data           0x0000000000800060      0x14a load address 0x0000000000001b8a
+.data           0x0000000000800060      0x14a load address 0x0000000000001b7e
                 0x0000000000800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800060       0x12 CMakeFiles/atmega8.elf.dir/main_functions.c.o
@@ -923,7 +923,7 @@ END GROUP
                 0x00000000008001e2                _edata = .
                 0x00000000008001e2                PROVIDE (__data_end, .)
 
-.bss            0x00000000008001aa       0x9e
+.bss            0x00000000008001aa       0xa0
                 0x00000000008001aa                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x00000000008001aa        0x5 CMakeFiles/atmega8.elf.dir/main.c.o
@@ -942,22 +942,22 @@ END GROUP
                 0x00000000008001d4                status
  COMMON         0x00000000008001d5        0x4 CMakeFiles/atmega8.elf.dir/BME280.c.o
                 0x00000000008001d5                t_fine
- COMMON         0x00000000008001d9       0x6f CMakeFiles/atmega8.elf.dir/main_functions.c.o
+ COMMON         0x00000000008001d9       0x71 CMakeFiles/atmega8.elf.dir/main_functions.c.o
                 0x00000000008001d9                dataFromNRF24L01
                 0x00000000008001e2                voltage
                 0x0000000000800205                light
                 0x0000000000800228                buffer
-                0x0000000000800237                BME180measure
-                0x0000000000800248                PROVIDE (__bss_end, .)
-                0x0000000000001b8a                __data_load_start = LOADADDR (.data)
-                0x0000000000001cd4                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000000000800239                BME180measure
+                0x000000000080024a                PROVIDE (__bss_end, .)
+                0x0000000000001b7e                __data_load_start = LOADADDR (.data)
+                0x0000000000001cc8                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800248        0x0
-                0x0000000000800248                PROVIDE (__noinit_start, .)
+.noinit         0x000000000080024a        0x0
+                0x000000000080024a                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0000000000800248                PROVIDE (__noinit_end, .)
-                0x0000000000800248                _end = .
-                0x0000000000800248                PROVIDE (__heap_start, .)
+                0x000000000080024a                PROVIDE (__noinit_end, .)
+                0x000000000080024a                _end = .
+                0x000000000080024a                PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)

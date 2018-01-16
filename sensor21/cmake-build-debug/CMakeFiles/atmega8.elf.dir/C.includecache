@@ -51,16 +51,16 @@ util/delay.h
 -
 slUart.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/slUart.h
+main_functions.h
+/home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.h
 slNRF24.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.h
-slBME180Measure.h
-/home/dariusz/Arduino/nrf24l01-net/sensor21/slBME180Measure.h
 BME280.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/BME280.h
 slAdc.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/slAdc.h
-main_functions.h
-/home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.h
+slBME180Measure.h
+/home/dariusz/Arduino/nrf24l01-net/sensor21/slBME180Measure.h
 
 /home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.h
 

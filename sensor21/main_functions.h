@@ -8,6 +8,8 @@
 
 #define SENSOR_ID 21
 
+#define DATA_UPLOAD_SIZE 17
+
 void initADCData();
 
 void restart();
