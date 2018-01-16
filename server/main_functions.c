@@ -96,6 +96,9 @@ void saveDataFromNRF() {
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
+    slUART_WriteStringNl("Get buffer from sensor ");
+    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+    slUART_WriteBuffer(dataFromNRF24L01, 17);
     BME180measure[(sensorNr - 1)] = returnMEASUREFromBuffer(dataFromNRF24L01);
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("OK");

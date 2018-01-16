@@ -33,14 +33,6 @@ slUart.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/slUart.h
 slNRF24.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.h
-slI2C.h
-/home/dariusz/Arduino/nrf24l01-net/sensor21/slI2C.h
-BME280.h
-/home/dariusz/Arduino/nrf24l01-net/sensor21/BME280.h
-slSPI.h
-/home/dariusz/Arduino/nrf24l01-net/sensor21/slSPI.h
-slAdc.h
-/home/dariusz/Arduino/nrf24l01-net/sensor21/slAdc.h
 main_functions.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.h
 

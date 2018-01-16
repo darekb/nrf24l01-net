@@ -25,7 +25,8 @@ char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'};
 
 uint8_t dataFromNRF24L01[9];
 union MEASURE BME180measure;
-uint8_t buffer[15];
+uint8_t buffer[17];
+uint16_t nextNumber = 0;
 
 TVOL voltage;
 TVOL light;
@@ -91,25 +92,10 @@ void getDataFromADC() {
 }
 
 void getMesurements() {
-    setBME280Mode();
-    getDataFromBME280();
-    getDataFromADC();
-    getDataFromFotorezistor();
-    #if showDebugDataMainFunctions == 1
-    slUART_WriteStringNl("Sensor21 got data from BME280");
-    slUART_LogHex32WithSign(BME180measure.data.temperature);
-    slUART_WriteString("|");
-    slUART_LogHex32WithSign(BME180measure.data.humidity);
-    slUART_WriteString("|");
-    slUART_LogHex32(BME180measure.data.pressure);
-    slUART_WriteString("|");
-    slUART_LogHex(BME180measure.data.voltage);
-    slUART_WriteString("|");
-    slUART_LogHex(BME180measure.data.fotorezistor);
-    slUART_WriteString("|");
-    slUART_LogDec(BME180measure.data.sensorId);
-    slUART_WriteStringNl("~");
-    #endif
+    nextNumber = nextNumber + 1;
+    for (uint8_t i = 0; i < 17; i++) {
+        dataFromNRF24L01[i] = nextNumber;
+    };
 }
 
 
@@ -164,8 +150,8 @@ void getDataFromNRF24L01() {
 }
 
 uint8_t sendVianRF24L01() {
-    //slUART_WriteStringNl("Try sent data: ");
-    //slUART_WriteBuffer(buffer, 17);
+    slUART_WriteStringNl("Try sent data: ");
+    slUART_WriteBuffer(buffer, 17);
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
