@@ -84,18 +84,16 @@ void sensorStart() {
     #endif
     slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
-    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
-    slNRF24_Reset();
     clearData();
+}
+
+void resetAfterGotData(){
+    slNRF24_Reset();
+    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
 }
 
 void saveDataFromNRF() {
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 17);
-    slNRF24_Reset();
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
     slUART_WriteStringNl("Get buffer from sensor ");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     slUART_WriteBuffer(dataFromNRF24L01, 17);
@@ -103,7 +101,7 @@ void saveDataFromNRF() {
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("OK");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
-    slUART_WriteStringNl("Sensor21 got data from BME280");
+    slUART_WriteStringNl("Server got data from Sensor21");
     slUART_LogHex32WithSign(BME180measure[(sensorNr - 1)].data.temperature);
     slUART_WriteString("|");
     slUART_LogHex32WithSign(BME180measure[(sensorNr - 1)].data.humidity);

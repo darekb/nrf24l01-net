@@ -18,18 +18,17 @@
 
 #include "slNRF24.h"
 #include "main_functions.h"
+#include "slSPI.h"
 
 void setupInt1();
 
 int main(void) {
-    #if showDebugDataMain == 1
-    slUART_SimpleTransmitInit();
-    slUART_WriteString("start.\r\n");
-    #endif
-    slNRF24_IoInit();
     setupInt1();
-    slNRF24_Init();
     sei();
+    slSPI_Init();
+    slNRF24_IoInit();
+    slNRF24_Init();
+    resetNRF24L01();
     while (1) {}
     return 0;
 }
@@ -49,18 +48,21 @@ void setupInt1() {
 ISR(INT1_vect) {
     uint8_t status = 0;
     slNRF24_GetRegister(STATUS, &status, 1);
+    slUART_LogBinaryNl(status);
     cli();
     if ((status & (1 << 6)) != 0) {//got data
         getDataFromNRF24L01();
         slUART_WriteStringNl("Sensor21 got data");
         getMesurements();
-        prepeareBuffer();
+        //prepeareBuffer();
         sendVianRF24L01();
     }
     if ((status & (1 << 5)) != 0) {//send ok
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Sensor21 sent data");
         #endif
+        slNRF24_Reset();
+        slNRF24_RxPowerUp();
     }
     sei();
 }

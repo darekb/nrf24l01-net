@@ -77,8 +77,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
  .data          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
  .bss           0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
- .text.slSPI_Init
-                0x0000000000000000       0x32 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
  .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
  .data          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
  .bss           0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
@@ -373,7 +371,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0x9e8
+.text           0x0000000000000000      0xa66
  *(.vectors)
  .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/crtatmega328p.o
                 0x0000000000000000                __vectors
@@ -461,120 +459,126 @@ END GROUP
                 0x00000000000000a0       0x18 CMakeFiles/atmega328p.elf.dir/main.c.o
                 0x00000000000000a0                setupInt0
  .text.startup.main
-                0x00000000000000b8       0x2c CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x00000000000000b8       0x70 CMakeFiles/atmega328p.elf.dir/main.c.o
                 0x00000000000000b8                main
  .text.__vector_1
-                0x00000000000000e4       0x74 CMakeFiles/atmega328p.elf.dir/main.c.o
-                0x00000000000000e4                __vector_1
+                0x0000000000000128       0x76 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x0000000000000128                __vector_1
  .text.slUART_SimpleTransmitInit
-                0x0000000000000158       0x12 CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x0000000000000158                slUART_SimpleTransmitInit
+                0x000000000000019e       0x12 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x000000000000019e                slUART_SimpleTransmitInit
  .text.slUART_Init
-                0x000000000000016a        0xa CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x000000000000016a                slUART_Init
+                0x00000000000001b0        0xa CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x00000000000001b0                slUART_Init
  .text.slUART_WriteByte
-                0x0000000000000174        0xe CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x0000000000000174                slUART_WriteByte
+                0x00000000000001ba        0xe CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x00000000000001ba                slUART_WriteByte
  .text.slUART_WriteString
-                0x0000000000000182       0x24 CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x0000000000000182                slUART_WriteString
+                0x00000000000001c8       0x24 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x00000000000001c8                slUART_WriteString
  .text.slUART_WriteStringNl
-                0x00000000000001a6        0x8 CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x00000000000001a6                slUART_WriteStringNl
+                0x00000000000001ec        0x8 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x00000000000001ec                slUART_WriteStringNl
  .text.slUART_LogDec
-                0x00000000000001ae       0x36 CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x00000000000001ae                slUART_LogDec
+                0x00000000000001f4       0x36 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x00000000000001f4                slUART_LogDec
  .text.slUART_LogHex
-                0x00000000000001e4       0x36 CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x00000000000001e4                slUART_LogHex
+                0x000000000000022a       0x36 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x000000000000022a                slUART_LogHex
  .text.slUART_WriteBuffer
-                0x000000000000021a       0x6c CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x000000000000021a                slUART_WriteBuffer
+                0x0000000000000260       0x6c CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x0000000000000260                slUART_WriteBuffer
  .text.slUART_LogHexNl
-                0x0000000000000286        0x8 CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x0000000000000286                slUART_LogHexNl
+                0x00000000000002cc        0x8 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x00000000000002cc                slUART_LogHexNl
  .text.slUART_LogHex32WithSign
-                0x000000000000028e       0x36 CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x000000000000028e                slUART_LogHex32WithSign
+                0x00000000000002d4       0x36 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x00000000000002d4                slUART_LogHex32WithSign
  .text.slUART_LogHex32
-                0x00000000000002c4       0x36 CMakeFiles/atmega328p.elf.dir/slUart.c.o
-                0x00000000000002c4                slUART_LogHex32
+                0x000000000000030a       0x36 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x000000000000030a                slUART_LogHex32
+ .text.slSPI_Init
+                0x0000000000000340       0x32 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
+                0x0000000000000340                slSPI_Init
  .text.slSPI_TransferInt
-                0x00000000000002fa        0xe CMakeFiles/atmega328p.elf.dir/slSPI.c.o
-                0x00000000000002fa                slSPI_TransferInt
+                0x0000000000000372        0xe CMakeFiles/atmega328p.elf.dir/slSPI.c.o
+                0x0000000000000372                slSPI_TransferInt
  .text.slNRF24_IoInit
-                0x0000000000000308        0xa CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x0000000000000308                slNRF24_IoInit
+                0x0000000000000380        0xa CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x0000000000000380                slNRF24_IoInit
  .text.slNRF24_SetRegister
-                0x0000000000000312       0x6e CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x0000000000000312                slNRF24_SetRegister
+                0x000000000000038a       0x6e CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x000000000000038a                slNRF24_SetRegister
  .text.slNRF24_GetRegister
-                0x0000000000000380       0x6e CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x0000000000000380                slNRF24_GetRegister
+                0x00000000000003f8       0x6e CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000003f8                slNRF24_GetRegister
  .text.slNRF24_Init
-                0x00000000000003ee       0xce CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x00000000000003ee                slNRF24_Init
+                0x0000000000000466       0xce CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x0000000000000466                slNRF24_Init
  .text.slNRF24_ChangeAddress
-                0x00000000000004bc       0x70 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x00000000000004bc                slNRF24_ChangeAddress
+                0x0000000000000534       0x70 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x0000000000000534                slNRF24_ChangeAddress
  .text.slNRF24_Reset
-                0x000000000000052c       0x2e CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x000000000000052c                slNRF24_Reset
+                0x00000000000005a4       0x2e CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000005a4                slNRF24_Reset
  .text.slNRF24_TransmitPayload
-                0x000000000000055a       0x90 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x000000000000055a                slNRF24_TransmitPayload
+                0x00000000000005d2       0x90 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000005d2                slNRF24_TransmitPayload
  .text.slNRF24_TxPowerUp
-                0x00000000000005ea       0x46 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x00000000000005ea                slNRF24_TxPowerUp
+                0x0000000000000662       0x46 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x0000000000000662                slNRF24_TxPowerUp
  .text.slNRF24_FlushTx
-                0x0000000000000630       0x22 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x0000000000000630                slNRF24_FlushTx
+                0x00000000000006a8       0x22 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000006a8                slNRF24_FlushTx
  .text.slNRF24_RxPowerUp
-                0x0000000000000652       0x46 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x0000000000000652                slNRF24_RxPowerUp
+                0x00000000000006ca       0x46 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x00000000000006ca                slNRF24_RxPowerUp
  .text.slNRF24_FlushRx
-                0x0000000000000698       0x22 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
-                0x0000000000000698                slNRF24_FlushRx
+                0x0000000000000710       0x22 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
+                0x0000000000000710                slNRF24_FlushRx
  .text.returnMEASUREFromBuffer
-                0x00000000000006ba       0x4c CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
-                0x00000000000006ba                returnMEASUREFromBuffer
+                0x0000000000000732       0x4c CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+                0x0000000000000732                returnMEASUREFromBuffer
  .text.clearData
-                0x0000000000000706       0x10 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000706                clearData
+                0x000000000000077e       0x10 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x000000000000077e                clearData
  .text.nextSensorNr
-                0x0000000000000716       0x1e CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000716                nextSensorNr
+                0x000000000000078e       0x1e CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x000000000000078e                nextSensorNr
  .text.nRF24L01Start
-                0x0000000000000734        0xa CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000734                nRF24L01Start
+                0x00000000000007ac        0xa CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x00000000000007ac                nRF24L01Start
  .text.sensorStart
-                0x000000000000073e       0x68 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x000000000000073e                sensorStart
+                0x00000000000007b6       0x50 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x00000000000007b6                sensorStart
+ .text.resetAfterGotData
+                0x0000000000000806       0x14 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000806                resetAfterGotData
  .text.saveDataFromNRF
-                0x00000000000007a6      0x17a CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x00000000000007a6                saveDataFromNRF
+                0x000000000000081a      0x184 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x000000000000081a                saveDataFromNRF
  .text.avr-libc
-                0x0000000000000920       0x14 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
-                0x0000000000000920                __itoa_ncheck
+                0x000000000000099e       0x14 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
+                0x000000000000099e                __itoa_ncheck
  .text.avr-libc
-                0x0000000000000934       0x1c /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(ltoa_ncheck.o)
-                0x0000000000000934                __ltoa_ncheck
+                0x00000000000009b2       0x1c /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(ltoa_ncheck.o)
+                0x00000000000009b2                __ltoa_ncheck
  .text.avr-libc
-                0x0000000000000950       0x42 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(ultoa_ncheck.o)
-                0x0000000000000950                __ultoa_ncheck
-                0x0000000000000952                __ultoa_common
+                0x00000000000009ce       0x42 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(ultoa_ncheck.o)
+                0x00000000000009ce                __ultoa_ncheck
+                0x00000000000009d0                __ultoa_common
  .text.avr-libc
-                0x0000000000000992       0x32 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
-                0x0000000000000992                __utoa_ncheck
-                0x0000000000000994                __utoa_common
+                0x0000000000000a10       0x32 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
+                0x0000000000000a10                __utoa_ncheck
+                0x0000000000000a12                __utoa_common
  .text.avr-libc
-                0x00000000000009c4       0x20 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(strrev.o)
-                0x00000000000009c4                strrev
-                0x00000000000009e4                . = ALIGN (0x2)
+                0x0000000000000a42       0x20 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(strrev.o)
+                0x0000000000000a42                strrev
+                0x0000000000000a62                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000000000009e4        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
-                0x00000000000009e4                exit
-                0x00000000000009e4                _exit
+ .fini9         0x0000000000000a62        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
+                0x0000000000000a62                exit
+                0x0000000000000a62                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -593,11 +597,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000000000009e4        0x4 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
+ .fini0         0x0000000000000a62        0x4 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x00000000000009e8                _etext = .
+                0x0000000000000a66                _etext = .
 
-.data           0x0000000000800100       0xea load address 0x00000000000009e8
+.data           0x0000000000800100       0xfe load address 0x0000000000000a66
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800100       0x6c CMakeFiles/atmega328p.elf.dir/main_functions.c.o
@@ -609,40 +613,39 @@ END GROUP
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x000000000080016c       0x21 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x000000000080016c       0x2e CMakeFiles/atmega328p.elf.dir/main.c.o
  .rodata.str1.1
-                0x000000000080018d        0x3 CMakeFiles/atmega328p.elf.dir/slUart.c.o
+                0x000000000080019a        0x3 CMakeFiles/atmega328p.elf.dir/slUart.c.o
  .rodata.str1.1
-                0x0000000000800190       0x59 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                                         0x5a (size before relaxing)
+                0x000000000080019d       0x61 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                                         0x62 (size before relaxing)
  *(.gnu.linkonce.d*)
-                0x00000000008001ea                . = ALIGN (0x2)
- *fill*         0x00000000008001e9        0x1 
-                0x00000000008001ea                _edata = .
-                0x00000000008001ea                PROVIDE (__data_end, .)
+                0x00000000008001fe                . = ALIGN (0x2)
+                0x00000000008001fe                _edata = .
+                0x00000000008001fe                PROVIDE (__data_end, .)
 
-.bss            0x00000000008001ea       0x46
-                0x00000000008001ea                PROVIDE (__bss_start, .)
+.bss            0x00000000008001fe       0x46
+                0x00000000008001fe                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00000000008001ea        0x1 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x00000000008001ea                sensorNr
+ .bss           0x00000000008001fe        0x1 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x00000000008001fe                sensorNr
  *(.bss*)
  *(COMMON)
- COMMON         0x00000000008001eb        0x1 CMakeFiles/atmega328p.elf.dir/main.c.o
-                0x00000000008001eb                status
- COMMON         0x00000000008001ec       0x44 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x00000000008001ec                dataFromNRF24L01
-                0x00000000008001fd                BME180measure
-                0x0000000000800230                PROVIDE (__bss_end, .)
-                0x00000000000009e8                __data_load_start = LOADADDR (.data)
-                0x0000000000000ad2                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00000000008001ff        0x1 CMakeFiles/atmega328p.elf.dir/main.c.o
+                0x00000000008001ff                status
+ COMMON         0x0000000000800200       0x44 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000800200                dataFromNRF24L01
+                0x0000000000800211                BME180measure
+                0x0000000000800244                PROVIDE (__bss_end, .)
+                0x0000000000000a66                __data_load_start = LOADADDR (.data)
+                0x0000000000000b64                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800230        0x0
-                0x0000000000800230                PROVIDE (__noinit_start, .)
+.noinit         0x0000000000800244        0x0
+                0x0000000000800244                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0000000000800230                PROVIDE (__noinit_end, .)
-                0x0000000000800230                _end = .
-                0x0000000000800230                PROVIDE (__heap_start, .)
+                0x0000000000800244                PROVIDE (__noinit_end, .)
+                0x0000000000800244                _end = .
+                0x0000000000800244                PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)

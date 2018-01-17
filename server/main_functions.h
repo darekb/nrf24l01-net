@@ -10,6 +10,7 @@ void nRF24L01Start();
 void sensorStart();
 
 void saveDataFromNRF();
+void resetAfterGotData();
 
 void saveErrorData();
 

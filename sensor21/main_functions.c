@@ -26,7 +26,7 @@ char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'};
 uint8_t dataFromNRF24L01[9];
 union MEASURE BME180measure;
 uint8_t buffer[17];
-uint16_t nextNumber = 0;
+uint8_t nextNumber = 0;
 
 TVOL voltage;
 TVOL light;
@@ -93,8 +93,11 @@ void getDataFromADC() {
 
 void getMesurements() {
     nextNumber = nextNumber + 1;
+    if(nextNumber > 245){
+        nextNumber = 0;
+    }
     for (uint8_t i = 0; i < 17; i++) {
-        dataFromNRF24L01[i] = nextNumber;
+        buffer[i] = nextNumber;
     };
 }
 
@@ -145,21 +148,15 @@ void getDataFromNRF24L01() {
     clearData();
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 9);
     slNRF24_Reset();
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
 }
 
 uint8_t sendVianRF24L01() {
     slUART_WriteStringNl("Try sent data: ");
     slUART_WriteBuffer(buffer, 17);
-    slNRF24_Reset();
+    //slNRF24_Reset();
     slNRF24_FlushTx();
-    slNRF24_FlushRx();
     slNRF24_TxPowerUp();
     slNRF24_TransmitPayload(&buffer, 17);
-    slNRF24_RxPowerUp();
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
-    slNRF24_Reset();
+    //resetNRF24L01();
     return 0;
 }

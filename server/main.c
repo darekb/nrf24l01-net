@@ -17,6 +17,7 @@
 #include "main.h"
 #include "slNRF24.h"
 #include "main_functions.h"
+#include "slSPI.h"
 
 
 #define LED (1 << PB0)
@@ -29,18 +30,15 @@ uint8_t status;
 //counter for fail response form sensor
 int main(void) {
     setupInt0();
-    #if showDebugDataMain == 1
-    slUART_Init();
-    DDRB |= (1 << DDB0);//set DDD7 as output
-    PORTB &= ~(1 << DDB0);// set as 0
-    #endif
+    sei();
+    slSPI_Init();
     slNRF24_IoInit();
     nRF24L01Start();
-    sei();
     slNRF24_Reset();
+    slUART_WriteStringNl("Start server");
     while (1) {
         sensorStart();
-        for(uint8_t i =0; i<15; i++){
+        for(uint8_t i =0; i<5; i++){
             _delay_ms(1000);
         }
     }
@@ -75,6 +73,7 @@ ISR(INT0_vect) {
         #if showDebugDataMain == 1
         slUART_WriteStringNl("server sent ok ");
         #endif
+        resetAfterGotData();
     }
     sei();
 }
