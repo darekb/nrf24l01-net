@@ -63,6 +63,7 @@ uint8_t returnNextStage() {
     if (sensorNr < sensorsCount) {
         return 1;
     }
+    
     return 0;
 }
 
