@@ -161,3 +161,7 @@ void slNRF24_PowerDown();
 void slNRF24_FlushTx();
 
 void slNRF24_FlushRx();
+
+void slNRF24_CE_LOW();
+
+void slNRF24_SetPayloadSize(uint8_t playloadSize);

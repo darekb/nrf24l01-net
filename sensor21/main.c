@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <util/delay.h>
 
 
 #ifndef F_CPU
@@ -23,6 +24,9 @@
 void setupInt1();
 
 int main(void) {
+    slUART_SimpleTransmitInit();
+    //slUART_Init();
+    slUART_WriteStringNl("Start sensor21");
     setupInt1();
     sei();
     slSPI_Init();
@@ -47,6 +51,7 @@ void setupInt1() {
 
 ISR(INT1_vect) {
     uint8_t status = 0;
+    slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
     slUART_LogBinaryNl(status);
     cli();
@@ -55,14 +60,15 @@ ISR(INT1_vect) {
         slUART_WriteStringNl("Sensor21 got data");
         getMesurements();
         //prepeareBuffer();
+        //_delay_ms(200);
         sendVianRF24L01();
+        resetAfterSendData();
     }
     if ((status & (1 << 5)) != 0) {//send ok
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Sensor21 sent data");
         #endif
-        slNRF24_Reset();
-        slNRF24_RxPowerUp();
+        resetAfterSendData();
     }
     sei();
 }

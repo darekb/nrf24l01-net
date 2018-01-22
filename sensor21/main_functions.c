@@ -147,6 +147,15 @@ void prepeareBuffer() {
 void getDataFromNRF24L01() {
     clearData();
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 9);
+    slNRF24_FlushRx();
+    slNRF24_FlushTx();
+    slNRF24_Reset();
+}
+
+void resetAfterSendData(){
+    slNRF24_RxPowerUp();
+    slNRF24_FlushRx();
+    slNRF24_FlushTx();
     slNRF24_Reset();
 }
 
@@ -157,6 +166,5 @@ uint8_t sendVianRF24L01() {
     slNRF24_FlushTx();
     slNRF24_TxPowerUp();
     slNRF24_TransmitPayload(&buffer, 17);
-    //resetNRF24L01();
     return 0;
 }

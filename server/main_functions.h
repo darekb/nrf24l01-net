@@ -11,6 +11,7 @@ void sensorStart();
 
 void saveDataFromNRF();
 void resetAfterGotData();
+void resetAfterSendData();
 
 void saveErrorData();
 

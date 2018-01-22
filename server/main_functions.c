@@ -3,6 +3,7 @@
 //
 
 #include <avr/io.h>
+#include <util/delay.h>
 
 #define showDebugDataMainFunctions 1
 #define sensorsCount 3
@@ -69,14 +70,12 @@ uint8_t returnNextStage() {
 
 void nRF24L01Start() {
     slNRF24_Init(*sensorsAdresses[0]);
-    slUART_SimpleTransmitInit();
-    slUART_Init();
 }
 
 
 void sensorStart() {
     nextSensorNr();
-    slNRF24_Reset();
+    //slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
     #if showDebugDataMainFunctions == 1
@@ -84,10 +83,20 @@ void sensorStart() {
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     #endif
     slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+    slNRF24_SetPayloadSize(9);
     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
+    _delay_ms(100);
+    resetAfterSendData();
     clearData();
 }
 
+void resetAfterSendData(){
+    //slNRF24_FlushRx();
+    //slNRF24_FlushTx();
+    slNRF24_SetPayloadSize(17);
+    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+    slNRF24_Reset();
+}
 void resetAfterGotData(){
     slNRF24_Reset();
     slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);

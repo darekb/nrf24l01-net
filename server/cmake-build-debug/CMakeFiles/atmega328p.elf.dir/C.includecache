@@ -29,6 +29,8 @@ slSPI.h
 /home/dariusz/Arduino/nrf24l01-net/server/main_functions.c
 avr/io.h
 -
+util/delay.h
+-
 slUart.h
 /home/dariusz/Arduino/nrf24l01-net/server/slUart.h
 slNRF24.h

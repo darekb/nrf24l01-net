@@ -66,7 +66,7 @@ void slNRF24_Init(uint8_t adress) {
     slNRF24_SetRegister(EN_AA, val, 1);
 
     //enable data pipe 1 for RX
-    val[0] = 0x07;
+    val[0] = 0x03;
     slNRF24_SetRegister(EN_RXADDR, val, 1);
 
     //Setup of Address Widths 5 bytes
@@ -77,13 +77,14 @@ void slNRF24_Init(uint8_t adress) {
     val[0] = 0x10;//2,401Ghz
     slNRF24_SetRegister(RF_CH, val, 1);
 
-    //RF setup  - 2Mbps spped and 0dBm
-    val[0] = 0x0e;
+    //RF setup  - 1Mbps spped and 0dBm
+    val[0] = 0x06;
     slNRF24_SetRegister(RF_SETUP, val, 1);
 
     val[0] = PAYLOAD_SIZE;
     slNRF24_SetRegister(RX_PW_P0, val, 1);
     slNRF24_SetRegister(RX_PW_P1, val, 1);
+    //slNRF24_SetRegister(RX_PW_P2, val, 1);
 
     //CONFIG reg setup - Mask interrupt caused by MAX_RT disabled enable CRC CRC 2 byte scheme power up
     val[0] = 0x1E;
@@ -92,7 +93,11 @@ void slNRF24_Init(uint8_t adress) {
 
     //device need 1.5ms to reach standby mode
     _delay_ms(100);
+}
 
+void slNRF24_SetPayloadSize(uint8_t playloadSize){
+    slNRF24_SetRegister(RX_PW_P0, &playloadSize, 1);
+    slNRF24_SetRegister(RX_PW_P1, &playloadSize, 1);
 }
 
 //TODO
@@ -130,6 +135,11 @@ void slNRF24_Reset(void) {
     CSN_HIGH();
 }
 
+
+void slNRF24_CE_LOW(){
+    CE_LOW();
+}
+
 //Sänd data
 void slNRF24_TransmitPayload(void *dataIn, uint8_t len) {
     uint8_t *data = dataIn;
@@ -159,8 +169,9 @@ void slNRF24_TxPowerUp(uint8_t adress, uint8_t pipe) {
     configReg |= (1 << PWR_UP);
     configReg &= ~(1 << PRIM_RX);
     slNRF24_SetRegister(CONFIG, &configReg, 1);
-    CE_LOW();
     slNRF24_ChangeAddress(adress, pipe);
+    slNRF24_FlushTx();
+    CE_LOW();
 }
 
 void slNRF24_RxPowerUp(uint8_t adress, uint8_t pipe) {
@@ -168,9 +179,9 @@ void slNRF24_RxPowerUp(uint8_t adress, uint8_t pipe) {
     slNRF24_GetRegister(CONFIG, &configReg, 1);
     configReg |= (1 << PWR_UP) | (1 << PRIM_RX);
     slNRF24_SetRegister(CONFIG, &configReg, 1);
-    CE_HIGH();
     slNRF24_ChangeAddress(adress, pipe);
-    slNRF24_FlushTx();
+    slNRF24_FlushRx();
+    CE_HIGH();
 }
 
 void slNRF24_PowerDown() {

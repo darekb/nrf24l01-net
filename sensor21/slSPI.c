@@ -32,7 +32,7 @@ void slSPI_Init() {
 uint8_t slSPI_TransferInt(uint8_t data) {
     /* Start transmission */
     SPDR = data;
-    asm volatile("nop");
+    //asm volatile("nop");
     /* Wait for transmission complete */
     while (!(SPSR & _BV(SPIF))) ;
     return SPDR;
