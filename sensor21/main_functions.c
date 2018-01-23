@@ -181,7 +181,7 @@ void resetAfterSendData(){
 
 uint8_t sendVianRF24L01() {
     slUART_WriteStringNl("Try sent data: ");
-    slUART_WriteBuffer(buffer, 17);
+    slUART_WriteBuffer(buffer, 1);
     //slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_TxPowerUp();

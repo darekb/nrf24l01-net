@@ -9,7 +9,6 @@ CMakeFiles/atmega8.elf.dir/BME280.c.o: ../slUart.h
 CMakeFiles/atmega8.elf.dir/main.c.o: ../main.c
 CMakeFiles/atmega8.elf.dir/main.c.o: ../main_functions.h
 CMakeFiles/atmega8.elf.dir/main.c.o: ../slNRF24.h
-CMakeFiles/atmega8.elf.dir/main.c.o: ../slSPI.h
 CMakeFiles/atmega8.elf.dir/main.c.o: ../slUart.h
 CMakeFiles/atmega8.elf.dir/main.c.o: main.h
 

@@ -1,6 +1,5 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include <util/delay.h>
 
 
 #ifndef F_CPU
@@ -19,7 +18,6 @@
 
 #include "slNRF24.h"
 #include "main_functions.h"
-#include "slSPI.h"
 
 
 volatile uint8_t error = 0;
@@ -52,13 +50,11 @@ ISR(INT1_vect) {
     uint8_t status = 0;
     slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
-    slUART_LogBinaryNl(status);
     cli();
     if ((status & (1 << 6)) != 0) {//got data
         getDataFromNRF24L01();
         slUART_WriteStringNl("Sensor21 got data");
         getMesurements();
-        //_delay_ms(200);
         sendVianRF24L01();
     }
     if ((status & (1 << 5)) != 0) {//send ok
@@ -74,7 +70,7 @@ ISR(INT1_vect) {
         slUART_WriteStringNl("Sensor21 FAIL sent data");
         #endif
         error = error +1;
-        if(error < 6){
+        if(error < 7){
             sendVianRF24L01();
         } else {
             error = 0;

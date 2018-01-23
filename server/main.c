@@ -26,8 +26,6 @@ void setupInt0();
 
 volatile uint8_t error = 0;
 
-uint8_t status;
-
 int main(void) {
     slUART_SimpleTransmitInit();
     #if showDebugDataMain == 1
@@ -64,11 +62,9 @@ void setupInt0() {
 
 
 ISR(INT0_vect) {
-    status = 0;
+    uint8_t status = 0;
     slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
-    #if showDebugDataMain == 1
-    #endif
     cli();
     if ((status & (1 << 6)) != 0) {
         #if showDebugDataMain == 1
