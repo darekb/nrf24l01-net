@@ -89,8 +89,8 @@ void sendCommandToSensor(){
     slUART_WriteString("S");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     #endif
-    slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
     slNRF24_FlushTx();
+    slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
     _delay_ms(100);
     clearData();

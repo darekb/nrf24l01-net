@@ -18,8 +18,10 @@
 
 #include "slNRF24.h"
 #include "main_functions.h"
+#include "slSPI.h"
 
 
+uint8_t status = 0;
 volatile uint8_t error = 0;
 
 void setupInt1();
@@ -29,7 +31,10 @@ int main(void) {
     slUART_WriteStringNl("Start sensor21");
     setupInt1();
     sei();
-    initAll();
+    slSPI_Init();
+    slNRF24_IoInit();
+    slNRF24_Init();
+    resetNRF24L01();
     while (1) {}
     return 0;
 }
@@ -47,13 +52,16 @@ void setupInt1() {
 
 
 ISR(INT1_vect) {
-    uint8_t status = 0;
+    slUART_WriteStringNl("ok:");
+    //cli();
+    status = 0;
     slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
-    cli();
+    slUART_WriteString("Sensor21 Status:");
+    slUART_LogBinaryNl(status);
     if ((status & (1 << 6)) != 0) {//got data
-        getDataFromNRF24L01();
         slUART_WriteStringNl("Sensor21 got data");
+        getDataFromNRF24L01();
         getMesurements();
         sendVianRF24L01();
     }
@@ -61,21 +69,21 @@ ISR(INT1_vect) {
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Sensor21 OK sent data");
         #endif
-
         error = 0;
         resetAfterSendData();
     }
-    if ((status & (1 << 4)) != 0) {//send failed
-        #if showDebugDataMain == 1
-        slUART_WriteStringNl("Sensor21 FAIL sent data");
-        #endif
-        error = error +1;
-        if(error < 7){
-            sendVianRF24L01();
-        } else {
-            error = 0;
-            slUART_WriteStringNl("Sensor21 GIVE UP sending data");
-        }
-    }
+//    if ((status & (1 << 4)) != 0) {//send failed
+//        #if showDebugDataMain == 1
+//        slUART_WriteStringNl("Sensor21 FAIL sent data");
+//        #endif
+//        slNRF24_Reset();
+//        error = error +1;
+//        if(error < 7){
+//            sendVianRF24L01();
+//        } else {
+//            error = 0;
+//            slUART_WriteStringNl("Sensor21 GIVE UP sending data");
+//        }
+//    }
     sei();
 }

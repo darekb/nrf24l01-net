@@ -34,7 +34,14 @@ uint8_t nextNumber = 0;
 TVOL voltage;
 TVOL light;
 
+
+void setupResetPin() {
+    DDRD |= (1 << DDD7);//set DDD7 as output
+    PORTD &= ~(1 << DDD7);// set as 0
+}
+
 void initAll(){
+    setupResetPin();
     // slI2C_Init();
     // if (BME280_Init(BME280_OS_T_1, BME280_OS_P_1, BME280_OS_H_1, BME280_FILTER_OFF, BME280_MODE_FORCED,
     //                 BME280_TSB_1000)) {

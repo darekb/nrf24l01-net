@@ -27,6 +27,7 @@ void setupInt0();
 volatile uint8_t error = 0;
 
 int main(void) {
+    _delay_ms(500);
     slUART_SimpleTransmitInit();
     #if showDebugDataMain == 1
     slUART_WriteStringNl("Start server");
@@ -37,12 +38,12 @@ int main(void) {
     sei();
     initAll();
     while (1) {
-        if(!error || error > 4){
+        if(!error || error > 40) {
             error = 0;
             nextSensorNr();
-            sendCommandToSensor();
         }
-        for(uint8_t i =0; i<5; i++){
+        sendCommandToSensor();
+        for(uint8_t i =0; i<2; i++){
             _delay_ms(1000);
         }
     }
@@ -63,9 +64,22 @@ void setupInt0() {
 
 ISR(INT0_vect) {
     uint8_t status = 0;
+    cli();
     slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
-    cli();
+    slUART_WriteString("SERVER Status:");
+    slUART_LogBinaryNl(status);
+    if ((status & (1 << 4)) != 0) {//send failed
+        saveErrorData();
+        #if showDebugDataMain == 1
+        slUART_WriteStringNl("Server FAIL sent data");
+        #endif
+        slNRF24_Reset();
+        error = error + 1;
+//        sendCommandToSensor();
+//        sei();
+//        _delay_ms(200);
+    }
     if ((status & (1 << 6)) != 0) {
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Server got data ");
@@ -79,14 +93,6 @@ ISR(INT0_vect) {
         #endif
         error = 0;
         resetAfterSendData();
-    }
-    if ((status & (1 << 4)) != 0) {//send failed
-        saveErrorData();
-        #if showDebugDataMain == 1
-        slUART_WriteStringNl("Server FAIL sent data");
-        #endif
-        error = error + 1;
-        sendCommandToSensor();
     }
     sei();
 }

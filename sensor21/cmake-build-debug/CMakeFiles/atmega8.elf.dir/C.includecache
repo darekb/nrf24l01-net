@@ -27,8 +27,6 @@ avr/io.h
 -
 avr/interrupt.h
 -
-util/delay.h
--
 main.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/main.h
 slUart.h
@@ -37,6 +35,8 @@ slNRF24.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.h
 main_functions.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.h
+slSPI.h
+/home/dariusz/Arduino/nrf24l01-net/sensor21/slSPI.h
 
 /home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.c
 avr/io.h

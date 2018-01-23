@@ -62,11 +62,11 @@ void slNRF24_Init(uint8_t adress) {
     slNRF24_SetRegister(SETUP_RETR, val, 1);
 
     //Enable ‘Auto Acknowledgment’ Function on data pipe 0 and pipe 1
-    val[0] = 0x03;
+    val[0] = 0x07;
     slNRF24_SetRegister(EN_AA, val, 1);
 
     //enable data pipe 1 for RX
-    val[0] = 0x03;
+    val[0] = 0x07;
     slNRF24_SetRegister(EN_RXADDR, val, 1);
 
     //Setup of Address Widths 5 bytes
