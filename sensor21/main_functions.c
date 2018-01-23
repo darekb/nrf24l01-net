@@ -13,10 +13,13 @@
 #endif
 
 #include "slNRF24.h"
+#include "slI2C.h"
+#include "BME280.h"
 #include "slBME180Measure.h"
 #include "BME280.h"
 #include "slAdc.h"
 #include "main_functions.h"
+#include "slSPI.h"
 
 
 char startStringSensor[] = {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'};
@@ -31,10 +34,27 @@ uint8_t nextNumber = 0;
 TVOL voltage;
 TVOL light;
 
-void initADCData() {
-    slADC_initializeData(&light);
-    slADC_initializeData(&voltage);
+void initAll(){
+    // slI2C_Init();
+    // if (BME280_Init(BME280_OS_T_1, BME280_OS_P_1, BME280_OS_H_1, BME280_FILTER_OFF, BME280_MODE_FORCED,
+    //                 BME280_TSB_1000)) {
+    //     #if showDebugDataMainFunctions == 1
+    //     slUART_WriteString("BMP280 init error.\r\n");
+    //     #endif
+    // } else {
+    //     #if showDebugDataMainFunctions == 1
+    //     slUART_WriteString("BMP280 init done.\r\n");
+    //     #endif
+    // }
+    slSPI_Init();
+    slNRF24_IoInit();
+    slNRF24_Init();
+    // slADC_init();
+    // slADC_initializeData(&light);
+    // slADC_initializeData(&voltage);
+    resetNRF24L01();
 }
+
 
 void restart() {
     #if showDebugDataMainFunctions == 1

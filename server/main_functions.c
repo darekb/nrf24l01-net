@@ -8,6 +8,7 @@
 #define showDebugDataMainFunctions 1
 #define sensorsCount 3
 
+#include "slSPI.h"
 #include "slUart.h"
 #include "slNRF24.h"
 #include "slBME180Measure.h"
@@ -45,6 +46,14 @@ uint8_t sensorsAdresses[sensorsCount][1] = {
         {0x12}
 };
 
+
+void initAll(){
+    slSPI_Init();
+    slNRF24_IoInit();
+    nRF24L01Start();
+    slNRF24_Reset();
+}
+
 void clearData() {
     for (uint8_t i = 0; i < 17; i++) {
         dataFromNRF24L01[i] = 0;
@@ -73,27 +82,24 @@ void nRF24L01Start() {
 }
 
 
-void sensorStart() {
-    nextSensorNr();
+void sendCommandToSensor(){
     //slNRF24_Reset();
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
+    //slNRF24_FlushRx();
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("S");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     #endif
     slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
-    slNRF24_SetPayloadSize(9);
+    slNRF24_FlushTx();
     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
     _delay_ms(100);
-    resetAfterSendData();
     clearData();
 }
 
 void resetAfterSendData(){
     //slNRF24_FlushRx();
     //slNRF24_FlushTx();
-    slNRF24_SetPayloadSize(17);
+    //slNRF24_SetPayloadSize(17);
     slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
     slNRF24_Reset();
 }

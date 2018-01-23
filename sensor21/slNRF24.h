@@ -24,7 +24,7 @@
 
 #define SENSOR_ADDR   0x21
 
-#define PAYLOAD_SIZE 9
+#define PAYLOAD_SIZE 17
 
 #define CE_PIN        PB1
 #define CE_OUTPUT()   DDRB |= (1 << CE_PIN)

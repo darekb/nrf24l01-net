@@ -22,7 +22,7 @@
     DEALINGS IN THE SOFTWARE.
 */
 
-#define PAYLOAD_SIZE 17
+#define PAYLOAD_SIZE 9
 
     
 #define CE_PIN        PB1

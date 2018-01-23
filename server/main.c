@@ -17,7 +17,6 @@
 #include "main.h"
 #include "slNRF24.h"
 #include "main_functions.h"
-#include "slSPI.h"
 
 
 #define LED (1 << PB0)
@@ -25,21 +24,26 @@
 
 void setupInt0();
 
+volatile uint8_t error = 0;
+
 uint8_t status;
 
-//counter for fail response form sensor
 int main(void) {
     slUART_SimpleTransmitInit();
-    //slUART_Init();
+    #if showDebugDataMain == 1
     slUART_WriteStringNl("Start server");
+    DDRB |= (1 << DDB0);//set DDD7 as output
+    PORTB &= ~(1 << DDB0);// set as 0
+    #endif
     setupInt0();
     sei();
-    slSPI_Init();
-    slNRF24_IoInit();
-    nRF24L01Start();
-    slNRF24_Reset();
+    initAll();
     while (1) {
-        sensorStart();
+        if(!error || error > 4){
+            error = 0;
+            nextSensorNr();
+            sendCommandToSensor();
+        }
         for(uint8_t i =0; i<5; i++){
             _delay_ms(1000);
         }
@@ -68,15 +72,25 @@ ISR(INT0_vect) {
     cli();
     if ((status & (1 << 6)) != 0) {
         #if showDebugDataMain == 1
-        slUART_WriteStringNl("server got data ");
+        slUART_WriteStringNl("Server got data ");
         #endif
         saveDataFromNRF();
     }
     if ((status & (1 << 5)) != 0) {//send ok
         #if showDebugDataMain == 1
-        slUART_WriteStringNl("server sent ok ");
+        LED_TOG;
+        slUART_WriteStringNl("Server OK sent ok ");
         #endif
-        //resetAfterSendData();
+        error = 0;
+        resetAfterSendData();
+    }
+    if ((status & (1 << 4)) != 0) {//send failed
+        saveErrorData();
+        #if showDebugDataMain == 1
+        slUART_WriteStringNl("Server FAIL sent data");
+        #endif
+        error = error + 1;
+        sendCommandToSensor();
     }
     sei();
 }

@@ -8,7 +8,7 @@
 
 #define SENSOR_ID 21
 
-void initADCData();
+void initAll();
 
 void restart();
 

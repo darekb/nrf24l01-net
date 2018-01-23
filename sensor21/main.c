@@ -21,18 +21,17 @@
 #include "main_functions.h"
 #include "slSPI.h"
 
+
+volatile uint8_t error = 0;
+
 void setupInt1();
 
 int main(void) {
     slUART_SimpleTransmitInit();
-    //slUART_Init();
     slUART_WriteStringNl("Start sensor21");
     setupInt1();
     sei();
-    slSPI_Init();
-    slNRF24_IoInit();
-    slNRF24_Init();
-    resetNRF24L01();
+    initAll();
     while (1) {}
     return 0;
 }
@@ -59,16 +58,28 @@ ISR(INT1_vect) {
         getDataFromNRF24L01();
         slUART_WriteStringNl("Sensor21 got data");
         getMesurements();
-        //prepeareBuffer();
         //_delay_ms(200);
         sendVianRF24L01();
-        resetAfterSendData();
     }
     if ((status & (1 << 5)) != 0) {//send ok
         #if showDebugDataMain == 1
-        slUART_WriteStringNl("Sensor21 sent data");
+        slUART_WriteStringNl("Sensor21 OK sent data");
         #endif
+
+        error = 0;
         resetAfterSendData();
+    }
+    if ((status & (1 << 4)) != 0) {//send failed
+        #if showDebugDataMain == 1
+        slUART_WriteStringNl("Sensor21 FAIL sent data");
+        #endif
+        error = error +1;
+        if(error < 6){
+            sendVianRF24L01();
+        } else {
+            error = 0;
+            slUART_WriteStringNl("Sensor21 GIVE UP sending data");
+        }
     }
     sei();
 }
