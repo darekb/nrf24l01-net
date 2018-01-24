@@ -128,7 +128,14 @@ ISR(INT1_vect) {
     status = 0;
     counter = 0;
     slNRF24_GetRegister(STATUS, &status, 1);
+    slUART_WriteString("Sensor21 Status:");
+    slUART_LogBinaryNl(status);
     cli();
+    if ((status & (1 << 4)) != 0) {//send fail
+        #if showDebugDataMain == 1
+        slUART_WriteStringNl("sensor21 FAIL sent");
+        #endif
+    }
     if ((status & (1 << 6)) != 0) {//got data
         getDataFromNRF24L01();
         if (isStartStringMatch()) {
@@ -153,5 +160,7 @@ ISR(INT1_vect) {
         slUART_WriteStringNl("Sensor21 sent data via nRF24L01 without errors");
         #endif
     }
+
+    resetNRF24L01();
     sei();
 }

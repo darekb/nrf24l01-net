@@ -118,10 +118,10 @@ void resetNRF24L01() {
     #if showDebugDataMainFunctions == 1
     slUART_WriteStringNl("Sensor21 nRF24L01 Reset");
     #endif
-    slNRF24_RxPowerUp();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
     slNRF24_Reset();
+    slNRF24_RxPowerUp();
     _delay_ms(10);
 }
 

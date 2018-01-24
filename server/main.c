@@ -150,5 +150,10 @@ ISR(INT0_vect) {
         #endif
         stage = 0;
     }
+    if ((status & (1 << 4)) != 0) {//send ok
+        #if showDebugDataMain == 1
+        slUART_WriteStringNl("server FAIL sent");
+        #endif
+    }
     sei();
 }

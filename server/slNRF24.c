@@ -86,7 +86,7 @@ void slNRF24_Init(uint8_t adress) {
     slNRF24_SetRegister(RX_PW_P1, val, 1);
 
     //CONFIG reg setup - Mask interrupt caused by MAX_RT disabled enable CRC CRC 2 byte scheme power up
-    val[0] = 0x1E;
+    val[0] = 0x0E;
     slNRF24_SetRegister(CONFIG, val, 1);
 
 
