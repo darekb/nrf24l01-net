@@ -11,6 +11,7 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
+#include "global_definitions.h"
 #include "slNRF24.h"
 #include "slSPI.h"
 #include "slUart.h"
@@ -62,11 +63,11 @@ void slNRF24_Init(uint8_t adress) {
     slNRF24_SetRegister(SETUP_RETR, val, 1);
 
     //Enable ‘Auto Acknowledgment’ Function on data pipe 0 and pipe 1
-    val[0] = 0x07;
+    val[0] = 0x3f;
     slNRF24_SetRegister(EN_AA, val, 1);
 
     //enable data pipe 1 for RX
-    val[0] = 0x07;
+    val[0] = 0x03;
     slNRF24_SetRegister(EN_RXADDR, val, 1);
 
     //Setup of Address Widths 5 bytes
@@ -78,7 +79,7 @@ void slNRF24_Init(uint8_t adress) {
     slNRF24_SetRegister(RF_CH, val, 1);
 
     //RF setup  - 1Mbps spped and 0dBm
-    val[0] = 0x06;
+    val[0] = 0x0e;
     slNRF24_SetRegister(RF_SETUP, val, 1);
 
     val[0] = PAYLOAD_SIZE;
@@ -162,6 +163,12 @@ void slNRF24_TransmitPayload(void *dataIn, uint8_t len) {
 
 }
 
+void slNRF24_Clear_MAX_RT(){
+    uint8_t statusReg;
+    slNRF24_GetRegister(STATUS, &statusReg, 1);
+    statusReg &= ~(1 << MAX_RT);
+    slNRF24_SetRegister(STATUS, &statusReg, 1);
+}
 
 void slNRF24_TxPowerUp(uint8_t adress, uint8_t pipe) {
     uint8_t configReg;
@@ -169,9 +176,8 @@ void slNRF24_TxPowerUp(uint8_t adress, uint8_t pipe) {
     configReg |= (1 << PWR_UP);
     configReg &= ~(1 << PRIM_RX);
     slNRF24_SetRegister(CONFIG, &configReg, 1);
-    slNRF24_ChangeAddress(adress, pipe);
-    slNRF24_FlushTx();
     CE_LOW();
+    slNRF24_ChangeAddress(adress, pipe);
 }
 
 void slNRF24_RxPowerUp(uint8_t adress, uint8_t pipe) {

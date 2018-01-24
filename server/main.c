@@ -18,7 +18,6 @@
 #include "slNRF24.h"
 #include "main_functions.h"
 
-
 #define LED (1 << PB0)
 #define LED_TOG PORTB ^= LED
 
@@ -64,17 +63,19 @@ void setupInt0() {
 
 ISR(INT0_vect) {
     uint8_t status = 0;
-    cli();
+    //cli();
     slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
     slUART_WriteString("SERVER Status:");
     slUART_LogBinaryNl(status);
+    slNRF24_Reset();
     if ((status & (1 << 4)) != 0) {//send failed
         saveErrorData();
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Server FAIL sent data");
         #endif
         slNRF24_Reset();
+        //slNRF24_Clear_MAX_RT();
         error = error + 1;
 //        sendCommandToSensor();
 //        sei();

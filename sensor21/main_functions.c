@@ -12,6 +12,7 @@
 
 #endif
 
+#include "global_definitions.h"
 #include "slNRF24.h"
 #include "slI2C.h"
 #include "BME280.h"
@@ -26,9 +27,9 @@ char startStringSensor[] = {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'};
 char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'};
 
 
-uint8_t dataFromNRF24L01[9];
+uint8_t dataFromNRF24L01[PAYLOAD_SIZE];
 union MEASURE BME180measure;
-uint8_t buffer[17];
+uint8_t buffer[PAYLOAD_SIZE];
 uint8_t nextNumber = 0;
 
 TVOL voltage;
@@ -82,7 +83,7 @@ uint8_t setBME280Mode() {
 
 
 void clearData() {
-    for (uint8_t i = 0; i < 9; i++) {
+    for (uint8_t i = 0; i < PAYLOAD_SIZE; i++) {
         dataFromNRF24L01[i] = 0;
     };
 }
@@ -123,7 +124,7 @@ void getMesurements() {
     if(nextNumber > 245){
         nextNumber = 0;
     }
-    for (uint8_t i = 0; i < 17; i++) {
+    for (uint8_t i = 0; i < PAYLOAD_SIZE; i++) {
         buffer[i] = nextNumber;
     };
 }
@@ -173,7 +174,7 @@ void prepeareBuffer() {
 
 void getDataFromNRF24L01() {
     clearData();
-    slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 9);
+    slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, PAYLOAD_SIZE);
     slNRF24_FlushRx();
     slNRF24_FlushTx();
     slNRF24_Reset();
@@ -192,6 +193,6 @@ uint8_t sendVianRF24L01() {
     //slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_TxPowerUp();
-    slNRF24_TransmitPayload(&buffer, 17);
+    slNRF24_TransmitPayload(&buffer, PAYLOAD_SIZE);
     return 0;
 }

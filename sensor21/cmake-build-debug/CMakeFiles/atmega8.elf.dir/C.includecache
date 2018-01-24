@@ -22,6 +22,8 @@ slUart.h
 
 /home/dariusz/Arduino/nrf24l01-net/sensor21/BME280.h
 
+/home/dariusz/Arduino/nrf24l01-net/sensor21/global_definitions.h
+
 /home/dariusz/Arduino/nrf24l01-net/sensor21/main.c
 avr/io.h
 -
@@ -45,6 +47,8 @@ util/delay.h
 -
 slUart.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/slUart.h
+global_definitions.h
+/home/dariusz/Arduino/nrf24l01-net/sensor21/global_definitions.h
 slNRF24.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.h
 slI2C.h
@@ -103,6 +107,8 @@ util/delay.h
 -
 avr/interrupt.h
 -
+global_definitions.h
+/home/dariusz/Arduino/nrf24l01-net/sensor21/global_definitions.h
 slNRF24.h
 /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.h
 slSPI.h

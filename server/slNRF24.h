@@ -22,7 +22,6 @@
     DEALINGS IN THE SOFTWARE.
 */
 
-#define PAYLOAD_SIZE 9
 
     
 #define CE_PIN        PB1
@@ -152,6 +151,8 @@ void slNRF24_Reset(void);
 void slNRF24_ReceivePayload(void);
 
 void slNRF24_TransmitPayload(void *dataIn, uint8_t len);
+
+void slNRF24_Clear_MAX_RT();
 
 void slNRF24_TxPowerUp(uint8_t adress, uint8_t pipe);
 

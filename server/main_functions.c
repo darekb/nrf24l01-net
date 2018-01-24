@@ -8,29 +8,29 @@
 #define showDebugDataMainFunctions 1
 #define sensorsCount 3
 
+#include "global_definitions.h"
 #include "slSPI.h"
 #include "slUart.h"
 #include "slNRF24.h"
 #include "slBME180Measure.h"
 #include "main_functions.h"
 
-
-uint8_t dataFromNRF24L01[17];
+uint8_t dataFromNRF24L01[PAYLOAD_SIZE];
 union MEASURE BME180measure[sensorsCount];
 
 
 volatile uint8_t sensorNr = 0;
 //nr of sensor from sensorsStrings
 
-char sensorsStrings[sensorsCount][17] = {
-        {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'},
-        {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'},
-        {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'}
+char sensorsStrings[sensorsCount][PAYLOAD_SIZE] = {
+        {'s', 't', 'a', 'r', 't', '-', 's', '2', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'s', 't', 'a', 'r', 't', '-', 's', '1', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'s', 't', 'a', 'r', 't', '-', 's', '1', '2', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
 };
-char resetSensorsStrings[sensorsCount][17] = {
-        {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'},
-        {'r', 'e', 's', 'e', 't', '-', 's', '1', '1'},
-        {'r', 'e', 's', 'e', 't', '-', 's', '1', '2'}
+char resetSensorsStrings[sensorsCount][PAYLOAD_SIZE] = {
+        {'r', 'e', 's', 'e', 't', '-', 's', '2', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'r', 'e', 's', 'e', 't', '-', 's', '1', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'r', 'e', 's', 'e', 't', '-', 's', '1', '2', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
 };
 
 uint8_t sensorsId[sensorsCount][1] = {
@@ -55,7 +55,7 @@ void initAll(){
 }
 
 void clearData() {
-    for (uint8_t i = 0; i < 17; i++) {
+    for (uint8_t i = 0; i < PAYLOAD_SIZE; i++) {
         dataFromNRF24L01[i] = 0;
     };
 }
@@ -83,15 +83,15 @@ void nRF24L01Start() {
 
 
 void sendCommandToSensor(){
-    //slNRF24_Reset();
-    //slNRF24_FlushRx();
+    slNRF24_Reset();
+    slNRF24_FlushRx();
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("S");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     #endif
     slNRF24_FlushTx();
     slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
-    slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
+    slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], PAYLOAD_SIZE);
     _delay_ms(100);
     clearData();
 }
@@ -99,7 +99,7 @@ void sendCommandToSensor(){
 void resetAfterSendData(){
     //slNRF24_FlushRx();
     //slNRF24_FlushTx();
-    //slNRF24_SetPayloadSize(17);
+    //slNRF24_SetPayloadSize(PAYLOAD_SIZE);
     slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
     slNRF24_Reset();
 }
@@ -109,10 +109,10 @@ void resetAfterGotData(){
 }
 
 void saveDataFromNRF() {
-    slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 17);
+    slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, PAYLOAD_SIZE);
     slUART_WriteStringNl("Get buffer from sensor ");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
-    slUART_WriteBuffer(dataFromNRF24L01, 17);
+    slUART_WriteBuffer(dataFromNRF24L01, PAYLOAD_SIZE);
     BME180measure[(sensorNr - 1)] = returnMEASUREFromBuffer(dataFromNRF24L01);
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("OK");

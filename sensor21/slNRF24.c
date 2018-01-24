@@ -3,6 +3,8 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
+
+#include "global_definitions.h"
 #include "slNRF24.h"
 #include "slSPI.h"
 
@@ -54,15 +56,15 @@ void slNRF24_Init(void) {
     uint8_t val[5];
 
     //SETUP_RETR (the setup for "EN_AA")
-    val[0] = 0x2F;    //0b0010 00011 "2" sets it up to 750uS delay between every retry (at least 500us at 250kbps and if payload >5bytes in 1Mbps, and if payload >15byte in 2Mbps) "F" is number of retries (1-15, now 15)
+    val[0] = 0x2F;    // "2" sets it up to 750uS delay between every retry (at least 500us at 250kbps and if payload >5bytes in 1Mbps, and if payload >15byte in 2Mbps) "F" is number of retries (1-15, now 15)
     slNRF24_SetRegister(SETUP_RETR, val, 1);
 
     //Enable ‘Auto Acknowledgment’ Function on data pipe 0 and pipe 1
-    val[0] = 0x07;
+    val[0] = 0x3f;
     slNRF24_SetRegister(EN_AA, val, 1);
 
     //enable data pipe 0 for RX
-    val[0] = 0x07;
+    val[0] = 0x03;
     slNRF24_SetRegister(EN_RXADDR, val, 1);
 
     //Setup of Address Width = 5 bytes
@@ -99,7 +101,7 @@ void slNRF24_SetPayloadSize(uint8_t playloadSize){
 }
 
 void slNRF24_ChangeAddress(uint8_t adress) {
-    //_delay_ms(100);
+    _delay_ms(100);
     uint8_t val[5];
     for (uint8_t i = 0; i < 5; i++) {
         val[i] = adress;
@@ -144,6 +146,13 @@ void slNRF24_TransmitPayload(void *dataIn, uint8_t len) {
     _delay_us(100);
     CE_LOW();
     _delay_ms(10);
+}
+
+void slNRF24_Clear_MAX_RT(){
+    uint8_t statusReg;
+    slNRF24_GetRegister(STATUS, &statusReg, 1);
+    statusReg &= ~(1 << MAX_RT);
+    slNRF24_SetRegister(STATUS, &statusReg, 1);
 }
 
 

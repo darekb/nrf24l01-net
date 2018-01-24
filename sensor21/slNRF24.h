@@ -24,8 +24,6 @@
 
 #define SENSOR_ADDR   0x21
 
-#define PAYLOAD_SIZE 17
-
 #define CE_PIN        PB1
 #define CE_OUTPUT()   DDRB |= (1 << CE_PIN)
 #define CE_HIGH()     PORTB |= (1 << CE_PIN)//enable RX
@@ -151,6 +149,8 @@ void slNRF24_ChangeAddress(uint8_t adress);
 void slNRF24_Reset(void);
 
 void slNRF24_TransmitPayload(void *dataIn, uint8_t len);
+
+void slNRF24_Clear_MAX_RT();
 
 void slNRF24_TxPowerUp();
 

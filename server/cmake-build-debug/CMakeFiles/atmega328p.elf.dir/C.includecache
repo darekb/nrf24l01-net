@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/dariusz/Arduino/nrf24l01-net/server/global_definitions.h
+
 /home/dariusz/Arduino/nrf24l01-net/server/main.c
 avr/io.h
 -
@@ -29,6 +31,8 @@ avr/io.h
 -
 util/delay.h
 -
+global_definitions.h
+/home/dariusz/Arduino/nrf24l01-net/server/global_definitions.h
 slSPI.h
 /home/dariusz/Arduino/nrf24l01-net/server/slSPI.h
 slUart.h
@@ -61,6 +65,8 @@ util/delay.h
 -
 avr/interrupt.h
 -
+global_definitions.h
+/home/dariusz/Arduino/nrf24l01-net/server/global_definitions.h
 slNRF24.h
 /home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h
 slSPI.h

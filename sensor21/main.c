@@ -53,7 +53,7 @@ void setupInt1() {
 
 ISR(INT1_vect) {
     slUART_WriteStringNl("ok:");
-    //cli();
+    cli();
     status = 0;
     slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
@@ -72,18 +72,19 @@ ISR(INT1_vect) {
         error = 0;
         resetAfterSendData();
     }
-//    if ((status & (1 << 4)) != 0) {//send failed
-//        #if showDebugDataMain == 1
-//        slUART_WriteStringNl("Sensor21 FAIL sent data");
-//        #endif
-//        slNRF24_Reset();
-//        error = error +1;
-//        if(error < 7){
-//            sendVianRF24L01();
-//        } else {
-//            error = 0;
-//            slUART_WriteStringNl("Sensor21 GIVE UP sending data");
-//        }
-//    }
+   if ((status & (1 << 4)) != 0) {//send failed
+       #if showDebugDataMain == 1
+       slUART_WriteStringNl("Sensor21 FAIL sent data");
+       #endif
+       slNRF24_Reset();
+       slNRF24_Clear_MAX_RT();
+       error = error +1;
+       if(error < 7){
+           sendVianRF24L01();
+       } else {
+           error = 0;
+           slUART_WriteStringNl("Sensor21 GIVE UP sending data");
+       }
+   }
     sei();
 }
