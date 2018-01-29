@@ -132,6 +132,7 @@ ISR(INT0_vect) {
     #endif
     cli();
     if ((status & (1 << 6)) != 0) {//got data
+        _delay_ms(1);
         saveDataFromNRF();
         #if showDebugDataMain == 1
         slUART_WriteStringNl("server got data ");
@@ -150,7 +151,7 @@ ISR(INT0_vect) {
         #endif
         stage = 0;
     }
-    if ((status & (1 << 4)) != 0) {//send ok
+    if ((status & (1 << 4)) != 0) {//send fail
         #if showDebugDataMain == 1
         slUART_WriteStringNl("server FAIL sent");
         #endif
