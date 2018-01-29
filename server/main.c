@@ -63,37 +63,39 @@ void setupInt0() {
 
 ISR(INT0_vect) {
     uint8_t status = 0;
-    //cli();
-    slNRF24_CE_LOW();
+    cli();
+    //slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
     slUART_WriteString("SERVER Status:");
     slUART_LogBinaryNl(status);
-    slNRF24_Reset();
+    //slNRF24_Reset();
+    if(status == 0xE){
+        slUART_WriteString("FIFO empty");
+        slNRF24_Reset();
+    }
     if ((status & (1 << 4)) != 0) {//send failed
         saveErrorData();
+        slNRF24_Reset();
+        //slNRF24_FlushRx();
+        //slNRF24_FlushTx();
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Server FAIL sent data");
         #endif
-        slNRF24_Reset();
-        //slNRF24_Clear_MAX_RT();
         error = error + 1;
-//        sendCommandToSensor();
-//        sei();
-//        _delay_ms(200);
     }
     if ((status & (1 << 6)) != 0) {
+        saveDataFromNRF();
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Server got data ");
         #endif
-        saveDataFromNRF();
     }
     if ((status & (1 << 5)) != 0) {//send ok
+        //resetAfterSendData();
         #if showDebugDataMain == 1
         LED_TOG;
         slUART_WriteStringNl("Server OK sent ok ");
         #endif
         error = 0;
-        resetAfterSendData();
     }
     sei();
 }

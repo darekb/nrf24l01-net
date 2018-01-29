@@ -23,8 +23,8 @@
 #include "slSPI.h"
 
 
-char startStringSensor[] = {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'};
-char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'};
+char startStringSensor[] = {'s', 't', 'a', 'r', 't', '-', 's', '2', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
 
 
 uint8_t dataFromNRF24L01[PAYLOAD_SIZE];
@@ -61,6 +61,8 @@ void initAll(){
     // slADC_initializeData(&light);
     // slADC_initializeData(&voltage);
     resetNRF24L01();
+    slNRF24_OpenWritingPipe(0x12, PAYLOAD_SIZE);
+    slNRF24_StartListening();
 }
 
 
@@ -131,7 +133,6 @@ void getMesurements() {
 
 
 void resetNRF24L01() {
-    slNRF24_PowerDown();
     #if showDebugDataMainFunctions == 1
     slUART_WriteStringNl("Sensor21 nRF24L01 Reset");
     #endif
@@ -139,7 +140,7 @@ void resetNRF24L01() {
     slNRF24_FlushTx();
     slNRF24_FlushRx();
     slNRF24_Reset();
-    _delay_ms(10);
+    _delay_ms(1);
 }
 
 uint8_t isStringMatch(uint8_t *dataFromNRF24L01, char *stringToMatch) {
@@ -175,6 +176,8 @@ void prepeareBuffer() {
 void getDataFromNRF24L01() {
     clearData();
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, PAYLOAD_SIZE);
+    slUART_WriteStringNl("Got data: ");
+    slUART_WriteBuffer(dataFromNRF24L01, 17);
     slNRF24_FlushRx();
     slNRF24_FlushTx();
     slNRF24_Reset();
@@ -192,7 +195,7 @@ uint8_t sendVianRF24L01() {
     slUART_WriteBuffer(buffer, 1);
     //slNRF24_Reset();
     slNRF24_FlushTx();
-    slNRF24_TxPowerUp();
-    slNRF24_TransmitPayload(&buffer, PAYLOAD_SIZE);
+//    slNRF24_TxPowerUp();
+//    slNRF24_TransmitPayload(&buffer, PAYLOAD_SIZE);
     return 0;
 }

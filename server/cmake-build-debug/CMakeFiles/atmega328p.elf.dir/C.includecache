@@ -71,8 +71,6 @@ slNRF24.h
 /home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h
 slSPI.h
 /home/dariusz/Arduino/nrf24l01-net/server/slSPI.h
-slUart.h
-/home/dariusz/Arduino/nrf24l01-net/server/slUart.h
 
 /home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h
 

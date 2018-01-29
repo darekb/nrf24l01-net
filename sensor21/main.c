@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <util/delay.h>
 
 
 #ifndef F_CPU
@@ -30,11 +31,8 @@ int main(void) {
     slUART_SimpleTransmitInit();
     slUART_WriteStringNl("Start sensor21");
     setupInt1();
+    initAll();
     sei();
-    slSPI_Init();
-    slNRF24_IoInit();
-    slNRF24_Init();
-    resetNRF24L01();
     while (1) {}
     return 0;
 }
@@ -52,30 +50,32 @@ void setupInt1() {
 
 
 ISR(INT1_vect) {
-    slUART_WriteStringNl("ok:");
-    cli();
-    status = 0;
-    slNRF24_CE_LOW();
+    uint8_t  status = 0;
+    //slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
     slUART_WriteString("Sensor21 Status:");
     slUART_LogBinaryNl(status);
+    cli();
+    if(status == 0xE){
+        slUART_WriteString("FIFO empty");
+        resetNRF24L01();
+        slNRF24_OpenWritingPipe(0x12, 17);
+        slNRF24_StartListening();
+    }
     if ((status & (1 << 6)) != 0) {//got data
-        slUART_WriteStringNl("Sensor21 got data");
         getDataFromNRF24L01();
         getMesurements();
         sendVianRF24L01();
+        slUART_WriteStringNl("Sensor21 got data");
     }
     if ((status & (1 << 5)) != 0) {//send ok
+        error = 0;
+        resetAfterSendData();
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Sensor21 OK sent data");
         #endif
-        error = 0;
-        resetAfterSendData();
     }
    if ((status & (1 << 4)) != 0) {//send failed
-       #if showDebugDataMain == 1
-       slUART_WriteStringNl("Sensor21 FAIL sent data");
-       #endif
        slNRF24_Reset();
        slNRF24_Clear_MAX_RT();
        error = error +1;
@@ -85,6 +85,9 @@ ISR(INT1_vect) {
            error = 0;
            slUART_WriteStringNl("Sensor21 GIVE UP sending data");
        }
+       #if showDebugDataMain == 1
+       slUART_WriteStringNl("Sensor21 FAIL sent data");
+       #endif
    }
     sei();
 }

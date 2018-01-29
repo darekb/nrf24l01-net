@@ -22,7 +22,6 @@ CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../global_definitions.h
 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slNRF24.c
 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slNRF24.h
 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slSPI.h
-CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slUart.h
 
 CMakeFiles/atmega328p.elf.dir/slSPI.c.o: ../slSPI.c
 CMakeFiles/atmega328p.elf.dir/slSPI.c.o: ../slSPI.h

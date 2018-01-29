@@ -83,16 +83,24 @@ void nRF24L01Start() {
 
 
 void sendCommandToSensor(){
-    slNRF24_Reset();
-    slNRF24_FlushRx();
+//     slNRF24_Reset();
+//     slNRF24_FlushTx();
+//     slNRF24_FlushRx();
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("S");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     #endif
-    slNRF24_FlushTx();
-    slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+//     slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+//     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
+//     slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+//     slNRF24_FlushTx();
+//     slNRF24_FlushRx();
+//    slNRF24_Reset();
+    slNRF24_StopListening();
+    slNRF24_OpenWritingPipe(*sensorsAdresses[(sensorNr - 1)], PAYLOAD_SIZE);
     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], PAYLOAD_SIZE);
-    _delay_ms(100);
+    slNRF24_Reset();
+    //slNRF24_StartListening();
     clearData();
 }
 
@@ -105,7 +113,7 @@ void resetAfterSendData(){
 }
 void resetAfterGotData(){
     slNRF24_Reset();
-    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+    //slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
 }
 
 void saveDataFromNRF() {

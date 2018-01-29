@@ -152,6 +152,14 @@ void slNRF24_ReceivePayload(void);
 
 void slNRF24_TransmitPayload(void *dataIn, uint8_t len);
 
+void slNRF24_OpenReadingPipe(uint8_t pipeNr, uint8_t adress, uint8_t payloadSize);
+
+void slNRF24_OpenWritingPipe(uint8_t adress, uint8_t payloadSize);
+
+void slNRF24_StartListening();
+
+void slNRF24_StopListening();
+
 void slNRF24_Clear_MAX_RT();
 
 void slNRF24_TxPowerUp(uint8_t adress, uint8_t pipe);
