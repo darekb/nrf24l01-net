@@ -20,6 +20,7 @@
 #define UBRRH UBRR0H
 #define UCSRB UCSR0B
 #define UCSRA UCSR0A
+#define UCSRB UCSR0B
 #define UCSRC UCSR0C
 #define UDRE  UDRE0
 #define UDR   UDR0
@@ -32,7 +33,7 @@
 #endif
 
 #define UART_BAUD 38400
-//#define UART_BAUD 115200
+
 #define __UBRR ((F_CPU + UART_BAUD * 8UL) / (16UL * UART_BAUD )-1)
 
 void slUART_Init();
@@ -45,7 +46,11 @@ void slUART_WriteString(const char myString[]);
 
 void slUART_WriteStringNl(const char myString[]);
 
-void slUART_WriteBuffer(const uint8_t myData[], uint8_t length);
+void slUART_WriteBuffer(uint8_t *myData, uint8_t length);
+
+void slUART_WriteBufferHex(uint8_t *myData, uint8_t length);
+
+void slUART_WriteBufferBin(uint8_t *myData, uint8_t length);
 
 void slUART_LogBinary(uint16_t dataIn);
 
@@ -58,11 +63,9 @@ void slUART_LogDecWithSign(int16_t dataIn);
 void slUART_LogDecNl(uint16_t dataIn);
 
 void slUART_LogHex(uint16_t dataIn);
-
-void slUART_LogHexNl(uint16_t dataIn);
-
-
 void slUART_LogHex32WithSign(int32_t dataIn);
 void slUART_LogHex32(uint32_t dataIn);
+
+void slUART_LogHexNl(uint16_t dataIn);
 
 #endif /* SLUART_H_ */

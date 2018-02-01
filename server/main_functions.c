@@ -7,13 +7,12 @@
 
 #define showDebugDataMainFunctions 1
 #define sensorsCount 3
-
 #include "global_definitions.h"
-#include "slSPI.h"
 #include "slUart.h"
 #include "slNRF24.h"
 #include "slBME180Measure.h"
 #include "main_functions.h"
+
 
 uint8_t dataFromNRF24L01[PAYLOAD_SIZE];
 union MEASURE BME180measure[sensorsCount];
@@ -23,14 +22,14 @@ volatile uint8_t sensorNr = 0;
 //nr of sensor from sensorsStrings
 
 char sensorsStrings[sensorsCount][PAYLOAD_SIZE] = {
-        {'s', 't', 'a', 'r', 't', '-', 's', '2', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-        {'s', 't', 'a', 'r', 't', '-', 's', '1', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-        {'s', 't', 'a', 'r', 't', '-', 's', '1', '2', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
+        {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'},
+        {'s', 't', 'a', 'r', 't', '-', 's', '1', '1'},
+        {'s', 't', 'a', 'r', 't', '-', 's', '1', '2'}
 };
 char resetSensorsStrings[sensorsCount][PAYLOAD_SIZE] = {
-        {'r', 'e', 's', 'e', 't', '-', 's', '2', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-        {'r', 'e', 's', 'e', 't', '-', 's', '1', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-        {'r', 'e', 's', 'e', 't', '-', 's', '1', '2', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
+        {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'},
+        {'r', 'e', 's', 'e', 't', '-', 's', '1', '1'},
+        {'r', 'e', 's', 'e', 't', '-', 's', '1', '2'}
 };
 
 uint8_t sensorsId[sensorsCount][1] = {
@@ -45,14 +44,6 @@ uint8_t sensorsAdresses[sensorsCount][1] = {
         {0x11},
         {0x12}
 };
-
-
-void initAll(){
-    slSPI_Init();
-    slNRF24_IoInit();
-    nRF24L01Start();
-    slNRF24_Reset();
-}
 
 void clearData() {
     for (uint8_t i = 0; i < PAYLOAD_SIZE; i++) {
@@ -82,50 +73,45 @@ void nRF24L01Start() {
 }
 
 
-void sendCommandToSensor(){
-//     slNRF24_Reset();
-//     slNRF24_FlushTx();
-//     slNRF24_FlushRx();
+void sensorStart() {
+    nextSensorNr();
+    //slNRF24_Reset();
+    slNRF24_FlushTx();
+    slNRF24_FlushRx();
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("S");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     #endif
-//     slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
-//     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
-//     slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
-//     slNRF24_FlushTx();
-//     slNRF24_FlushRx();
-//    slNRF24_Reset();
-    slNRF24_StopListening();
-    slNRF24_OpenWritingPipe(*sensorsAdresses[(sensorNr - 1)], PAYLOAD_SIZE);
-    slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], PAYLOAD_SIZE);
-    slNRF24_Reset();
-    //slNRF24_StartListening();
+    slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)]);
+    //slNRF24_SetPayloadSize(9);
+    slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
+    _delay_ms(100);
+    resetAfterSendData();
     clearData();
 }
 
 void resetAfterSendData(){
-    //slNRF24_FlushRx();
-    //slNRF24_FlushTx();
-    //slNRF24_SetPayloadSize(PAYLOAD_SIZE);
-    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+    slNRF24_FlushRx();
+    slNRF24_FlushTx();
+    slNRF24_SetPayloadSize(PAYLOAD_SIZE);
+    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)]);
     slNRF24_Reset();
 }
 void resetAfterGotData(){
     slNRF24_Reset();
-    //slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)], sensorNr);
+    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)]);
 }
 
 void saveDataFromNRF() {
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, PAYLOAD_SIZE);
-    slUART_WriteStringNl("Get buffer from sensor ");
+    slUART_WriteString("Get buffer from Sensor");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     slUART_WriteBuffer(dataFromNRF24L01, PAYLOAD_SIZE);
     BME180measure[(sensorNr - 1)] = returnMEASUREFromBuffer(dataFromNRF24L01);
     #if showDebugDataMainFunctions == 1
-    slUART_WriteString("OK");
     slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
-    slUART_WriteStringNl("Server got data from Sensor21");
+    slUART_WriteString("Server got data from Sensor");
+    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
     slUART_LogHex32WithSign(BME180measure[(sensorNr - 1)].data.temperature);
     slUART_WriteString("|");
     slUART_LogHex32WithSign(BME180measure[(sensorNr - 1)].data.humidity);

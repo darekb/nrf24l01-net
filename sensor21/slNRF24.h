@@ -22,7 +22,12 @@
     DEALINGS IN THE SOFTWARE.
 */
 
+#define showDebugDataSlnRF24 1
+
 #define SENSOR_ADDR   0x21
+#define SERVER_ADDR   0xFF
+
+#define PAYLOAD_SIZE 9
 
 #define CE_PIN        PB1
 #define CE_OUTPUT()   DDRB |= (1 << CE_PIN)
@@ -150,16 +155,6 @@ void slNRF24_Reset(void);
 
 void slNRF24_TransmitPayload(void *dataIn, uint8_t len);
 
-void slNRF24_OpenReadingPipe(uint8_t pipeNr, uint8_t adress, uint8_t payloadSize);
-
-void slNRF24_OpenWritingPipe(uint8_t adress, uint8_t payloadSize);
-
-void slNRF24_StartListening();
-
-void slNRF24_StopListening();
-
-void slNRF24_Clear_MAX_RT();
-
 void slNRF24_TxPowerUp();
 
 void slNRF24_RxPowerUp();
@@ -173,3 +168,7 @@ void slNRF24_FlushRx();
 void slNRF24_CE_LOW();
 
 void slNRF24_SetPayloadSize(uint8_t playloadSize);
+
+#if showDebugDataSlnRF24 == 1
+void slNRF24_PrintRegisters();
+#endif

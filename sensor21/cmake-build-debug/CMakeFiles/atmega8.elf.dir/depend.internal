@@ -15,14 +15,11 @@ CMakeFiles/atmega8.elf.dir/main.c.o
  main.h
 CMakeFiles/atmega8.elf.dir/main_functions.c.o
  /home/dariusz/Arduino/nrf24l01-net/sensor21/BME280.h
- /home/dariusz/Arduino/nrf24l01-net/sensor21/global_definitions.h
  /home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.c
  /home/dariusz/Arduino/nrf24l01-net/sensor21/main_functions.h
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slAdc.h
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slBME180Measure.h
- /home/dariusz/Arduino/nrf24l01-net/sensor21/slI2C.h
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.h
- /home/dariusz/Arduino/nrf24l01-net/sensor21/slSPI.h
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slUart.h
 CMakeFiles/atmega8.elf.dir/slAdc.c.o
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slAdc.c
@@ -35,10 +32,10 @@ CMakeFiles/atmega8.elf.dir/slI2C.c.o
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slI2C.h
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slUart.h
 CMakeFiles/atmega8.elf.dir/slNRF24.c.o
- /home/dariusz/Arduino/nrf24l01-net/sensor21/global_definitions.h
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.c
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.h
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slSPI.h
+ /home/dariusz/Arduino/nrf24l01-net/sensor21/slUart.h
 CMakeFiles/atmega8.elf.dir/slSPI.c.o
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slSPI.c
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slSPI.h

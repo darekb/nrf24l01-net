@@ -21,18 +21,18 @@
 #include "main_functions.h"
 #include "slSPI.h"
 
-
-uint8_t status = 0;
-volatile uint8_t error = 0;
-
 void setupInt1();
 
 int main(void) {
     slUART_SimpleTransmitInit();
+    //slUART_Init();
     slUART_WriteStringNl("Start sensor21");
     setupInt1();
-    initAll();
     sei();
+    slSPI_Init();
+    slNRF24_IoInit();
+    slNRF24_Init();
+    resetNRF24L01();
     while (1) {}
     return 0;
 }
@@ -50,44 +50,33 @@ void setupInt1() {
 
 
 ISR(INT1_vect) {
-    uint8_t  status = 0;
-    //slNRF24_CE_LOW();
+    uint8_t status = 0;
+    slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
-    slUART_WriteString("Sensor21 Status:");
+    slUART_WriteString("Sensor21 STATUS:");
     slUART_LogBinaryNl(status);
     cli();
     if(status == 0xE){
-        slUART_WriteString("FIFO empty");
-        resetNRF24L01();
-        slNRF24_OpenWritingPipe(0x12, 17);
-        slNRF24_StartListening();
+        slNRF24_PrintRegisters();
+        resetAfterSendData();
     }
     if ((status & (1 << 6)) != 0) {//got data
         getDataFromNRF24L01();
+        slUART_WriteStringNl("Sensor21 got data");
         getMesurements();
         sendVianRF24L01();
-        slUART_WriteStringNl("Sensor21 got data");
     }
     if ((status & (1 << 5)) != 0) {//send ok
-        error = 0;
-        resetAfterSendData();
         #if showDebugDataMain == 1
-        slUART_WriteStringNl("Sensor21 OK sent data");
+        slUART_WriteStringNl("Sensor21 sent data");
         #endif
+        resetAfterSendData();
     }
-   if ((status & (1 << 4)) != 0) {//send failed
-       slNRF24_Reset();
-       slNRF24_Clear_MAX_RT();
-       error = error +1;
-       if(error < 7){
-           sendVianRF24L01();
-       } else {
-           error = 0;
-           slUART_WriteStringNl("Sensor21 GIVE UP sending data");
-       }
-       #if showDebugDataMain == 1
-       slUART_WriteStringNl("Sensor21 FAIL sent data");
-       #endif
-   }
+    if ((status & (1 << 4)) != 0) {//send fail
+        #if showDebugDataMain == 1
+        slUART_WriteStringNl("Sensor21 FAIL data");
+        #endif
+        resetAfterSendData();
+    }
     sei();
 }

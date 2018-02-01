@@ -190,9 +190,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/global_definitions.h">
-			<Option target="atmega328p.elf"/>
-		</Unit>
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/main.c">
 			<Option target="atmega328p.elf"/>
 		</Unit>

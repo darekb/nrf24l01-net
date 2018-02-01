@@ -17,32 +17,31 @@
 #include "main.h"
 #include "slNRF24.h"
 #include "main_functions.h"
+#include "slSPI.h"
+
 
 #define LED (1 << PB0)
 #define LED_TOG PORTB ^= LED
 
 void setupInt0();
 
-volatile uint8_t error = 0;
+uint8_t status;
 
+//counter for fail response form sensor
 int main(void) {
-    _delay_ms(500);
     slUART_SimpleTransmitInit();
-    #if showDebugDataMain == 1
+    //slUART_Init();
     slUART_WriteStringNl("Start server");
-    DDRB |= (1 << DDB0);//set DDD7 as output
-    PORTB &= ~(1 << DDB0);// set as 0
-    #endif
     setupInt0();
     sei();
-    initAll();
+    slSPI_Init();
+    slNRF24_IoInit();
+    nRF24L01Start();
+    slNRF24_Reset();
+    nextSensorNr();
     while (1) {
-        if(!error || error > 40) {
-            error = 0;
-            nextSensorNr();
-        }
-        sendCommandToSensor();
-        for(uint8_t i =0; i<2; i++){
+        sensorStart();
+        for(uint8_t i =0; i<5; i++){
             _delay_ms(1000);
         }
     }
@@ -62,40 +61,33 @@ void setupInt0() {
 
 
 ISR(INT0_vect) {
-    uint8_t status = 0;
-    cli();
-    //slNRF24_CE_LOW();
+    status = 0;
+    slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
-    slUART_WriteString("SERVER Status:");
+    #if showDebugDataMain == 1
+    slUART_WriteString("Server STATUS:");
     slUART_LogBinaryNl(status);
-    //slNRF24_Reset();
-    if(status == 0xE){
-        slUART_WriteString("FIFO empty");
-        slNRF24_Reset();
-    }
-    if ((status & (1 << 4)) != 0) {//send failed
-        saveErrorData();
-        slNRF24_Reset();
-        //slNRF24_FlushRx();
-        //slNRF24_FlushTx();
-        #if showDebugDataMain == 1
-        slUART_WriteStringNl("Server FAIL sent data");
-        #endif
-        error = error + 1;
-    }
+    #endif
+    cli();
     if ((status & (1 << 6)) != 0) {
-        saveDataFromNRF();
         #if showDebugDataMain == 1
-        slUART_WriteStringNl("Server got data ");
+        slUART_WriteStringNl("server got data ");
         #endif
+        saveDataFromNRF();
+        resetAfterSendData();
     }
     if ((status & (1 << 5)) != 0) {//send ok
-        //resetAfterSendData();
         #if showDebugDataMain == 1
-        LED_TOG;
-        slUART_WriteStringNl("Server OK sent ok ");
+        slUART_WriteStringNl("server sent ok ");
         #endif
-        error = 0;
+        resetAfterSendData();
+        _delay_ms(1);
+    }
+    if ((status & (1 << 4)) != 0) {//send fail
+        #if showDebugDataMain == 1
+        slUART_WriteStringNl("Server FAIL data");
+        #endif
+        resetAfterSendData();
     }
     sei();
 }

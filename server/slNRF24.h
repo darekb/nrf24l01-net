@@ -23,6 +23,12 @@
 */
 
 
+#define showDebugDataSlnRF24 1
+
+
+#define PAYLOAD_SIZE 17
+#define SERVER_ADDR   0xFF
+
     
 #define CE_PIN        PB1
 #define CE_OUTPUT()   DDRB |= (1 << CE_PIN)
@@ -144,7 +150,7 @@ void slNRF24_GetRegister(uint8_t reg, uint8_t *dataIn, uint8_t len);
 
 void slNRF24_Init(uint8_t adress);
 
-void slNRF24_ChangeAddress(uint8_t adress, uint8_t pipe);
+void slNRF24_ChangeAddress(uint8_t adress);
 
 void slNRF24_Reset(void);
 
@@ -152,19 +158,9 @@ void slNRF24_ReceivePayload(void);
 
 void slNRF24_TransmitPayload(void *dataIn, uint8_t len);
 
-void slNRF24_OpenReadingPipe(uint8_t pipeNr, uint8_t adress, uint8_t payloadSize);
+void slNRF24_TxPowerUp(uint8_t adress);
 
-void slNRF24_OpenWritingPipe(uint8_t adress, uint8_t payloadSize);
-
-void slNRF24_StartListening();
-
-void slNRF24_StopListening();
-
-void slNRF24_Clear_MAX_RT();
-
-void slNRF24_TxPowerUp(uint8_t adress, uint8_t pipe);
-
-void slNRF24_RxPowerUp(uint8_t adress, uint8_t pipe);
+void slNRF24_RxPowerUp(uint8_t adress);
 
 void slNRF24_PowerDown();
 
@@ -175,3 +171,7 @@ void slNRF24_FlushRx();
 void slNRF24_CE_LOW();
 
 void slNRF24_SetPayloadSize(uint8_t playloadSize);
+
+#if showDebugDataSlnRF24 == 1
+void slNRF24_PrintRegisters();
+#endif

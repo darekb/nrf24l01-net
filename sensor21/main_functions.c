@@ -12,59 +12,29 @@
 
 #endif
 
-#include "global_definitions.h"
 #include "slNRF24.h"
-#include "slI2C.h"
-#include "BME280.h"
 #include "slBME180Measure.h"
 #include "BME280.h"
 #include "slAdc.h"
 #include "main_functions.h"
-#include "slSPI.h"
 
 
-char startStringSensor[] = {'s', 't', 'a', 'r', 't', '-', 's', '2', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
-char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+char startStringSensor[] = {'s', 't', 'a', 'r', 't', '-', 's', '2', '1'};
+char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'};
 
 
-uint8_t dataFromNRF24L01[PAYLOAD_SIZE];
+uint8_t dataFromNRF24L01[9];
 union MEASURE BME180measure;
-uint8_t buffer[PAYLOAD_SIZE];
+uint8_t buffer[17];
 uint8_t nextNumber = 0;
 
 TVOL voltage;
 TVOL light;
 
-
-void setupResetPin() {
-    DDRD |= (1 << DDD7);//set DDD7 as output
-    PORTD &= ~(1 << DDD7);// set as 0
+void initADCData() {
+    slADC_initializeData(&light);
+    slADC_initializeData(&voltage);
 }
-
-void initAll(){
-    setupResetPin();
-    // slI2C_Init();
-    // if (BME280_Init(BME280_OS_T_1, BME280_OS_P_1, BME280_OS_H_1, BME280_FILTER_OFF, BME280_MODE_FORCED,
-    //                 BME280_TSB_1000)) {
-    //     #if showDebugDataMainFunctions == 1
-    //     slUART_WriteString("BMP280 init error.\r\n");
-    //     #endif
-    // } else {
-    //     #if showDebugDataMainFunctions == 1
-    //     slUART_WriteString("BMP280 init done.\r\n");
-    //     #endif
-    // }
-    slSPI_Init();
-    slNRF24_IoInit();
-    slNRF24_Init();
-    // slADC_init();
-    // slADC_initializeData(&light);
-    // slADC_initializeData(&voltage);
-    resetNRF24L01();
-    slNRF24_OpenWritingPipe(0x12, PAYLOAD_SIZE);
-    slNRF24_StartListening();
-}
-
 
 void restart() {
     #if showDebugDataMainFunctions == 1
@@ -85,7 +55,7 @@ uint8_t setBME280Mode() {
 
 
 void clearData() {
-    for (uint8_t i = 0; i < PAYLOAD_SIZE; i++) {
+    for (uint8_t i = 0; i < 9; i++) {
         dataFromNRF24L01[i] = 0;
     };
 }
@@ -126,13 +96,14 @@ void getMesurements() {
     if(nextNumber > 245){
         nextNumber = 0;
     }
-    for (uint8_t i = 0; i < PAYLOAD_SIZE; i++) {
+    for (uint8_t i = 0; i < 17; i++) {
         buffer[i] = nextNumber;
     };
 }
 
 
 void resetNRF24L01() {
+    slNRF24_PowerDown();
     #if showDebugDataMainFunctions == 1
     slUART_WriteStringNl("Sensor21 nRF24L01 Reset");
     #endif
@@ -140,7 +111,7 @@ void resetNRF24L01() {
     slNRF24_FlushTx();
     slNRF24_FlushRx();
     slNRF24_Reset();
-    _delay_ms(1);
+    _delay_ms(10);
 }
 
 uint8_t isStringMatch(uint8_t *dataFromNRF24L01, char *stringToMatch) {
@@ -175,27 +146,29 @@ void prepeareBuffer() {
 
 void getDataFromNRF24L01() {
     clearData();
-    slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, PAYLOAD_SIZE);
-    slUART_WriteStringNl("Got data: ");
-    slUART_WriteBuffer(dataFromNRF24L01, 17);
+    slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 9);
     slNRF24_FlushRx();
     slNRF24_FlushTx();
     slNRF24_Reset();
 }
 
 void resetAfterSendData(){
-    slNRF24_RxPowerUp();
     slNRF24_FlushRx();
     slNRF24_FlushTx();
+    slNRF24_SetPayloadSize(9);
+    slNRF24_RxPowerUp();
     slNRF24_Reset();
 }
 
 uint8_t sendVianRF24L01() {
-    slUART_WriteStringNl("Try sent data: ");
-    slUART_WriteBuffer(buffer, 1);
-    //slNRF24_Reset();
     slNRF24_FlushTx();
-//    slNRF24_TxPowerUp();
-//    slNRF24_TransmitPayload(&buffer, PAYLOAD_SIZE);
+    slNRF24_FlushRx();
+    slUART_WriteStringNl("Try sent data: ");
+    slUART_WriteBuffer(buffer, 17);
+    slNRF24_TxPowerUp();
+    slNRF24_SetPayloadSize(17);
+    slNRF24_TransmitPayload(&buffer, 17);
+    _delay_ms(100);
+    resetAfterSendData();
     return 0;
 }

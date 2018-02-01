@@ -45,11 +45,19 @@ void slUART_WriteStringNl(const char myString[]) {
     slUART_WriteString("\r\n");
 }
 
-void slUART_WriteBuffer(const uint8_t myData[], uint8_t length) {
-    uint8_t buff[8];
-    memcpy(&buff, myData, 8 * sizeof(uint8_t));
+void slUART_WriteBuffer(uint8_t *myData, uint8_t length) {
+    slUART_WriteBufferHex(myData, length);
+}
+void slUART_WriteBufferHex(uint8_t *myData, uint8_t length) {
     for (uint8_t i = 0; i < length; i++) {
-        slUART_LogHex((uint16_t) buff[i]);
+        slUART_LogHex((uint8_t) myData[i]);
+        slUART_WriteByte(' ');
+    }
+    slUART_WriteString("\r\n");
+}
+void slUART_WriteBufferBin(uint8_t *myData, uint8_t length) {
+    for (uint8_t i = 0; i < length; i++) {
+        slUART_LogBinary((uint8_t) myData[i]);
         slUART_WriteByte(' ');
     }
     slUART_WriteString("\r\n");

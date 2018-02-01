@@ -5,6 +5,7 @@ CMakeFiles/atmega328p.elf.dir/main.c.o: ../main.c
 CMakeFiles/atmega328p.elf.dir/main.c.o: ../main.h
 CMakeFiles/atmega328p.elf.dir/main.c.o: ../main_functions.h
 CMakeFiles/atmega328p.elf.dir/main.c.o: ../slNRF24.h
+CMakeFiles/atmega328p.elf.dir/main.c.o: ../slSPI.h
 CMakeFiles/atmega328p.elf.dir/main.c.o: ../slUart.h
 
 CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../global_definitions.h
@@ -12,16 +13,15 @@ CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../main_functions.c
 CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../main_functions.h
 CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../slBME180Measure.h
 CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../slNRF24.h
-CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../slSPI.h
 CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../slUart.h
 
 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o: ../slBME180Measure.c
 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o: ../slBME180Measure.h
 
-CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../global_definitions.h
 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slNRF24.c
 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slNRF24.h
 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slSPI.h
+CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slUart.h
 
 CMakeFiles/atmega328p.elf.dir/slSPI.c.o: ../slSPI.c
 CMakeFiles/atmega328p.elf.dir/slSPI.c.o: ../slSPI.h
