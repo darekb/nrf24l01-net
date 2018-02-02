@@ -147,9 +147,7 @@ void prepeareBuffer() {
 void getDataFromNRF24L01() {
     clearData();
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 9);
-    slNRF24_FlushRx();
-    slNRF24_FlushTx();
-    slNRF24_Reset();
+   slNRF24_Reset();
 }
 
 void resetAfterSendData(){
@@ -166,9 +164,7 @@ uint8_t sendVianRF24L01() {
     slUART_WriteStringNl("Try sent data: ");
     slUART_WriteBuffer(buffer, 17);
     slNRF24_TxPowerUp();
-    slNRF24_SetPayloadSize(17);
     slNRF24_TransmitPayload(&buffer, 17);
     _delay_ms(100);
-    resetAfterSendData();
     return 0;
 }

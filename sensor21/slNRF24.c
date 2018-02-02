@@ -124,10 +124,6 @@ void slNRF24_SetPayloadSize(uint8_t playloadSize){
 }
 
 
-void slNRF24_ChangeAddress(uint8_t adress) {
-    
-}
-
 void slNRF24_Reset(void) {
     _delay_us(10);
     CSN_LOW();
@@ -171,81 +167,16 @@ void slNRF24_TxPowerUp() {
     configReg |= (1 << PWR_UP);
     configReg &= ~(1 << PRIM_RX);
     slNRF24_SetRegister(CONFIG, &configReg, 1);
-    //slNRF24_ChangeAddress(SENSOR_ADDR);
     slNRF24_FlushTx();
     CE_LOW();
 }
 
-
-void slNRF24_OpenWritingPipe(uint8_t adress, uint8_t payloadSize) {
-    uint8_t val[5];
-    for (uint8_t i = 0; i < 5; i++) {
-        val[i] = adress;
-    }
-  slNRF24_SetRegister(RX_ADDR_P0, val, 5);
-  slNRF24_SetRegister(TX_ADDR, val, 5);
-  slNRF24_SetRegister(RX_PW_P0, &payloadSize, 1);
-}
-uint8_t child_pipe[]  =
-{
-  RX_ADDR_P0, RX_ADDR_P1, RX_ADDR_P2, RX_ADDR_P3, RX_ADDR_P4, RX_ADDR_P5
-};
-uint8_t child_payload_size[]  =
-{
-  RX_PW_P0, RX_PW_P1, RX_PW_P2, RX_PW_P3, RX_PW_P4, RX_PW_P5
-};
-uint8_t child_pipe_enable[]  =
-{
-  ERX_P0, ERX_P1, ERX_P2, ERX_P3, ERX_P4, ERX_P5
-};
-void slNRF24_OpenReadingPipe(uint8_t pipeNr, uint8_t adress, uint8_t payloadSize){
-    uint8_t val[5];
-    uint8_t EN_RXADDR_register = 0;
-    for (uint8_t i = 0; i < 5; i++) {
-        val[i] = adress;
-    }
-    if(pipeNr < 2){
-        slNRF24_SetRegister(child_pipe[pipeNr], val, 5);
-    } else {
-        slNRF24_SetRegister(child_pipe[pipeNr], &adress, 1);
-    }
-    slNRF24_SetRegister(child_payload_size[pipeNr], &payloadSize, 1);
-    slNRF24_GetRegister(EN_RXADDR,&EN_RXADDR_register,1);
-    EN_RXADDR_register |= child_pipe_enable[pipeNr];
-    slNRF24_SetRegister(EN_RXADDR, &EN_RXADDR_register, 1);
-}
-
-
-void slNRF24_StartListening(){
-    
-    //reset Data Ready RX FIFO interrupt, Data Sent TX FIFO interrupt, Maximum number of TX retransmits interrupt
-    uint8_t val = 0x70;
-    slNRF24_SetRegister(STATUS, &val, 1);
-    uint8_t configReg;
-    slNRF24_GetRegister(CONFIG, &configReg, 1);
-    configReg |= (1 << PWR_UP) | (1 << PRIM_RX);
-    slNRF24_SetRegister(CONFIG, &configReg, 1);
-    val = PAYLOAD_SIZE;
-    slNRF24_SetRegister(RX_PW_P0, &val, 1);
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
-    CE_HIGH();
-    _delay_ms(130);
-}
-
-
-void slNRF24_StopListening(){
-    CE_LOW();
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
-}
 
 void slNRF24_RxPowerUp() {
     uint8_t configReg;
     slNRF24_GetRegister(CONFIG, &configReg, 1);
     configReg |= (1 << PWR_UP) | (1 << PRIM_RX);
     slNRF24_SetRegister(CONFIG, &configReg, 1);
-    //slNRF24_ChangeAddress(SENSOR_ADDR);
     slNRF24_FlushRx();
     CE_HIGH();
 }

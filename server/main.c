@@ -41,7 +41,7 @@ int main(void) {
     nextSensorNr();
     while (1) {
         sensorStart();
-        for(uint8_t i =0; i<5; i++){
+        for(uint8_t i =0; i<15; i++){
             _delay_ms(1000);
         }
     }
@@ -69,6 +69,10 @@ ISR(INT0_vect) {
     slUART_LogBinaryNl(status);
     #endif
     cli();
+    if(status == 0xE){
+        slNRF24_PrintRegisters();
+        resetAfterSendData();
+    }
     if ((status & (1 << 6)) != 0) {
         #if showDebugDataMain == 1
         slUART_WriteStringNl("server got data ");

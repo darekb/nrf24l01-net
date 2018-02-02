@@ -64,6 +64,7 @@ ISR(INT1_vect) {
         getDataFromNRF24L01();
         slUART_WriteStringNl("Sensor21 got data");
         getMesurements();
+        _delay_ms(100);
         sendVianRF24L01();
     }
     if ((status & (1 << 5)) != 0) {//send ok

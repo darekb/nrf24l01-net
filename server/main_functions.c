@@ -32,18 +32,12 @@ char resetSensorsStrings[sensorsCount][PAYLOAD_SIZE] = {
         {'r', 'e', 's', 'e', 't', '-', 's', '1', '2'}
 };
 
-uint8_t sensorsId[sensorsCount][1] = {
-        {21},
-        {11},
-        {12}
-};
+uint8_t sensorsId[sensorsCount] = {21, 11, 12};
+
+uint8_t sensorsErrors[sensorsCount] = {0,0,0};
 
 
-uint8_t sensorsAdresses[sensorsCount][1] = {
-        {0x21},
-        {0x11},
-        {0x12}
-};
+uint8_t sensorsAdresses[sensorsCount] = {0x21, 0x11, 0x12};
 
 void clearData() {
     for (uint8_t i = 0; i < PAYLOAD_SIZE; i++) {
@@ -69,21 +63,20 @@ uint8_t returnNextStage() {
 }
 
 void nRF24L01Start() {
-    slNRF24_Init(*sensorsAdresses[0]);
+    slNRF24_Init(sensorsAdresses[0]);
 }
 
 
 void sensorStart() {
-    nextSensorNr();
-    //slNRF24_Reset();
+    //nextSensorNr();
+    slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("S");
-    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+    slUART_LogHexNl(sensorsAdresses[(sensorNr - 1)]);
     #endif
-    slNRF24_TxPowerUp(*sensorsAdresses[(sensorNr - 1)]);
-    //slNRF24_SetPayloadSize(9);
+    slNRF24_TxPowerUp(sensorsAdresses[(sensorNr - 1)]);
     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
     _delay_ms(100);
     resetAfterSendData();
@@ -94,24 +87,25 @@ void resetAfterSendData(){
     slNRF24_FlushRx();
     slNRF24_FlushTx();
     slNRF24_SetPayloadSize(PAYLOAD_SIZE);
-    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)]);
+    slNRF24_RxPowerUp(sensorsAdresses[(sensorNr - 1)]);
     slNRF24_Reset();
 }
 void resetAfterGotData(){
     slNRF24_Reset();
-    slNRF24_RxPowerUp(*sensorsAdresses[(sensorNr - 1)]);
+    slNRF24_RxPowerUp(sensorsAdresses[(sensorNr - 1)]);
 }
 
 void saveDataFromNRF() {
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, PAYLOAD_SIZE);
     slUART_WriteString("Get buffer from Sensor");
-    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+    slUART_LogHexNl(sensorsAdresses[(sensorNr - 1)]);
     slUART_WriteBuffer(dataFromNRF24L01, PAYLOAD_SIZE);
     BME180measure[(sensorNr - 1)] = returnMEASUREFromBuffer(dataFromNRF24L01);
+    //sensorsErrors[(sensorNr - 1)] = 0;
     #if showDebugDataMainFunctions == 1
-    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+    slUART_LogHexNl(sensorsAdresses[(sensorNr - 1)]);
     slUART_WriteString("Server got data from Sensor");
-    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+    slUART_LogHexNl(sensorsAdresses[(sensorNr - 1)]);
     slUART_LogHex32WithSign(BME180measure[(sensorNr - 1)].data.temperature);
     slUART_WriteString("|");
     slUART_LogHex32WithSign(BME180measure[(sensorNr - 1)].data.humidity);
@@ -134,14 +128,15 @@ void resetBMEData(uint8_t sensorId) {
     BME180measure[sensorId].data.pressure = 0;
     BME180measure[sensorId].data.voltage = 0;
     BME180measure[sensorId].data.fotorezistor = 0;
-    BME180measure[sensorId].data.sensorId = *sensorsId[sensorId];
+    BME180measure[sensorId].data.sensorId = sensorsId[sensorId];
 }
 
 void saveErrorData() {
     resetBMEData((sensorNr - 1));
+    sensorsErrors[(sensorNr - 1)] = sensorsErrors[(sensorNr - 1)] + 1;
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("F");
-    slUART_LogHexNl(*sensorsAdresses[(sensorNr - 1)]);
+    slUART_LogHexNl(sensorsAdresses[(sensorNr - 1)]);
     #endif
 }
 
