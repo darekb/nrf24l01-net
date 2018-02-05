@@ -26,6 +26,7 @@
 void setupInt0();
 
 uint8_t status;
+uint8_t recieviedResponse = 0;
 
 //counter for fail response form sensor
 int main(void) {
@@ -40,8 +41,16 @@ int main(void) {
     slNRF24_Reset();
     nextSensorNr();
     while (1) {
+        if(recieviedResponse > 0){
+            recieviedResponse = 0;
+            nextSensorNr();
+        }
+        if(recieviedResponse == 5){
+            recieviedResponse = 0;
+            nextSensorNr();
+        }
         sensorStart();
-        for(uint8_t i =0; i<15; i++){
+        for(uint8_t i =0; i<1; i++){
             _delay_ms(1000);
         }
     }
@@ -74,13 +83,16 @@ ISR(INT0_vect) {
         resetAfterSendData();
     }
     if ((status & (1 << 6)) != 0) {
+        recieviedResponse = 1;
         #if showDebugDataMain == 1
         slUART_WriteStringNl("server got data ");
         #endif
         saveDataFromNRF();
         resetAfterSendData();
+        _delay_ms(1);
     }
     if ((status & (1 << 5)) != 0) {//send ok
+        recieviedResponse = 0;
         #if showDebugDataMain == 1
         slUART_WriteStringNl("server sent ok ");
         #endif
@@ -88,10 +100,12 @@ ISR(INT0_vect) {
         _delay_ms(1);
     }
     if ((status & (1 << 4)) != 0) {//send fail
+        recieviedResponse = recieviedResponse + 1;
         #if showDebugDataMain == 1
         slUART_WriteStringNl("Server FAIL data");
         #endif
         resetAfterSendData();
+        _delay_ms(1);
     }
     sei();
 }
