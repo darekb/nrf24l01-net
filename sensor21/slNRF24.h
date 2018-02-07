@@ -22,7 +22,7 @@
     DEALINGS IN THE SOFTWARE.
 */
 
-#define showDebugDataSlnRF24 1
+#define showDebugDataSlnRF24 0
 
 #define SENSOR_ADDR   0x21
 #define SERVER_ADDR   0xFF

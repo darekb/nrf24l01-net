@@ -23,7 +23,7 @@
 */
 
 
-#define showDebugDataSlnRF24 1
+#define showDebugDataSlnRF24 0
 
 
 #define PAYLOAD_SIZE 17

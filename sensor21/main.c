@@ -57,7 +57,10 @@ ISR(INT1_vect) {
     slUART_LogBinaryNl(status);
     cli();
     if(status == 0xE){
-        slNRF24_PrintRegisters();
+        #if showDebugDataMain == 1
+        slUART_WriteStringNl("Sensor21 unknow error");
+        #endif
+        //slNRF24_PrintRegisters();
         resetAfterSendData();
     }
     if ((status & (1 << 6)) != 0) {//got data

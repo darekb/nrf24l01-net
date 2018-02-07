@@ -13,13 +13,13 @@ void sensorStart();
 
 void saveDataFromNRF();
 
-void resetAfterGotData();
-
-void resetAfterSendData();
+void resetNRF24L01p();
 
 void saveErrorData();
 
-uint8_t returnNextStage();
+uint8_t returnCountErrorsForSensor();
+
+void resetErrors();
 
 uint8_t ifCheckEverySensor();
 

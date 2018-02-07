@@ -5,7 +5,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define showDebugDataMainFunctions 1
+#define showDebugDataMainFunctions 0
 #define sensorsCount 3
 #include "global_definitions.h"
 #include "slUart.h"
@@ -54,13 +54,6 @@ uint8_t nextSensorNr() {
     return sensorNr;
 }
 
-uint8_t returnNextStage() {
-    if (sensorNr < sensorsCount) {
-        return 1;
-    }
-    
-    return 0;
-}
 
 void nRF24L01Start() {
     slNRF24_Init(sensorsAdresses[0]);
@@ -72,34 +65,31 @@ void sensorStart() {
     slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
-    #if showDebugDataMainFunctions == 1
     slUART_WriteString("S");
     slUART_LogHexNl(sensorsAdresses[(sensorNr - 1)]);
-    #endif
     slNRF24_TxPowerUp(sensorsAdresses[(sensorNr - 1)]);
     slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], 9);
     _delay_ms(50);
-    resetAfterSendData();
+    resetNRF24L01p();
     clearData();
 }
 
-void resetAfterSendData(){
+void resetNRF24L01p(){
     slNRF24_FlushRx();
     slNRF24_FlushTx();
     slNRF24_SetPayloadSize(PAYLOAD_SIZE);
     slNRF24_RxPowerUp(sensorsAdresses[(sensorNr - 1)]);
     slNRF24_Reset();
 }
-void resetAfterGotData(){
-    slNRF24_Reset();
-    slNRF24_RxPowerUp(sensorsAdresses[(sensorNr - 1)]);
-}
-
 void saveDataFromNRF() {
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, PAYLOAD_SIZE);
+    slUART_WriteString("OK");
+    slUART_LogHexNl(sensorsAdresses[(sensorNr - 1)]);
+    #if showDebugDataMainFunctions == 1
     slUART_WriteString("Get buffer from Sensor");
     slUART_LogHexNl(sensorsAdresses[(sensorNr - 1)]);
     slUART_WriteBuffer(dataFromNRF24L01, PAYLOAD_SIZE);
+    #endif
     BME180measure[(sensorNr - 1)] = returnMEASUREFromBuffer(dataFromNRF24L01);
     //sensorsErrors[(sensorNr - 1)] = 0;
     #if showDebugDataMainFunctions == 1
@@ -134,10 +124,18 @@ void resetBMEData(uint8_t sensorId) {
 void saveErrorData() {
     resetBMEData((sensorNr - 1));
     sensorsErrors[(sensorNr - 1)] = sensorsErrors[(sensorNr - 1)] + 1;
-    #if showDebugDataMainFunctions == 1
     slUART_WriteString("F");
     slUART_LogHexNl(sensorsAdresses[(sensorNr - 1)]);
-    #endif
+}
+
+uint8_t returnCountErrorsForSensor(){
+    return sensorsErrors[(sensorNr - 1)];
+}
+
+void resetErrors(){
+    for (uint8_t i = 0; i < sensorsCount; i++) {
+        sensorsErrors[i] = 0;
+    }
 }
 
 uint8_t ifCheckEverySensor() {
