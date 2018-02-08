@@ -42,6 +42,7 @@ int main(void) {
     setupInt0();
     slSPI_Init();
     slNRF24_IoInit();
+    slNRF24_Init();
     nRF24L01Start();
     slNRF24_Reset();
     nextSensorNr();
@@ -141,7 +142,6 @@ void setupInt0() {
 
 ISR(INT0_vect) {
     status = 0;
-    //  slNRF24_CE_LOW();
     slNRF24_GetRegister(STATUS, &status, 1);
     #if showDebugDataMain == 1
     slUART_WriteString("Server STATUS:");
