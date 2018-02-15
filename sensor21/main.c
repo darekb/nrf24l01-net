@@ -8,7 +8,7 @@
 #define showDebugDataMain 0
 
 #include "main.h"
-#if showDebugDataMainFunctions == 1
+#if showDebugDataMain == 1
 #include "slUart.h"
 #endif
 
