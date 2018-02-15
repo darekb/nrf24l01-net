@@ -4,12 +4,10 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define showDebugDataMainFunctions 1
+#define showDebugDataMainFunctions 0
 
 #if showDebugDataMainFunctions == 1
-
 #include "slUart.h"
-
 #endif
 
 #include "main_functions.h"
@@ -25,7 +23,8 @@ char resetStringSensor[] = {'r', 'e', 's', 'e', 't', '-', 's', '2', '1'};
 
 uint8_t dataFromNRF24L01[9];
 union MEASURE BME180measure;
-uint8_t buffer[DATA_UPLOAD_SIZE];
+uint8_t buffer[17];
+uint8_t nextNumber = 0;
 
 TVOL voltage;
 TVOL light;
@@ -96,7 +95,7 @@ void getMesurements() {
     getDataFromADC();
     getDataFromFotorezistor();
     #if showDebugDataMainFunctions == 1
-    slUART_WriteStringNl("Sensor21 got data from BME280");
+    slUART_WriteStringNl("Sensor21 collected data");
     slUART_LogHex32WithSign(BME180measure.data.temperature);
     slUART_WriteString("|");
     slUART_LogHex32WithSign(BME180measure.data.humidity);
@@ -159,21 +158,25 @@ void getDataFromNRF24L01() {
     clearData();
     slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 9);
     slNRF24_Reset();
-    slNRF24_FlushTx();
+}
+
+void resetAfterSendData() {
     slNRF24_FlushRx();
+    slNRF24_FlushTx();
+    slNRF24_SetPayloadSize(9);
+    slNRF24_RxPowerUp();
+    slNRF24_Reset();
 }
 
 uint8_t sendVianRF24L01() {
-    //slUART_WriteStringNl("Try sent data: ");
-    //slUART_WriteBuffer(buffer, DATA_UPLOAD_SIZE);
-    slNRF24_Reset();
     slNRF24_FlushTx();
     slNRF24_FlushRx();
+    #if showDebugDataMainFunctions == 1
+    slUART_WriteStringNl("Try sent data: ");
+    slUART_WriteBuffer(buffer, 17);
+    #endif
     slNRF24_TxPowerUp();
-    slNRF24_TransmitPayload(&buffer, DATA_UPLOAD_SIZE);
-    slNRF24_RxPowerUp();
-    slNRF24_FlushTx();
-    slNRF24_FlushRx();
-    slNRF24_Reset();
+    slNRF24_TransmitPayload(&buffer, 17);
+    _delay_ms(100);
     return 0;
 }

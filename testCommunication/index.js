@@ -24,17 +24,17 @@ sensor21.on('open', function (error) {
 sensor21.on('data', function(dataIn){
 	_sockedLog.write('sensor21|' + new Date() + '|' + new Date().getTime() + '|' + ' ' + dataIn + '\n');
 });
-var server = new SerialPort('/dev/ttyUSB1', {
-				baudrate: 38400,
-				parser: SerialPort.parsers.readline('\n')
-});
-server.on('open', function (error) {
-				if (error) {
-				  _sockedLog.write(new Date() + ' SensorRecivier: SerialPort: Failed to open serial port: /dev/ttyUSB1 ' + error + '\n');
-				} else {
-				_sockedLog.write('index.js [' + new Date() + '] SerialPort: Open serial port: /dev/ttyUSB1\n');
-				}
-			});
-server.on('data', function(dataIn){
-	_sockedLog.write('server  |' + new Date() + '|' + new Date().getTime() + '|' + ' ' + dataIn + '\n');
-});
+// var server = new SerialPort('/dev/ttyUSB1', {
+// 				baudrate: 38400,
+// 				parser: SerialPort.parsers.readline('\n')
+// });
+// server.on('open', function (error) {
+// 				if (error) {
+// 				  _sockedLog.write(new Date() + ' SensorRecivier: SerialPort: Failed to open serial port: /dev/ttyUSB1 ' + error + '\n');
+// 				} else {
+// 				_sockedLog.write('index.js [' + new Date() + '] SerialPort: Open serial port: /dev/ttyUSB1\n');
+// 				}
+// 			});
+// server.on('data', function(dataIn){
+// 	_sockedLog.write('server  |' + new Date() + '|' + new Date().getTime() + '|' + ' ' + dataIn + '\n');
+// });

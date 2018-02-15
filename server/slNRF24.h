@@ -22,7 +22,12 @@
     DEALINGS IN THE SOFTWARE
 */
 
+
+#define showDebugDataSlnRF24 0
+
+
 #define PAYLOAD_SIZE 17
+#define SERVER_ADDR   0xFF
 
     
 #define CE_PIN        PB1
@@ -143,9 +148,7 @@ void slNRF24_SetRegister(uint8_t reg, void *dataIn, uint8_t len);
 
 void slNRF24_GetRegister(uint8_t reg, uint8_t *dataIn, uint8_t len);
 
-void slNRF24_Init(uint8_t adress);
-
-void slNRF24_ChangeAddress(uint8_t adress, uint8_t pipe);
+void slNRF24_Init();
 
 void slNRF24_Reset(void);
 
@@ -153,12 +156,20 @@ void slNRF24_ReceivePayload(void);
 
 void slNRF24_TransmitPayload(void *dataIn, uint8_t len);
 
-void slNRF24_TxPowerUp(uint8_t adress, uint8_t pipe);
+void slNRF24_TxPowerUp(uint8_t adress);
 
-void slNRF24_RxPowerUp(uint8_t adress, uint8_t pipe);
+void slNRF24_RxPowerUp(uint8_t adress);
 
 void slNRF24_PowerDown();
 
 void slNRF24_FlushTx();
 
 void slNRF24_FlushRx();
+
+void slNRF24_CE_LOW();
+
+void slNRF24_SetPayloadSize(uint8_t playloadSize);
+
+#if showDebugDataSlnRF24 == 1
+void slNRF24_PrintRegisters();
+#endif

@@ -1,0 +1,10 @@
+//
+// Created by dariusz on 24.01.18.
+//
+
+#ifndef CMAKE_AVR_GLOBAL_DEFINITIONS_H
+#define CMAKE_AVR_GLOBAL_DEFINITIONS_H
+
+#define PAYLOAD_SIZE 17
+
+#endif //CMAKE_AVR_GLOBAL_DEFINITIONS_H

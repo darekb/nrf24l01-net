@@ -38,6 +38,7 @@ CMakeFiles/atmega8.elf.dir/slNRF24.c.o
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.c
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slNRF24.h
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slSPI.h
+ /home/dariusz/Arduino/nrf24l01-net/sensor21/slUart.h
 CMakeFiles/atmega8.elf.dir/slSPI.c.o
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slSPI.c
  /home/dariusz/Arduino/nrf24l01-net/sensor21/slSPI.h

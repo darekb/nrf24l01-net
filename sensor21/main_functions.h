@@ -26,5 +26,6 @@ void prepeareBuffer();
 
 uint8_t sendVianRF24L01();
 
+void resetAfterSendData();
 
 #endif //CMAKE_AVR_MAIN_FUNCTIONS_H

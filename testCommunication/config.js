@@ -1,4 +1,4 @@
 var config = {
-  'filename': 'log-16-01-2018-test01.dat'
+  'filename': 'log-06-02-2018-testComm.dat'
 };
 module.exports = config;

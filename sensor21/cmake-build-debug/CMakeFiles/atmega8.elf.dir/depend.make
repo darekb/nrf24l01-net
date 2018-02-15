@@ -37,6 +37,7 @@ CMakeFiles/atmega8.elf.dir/slI2C.c.o: ../slUart.h
 CMakeFiles/atmega8.elf.dir/slNRF24.c.o: ../slNRF24.c
 CMakeFiles/atmega8.elf.dir/slNRF24.c.o: ../slNRF24.h
 CMakeFiles/atmega8.elf.dir/slNRF24.c.o: ../slSPI.h
+CMakeFiles/atmega8.elf.dir/slNRF24.c.o: ../slUart.h
 
 CMakeFiles/atmega8.elf.dir/slSPI.c.o: ../slSPI.c
 CMakeFiles/atmega8.elf.dir/slSPI.c.o: ../slSPI.h

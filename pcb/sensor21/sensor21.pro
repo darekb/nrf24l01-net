@@ -1,4 +1,4 @@
-update=sob, 6 sty 2018, 08:16:59
+update=wto, 13 lut 2018, 10:09:19
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=nRF24L01
+LibName31=HT7333

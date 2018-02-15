@@ -6,64 +6,118 @@
 #define F_CPU 8000000UL
 #endif
 
-#define showDebugDataMain 1
-
-#if showDebugDataMain == 1
+#define showDebugDataMain 0
 
 #include "slUart.h"
 
-#endif
-
 #include "main.h"
 #include "slNRF24.h"
-#include "slSPI.h"
 #include "main_functions.h"
+#include "slSPI.h"
 
 
 #define LED (1 << PB0)
 #define LED_TOG PORTB ^= LED
 
+#define ST_START 1
+#define ST_GOT_DATA 2
+#define ST_SENT_DATA 3
+#define ST_ERROR_SENT_DATA 4
+#define ST_UNKNOWN_ERROR 5
+#define ST_END_STATE 6
+#define ST_WAITING 0
+
+
 void setupTimer();
-
 void setupInt0();
-
 
 uint8_t status;
 volatile uint8_t stage = 0;
-//stage
 volatile uint16_t counter = 0;
-//counter for next mesure
-volatile uint16_t counter2 = 0;
-//counter for reset mesurements
-volatile uint16_t counter3 = 0;
 
-//counter for fail response form sensor
 int main(void) {
-    #if showDebugDataMain == 1
-    slUART_Init();
-    DDRB |= (1 << DDB0);//set DDD7 as output
-    PORTB &= ~(1 << DDB0);// set as 0
-    #endif
-    slSPI_Init();
-    slNRF24_IoInit();
-    nRF24L01Start();
+    slUART_SimpleTransmitInit();
+    slUART_WriteStringNl("Start server");
     setupTimer();
     setupInt0();
-    sei();
-    stage = 1;
-    #if showDebugDataMain == 1
-    slUART_WriteStringNl("\nStart server");
-    #endif
-    _delay_ms(500);
+    slSPI_Init();
+    slNRF24_IoInit();
+    slNRF24_Init();
+    nRF24L01Start();
     slNRF24_Reset();
+    nextSensorNr();
+    stage = ST_START;
     while (1) {
-        switch (stage) {
-            case 1:
-                //LED_TOG;
-                sensorStart();
-                stage = 0;//wait for intrrupt
-                counter3 = 1;
-                break;
+        if (stage == ST_START) {
+            cli();
+            sensorStart();
+            stage = ST_WAITING;
+            sei();
+        }
+        if (stage == ST_SENT_DATA) {
+            cli();
+            #if showDebugDataMain == 1
+            slUART_WriteStringNl("server sent ok ");
+            #endif
+            resetNRF24L01p();
+            _delay_ms(1);
+            stage = ST_WAITING;
+            sei();
+        }
+        if (stage == ST_GOT_DATA) {
+            cli();
+            #if showDebugDataMain == 1
+            slUART_WriteStringNl("server got data ");
+            #endif
+            saveDataFromNRF();
+            resetNRF24L01p();
+            _delay_ms(1);
+            stage = ST_END_STATE;
+            sei();
+        }
+        if (stage == ST_ERROR_SENT_DATA) {
+            cli();
+            #if showDebugDataMain == 1
+            slUART_WriteStringNl("Server FAIL data");
+            #endif
+            saveErrorData();
+            if(returnCountErrorsForSensor() > 3){
+                stage = ST_END_STATE;
+            } else {
+                stage = ST_START;
+            }
+            resetNRF24L01p();
+            _delay_ms(1);
+            stage = ST_END_STATE;
+            sei();
+        }
+        if (stage == ST_UNKNOWN_ERROR) {
+            cli();
+            #if showDebugDataMain == 1
+            slUART_WriteStringNl("Server unknown error");
+            #endif
+            saveErrorData();
+            if(returnCountErrorsForSensor() > 3){
+                stage = ST_END_STATE;
+            } else {
+                stage = ST_START;
+            }
+            resetNRF24L01p();
+            _delay_ms(1);
+            sei();
+        }
+        if(stage == ST_END_STATE){
+            if(ifCheckEverySensor()){
+                resetErrors();
+                stage = ST_WAITING;
+                sendingSensorDataViaUart();
+                #if showDebugDataMain == 1
+                slUART_WriteStringNl("------------");
+                #endif
+            } else {
+                stage = ST_START;
+            }
+            nextSensorNr();
         }
     }
     return 0;
@@ -86,75 +140,37 @@ void setupInt0() {
 }
 
 
-ISR(TIMER0_OVF_vect) {
-    //co 0.01632sek.
-    if (stage == 0) {
-        counter = counter + 1;
-        if (counter3 > 0) {
-            counter3 = counter3 + 1;
-        }
-    } else {
-        counter2 = counter2 + 1;
-    }
-    if (counter3 > 62) {//1.02816sek. failed get sensor data
-        saveErrorData();
-        stage = returnNextStage();
-        if(ifCheckEverySensor()) {
-            sendingSensorDataViaUart();
-        }
-        counter3 = 0;
-    }
-    if (counter == 500) {//17.952 sek Next mesurements
-        counter = 0;
-        counter2 = 0;
-        stage = 1;
-        #if showDebugDataMain == 1
-        slUART_WriteStringNl("----------------");
-        #endif
-    }
-    if (counter2 == 2840) {//46.348 sek Reset to sending
-        #if showDebugDataMain == 1
-        slUART_WriteString("server Fail at stage: ");
-        slUART_LogDecNl(stage);
-        #endif
-        counter = 0;
-        counter2 = 0;
-        stage = 1;
-    }
-}
-
 ISR(INT0_vect) {
     status = 0;
     slNRF24_GetRegister(STATUS, &status, 1);
     #if showDebugDataMain == 1
-    //slUART_WriteString("server STATUS: ");
-    //slUART_LogBinaryNl(status);
+    slUART_WriteString("Server STATUS:");
+    slUART_LogBinaryNl(status);
+    #else
+    _delay_ms(100);
     #endif
-    cli();
-    if ((status & (1 << 6)) != 0) {//got data
-        _delay_ms(1);
-        saveDataFromNRF();
-        #if showDebugDataMain == 1
-        slUART_WriteStringNl("server got data ");
-        #endif
-        stage = returnNextStage();
-        if(ifCheckEverySensor()) {
-            sendingSensorDataViaUart();
-        }
+    if ((status & (1 << 5)) != 0) {
+        stage = ST_SENT_DATA;
+    }
+    if ((status & (1 << 6)) != 0) {
+        stage = ST_GOT_DATA;
+    }
+    if ((status & (1 << 4)) != 0) {
+        stage = ST_ERROR_SENT_DATA;
+    }
+    if (status == 0xE) {
+        stage = ST_UNKNOWN_ERROR;
+    }
+}
+
+
+ISR(TIMER0_OVF_vect) {
+    //co 0.03264sek.
+    if (stage == ST_WAITING) {
+        counter = counter + 1;
+    }
+    if (counter >= 123) {//4.01472 sek Next mesurements
         counter = 0;
-        counter2 = 0;
-        counter3 = 0;
+        stage = ST_START;
     }
-    if ((status & (1 << 5)) != 0) {//send ok
-        #if showDebugDataMain == 1
-        slUART_WriteStringNl("server sent ok ");
-        #endif
-        stage = 0;
-    }
-    if ((status & (1 << 4)) != 0) {//send fail
-        #if showDebugDataMain == 1
-        slUART_WriteStringNl("server FAIL sent");
-        #endif
-    }
-    sei();
 }
