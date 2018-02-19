@@ -214,6 +214,12 @@
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h">
 			<Option target="atmega328p.elf"/>
 		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/slPCF8563.c">
+			<Option target="atmega328p.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/slPCF8563.h">
+			<Option target="atmega328p.elf"/>
+		</Unit>
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/slSPI.c">
 			<Option target="atmega328p.elf"/>
 		</Unit>

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/dariusz/Arduino/nrf24l01-net/server/main_functions.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/main_functions.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/server/slNRF24.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slNRF24.c.o"
+  "/home/dariusz/Arduino/nrf24l01-net/server/slPCF8563.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/server/slSPI.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slSPI.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/server/slUart.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slUart.c.o"
   )

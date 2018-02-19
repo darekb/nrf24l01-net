@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/atmega328p.elf.dir/slNRF24.c.o"
   "CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o"
   "CMakeFiles/atmega328p.elf.dir/main_functions.c.o"
+  "CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o"
   "../bin/atmega328p.elf.pdb"
   "../bin/atmega328p.elf"
 )

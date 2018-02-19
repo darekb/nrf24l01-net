@@ -361,6 +361,33 @@ slNRF24.c.s:
 	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/slNRF24.c.s
 .PHONY : slNRF24.c.s
 
+slPCF8563.o: slPCF8563.c.o
+
+.PHONY : slPCF8563.o
+
+# target to build an object file
+slPCF8563.c.o:
+	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+.PHONY : slPCF8563.c.o
+
+slPCF8563.i: slPCF8563.c.i
+
+.PHONY : slPCF8563.i
+
+# target to preprocess a source file
+slPCF8563.c.i:
+	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/slPCF8563.c.i
+.PHONY : slPCF8563.c.i
+
+slPCF8563.s: slPCF8563.c.s
+
+.PHONY : slPCF8563.s
+
+# target to generate assembly for a file
+slPCF8563.c.s:
+	$(MAKE) -f CMakeFiles/atmega328p.elf.dir/build.make CMakeFiles/atmega328p.elf.dir/slPCF8563.c.s
+.PHONY : slPCF8563.c.s
+
 slSPI.o: slSPI.c.o
 
 .PHONY : slSPI.o
@@ -446,6 +473,9 @@ help:
 	@echo "... slNRF24.o"
 	@echo "... slNRF24.i"
 	@echo "... slNRF24.s"
+	@echo "... slPCF8563.o"
+	@echo "... slPCF8563.i"
+	@echo "... slPCF8563.s"
 	@echo "... slSPI.o"
 	@echo "... slSPI.i"
 	@echo "... slSPI.s"
