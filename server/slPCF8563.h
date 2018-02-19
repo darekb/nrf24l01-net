@@ -25,6 +25,55 @@
 #define TIMER            0x0F  //TIMER[7:0]               8bits
 
 
+//CONTROL_STATUS_1 bits
 
+#define CONTROL_STATUS_1_TEST1      0x0<<7  
+//Default value. must be set to logic 0 during normal operations
+
+#define CONTROL_STATUS_1_STOP_ON    0x1<<5  
+//all RTC divider chain flip-flops are asynchronously set to logic 0; the RTC clock is stopped (CLKOUT at 32.768 kHz is still available)
+#define CONTROL_STATUS_1_STOP_OFF   0x0<<5  //Default value. 
+//RTC source clock runs
+
+
+#define CONTROL_STATUS_1_TESTC_ON   0x1<<3  //Default value. 
+//Power-On Reset (POR) override may be enabled
+#define CONTROL_STATUS_1_TESTC_OFF  0x0<<3  
+//Power-On Reset (POR) override facility is disabled; set to logic 0 for normal operation
+
+
+//CONTROL_STATUS_2 bits
+
+#define CONTROL_STATUS_2_TI_TP_OFF  0x0<<4  //Default value. 
+//INT is active when TF is active (subject to the status of TIE)
+#define CONTROL_STATUS_2_TI_TP_ON   0x1<<4  
+//INT pulses active according to Table 7 (subject to the status of TIE);
+
+
+#define CONTROL_STATUS_2_AF_OFF     0x0<<3  //Default value. 
+//read: alarm flag inactive
+//write: alarm flag is cleared
+#define CONTROL_STATUS_2_AF_ON      0x1<<3
+//read: alarm flag active
+//write: alarm flag remains unchanged
+
+#define CONTROL_STATUS_2_TF_OFF     0x0<<2  //Default value. 
+//read: timer flag inactive
+//write: timer flag is cleared
+#define CONTROL_STATUS_2_TF_ON      0x1<<2
+//read: timer flag active
+//write: timer flag remains unchanged
+
+
+#define CONTROL_STATUS_2_AIE_OFF    0x0<<1  //Default value. 
+//alarm interrupt disabled
+#define CONTROL_STATUS_2_AIE_ON     0x1<<1
+//alarm interrupt enabled
+
+
+#define CONTROL_STATUS_2_TIE_OFF    0x0  //Default value. 
+//timer interrupt disabled
+#define CONTROL_STATUS_2_TIE_ON     0x1
+//timer interrupt enabled
 
 #endif //CMAKE_AVR_SLPCF8563_H
