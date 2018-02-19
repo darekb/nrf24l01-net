@@ -58,6 +58,8 @@ global_definitions.h
 
 /home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.h
 
+/home/dariusz/Arduino/nrf24l01-net/server/slI2C.h
+
 /home/dariusz/Arduino/nrf24l01-net/server/slNRF24.c
 avr/io.h
 -
@@ -75,6 +77,16 @@ slUart.h
 /home/dariusz/Arduino/nrf24l01-net/server/slUart.h
 
 /home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h
+
+/home/dariusz/Arduino/nrf24l01-net/server/slPCF8563.c
+avr/io.h
+-
+slI2C.h
+/home/dariusz/Arduino/nrf24l01-net/server/slI2C.h
+slPCF8563.h
+/home/dariusz/Arduino/nrf24l01-net/server/slPCF8563.h
+
+/home/dariusz/Arduino/nrf24l01-net/server/slPCF8563.h
 
 /home/dariusz/Arduino/nrf24l01-net/server/slSPI.c
 avr/io.h

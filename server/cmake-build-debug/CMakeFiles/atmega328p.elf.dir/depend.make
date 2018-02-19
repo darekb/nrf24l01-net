@@ -24,6 +24,10 @@ CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slNRF24.h
 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slSPI.h
 CMakeFiles/atmega328p.elf.dir/slNRF24.c.o: ../slUart.h
 
+CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o: ../slI2C.h
+CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o: ../slPCF8563.c
+CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o: ../slPCF8563.h
+
 CMakeFiles/atmega328p.elf.dir/slSPI.c.o: ../slSPI.c
 CMakeFiles/atmega328p.elf.dir/slSPI.c.o: ../slSPI.h
 

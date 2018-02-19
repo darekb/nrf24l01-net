@@ -24,6 +24,10 @@ CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
  /home/dariusz/Arduino/nrf24l01-net/server/slNRF24.h
  /home/dariusz/Arduino/nrf24l01-net/server/slSPI.h
  /home/dariusz/Arduino/nrf24l01-net/server/slUart.h
+CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ /home/dariusz/Arduino/nrf24l01-net/server/slI2C.h
+ /home/dariusz/Arduino/nrf24l01-net/server/slPCF8563.c
+ /home/dariusz/Arduino/nrf24l01-net/server/slPCF8563.h
 CMakeFiles/atmega328p.elf.dir/slSPI.c.o
  /home/dariusz/Arduino/nrf24l01-net/server/slSPI.c
  /home/dariusz/Arduino/nrf24l01-net/server/slSPI.h

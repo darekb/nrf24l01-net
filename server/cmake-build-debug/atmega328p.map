@@ -1,5 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
+/usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+                              CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o (__udivmodqi4)
 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
                               /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/crtatmega328p.o (exit)
 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_copy_data.o)
@@ -53,7 +55,11 @@ Allocating common symbols
 Common symbol       size              file
 
 dataFromNRF24L01    0x11              CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+slI2C_readByteValue
+                    0x1               CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
 BME180measure       0x33              CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+slI2C_statusFlags   0x1               CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+I2C_Error           0x1               CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
 status              0x1               CMakeFiles/atmega328p.elf.dir/main.c.o
 
 Discarded input sections
@@ -99,6 +105,37 @@ Discarded input sections
  .text.fillBuferFromMEASURE
                 0x0000000000000000       0x18 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
  .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ .text.slPCF8563_Init
+                0x0000000000000000        0x2 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ .text.slPCF8563_ConvertFromBCD
+                0x0000000000000000       0x12 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ .text.slPCF8563_ConvertToBCD
+                0x0000000000000000       0x14 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ .text.slPCF8563_SetData
+                0x0000000000000000       0xe4 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ .text.slPCF8563_GetData
+                0x0000000000000000       0xf6 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ .comment       0x0000000000000000       0x12 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ COMMON         0x0000000000000000        0x3 CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.div
+                0x0000000000000000       0x18 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_udivmodqi4.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
@@ -237,6 +274,7 @@ LOAD CMakeFiles/atmega328p.elf.dir/slSPI.c.o
 LOAD CMakeFiles/atmega328p.elf.dir/slNRF24.c.o
 LOAD CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
 LOAD CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+LOAD CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o
 START GROUP
 LOAD /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a
 LOAD /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a
