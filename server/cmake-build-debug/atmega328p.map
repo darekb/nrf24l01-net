@@ -334,7 +334,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0xfca
+.text           0x0000000000000000      0xfb6
  *(.vectors)
  .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/crtatmega328p.o
                 0x0000000000000000                __vectors
@@ -514,116 +514,116 @@ END GROUP
                 0x0000000000000884       0x1c CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
                 0x0000000000000884                calculatePressure
  .text.calculateVoltage
-                0x00000000000008a0       0x4a CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+                0x00000000000008a0       0x40 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
                 0x00000000000008a0                calculateVoltage
  .text.calculateFotorezistor
-                0x00000000000008ea       0x4a CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
-                0x00000000000008ea                calculateFotorezistor
+                0x00000000000008e0       0x40 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o
+                0x00000000000008e0                calculateFotorezistor
  .text.clearData
-                0x0000000000000934       0x10 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000934                clearData
+                0x0000000000000920       0x10 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000920                clearData
  .text.nextSensorNr
-                0x0000000000000944       0x1e CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000944                nextSensorNr
+                0x0000000000000930       0x1e CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000930                nextSensorNr
  .text.nRF24L01Start
-                0x0000000000000962        0x8 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000962                nRF24L01Start
+                0x000000000000094e        0x8 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x000000000000094e                nRF24L01Start
  .text.resetNRF24L01p
-                0x000000000000096a       0x18 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x000000000000096a                resetNRF24L01p
+                0x0000000000000956       0x18 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000956                resetNRF24L01p
  .text.sensorStart
-                0x0000000000000982       0x5e CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000982                sensorStart
+                0x000000000000096e       0x5e CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x000000000000096e                sensorStart
  .text.saveDataFromNRF
-                0x00000000000009e0       0x80 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x00000000000009e0                saveDataFromNRF
+                0x00000000000009cc       0x80 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x00000000000009cc                saveDataFromNRF
  .text.resetBMEData
-                0x0000000000000a60       0x3a CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000a60                resetBMEData
+                0x0000000000000a4c       0x3a CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000a4c                resetBMEData
  .text.saveErrorData
-                0x0000000000000a9a       0x38 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000a9a                saveErrorData
+                0x0000000000000a86       0x38 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000a86                saveErrorData
  .text.returnCountErrorsForSensor
-                0x0000000000000ad2        0xe CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000ad2                returnCountErrorsForSensor
+                0x0000000000000abe        0xe CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000abe                returnCountErrorsForSensor
  .text.resetErrors
-                0x0000000000000ae0        0xc CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000ae0                resetErrors
+                0x0000000000000acc        0xc CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000acc                resetErrors
  .text.ifCheckEverySensor
-                0x0000000000000aec        0xe CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000aec                ifCheckEverySensor
+                0x0000000000000ad8        0xe CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000ad8                ifCheckEverySensor
  .text.sendingSensorDataViaUart
-                0x0000000000000afa       0x88 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
-                0x0000000000000afa                sendingSensorDataViaUart
+                0x0000000000000ae6       0x88 CMakeFiles/atmega328p.elf.dir/main_functions.c.o
+                0x0000000000000ae6                sendingSensorDataViaUart
  .text.avr-libc.fplib
-                0x0000000000000b82        0xa /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(addsf3.o)
-                0x0000000000000b82                __subsf3
-                0x0000000000000b84                __addsf3
+                0x0000000000000b6e        0xa /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(addsf3.o)
+                0x0000000000000b6e                __subsf3
+                0x0000000000000b70                __addsf3
  .text.avr-libc.fplib
-                0x0000000000000b8c       0xc0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(addsf3x.o)
-                0x0000000000000ba6                __addsf3x
+                0x0000000000000b78       0xc0 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(addsf3x.o)
+                0x0000000000000b92                __addsf3x
  .text.avr-libc.fplib
-                0x0000000000000c4c        0x4 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(divsf3.o)
-                0x0000000000000c4c                __divsf3
+                0x0000000000000c38        0x4 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(divsf3.o)
+                0x0000000000000c38                __divsf3
  .text.avr-libc.fplib
-                0x0000000000000c50       0xcc /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(divsf3x.o)
-                0x0000000000000c66                __divsf3x
-                0x0000000000000c6a                __divsf3_pse
+                0x0000000000000c3c       0xcc /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(divsf3x.o)
+                0x0000000000000c52                __divsf3x
+                0x0000000000000c56                __divsf3_pse
  .text.avr-libc.fplib
-                0x0000000000000d1c        0xa /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fixsfsi.o)
-                0x0000000000000d1c                __fixsfsi
+                0x0000000000000d08        0xa /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                0x0000000000000d08                __fixsfsi
  .text.avr-libc.fplib
-                0x0000000000000d26       0x58 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
-                0x0000000000000d26                __fixunssfsi
+                0x0000000000000d12       0x58 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                0x0000000000000d12                __fixunssfsi
  .text.avr-libc.fplib
-                0x0000000000000d7e       0x7a /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(floatsisf.o)
-                0x0000000000000d7e                __floatunsisf
-                0x0000000000000d82                __floatsisf
+                0x0000000000000d6a       0x7a /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(floatsisf.o)
+                0x0000000000000d6a                __floatunsisf
+                0x0000000000000d6e                __floatsisf
  .text.avr-libc.fplib
-                0x0000000000000df8        0xc /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_inf.o)
-                0x0000000000000df8                __fp_inf
+                0x0000000000000de4        0xc /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_inf.o)
+                0x0000000000000de4                __fp_inf
  .text.avr-libc.fplib
-                0x0000000000000e04        0x6 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_nan.o)
-                0x0000000000000e04                __fp_nan
+                0x0000000000000df0        0x6 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_nan.o)
+                0x0000000000000df0                __fp_nan
  .text.avr-libc.fplib
-                0x0000000000000e0a        0xe /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_pscA.o)
-                0x0000000000000e0a                __fp_pscA
+                0x0000000000000df6        0xe /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                0x0000000000000df6                __fp_pscA
  .text.avr-libc.fplib
-                0x0000000000000e18        0xe /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_pscB.o)
-                0x0000000000000e18                __fp_pscB
+                0x0000000000000e04        0xe /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                0x0000000000000e04                __fp_pscB
  .text.avr-libc.fplib
-                0x0000000000000e26       0x22 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_round.o)
-                0x0000000000000e26                __fp_round
+                0x0000000000000e12       0x22 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_round.o)
+                0x0000000000000e12                __fp_round
  .text.avr-libc.fplib
-                0x0000000000000e48       0x44 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_split3.o)
-                0x0000000000000e48                __fp_split3
-                0x0000000000000e58                __fp_splitA
+                0x0000000000000e34       0x44 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                0x0000000000000e34                __fp_split3
+                0x0000000000000e44                __fp_splitA
  .text.avr-libc.fplib
-                0x0000000000000e8c        0xe /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_zero.o)
-                0x0000000000000e8c                __fp_zero
-                0x0000000000000e8e                __fp_szero
+                0x0000000000000e78        0xe /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                0x0000000000000e78                __fp_zero
+                0x0000000000000e7a                __fp_szero
  .text.avr-libc.fplib
-                0x0000000000000e9a        0x4 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(mulsf3.o)
-                0x0000000000000e9a                __mulsf3
+                0x0000000000000e86        0x4 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                0x0000000000000e86                __mulsf3
  .text.avr-libc.fplib
-                0x0000000000000e9e       0xc2 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(mulsf3x.o)
-                0x0000000000000eb2                __mulsf3x
-                0x0000000000000eb6                __mulsf3_pse
+                0x0000000000000e8a       0xc2 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                0x0000000000000e9e                __mulsf3x
+                0x0000000000000ea2                __mulsf3_pse
  .text.avr-libc
-                0x0000000000000f60       0x14 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
-                0x0000000000000f60                __itoa_ncheck
+                0x0000000000000f4c       0x14 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
+                0x0000000000000f4c                __itoa_ncheck
  .text.avr-libc
-                0x0000000000000f74       0x32 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
-                0x0000000000000f74                __utoa_ncheck
-                0x0000000000000f76                __utoa_common
+                0x0000000000000f60       0x32 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
+                0x0000000000000f60                __utoa_ncheck
+                0x0000000000000f62                __utoa_common
  .text.avr-libc
-                0x0000000000000fa6       0x20 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(strrev.o)
-                0x0000000000000fa6                strrev
-                0x0000000000000fc6                . = ALIGN (0x2)
+                0x0000000000000f92       0x20 /usr/lib/gcc/avr/4.9.2/../../../avr/lib/avr5/libc.a(strrev.o)
+                0x0000000000000f92                strrev
+                0x0000000000000fb2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000fc6        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
-                0x0000000000000fc6                exit
-                0x0000000000000fc6                _exit
+ .fini9         0x0000000000000fb2        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
+                0x0000000000000fb2                exit
+                0x0000000000000fb2                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -642,11 +642,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000fc6        0x4 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
+ .fini0         0x0000000000000fb2        0x4 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000000fca                _etext = .
+                0x0000000000000fb6                _etext = .
 
-.data           0x0000000000800100       0x88 load address 0x0000000000000fca
+.data           0x0000000000800100       0x88 load address 0x0000000000000fb6
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800100       0x6c CMakeFiles/atmega328p.elf.dir/main_functions.c.o
@@ -687,8 +687,8 @@ END GROUP
                 0x0000000000800190                dataFromNRF24L01
                 0x00000000008001a1                BME180measure
                 0x00000000008001d4                PROVIDE (__bss_end, .)
-                0x0000000000000fca                __data_load_start = LOADADDR (.data)
-                0x0000000000001052                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000000000000fb6                __data_load_start = LOADADDR (.data)
+                0x000000000000103e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00000000008001d4        0x0
                 0x00000000008001d4                PROVIDE (__noinit_start, .)

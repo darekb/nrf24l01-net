@@ -15,6 +15,7 @@ CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../slBME180Measure.h
 CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../slNRF24.h
 CMakeFiles/atmega328p.elf.dir/main_functions.c.o: ../slUart.h
 
+CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o: ../global_definitions.h
 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o: ../slBME180Measure.c
 CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o: ../slBME180Measure.h
 

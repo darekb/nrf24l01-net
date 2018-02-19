@@ -53,6 +53,8 @@ string.h
 -
 slBME180Measure.h
 /home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.h
+global_definitions.h
+/home/dariusz/Arduino/nrf24l01-net/server/global_definitions.h
 
 /home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.h
 
