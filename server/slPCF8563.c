@@ -8,16 +8,9 @@
 
 
 void slPCF8563_Init(){
-
+  
 }
 
-uint8_t slPCF8563_ConvertFromBCD(uint8_t BCDCode){
-    return ((BCDCode & 0xF0) >> 4)*10 + (BCDCode & 0x0F);
-}
-
-uint8_t slPCF8563_ConvertToBCD(uint8_t number){
-    return ((uint8_t)(number/10)<<4) | (number % 10);
-}
 
 void slPCF8563_SetData(uint8_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec){
   slI2C_Start();

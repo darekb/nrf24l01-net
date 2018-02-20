@@ -78,6 +78,10 @@
 #define slPCF8563_CONTROL_STATUS_2_TIE_ON     0x1
 //timer interrupt enabled
 
+#define slPCF8563_ConvertToBCD(number) (((uint8_t)(number/10)<<4) | (number % 10))
+
+#define slPCF8563_ConvertFromBCD(BCDCode) (((BCDCode & 0xF0) >> 4)*10 + (BCDCode & 0x0F))
+
 void slPCF8563_Init();
 
 void slPCF8563_SetData(uint8_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec);

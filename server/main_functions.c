@@ -5,7 +5,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define showDebugDataMainFunctions 0
+#define showDebugDataMainFunctions 1
 #define sensorsCount 3
 #include "global_definitions.h"
 #include "slUart.h"

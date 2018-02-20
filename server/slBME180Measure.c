@@ -39,6 +39,6 @@ uint16_t calculateVoltage(uint16_t voltage) {
 }
 
 uint16_t calculateFotorezistor(uint16_t fotorezistor) {
-    float f = (((float) fotorezistor / 16.0) * 2.54 * 3.5) / (1024 * 2.567);
+    float f = (((float) fotorezistor / 16.0) * 100) / 1024;
     return (uint16_t) ((float) f * 100);
 }
