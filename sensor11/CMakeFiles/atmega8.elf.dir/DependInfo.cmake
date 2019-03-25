@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/dariusz/Arduino/nrf24l01-net/sensor11/BME280.c" "/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/atmega8.elf.dir/BME280.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/sensor11/main.c" "/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/atmega8.elf.dir/main.c.o"
+  "/home/dariusz/Arduino/nrf24l01-net/sensor11/main_functions.c" "/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/atmega8.elf.dir/main_functions.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/sensor11/slAdc.c" "/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/atmega8.elf.dir/slAdc.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/sensor11/slBME180Measure.c" "/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/atmega8.elf.dir/slBME180Measure.c.o"
   "/home/dariusz/Arduino/nrf24l01-net/sensor11/slI2C.c" "/home/dariusz/Arduino/nrf24l01-net/sensor11/CMakeFiles/atmega8.elf.dir/slI2C.c.o"
@@ -17,7 +18,7 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "F_CPU=16000000UL"
+  "F_CPU=8000000UL"
   )
 
 # The include file search paths:

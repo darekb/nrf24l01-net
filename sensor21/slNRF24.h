@@ -22,12 +22,36 @@
     DEALINGS IN THE SOFTWARE.
 */
 
+
+#include "global_definitions.h"
+
 #define showDebugDataSlnRF24 0
 
+//spialnia out
+#if SENSOR_ID == 21
 #define SENSOR_ADDR   0x21
-#define SERVER_ADDR   0xFF
+#endif
+//sypialnia in
+#if SENSOR_ID == 71
+#define SENSOR_ADDR   0x71
+#endif
 
-#define PAYLOAD_SIZE 9
+//salon out
+#if SENSOR_ID == 22
+#define SENSOR_ADDR   0x22
+#endif
+//salon in
+#if SENSOR_ID == 72
+#define SENSOR_ADDR   0x72
+#endif
+
+//dzieciecy
+#if SENSOR_ID == 73
+#define SENSOR_ADDR   0x73
+#endif
+
+
+#define SERVER_ADDR   0xFF
 
 #define CE_PIN        PB1
 #define CE_OUTPUT()   DDRB |= (1 << CE_PIN)

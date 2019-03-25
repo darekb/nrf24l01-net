@@ -8,6 +8,8 @@
 #ifndef SLUART_H_
 #define SLUART_H_
 
+#include <avr/io.h>
+
 
 // compatibility for the mega161
 #ifndef RXCIE

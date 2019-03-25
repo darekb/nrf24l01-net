@@ -1,0 +1,1585 @@
+Sensor21 got data from BME280
+a33|aaf5|18b4802|25e4|2e33|21~
+Sensor21 got data from BME280
+a31|aad1|18b3ef8|254a|2d08|21~
+Sensor21 got data from BME280
+a32|aa4a|18b437d|2437|2bfc|21~
+Sensor21 got data from BME280
+a33|aaa5|18b3f94|2330|2afc|21~
+Sensor21 got data from BME280
+a32|aa83|18b4458|22ab|2a59|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a32|aade|18b3eb9|21fd|2aac|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+32 a 0 0 de aa 0 0 b9 3e 8b 1 fd 21 ac 2a 15 
+Sensor21 got data from BME280
+a32|aa83|18b437d|20d6|2b15|21~
+Sensor21 got data from BME280
+a32|aa6c|18b3dde|209d|2a23|21~
+Sensor21 got data from BME280
+a30|aa6a|18b3d42|20b4|28c5|21~
+Sensor21 got data from BME280
+a31|aa04|18b4497|2050|27f6|21~
+Sensor21 got data from BME280
+a30|aa81|18b42e1|1fdb|2774|21~
+Sensor21 got data from BME280
+a2f|aa6a|18b4206|1f44|26f7|21~
+Sensor21 got data from BME280
+a2c|aa00|18b3ce4|1ed4|2681|21~
+Sensor21 got data from BME280
+a2d|a985|18b4169|1e95|2638|21~
+Sensor21 got data from BME280
+a2c|a9a6|18b435e|1e8b|2614|21~
+Sensor21 got data from BME280
+a2c|a98e|18b3ce4|1e7b|2603|21~
+Sensor21 got data from BME280
+a2e|aa02|18b48bf|1e38|25e1|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got start command from nRF24L01
+Try sent data: 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Sensor21 got data from BME280
+a2c|a9b1|18b408e|1610|1269|21~
+Sensor21 got data from BME280
+a2d|a9c9|18b4709|2878|2782|21~
+Sensor21 got data from BME280
+a2b|a96c|18b3dfe|247f|2b1e|21~
+Sensor21 got data from BME280
+a2b|a9e9|18b41a8|245a|2c7d|21~
+Sensor21 got data from BME280
+a2a|a9ba|18b44b7|24ce|2d46|21~
+Sensor21 got data from BME280
+a2b|a9bb|18b439d|253e|2dc6|21~
+Sensor21 got data from BME280
+a2c|a8fa|18b3fb4|25a7|2e28|21~
+Sensor21 got data from BME280
+a2c|a955|18b4552|25f6|2e6d|21~
+Sensor21 got data from BME280
+a2b|a9a5|18b41a8|2644|2ea1|21~
+Sensor21 got data from BME280
+a2d|a9eb|18b49d8|268b|2ee7|21~
+Sensor21 got data from BME280
+a2b|a9c7|18b41a8|2686|2efc|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a2d|aa46|18b49d8|2337|2ce7|21~
+Sensor21 got data from BME280
+a2c|aac2|18b408e|20f7|2ad9|21~
+Sensor21 got data from BME280
+a2f|aacf|18b46ca|2299|2b4b|21~
+Sensor21 got data from BME280
+a2d|aae6|18b3f75|23ca|2c37|21~
+Sensor21 got data from BME280
+a2f|aae7|18b4206|24af|2d13|21~
+Sensor21 got data from BME280
+a2e|aafc|18b3ab1|2525|2dad|21~
+Sensor21 got data from BME280
+a2d|aafc|18b4245|2578|2e05|21~
+Sensor21 got data from BME280
+a30|aafe|18b4880|25cb|2e4a|21~
+Sensor21 got data from BME280
+a2d|aaf1|18b3ca5|261c|2e85|21~
+Sensor21 got data from BME280
+a2e|aacf|18b4050|2671|2ec8|21~
+Sensor21 got data from BME280
+a2e|aac4|18b4320|2684|2ef5|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+2e a 0 0 c4 aa 0 0 20 43 8b 1 84 26 f5 2e 15 
+Sensor21 got data from BME280
+a2d|aac4|18b4245|24ab|2def|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a2e|aa69|18b48bf|237f|2d3c|21~
+Sensor21 got data from BME280
+a2d|aa19|18b3f75|249e|2dab|21~
+Sensor21 got data from BME280
+a2f|aa0e|18b46ca|2585|2e07|21~
+Sensor21 got data from BME280
+a30|aa1b|18b4880|25eb|2e69|21~
+Sensor21 got data from BME280
+a30|aa54|18b42e1|2605|2e91|21~
+Sensor21 got data from BME280
+a2f|aa7f|18b412b|262e|2eab|21~
+Sensor21 got data from BME280
+a2f|aa6a|18b47a5|2670|2ed0|21~
+Sensor21 got data from BME280
+a2d|aa0e|18b4245|26a7|2f02|21~
+Sensor21 got data from BME280
+a2f|aa47|18b412b|2699|2f0f|21~
+Sensor21 got data from BME280
+a2d|aa0e|18b4245|2687|2eff|21~
+Sensor21 got data from BME280
+a2c|aa44|18b4283|269c|2eff|21~
+Sensor21 got data from BME280
+a2c|aa2e|18b408e|26c9|2f1e|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a2f|aa24|18b43fb|24dd|2dff|21~
+Sensor21 got data from BME280
+a2e|aa52|18b45ef|2387|2ce0|21~
+Sensor21 got data from BME280
+a2f|aa47|18b44d5|24a0|2d3c|21~
+Sensor21 got data from BME280
+a2f|aa3b|18b43fb|255e|2dc9|21~
+Sensor21 got data from BME280
+a30|aa48|18b43bc|25c4|2e45|21~
+Sensor21 got data from BME280
+a2c|aa22|18b4283|25e9|2e79|21~
+Sensor21 got data from BME280
+a2b|aa38|18b41a8|2614|2e92|21~
+Sensor21 got data from BME280
+a2a|aa43|18b3ff3|2641|2eaf|21~
+Sensor21 got data from BME280
+a2c|aa5b|18b4552|2685|2ee1|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+2c a 0 0 5b aa 0 0 52 45 8b 1 85 26 e1 2e 15 
+Sensor21 got data from BME280
+a2b|aa71|18b4747|23d1|2d48|21~
+Sensor21 got data from BME280
+a2b|aa71|18b3ed9|21d7|2b9a|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a2b|aa66|18b40cd|1520|1575|21~
+Sensor21 got data from BME280
+a2a|aa2b|18b41e7|28ad|2c89|21~
+Sensor21 got data from BME280
+a2a|aa38|18b3ff3|2703|2eb2|21~
+Sensor21 got data from BME280
+a2b|aa4f|18b3dfe|26dd|2f48|21~
+Sensor21 got data from BME280
+a2a|aa5a|18b4591|26dc|2f58|21~
+Sensor21 got data from BME280
+a2b|aa93|18b439d|26f2|2f62|21~
+Sensor21 got data from BME280
+a2a|aac0|18b4591|2724|2f78|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+2a a 0 0 c0 aa 0 0 91 45 8b 1 24 27 78 2f 15 
+Sensor21 got data from BME280
+a2b|aacc|18b4747|23c9|2d46|21~
+Sensor21 got data from BME280
+a2c|ab06|18b4e9c|2165|2b59|21~
+Sensor21 got data from BME280
+a2c|aafa|18b462e|233f|2c2f|21~
+Sensor21 got data from BME280
+a2f|aac4|18b46ca|2471|2d22|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a2d|aa24|18b4439|22fa|2c89|21~
+Sensor21 got data from BME280
+a2f|aa52|18b43fb|21e0|2b9d|21~
+Sensor21 got data from BME280
+a2d|aa68|18b4439|237d|2c51|21~
+Sensor21 got data from BME280
+a2c|aa71|18b4283|249d|2d45|21~
+Sensor21 got data from BME280
+a2c|aa88|18b4af2|2578|2e08|21~
+Sensor21 got data from BME280
+a2f|aa6a|18b4a74|2626|2eaf|21~
+Sensor21 got data from BME280
+a2f|aaa1|18b3e5b|2671|2f06|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+2f a 0 0 a1 aa 0 0 5b 3e 8b 1 71 26 6 2f 15 
+Sensor21 got data from BME280
+a2d|aada|18b47e4|25b4|2e9d|21~
+Sensor21 got data from BME280
+a2d|aaac|18b4439|2583|2e6d|21~
+Sensor21 got data from BME280
+a2f|aa96|18b46ca|267e|2f03|21~
+Sensor21 got data from BME280
+a2f|aac4|18b44d5|26be|2f43|21~
+Sensor21 got data from BME280
+a2f|aaad|18b46ca|26bf|2f43|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a30|aa98|18b4e1e|257a|2e7b|21~
+Sensor21 got data from BME280
+a2f|aa8c|18b47a5|24a5|2dd2|21~
+Sensor21 got data from BME280
+a2f|aa7f|18b43fb|2583|2e3d|21~
+Sensor21 got data from BME280
+a2f|aa7f|18b4c69|2624|2eaf|21~
+Sensor21 got data from BME280
+a30|aa26|18b43bc|26a7|2f17|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+30 a 0 0 26 aa 0 0 bc 43 8b 1 a7 26 17 2f 15 
+Sensor21 got data from BME280
+a32|aa28|18b4bec|24b4|2dee|21~
+Sensor21 got data from BME280
+a32|aa6c|18b4bec|2377|2cfa|21~
+Sensor21 got data from BME280
+a30|aa5f|18b4880|2508|2dc7|21~
+Sensor21 got data from BME280
+a30|aa8d|18b43bc|25f2|2e7c|21~
+Sensor21 got data from BME280
+a32|aa6c|18b4cc7|2652|2ee5|21~
+Sensor21 got data from BME280
+a32|aa3f|18b464c|2687|2f12|21~
+Sensor21 got data from BME280
+a32|aa56|18b437d|26ca|2f38|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a32|aa4a|18b4cc7|269a|2f27|21~
+Sensor21 got data from BME280
+a33|aa1d|18b4ad2|2695|2f20|21~
+Sensor21 got data from BME280
+a34|aa09|18b4d63|26f4|2f58|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+34 a 0 0 9 aa 0 0 63 4d 8b 1 f4 26 58 2f 15 
+Sensor21 got data from BME280
+a33|aa12|18b48dd|23f4|2d66|21~
+Sensor21 got data from BME280
+a32|aa1d|18b4727|21ff|2bb7|21~
+Sensor21 got data from BME280
+a31|aab0|18b4841|23ac|2c92|21~
+Sensor21 got data from BME280
+a30|ab20|18b4880|24ad|2d68|21~
+Sensor21 got data from BME280
+a31|ab21|18b4de0|2570|2e14|21~
+Sensor21 got data from BME280
+a30|aaf3|18b468b|25da|2e70|21~
+Sensor21 got data from BME280
+a31|aad1|18b4766|2651|2ec6|21~
+Sensor21 got data from BME280
+a2f|aada|18b46ca|270b|2f61|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a2f|ab2a|18b4999|15d1|15e3|21~
+Sensor21 got data from BME280
+a2f|ab2a|18b46ca|29b1|2d53|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+2f a 0 0 2a ab 0 0 ca 46 8b 1 b1 29 53 2d 15 
+Sensor21 got data from BME280
+a2c|ab1d|18b4bcd|23a2|2cb8|21~
+Sensor21 got data from BME280
+a31|ab21|18b4b10|20e6|2b0c|21~
+Sensor21 got data from BME280
+a2f|ab1e|18b4c69|2329|2c30|21~
+Sensor21 got data from BME280
+a2f|ab1f|18b47a5|249d|2d60|21~
+Sensor21 got data from BME280
+a32|aae9|18b491c|2593|2e44|21~
+Sensor21 got data from BME280
+a32|aae9|18b4cc7|264e|2edb|21~
+Sensor21 got data from BME280
+a33|aac8|18b4bad|26e6|2f4e|21~
+Sensor21 got data from BME280
+a32|aabc|18b49f7|272d|2f9b|21~
+Sensor21 got data from BME280
+a32|aade|18b4cc7|2724|2fa1|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a32|aae9|18b4bec|24a8|2dfe|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+32 a 0 0 e9 aa 0 0 ec 4b 8b 1 a8 24 fe 2d 15 
+Sensor21 got data from BME280
+a34|aaeb|18b4c88|22aa|2ca5|21~
+Sensor21 got data from BME280
+a33|aaa6|18b48dd|241c|2d75|21~
+Sensor21 got data from BME280
+a33|aa83|18b4ad2|2580|2e5e|21~
+Sensor21 got data from BME280
+a34|aab3|18b4d63|262a|2ee0|21~
+Sensor21 got data from BME280
+a34|aa6f|18b4d63|269c|2f2f|21~
+Sensor21 got data from BME280
+a34|aa2a|18b4c88|26e8|2f5f|21~
+Sensor21 got data from BME280
+a35|a9e7|18b510d|2734|2f89|21~
+Sensor21 got data from BME280
+a34|a975|18b4d63|2759|2fb2|21~
+Sensor21 got data from BME280
+a34|a95e|18b5032|273e|2fb6|21~
+Sensor21 got data from BME280
+a34|a95d|18b4f57|2726|2fa0|21~
+Sensor21 got data from BME280
+a35|a96a|18b4e3d|2729|2f97|21~
+Sensor21 FAIL
+Sensor21 got start command from nRF24L01
+Try sent data: 
+35 a 0 0 6a a9 0 0 3d 4e 8b 1 29 27 97 2f 15 
+Sensor21 got data from BME280
+a34|a980|18b4c88|237c|2d27|21~
+Sensor21 got data from BME280
+a37|a91c|18b5479|2103|2b1f|21~
+Sensor21 got data from BME280
+a36|a91b|18b52c3|231a|2c32|21~
+Sensor21 got data from BME280
+a35|a8d6|18b510d|2470|2d45|21~
+Sensor21 got data from BME280
+a36|a8e3|18b566d|255a|2e15|21~
+Sensor21 got data from BME280
+a36|a87c|18b4d24|261c|2ebe|21~
+Sensor21 got data from BME280
+a37|a84f|18b4ce5|2698|2f26|21~
+Sensor21 got data from BME280
+a36|a866|18b4dfe|26fb|2f62|21~
+Sensor21 got data from BME280
+a37|a87d|18b4ed9|2740|2f96|21~
+Sensor21 got data from BME280
+a36|a8c0|18b4ff3|2738|2fab|21~
+Sensor21 got data from BME280
+a37|a8c1|18b5284|2720|2f9b|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a38|a906|18b4dbf|236c|2d20|21~
+Sensor21 got data from BME280
+a38|a912|18b4dbf|20e2|2af5|21~
+Sensor21 got data from BME280
+a37|a8ef|18b51a9|22e3|2be3|21~
+Sensor21 got data from BME280
+a36|a7e8|18b4d24|244f|2d19|21~
+Sensor21 got data from BME280
+a37|a7bc|18b4ed9|2574|2e19|21~
+Sensor21 got data from BME280
+a37|a7f4|18b4ed9|2646|2eda|21~
+Sensor21 got data from BME280
+a37|a839|18b4c0a|269d|2f37|21~
+Sensor21 got data from BME280
+a36|a85a|18b4d24|26cb|2f54|21~
+Sensor21 got data from BME280
+a35|a837|18b4f18|2724|2f89|21~
+Sensor21 got data from BME280
+a36|a893|18b5593|2755|2faa|21~
+Sensor21 got data from BME280
+a36|a8b5|18b4ff3|2736|2fab|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+36 a 0 0 b5 a8 0 0 f3 4f 8b 1 36 27 ab 2f 15 
+Sensor21 got data from BME280
+a36|a887|18b4a54|256a|2e78|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a38|a823|18b535f|1719|156b|21~
+Sensor21 got data from BME280
+a37|a82d|18b51a9|2b5c|2cd7|21~
+Sensor21 got data from BME280
+a37|a844|18b5479|281d|2f63|21~
+Sensor21 got data from BME280
+a36|a816|18b4d24|2785|2fe0|21~
+Sensor21 got data from BME280
+a35|a809|18b4e3d|2751|2fc3|21~
+Sensor21 got data from BME280
+a35|a7f3|18b510d|274b|2fb3|21~
+Sensor21 got data from BME280
+a36|a7c7|18b50ce|2766|2fb7|21~
+Sensor21 got data from BME280
+a38|a818|18b562e|278f|2fd6|21~
+Sensor21 got data from BME280
+a36|a87d|18b539e|2769|2fd9|21~
+Sensor21 got data from BME280
+a37|a871|18b5479|273e|2fb8|21~
+Sensor21 got data from BME280
+a37|a817|18b4ed9|2752|2fb7|21~
+Sensor21 got data from BME280
+a37|a800|18b4ed9|2773|2fd0|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a38|a76d|18b4dbf|2533|2e47|21~
+Sensor21 got data from BME280
+a38|a88a|18b543a|23e5|2d45|21~
+Sensor21 got data from BME280
+a39|a907|18b4707|256e|2e50|21~
+Sensor21 got data from BME280
+a38|a912|18b516b|263a|2efb|21~
+Sensor21 got data from BME280
+a37|a905|18b5748|26b8|2f52|21~
+Sensor21 got data from BME280
+a38|a8ac|18b516b|2701|2f82|21~
+Sensor21 got data from BME280
+a38|a87e|18b535f|2727|2f9a|21~
+Sensor21 got data from BME280
+a37|a844|18b4fb4|2756|2fab|21~
+Sensor21 got data from BME280
+a37|a82d|18b5554|277c|2fc7|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+37 a 0 0 2d a8 0 0 54 55 8b 1 7c 27 c7 2f 15 
+Sensor21 got data from BME280
+a38|a802|18b543a|24cf|2e13|21~
+Sensor21 got data from BME280
+a39|a7d4|18b5320|2343|2ced|21~
+Sensor21 got data from BME280
+a37|a839|18b5554|251c|2e06|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a37|a82d|18b4fb4|260a|2ec4|21~
+Sensor21 got data from BME280
+a39|a851|18b5515|2689|2f33|21~
+Sensor21 got data from BME280
+a39|a83a|18b5245|26e8|2f71|21~
+Sensor21 got data from BME280
+a39|a846|18b4f76|2719|2f90|21~
+Sensor21 got data from BME280
+a39|a851|18b57e4|274c|2fa3|21~
+Sensor21 got data from BME280
+a38|a82f|18b543a|2777|2fc1|21~
+Sensor21 got data from BME280
+a39|a851|18b5245|276c|2fd3|21~
+Sensor21 got data from BME280
+a3a|a874|18b4e5c|2746|2fc1|21~
+Sensor21 got false command from nRF24L01
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a3a|a896|18b512c|25b5|2eac|21~
+Sensor21 got data from BME280
+a3a|a88b|18b53fb|251e|2e30|21~
+Sensor21 got data from BME280
+a3a|a8ad|18b53fb|2665|2f0b|21~
+Sensor21 got data from BME280
+a3a|a897|18b5206|26d3|2f70|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3a|a880|18b512c|2652|2f26|21~
+Sensor21 got data from BME280
+a3a|a8a2|18b599b|261a|2ef2|21~
+Sensor21 got data from BME280
+a3a|a8ad|18b512c|26a5|2f3f|21~
+Sensor21 got data from BME280
+a39|a85d|18b4d80|26fb|2f73|21~
+Sensor21 got data from BME280
+a3a|a80e|18b4e5c|2747|2fa0|21~
+Sensor21 got data from BME280
+a3a|a81a|18b4f37|2762|2fc5|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 1a a8 0 0 37 4f 8b 1 62 27 c5 2f 15 
+Sensor21 got data from BME280
+a39|a824|18b4ca6|2411|2d88|21~
+Sensor21 got data from BME280
+a3a|a7bf|18b4c67|221e|2be5|21~
+Sensor21 got data from BME280
+a3a|a80e|18b4b8c|2434|2d35|21~
+Sensor21 got data from BME280
+a3b|a81b|18b4e1d|256c|2e4f|21~
+Sensor21 got data from BME280
+a3b|a854|18b53bc|2631|2ef1|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a3c|a849|18b52a2|16c5|16d0|21~
+Sensor21 got data from BME280
+a3c|a804|18b4c28|2b94|2f44|21~
+Sensor21 got data from BME280
+a3b|a7c0|18b52e1|28ed|30a3|21~
+Sensor21 got data from BME280
+a3b|a7a9|18b50ed|2817|3039|21~
+Sensor21 got data from BME280
+a3c|a788|18b52a2|27e5|3015|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3c a 0 0 88 a7 0 0 a2 52 8b 1 e5 27 15 30 15 
+Sensor21 got data from BME280
+a3b|a771|18b5012|23ac|2d48|21~
+Sensor21 got data from BME280
+a3b|a793|18b568b|2176|2bbf|21~
+Sensor21 got data from BME280
+a3b|a787|18b4a72|248e|2de2|21~
+Sensor21 got data from BME280
+a3c|a79e|18b51c7|2634|2f12|21~
+Sensor21 got data from BME280
+a3c|a765|18b4ef8|26f2|2f88|21~
+Sensor21 got data from BME280
+a3c|a79f|18b4fd3|2740|2fbb|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a771|18b55b1|24a8|2dff|21~
+Sensor21 got data from BME280
+a3c|a766|18b52a2|2392|2d32|21~
+Sensor21 got data from BME280
+a3b|a787|18b50ed|25f1|2ec3|21~
+Sensor21 got data from BME280
+a3d|a767|18b537d|26fb|2f8b|21~
+Sensor21 got data from BME280
+a3c|a787|18b5497|2745|2fcd|21~
+Sensor21 got data from BME280
+a3b|a77c|18b4b4d|274e|2fd6|21~
+Sensor21 got data from BME280
+a3c|a74e|18b4ef8|2759|2fd1|21~
+Sensor21 got data from BME280
+a3c|a766|18b4fd3|2767|2fd5|21~
+Sensor21 got data from BME280
+a3c|a721|18b4ef8|276b|2fd9|21~
+Sensor21 got data from BME280
+a3b|a6ff|18b5012|2781|2fd9|21~
+Sensor21 got data from BME280
+a3c|a682|18b51c7|27a7|2fec|21~
+Sensor21 got data from BME280
+a3b|a682|18b4e1d|27a4|2fff|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a677|18b5012|2532|2e62|21~
+Sensor21 got data from BME280
+a3a|a630|18b4e5c|2422|2da4|21~
+Sensor21 got data from BME280
+a3a|a60e|18b53fb|260a|2eec|21~
+Sensor21 got data from BME280
+a39|a60e|18b4d80|26fb|2f7e|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+39 a 0 0 e a6 0 0 80 4d 8b 1 fb 26 7e 2f 15 
+Sensor21 got data from BME280
+a3a|a61b|18b57a5|25f8|2ec2|21~
+Sensor21 got data from BME280
+a39|a652|18b5515|2590|2e8a|21~
+Sensor21 got data from BME280
+a39|a646|18b5245|26cb|2f74|21~
+Sensor21 got data from BME280
+a39|a668|18b5051|2722|2fb7|21~
+Sensor21 got data from BME280
+a39|a668|18b55f0|2742|2fc2|21~
+Sensor21 got data from BME280
+a38|a67f|18b516b|275c|2fcc|21~
+Sensor21 got data from BME280
+a39|a6cf|18b4ca6|2766|2fd2|21~
+Sensor21 got data from BME280
+a3a|a737|18b57a5|2784|2fd8|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a39|a74c|18b5320|261c|2ede|21~
+Sensor21 got data from BME280
+a3a|a6e7|18b5206|2572|2e83|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 e7 a6 0 0 6 52 8b 1 72 25 83 2e 15 
+Sensor21 got data from BME280
+a3b|a6f4|18b50ed|227e|2c8f|21~
+Sensor21 got data from BME280
+a3a|a6ae|18b53fb|20c3|2b41|21~
+Sensor21 got data from BME280
+a39|a624|18b5051|2415|2d86|21~
+Sensor21 got data from BME280
+a39|a624|18b5245|25f3|2ee3|21~
+Sensor21 got data from BME280
+a3a|a61a|18b56ca|26d4|2f73|21~
+Sensor21 got data from BME280
+a39|a5f7|18b4f76|272d|2fad|21~
+Sensor21 got data from BME280
+a39|a5b3|18b55f0|2762|2fc2|21~
+Sensor21 got data from BME280
+a39|a5be|18b55f0|2796|2fdf|21~
+Sensor21 got data from BME280
+a39|a60e|18b5320|279d|2ff7|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a3b|a63e|18b55b1|1781|16c8|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3b a 0 0 3e a6 0 0 b1 55 8b 1 81 17 c8 16 15 
+Sensor21 got data from BME280
+a3b|a660|18b5012|2b52|2ea0|21~
+Sensor21 got data from BME280
+a3c|a610|18b5767|2785|2fbe|21~
+Sensor21 got data from BME280
+a3b|a5ee|18b55b1|2766|2fcd|21~
+Sensor21 got data from BME280
+a3a|a5ca|18b53fb|2762|2fcc|21~
+Sensor21 got data from BME280
+a3b|a5d7|18b55b1|2770|2fc8|21~
+Sensor21 got data from BME280
+a39|a602|18b4f76|2794|2fdd|21~
+Sensor21 got data from BME280
+a39|a630|18b4f76|278f|2ff2|21~
+Sensor21 got data from BME280
+a3b|a632|18b5012|2763|2fdb|21~
+Sensor21 got data from BME280
+a3a|a630|18b56ca|2754|2fc8|21~
+Sensor21 got data from BME280
+a3a|a603|18b53fb|2758|2fc7|21~
+Sensor21 got data from BME280
+a3a|a5e2|18b5206|276b|2fc5|21~
+Sensor21 FAIL
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 e2 a5 0 0 6 52 8b 1 6b 27 c5 2f 15 
+Sensor21 got data from BME280
+a39|a5e0|18b49d6|2377|2d23|21~
+Sensor21 got data from BME280
+a39|a5eb|18b5051|2126|2b68|21~
+Sensor21 got data from BME280
+a39|a602|18b5320|2419|2d3e|21~
+Sensor21 got data from BME280
+a39|a5a7|18b5245|25f5|2eba|21~
+Sensor21 got data from BME280
+a38|a5b3|18b4bcb|26bd|2f69|21~
+Sensor21 got data from BME280
+a39|a5f7|18b5245|2707|2f96|21~
+Sensor21 got data from BME280
+a3a|a5f8|18b56ca|2733|2fab|21~
+Sensor21 got data from BME280
+a39|a5be|18b5245|2758|2fb9|21~
+Sensor21 got data from BME280
+a39|a59c|18b57e4|2786|2fd6|21~
+Sensor21 got data from BME280
+a38|a5d5|18b5709|2780|2fe7|21~
+Sensor21 got data from BME280
+a37|a62e|18b4fb4|2757|2fcd|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+37 a 0 0 2e a6 0 0 b4 4f 8b 1 57 27 cd 2f 15 
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3a|a631|18b57a5|22f3|2cce|21~
+Sensor21 got data from BME280
+a38|a584|18b535f|205e|2abe|21~
+Sensor21 got data from BME280
+a38|a59c|18b516b|236b|2c9d|21~
+Sensor21 got data from BME280
+a38|a5b3|18b516b|2581|2e55|21~
+Sensor21 got data from BME280
+a38|a5b2|18b5090|2688|2f43|21~
+Sensor21 got data from BME280
+a38|a5d5|18b516b|26ee|2f8a|21~
+Sensor21 got data from BME280
+a39|a5f7|18b5245|2727|2fa5|21~
+Sensor21 got data from BME280
+a3a|a5f8|18b56ca|2742|2fb6|21~
+Sensor21 got data from BME280
+a39|a5be|18b5245|276e|2fc7|21~
+Sensor21 got data from BME280
+a3a|a5a8|18b53fb|2792|2fe2|21~
+Sensor21 got data from BME280
+a39|a558|18b5515|277c|2fe8|21~
+Sensor21 got data from BME280
+a3a|a57b|18b53fb|2756|2fd1|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a38|a529|18b535f|2508|2e40|21~
+Sensor21 got data from BME280
+a39|a56e|18b5245|23ec|2d75|21~
+Sensor21 got data from BME280
+a3a|a586|18b56ca|25c6|2ea1|21~
+Sensor21 got data from BME280
+a38|a557|18b562e|26d6|2f59|21~
+Sensor21 got data from BME280
+a37|a561|18b51a9|2742|2fb5|21~
+Sensor21 got data from BME280
+a37|a51d|18b4fb4|2746|2fca|21~
+Sensor21 got data from BME280
+a38|a51e|18b535f|273e|2fbf|21~
+Sensor21 got data from BME280
+a38|a56d|18b5090|2748|2fba|21~
+Sensor21 got data from BME280
+a39|a56e|18b5245|274d|2fbb|21~
+Sensor21 got data from BME280
+a3a|a56f|18b53fb|276f|2fc7|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 6f a5 0 0 fb 53 8b 1 6f 27 c7 2f 15 
+Sensor21 got data from BME280
+a3a|a57b|18b53fb|266c|2f1e|21~
+Sensor21 got data from BME280
+a3a|a536|18b53fb|25f8|2ed1|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a3a|a4fe|18b512c|1763|1654|21~
+Sensor21 got data from BME280
+a39|a4fd|18b4f76|2bdb|2e20|21~
+Sensor21 got data from BME280
+a39|a558|18b5515|2863|2fbf|21~
+Sensor21 got data from BME280
+a3a|a54d|18b512c|27ba|2fe2|21~
+Sensor21 got data from BME280
+a3b|a538|18b52e1|2772|2fcf|21~
+Sensor21 got data from BME280
+a3a|a54d|18b56ca|2727|2fa3|21~
+Sensor21 got data from BME280
+a3b|a57c|18b4d42|2706|2f80|21~
+Sensor21 got data from BME280
+a3a|a59d|18b48bd|2700|2f7a|21~
+Sensor21 got data from BME280
+a3a|a57b|18b512c|270f|2f77|21~
+Sensor21 got data from BME280
+a3b|a59f|18b52e1|2730|2f8c|21~
+Sensor21 got data from BME280
+a3b|a5e3|18b52e1|2721|2f9b|21~
+Sensor21 got data from BME280
+a3a|a5a9|18b54d6|26f8|2f80|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3c|a5d7|18b5767|24d5|2e08|21~
+Sensor21 got data from BME280
+a3c|a588|18b51c7|23b1|2d16|21~
+Sensor21 got data from BME280
+a3b|a54f|18b4d42|24fe|2de3|21~
+Sensor21 got data from BME280
+a3b|a4ff|18b52e1|25a8|2e74|21~
+Sensor21 got data from BME280
+a3a|a4f3|18b5206|262c|2ed6|21~
+Sensor21 got data from BME280
+a3a|a520|18b56ca|269f|2f1f|21~
+Sensor21 got data from BME280
+a3a|a543|18b54d6|26f0|2f60|21~
+Sensor21 got data from BME280
+a3a|a54d|18b4e5c|26eb|2f7a|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 4d a5 0 0 5c 4e 8b 1 eb 26 7a 2f 15 
+Sensor21 got data from BME280
+a3a|a543|18b4f37|252e|2e56|21~
+Sensor21 got data from BME280
+a3b|a593|18b50ed|2454|2da6|21~
+Sensor21 got data from BME280
+a3c|a588|18b5497|25a2|2e60|21~
+Sensor21 got data from BME280
+a3d|a57e|18b564d|265d|2eee|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3c|a4d2|18b5a37|25c6|2ea8|21~
+Sensor21 got data from BME280
+a3c|a4c6|18b5497|254e|2e58|21~
+Sensor21 got data from BME280
+a3b|a4bb|18b5881|25e8|2eb3|21~
+Sensor21 got data from BME280
+a39|a4c4|18b4d80|2655|2ef9|21~
+Sensor21 got data from BME280
+a3b|a4e9|18b55b1|26bd|2f40|21~
+Sensor21 got data from BME280
+a3a|a4d0|18b4e5c|26e9|2f6d|21~
+Sensor21 got data from BME280
+a3c|a4b0|18b5767|26d7|2f69|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3c a 0 0 b0 a4 0 0 67 57 8b 1 d7 26 69 2f 15 
+Sensor21 got data from BME280
+a3a|a4d1|18b57a5|2614|2ee7|21~
+Sensor21 got data from BME280
+a3b|a4d2|18b5881|25d8|2ead|21~
+Sensor21 got data from BME280
+a3c|a4b1|18b5b11|268e|2f1e|21~
+Sensor21 got data from BME280
+a3a|a4ba|18b5206|26b9|2f4b|21~
+Sensor21 got data from BME280
+a3a|a4c6|18b54d6|26c0|2f4b|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3c|a48e|18b51c7|250b|2e24|21~
+Sensor21 got data from BME280
+a3a|a449|18b54d6|241d|2d64|21~
+Sensor21 got data from BME280
+a3b|a43e|18b55b1|253e|2e1c|21~
+Sensor21 got data from BME280
+a39|a43b|18b5245|25d2|2e97|21~
+Sensor21 got data from BME280
+a39|a419|18b55f0|2647|2eea|21~
+Sensor21 got data from BME280
+a3a|a4ae|18b599b|26b3|2f34|21~
+Sensor21 got data from BME280
+a3a|a4f3|18b54d6|26e5|2f68|21~
+Sensor21 got data from BME280
+a3a|a537|18b57a5|26d7|2f69|21~
+Sensor21 got data from BME280
+a3b|a4ff|18b5012|26d8|2f60|21~
+Sensor21 got data from BME280
+a3b|a4ff|18b5881|26f9|2f67|21~
+Sensor21 got data from BME280
+a3b|a4f4|18b53bc|271c|2f83|21~
+Sensor21 got data from BME280
+a3a|a4d1|18b54d6|2703|2f86|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a3c|a46c|18b5de1|1758|1670|21~
+Sensor21 got data from BME280
+a3a|a45e|18b56ca|2c1a|2ea7|21~
+Sensor21 got data from BME280
+a39|a45d|18b5245|28ea|3059|21~
+Sensor21 got data from BME280
+a39|a452|18b5515|2817|3035|21~
+Sensor21 got data from BME280
+a39|a430|18b5515|27a4|3004|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+39 a 0 0 30 a4 0 0 15 55 8b 1 a4 27 4 30 15 
+Sensor21 got data from BME280
+a39|a447|18b5d84|25ce|2ed3|21~
+Sensor21 got data from BME280
+a3a|a4a3|18b512c|2509|2e49|21~
+Sensor21 got data from BME280
+a39|a4c4|18b5320|264a|2f13|21~
+Sensor21 got data from BME280
+a3a|a4b9|18b599b|26e4|2f73|21~
+Sensor21 got data from BME280
+a3c|a499|18b5497|2744|2fa9|21~
+Sensor21 got data from BME280
+a3b|a449|18b55b1|2775|2fd2|21~
+Sensor21 got data from BME280
+a39|a425|18b58bf|275d|2fd8|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a433|18b5b50|2618|2f01|21~
+Sensor21 got data from BME280
+a3a|a453|18b56ca|2586|2e9c|21~
+Sensor21 got data from BME280
+a3c|a477|18b5d06|2673|2f35|21~
+Sensor21 got data from BME280
+a3b|a48e|18b52e1|26ee|2f7f|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3b a 0 0 8e a4 0 0 e1 52 8b 1 ee 26 7f 2f 15 
+Sensor21 got data from BME280
+a3b|a460|18b5881|2653|2f1b|21~
+Sensor21 got data from BME280
+a3c|a427|18b5497|2623|2eef|21~
+Sensor21 got data from BME280
+a3b|a477|18b568b|26fe|2f74|21~
+Sensor21 got data from BME280
+a3a|a448|18b53fb|2756|2fbb|21~
+Sensor21 got data from BME280
+a3a|a41a|18b53fb|2756|2fd0|21~
+Sensor21 got data from BME280
+a3b|a405|18b5b50|273f|2fc3|21~
+Sensor21 got data from BME280
+a3a|a3ed|18b56ca|273f|2fb8|21~
+Sensor21 got data from BME280
+a3a|a3cb|18b53fb|2747|2fbb|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a3d8|18b52e1|2533|2e5e|21~
+Sensor21 got data from BME280
+a39|a40e|18b57e4|242d|2da6|21~
+Sensor21 got data from BME280
+a39|a452|18b57e4|25d0|2eb5|21~
+Sensor21 got data from BME280
+a3a|a48c|18b56ca|26a5|2f4c|21~
+Sensor21 got data from BME280
+a3a|a48d|18b57a5|2703|2f8c|21~
+Sensor21 got data from BME280
+a3b|a4b0|18b55b1|2741|2fa7|21~
+Sensor21 got data from BME280
+a3b|a449|18b5881|2774|2fc3|21~
+Sensor21 got data from BME280
+a3a|a3ed|18b599b|277b|2fdb|21~
+Sensor21 got data from BME280
+a39|a3be|18b5e5f|2756|2fd3|21~
+Sensor21 got data from BME280
+a39|a391|18b57e4|273e|2fbc|21~
+Sensor21 got data from BME280
+a3a|a3b4|18b53fb|2743|2fb6|21~
+Sensor21 got data from BME280
+a3a|a3f8|18b512c|2748|2fba|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3a|a45e|18b599b|252c|2e4d|21~
+Sensor21 got data from BME280
+a3b|a43e|18b5c2b|2411|2d90|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3b a 0 0 3e a4 0 0 2b 5c 8b 1 11 24 90 2d 15 
+Sensor21 got data from BME280
+a3a|a43c|18b599b|23ba|2d5d|21~
+Sensor21 got data from BME280
+a3b|a455|18b5e20|23bc|2d4d|21~
+Sensor21 got data from BME280
+a3a|a431|18b53fb|25d2|2ea8|21~
+Sensor21 got data from BME280
+a3b|a411|18b5881|26c8|2f66|21~
+Sensor21 got data from BME280
+a3b|a405|18b55b1|270c|2fa0|21~
+Sensor21 got data from BME280
+a3a|a3ed|18b56ca|2725|2faa|21~
+Sensor21 got data from BME280
+a3b|a3c1|18b5b50|273a|2fb1|21~
+Sensor21 got data from BME280
+a39|a3b3|18b55f0|2762|2fbe|21~
+Sensor21 got data from BME280
+a3a|a3ed|18b56ca|277f|2fd9|21~
+Sensor21 got data from BME280
+a39|a3f7|18b5320|275a|2fd0|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a3a|a432|18b5a76|1879|17b8|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 32 a4 0 0 76 5a 8b 1 79 18 b8 17 15 
+Sensor21 got data from BME280
+a3a|a48c|18b56ca|2d55|304b|21~
+Sensor21 got data from BME280
+a3b|a4b0|18b55b1|28e2|30bf|21~
+Sensor21 got data from BME280
+a3b|a499|18b5881|27d3|3030|21~
+Sensor21 got data from BME280
+a3a|a3b4|18b599b|2790|2ff7|21~
+Sensor21 got data from BME280
+a3b|a316|18b5b50|2796|2ffc|21~
+Sensor21 got data from BME280
+a39|a308|18b5ab4|277c|2ff5|21~
+Sensor21 got data from BME280
+a3a|a316|18b5a76|2750|2fd6|21~
+Sensor21 got data from BME280
+a38|a335|18b535f|2774|2fe8|21~
+Sensor21 got data from BME280
+a39|a36f|18b58bf|2774|2fe8|21~
+Sensor21 got data from BME280
+a38|a39c|18b516b|274e|2fd4|21~
+Sensor21 got data from BME280
+a39|a3ec|18b57e4|2774|2fed|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a39|a419|18b5245|252b|2e70|21~
+Sensor21 got data from BME280
+a3a|a3bf|18b599b|2422|2dc5|21~
+Sensor21 got data from BME280
+a39|a3b3|18b5245|263b|2f20|21~
+Sensor21 got data from BME280
+a3a|a3bf|18b56ca|26fc|2f9c|21~
+Sensor21 got data from BME280
+a39|a3ca|18b55f0|2726|2fb3|21~
+Sensor21 got data from BME280
+a39|a3be|18b5245|275d|2fdc|21~
+Sensor21 got data from BME280
+a3a|a3f8|18b56ca|275f|2fe4|21~
+Sensor21 got data from BME280
+a39|a43b|18b55f0|2766|2fd5|21~
+Sensor21 got data from BME280
+a3b|a46c|18b52e1|2771|2fe4|21~
+Sensor21 got data from BME280
+a3b|a499|18b5b50|2755|2fdf|21~
+Sensor21 got data from BME280
+a3a|a45f|18b57a5|2773|2fe3|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 5f a4 0 0 a5 57 8b 1 73 27 e3 2f 15 
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a482|18b55b1|2226|2c4f|21~
+Sensor21 got data from BME280
+a3c|a411|18b5b11|2023|2afc|21~
+Sensor21 got data from BME280
+a3b|a3e3|18b5e20|24c2|2e2b|21~
+Sensor21 got data from BME280
+a3a|a3cb|18b56ca|2654|2f3c|21~
+Sensor21 got data from BME280
+a3a|a3a8|18b512c|2701|2f93|21~
+Sensor21 got data from BME280
+a39|a3ca|18b5515|2749|2fcd|21~
+Sensor21 got data from BME280
+a3b|a411|18b5b50|2742|2fd8|21~
+Sensor21 got data from BME280
+a3b|a433|18b55b1|2765|2fd9|21~
+Sensor21 got data from BME280
+a3b|a449|18b5881|2770|2fe7|21~
+Sensor21 got data from BME280
+a3c|a41c|18b5d06|2750|2fdd|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3c a 0 0 1c a4 0 0 6 5d 8b 1 50 27 dd 2f 15 
+Sensor21 got data from BME280
+a3b|a3ef|18b595c|2435|2dc3|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a3c1|18b55b1|1fa9|2ac7|21~
+Sensor21 got data from BME280
+a3b|a394|18b52e1|210b|2bbe|21~
+Sensor21 got data from BME280
+a3a|a370|18b57a5|2518|2e65|21~
+Sensor21 got data from BME280
+a3b|a316|18b5b50|268b|2f52|21~
+Sensor21 got data from BME280
+a3a|a30a|18b54d6|26f5|2f94|21~
+Sensor21 got data from BME280
+a3b|a2e9|18b5c2b|2745|2fcf|21~
+Sensor21 got data from BME280
+a3c|a316|18b5767|2753|2fde|21~
+Sensor21 got data from BME280
+a3b|a366|18b5881|275e|2fd1|21~
+Sensor21 got data from BME280
+a3a|a39e|18b57a5|2772|2fe6|21~
+Sensor21 got data from BME280
+a3b|a3cc|18b568b|2758|2fe2|21~
+Sensor21 got data from BME280
+a3b|a3e3|18b568b|2768|2fd8|21~
+Sensor21 got data from BME280
+a3d|a3fc|18b591d|2774|2fea|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a3d|a395|18b5bec|17c1|17aa|21~
+Sensor21 got data from BME280
+a3c|a2f5|18b60b1|2d14|3079|21~
+Sensor21 got data from BME280
+a3b|a2bb|18b568b|29a3|312e|21~
+Sensor21 got data from BME280
+a3a|a2f3|18b54d6|2832|306f|21~
+Sensor21 got data from BME280
+a3b|a2de|18b5881|27c2|3012|21~
+Sensor21 got data from BME280
+a3c|a2c7|18b5fd5|2796|2ffc|21~
+Sensor21 got data from BME280
+a3b|a2e9|18b5881|2760|2fe4|21~
+Sensor21 got data from BME280
+a3a|a30a|18b5a76|2777|2fe4|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 a a3 0 0 76 5a 8b 1 77 27 e4 2f 15 
+Sensor21 got data from BME280
+a3a|a2fe|18b5f39|23c1|2d64|21~
+Sensor21 got data from BME280
+a3b|a366|18b5e20|222b|2c67|21~
+Sensor21 got data from BME280
+a3b|a39f|18b595c|2552|2e8a|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a3c1|18b55b1|2365|2d37|21~
+Sensor21 got data from BME280
+a3b|a3c1|18b568b|22c4|2cc3|21~
+Sensor21 got data from BME280
+a3a|a364|18b5f39|25bc|2ec9|21~
+Sensor21 got data from BME280
+a3c|a34f|18b5d06|26b7|2f78|21~
+Sensor21 got data from BME280
+a3a|a2fe|18b5c6a|271d|2fa4|21~
+Sensor21 got data from BME280
+a3a|a2e7|18b599b|275c|2fd5|21~
+Sensor21 got data from BME280
+a39|a2d0|18b58bf|2753|2fde|21~
+Sensor21 got data from BME280
+a39|a2d0|18b5ab4|2758|2fcc|21~
+Sensor21 got data from BME280
+a38|a2d0|18b5709|2775|2fe4|21~
+Sensor21 got data from BME280
+a3a|a2e8|18b54d6|2761|2fe4|21~
+Sensor21 got data from BME280
+a39|a314|18b57e4|2755|2fce|21~
+Sensor21 got data from BME280
+a3a|a342|18b599b|2777|2fe8|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3c|a388|18b5a37|2517|2e5a|21~
+Sensor21 got data from BME280
+a3b|a3c1|18b55b1|242c|2db1|21~
+Sensor21 got data from BME280
+a39|a3d5|18b5320|2640|2f1d|21~
+Sensor21 got data from BME280
+a3b|a3d8|18b595c|26e7|2f97|21~
+Sensor21 got data from BME280
+a3b|a3c1|18b568b|272d|2fb0|21~
+Sensor21 got data from BME280
+a3c|a32d|18b5d06|2766|2fdb|21~
+Sensor21 got data from BME280
+a39|a2e6|18b5e5f|275e|2fe2|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+39 a 0 0 e6 a2 0 0 5f 5e 8b 1 5e 27 e2 2f 15 
+Sensor21 got data from BME280
+a39|a2db|18b5e5f|2664|2f3c|21~
+Sensor21 got data from BME280
+a3a|a2e7|18b599b|260d|2f04|21~
+Sensor21 got data from BME280
+a39|a2fd|18b5b8f|26ed|2f85|21~
+Sensor21 got data from BME280
+a39|a2f2|18b5d84|2746|2fca|21~
+Sensor21 got data from BME280
+a3b|a2e9|18b649a|2743|2fd5|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3a|a32b|18b599b|2533|2e72|21~
+Sensor21 got data from BME280
+a3a|a342|18b599b|2469|2def|21~
+Sensor21 got data from BME280
+a3a|a359|18b599b|2646|2f16|21~
+Sensor21 got data from BME280
+a3a|a32b|18b599b|270b|2f9f|21~
+Sensor21 got data from BME280
+a39|a363|18b5ab4|2731|2fc6|21~
+Sensor21 got data from BME280
+a3b|a39f|18b5e20|273d|2fc1|21~
+Sensor21 got data from BME280
+a3a|a370|18b5f39|2771|2fe6|21~
+Sensor21 got data from BME280
+a3a|a359|18b56ca|2771|2fec|21~
+Sensor21 got data from BME280
+a39|a336|18b5e5f|274d|2fd3|21~
+Sensor21 got data from BME280
+a3a|a359|18b6209|2773|2fe3|21~
+Sensor21 got data from BME280
+a3a|a337|18b5c6a|2777|2ff0|21~
+Sensor21 got data from BME280
+a3a|a2ff|18b5a76|2751|2fdf|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a3d|a2c9|18b645b|17c2|178c|21~
+Sensor21 got data from BME280
+a3a|a2dd|18b5a76|2d22|3072|21~
+Sensor21 got data from BME280
+a3a|a2e8|18b5a76|299d|3130|21~
+Sensor21 got data from BME280
+a3a|a2e7|18b599b|2821|305a|21~
+Sensor21 got data from BME280
+a3a|a309|18b599b|27c6|3012|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 9 a3 0 0 9b 59 8b 1 c6 27 12 30 15 
+Sensor21 got data from BME280
+a3b|a339|18b5881|25f0|2ed7|21~
+Sensor21 got data from BME280
+a3b|a35b|18b595c|252e|2e57|21~
+Sensor21 got data from BME280
+a3a|a370|18b56ca|26ab|2f5d|21~
+Sensor21 got data from BME280
+a3b|a371|18b55b1|271d|2fb2|21~
+Sensor21 got data from BME280
+a3b|a344|18b5c2b|2731|2fb9|21~
+Sensor21 got data from BME280
+a3c|a339|18b5a37|276a|2fd7|21~
+Sensor21 got data from BME280
+a3b|a316|18b595c|2778|2fec|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a2a5|18b5b50|2611|2f02|21~
+Sensor21 got data from BME280
+a3c|a261|18b5a37|257f|2e9a|21~
+Sensor21 got data from BME280
+a3b|a24a|18b5e20|268e|2f54|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3b a 0 0 4a a2 0 0 20 5e 8b 1 8e 26 54 2f 15 
+Sensor21 got data from BME280
+a39|a25e|18b5b8f|244e|2dcc|21~
+Sensor21 got data from BME280
+a3b|a28e|18b5c2b|239a|2d4d|21~
+Sensor21 got data from BME280
+a39|a2b9|18b5ab4|2611|2f00|21~
+Sensor21 got data from BME280
+a3b|a283|18b5c2b|26d0|2f85|21~
+Sensor21 got data from BME280
+a3a|a2c5|18b5c6a|2716|2fa9|21~
+Sensor21 got data from BME280
+a3b|a2a5|18b5b50|275e|2fd4|21~
+Sensor21 got data from BME280
+a3a|a2d1|18b57a5|2770|2fe8|21~
+Sensor21 got data from BME280
+a39|a2b9|18b55f0|2751|2fd8|21~
+Sensor21 got data from BME280
+a39|a269|18b5d84|2754|2fcc|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a39|a25e|18b63fe|2741|2fbc|21~
+Sensor21 got data from BME280
+a38|a25d|18b562e|2759|2fd0|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+38 a 0 0 5d a2 0 0 2e 56 8b 1 59 27 d0 2f 15 
+Sensor21 got data from BME280
+a39|a275|18b5d84|238b|2d48|21~
+Sensor21 got data from BME280
+a39|a2a2|18b6053|21ee|2c48|21~
+Sensor21 got data from BME280
+a3a|a2d1|18b5d45|253d|2e84|21~
+Sensor21 got data from BME280
+a39|a2f2|18b57e4|2689|2f4d|21~
+Sensor21 got data from BME280
+a39|a308|18b5d84|272b|2fb5|21~
+Sensor21 got data from BME280
+a3a|a2ff|18b6014|2754|2fd8|21~
+Sensor21 got data from BME280
+a39|a308|18b612e|2742|2fcc|21~
+Sensor21 got data from BME280
+a39|a336|18b6323|276d|2fd6|21~
+Sensor21 got data from BME280
+a3a|a32b|18b5c6a|277c|2fe8|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a39|a2c4|18b6053|245a|2dd9|21~
+Sensor21 got data from BME280
+a3c|a299|18b62a6|2352|2d21|21~
+Sensor21 got data from BME280
+a3a|a320|18b5f39|25e8|2eeb|21~
+Sensor21 got data from BME280
+a3b|a316|18b5e20|26b8|2f76|21~
+Sensor21 got data from BME280
+a3a|a320|18b5f39|2724|2fa6|21~
+Sensor21 got data from BME280
+a3b|a30b|18b60ef|2767|2fd5|21~
+Sensor21 got data from BME280
+a3c|a32d|18b5d06|2762|2fdf|21~
+Sensor21 got data from BME280
+a3b|a322|18b5b50|274a|2fcd|21~
+Sensor21 got data from BME280
+a3c|a34f|18b62a6|276f|2fd8|21~
+Sensor21 got data from BME280
+a3c|a366|18b62a6|2783|2fed|21~
+Sensor21 got data from BME280
+a3b|a300|18b5e20|2762|2fe3|21~
+Sensor21 got data from BME280
+a3c|a317|18b6650|274e|2fcb|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a3d|a2bd|18b5ebc|17e6|17ec|21~
+Sensor21 got data from BME280
+a3b|a2c7|18b5e20|2d37|30dc|21~
+Sensor21 got data from BME280
+a3c|a2d3|18b6380|2991|313f|21~
+Sensor21 got data from BME280
+a3b|a299|18b668f|2825|3063|21~
+Sensor21 got data from BME280
+a3b|a23e|18b60ef|27ca|3026|21~
+Sensor21 got data from BME280
+a3b|a228|18b5b50|2793|300c|21~
+Sensor21 got data from BME280
+a3a|a253|18b5c6a|2755|2fe7|21~
+Sensor21 got data from BME280
+a3b|a24a|18b5efa|2761|2fd9|21~
+Sensor21 got data from BME280
+a3a|a227|18b65b4|277f|2ff0|21~
+Sensor21 got data from BME280
+a3b|a23e|18b60ef|276a|2ff0|21~
+Sensor21 got data from BME280
+a3c|a228|18b6844|274a|2fd9|21~
+Sensor21 got data from BME280
+a3b|a277|18b676a|276d|2fe3|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3b a 0 0 77 a2 0 0 6a 67 8b 1 6d 27 e3 2f 15 
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a2b0|18b63bf|24ab|2e02|21~
+Sensor21 got data from BME280
+a3c|a2a5|18b62a6|2382|2d55|21~
+Sensor21 got data from BME280
+a3b|a2bb|18b649a|261c|2f1c|21~
+Sensor21 got data from BME280
+a3c|a21d|18b691f|2706|2f9f|21~
+Sensor21 got data from BME280
+a3a|a2af|18b6883|272b|2fbd|21~
+Sensor21 got data from BME280
+a39|a36f|18b5d84|2721|2fc4|21~
+Sensor21 got data from BME280
+a39|a3d5|18b6323|270b|2fae|21~
+Sensor21 got data from BME280
+a3a|a2dc|18b67a9|2751|2fd8|21~
+Sensor21 got data from BME280
+a3a|a2e7|18b6209|2772|2ff7|21~
+Sensor21 got data from BME280
+a3a|a2fe|18b6a78|2730|2fcf|21~
+Sensor21 got data from BME280
+a3a|a37c|18b62e4|272b|2fbc|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3a a 0 0 7c a3 0 0 e4 62 8b 1 2b 27 bc 2f 15 
+Sensor21 FAIL
+Sensor21 got data from BME280
+a3b|a394|18b60ef|2209|2c3e|21~
+Sensor21 got data from BME280
+a3d|a3ce|18b645b|2011|2b00|21~
+Sensor21 got data from BME280
+a3c|a3b6|18b6844|2499|2e24|21~
+Sensor21 got data from BME280
+a3c|a3ef|18b6380|2640|2f33|21~
+Sensor21 got data from BME280
+a3c|a41d|18b6380|26f4|2f9e|21~
+Sensor21 got data from BME280
+a3c|a3e3|18b6844|277d|2ff3|21~
+Sensor21 got data from BME280
+a3f|a3e7|18b64f7|26d0|2f96|21~
+Sensor21 got data from BME280
+a3f|a4f8|18b64f7|26e5|2fa9|21~
+Sensor21 got data from BME280
+a40|a7a2|18b63dd|279a|300a|21~
+Sensor21 got data from BME280
+a40|a719|18b589f|2768|2fde|21~
+Sensor21 got data from BME280
+a42|a6b6|18b61aa|275e|2fe2|21~
+Sensor21 got data from BME280
+a40|a692|18b64b8|2740|2fda|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a41|a65a|18b6593|2485|2dff|21~
+Sensor21 got data from BME280
+a42|a58e|18b6824|233b|2d1c|21~
+Sensor21 got data from BME280
+a3e|a567|18b5ad2|25ea|2ee6|21~
+Sensor21 got data from BME280
+a40|a597|18b610e|272a|2fcc|21~
+Sensor21 got data from BME280
+a40|a486|18b63dd|2746|2fdd|21~
+Sensor21 got data from BME280
+a40|a436|18b610e|2752|2fdc|21~
+Sensor21 got data from BME280
+a40|a437|18b64b8|276a|2fe1|21~
+Sensor21 got data from BME280
+a40|a3ba|18b6a58|278e|2ffa|21~
+Sensor21 got data from BME280
+a3f|a3db|18b65d2|276c|2ff5|21~
+Sensor21 got data from BME280
+a3f|a442|18b6228|2746|2fd8|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+3f a 0 0 42 a4 0 0 28 62 8b 1 46 27 d8 2f 15 
+Sensor21 got data from BME280
+a3e|a435|18b614d|2652|2f2f|21~
+Sensor21 got data from BME280
+a40|a437|18b64b8|2618|2f01|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a41|a465|18b639e|17cb|1789|21~
+Sensor21 got data from BME280
+a40|a4b3|18b63dd|2d14|305d|21~
+Sensor21 got data from BME280
+a40|a4b3|18b5b6e|29b3|313b|21~
+Sensor21 got data from BME280
+a40|a486|18b63dd|284f|3088|21~
+Sensor21 got data from BME280
+a40|a44d|18b697d|27a2|301b|21~
+Sensor21 got data from BME280
+a41|a45a|18b6b33|276d|2feb|21~
+Sensor21 got data from BME280
+a41|a47c|18b666f|277f|2fed|21~
+Sensor21 got data from BME280
+a41|a45a|18b62c4|278a|2ffd|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+41 a 0 0 5a a4 0 0 c4 62 8b 1 8a 27 fd 2f 15 
+Sensor21 got data from BME280
+a41|a438|18b62c4|2388|2d5c|21~
+Sensor21 got data from BME280
+a42|a3bc|18b6479|2216|2c56|21~
+Sensor21 got data from BME280
+a40|a3a3|18b64b8|2584|2ea0|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a41|a3b0|18b62c4|2373|2d46|21~
+Sensor21 got data from BME280
+a42|a361|18b6a19|22ae|2cb8|21~
+Sensor21 got data from BME280
+a41|a305|18b60cf|25c1|2ec6|21~
+Sensor21 got data from BME280
+a41|a2fa|18b5ff4|26c3|2f87|21~
+Sensor21 got data from BME280
+a42|a38e|18b6a19|2704|2fb4|21~
+Sensor21 got data from BME280
+a42|a355|18b5fb5|272b|2fc2|21~
+Sensor21 got data from BME280
+a43|a2ce|18b69da|273e|2fcd|21~
+Sensor21 got data from BME280
+a42|a2a0|18b6285|2750|2fcd|21~
+Sensor21 got data from BME280
+a43|a2a0|18b5dc1|277b|2fe0|21~
+Sensor21 got data from BME280
+a42|a2a0|18b6285|2784|2ff7|21~
+Sensor21 got data from BME280
+a42|a31d|18b6555|275c|2ff0|21~
+Sensor21 got data from BME280
+a42|a2ef|18b6479|2745|2fd9|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a42|a2c2|18b674a|24eb|2e3b|21~
+Sensor21 got data from BME280
+a43|a384|18b635f|240c|2da8|21~
+Sensor21 got data from BME280
+a43|a384|18b68ff|2633|2f0e|21~
+Sensor21 got data from BME280
+a43|a356|18b635f|270e|2fa5|21~
+Sensor21 got data from BME280
+a42|a328|18b6555|2733|2fd5|21~
+Sensor21 got data from BME280
+a43|a2fb|18b635f|272f|2fce|21~
+Sensor21 got data from BME280
+a43|a329|18b670b|273a|2fca|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+43 a 0 0 29 a3 0 0 b 67 8b 1 3a 27 ca 2f 15 
+Sensor21 got data from BME280
+a43|a31d|18b68ff|2659|2f3a|21~
+Sensor21 got data from BME280
+a42|a2ef|18b6555|2601|2f00|21~
+Sensor21 got data from BME280
+a43|a340|18b635f|26c6|2f80|21~
+Sensor21 got data from BME280
+a42|a2c2|18b61aa|272f|2fb7|21~
+Sensor21 got data from BME280
+a43|a268|18b69da|2770|2fdf|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a41|a2cc|18b62c4|255c|2e8d|21~
+Sensor21 got data from BME280
+a42|a2c2|18b6479|246d|2e00|21~
+Sensor21 got data from BME280
+a41|a2aa|18b6593|2623|2f20|21~
+Sensor21 got data from BME280
+a43|a2e5|18b6630|26d5|2f86|21~
+Sensor21 got data from BME280
+a42|a2e4|18b6a19|271c|2fb4|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+42 a 0 0 e4 a2 0 0 19 6a 8b 1 1c 27 b4 2f 15 
+Sensor21 got data from BME280
+a41|a2d7|18b639e|232b|2d14|21~
+Sensor21 got data from BME280
+a43|a2a0|18b635f|219b|2c1a|21~
+Sensor21 got data from BME280
+a41|a2e3|18b6863|250d|2e66|21~
+Sensor21 got data from BME280
+a41|a310|18b6c0d|2665|2f3e|21~
+Sensor21 got data from BME280
+a42|a355|18b6af4|2704|2f9a|21~
+Sensor21 got data from BME280
+a42|a3a5|18b6555|2760|2fd5|21~
+Sensor21 FAIL
+Total restart.
+start.
+BMP280 init done.
+Sensor21 nRF24L01 Reset
+Sensor21 got data from BME280
+a43|a362|18b643b|1755|1720|21~
+Sensor21 got data from BME280
+a42|a333|18b6479|2c5e|2fee|21~
+Sensor21 got data from BME280
+a41|a22d|18b60cf|292b|312a|21~
+Sensor21 got data from BME280
+a42|a244|18b6479|27e0|307e|21~
+Sensor21 got data from BME280
+a42|a250|18b6479|2740|3026|21~
+Sensor21 got data from BME280
+a42|a250|18b6a19|26e7|2ff1|21~
+Sensor21 got data from BME280
+a43|a23a|18b6caa|26cb|2fd1|21~
+Sensor21 got data from BME280
+a44|a274|18b67e5|26d0|2fcd|21~
+Sensor21 got data from BME280
+a42|a2d8|18b6824|26d1|2fd2|21~
+Sensor21 got data from BME280
+a44|a2a1|18b6516|26d7|2fce|21~
+Sensor21 got data from BME280
+a43|a273|18b69da|26fb|2fd4|21~
+Sensor21 got data from BME280
+a44|a268|18b6d85|2716|2fec|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a44|a252|18b6b90|2458|2e3c|21~
+Sensor21 got data from BME280
+a43|a28a|18b635f|2327|2d79|21~
+Sensor21 got data from BME280
+a42|a2a0|18b6285|2559|2edd|21~
+Sensor21 got data from BME280
+a43|a295|18b68ff|263e|2f6d|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+43 a 0 0 95 a2 0 0 ff 68 8b 1 3e 26 6d 2f 15 
+Sensor21 got data from BME280
+a43|a2b7|18b6630|25b1|2f10|21~
+Sensor21 got data from BME280
+a43|a2f0|18b6e9f|257b|2eee|21~
+Sensor21 got data from BME280
+a44|a25d|18b65f1|266b|2f7e|21~
+Sensor21 got data from BME280
+a43|a20c|18b68ff|26df|2fc6|21~
+Sensor21 got data from BME280
+a43|a223|18b6630|26fa|2fe7|21~
+Sensor21 got data from BME280
+a43|a2c2|18b6630|26e6|2fe7|21~
+Sensor21 got data from BME280
+a42|a2c2|18b6ce9|26cb|2fd4|21~
+Sensor21 got data from BME280
+a44|a2cf|18b5f76|26cc|2fc7|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a43|a2ac|18b68ff|2465|2e2f|21~
+Sensor21 got data from BME280
+a44|a296|18b6ab5|237c|2d93|21~
+Sensor21 got start command from nRF24L01
+Try sent data: 
+44 a 0 0 96 a2 0 0 b5 6a 8b 1 7c 23 93 2d 15 
+Sensor21 got data from BME280
+a42|a294|18b6dc4|2160|2c23|21~
+Sensor21 got data from BME280
+a43|a27e|18b6630|209e|2bb1|21~
+Sensor21 got data from BME280
+a43|a2b7|18b6f7a|2478|2e56|21~
+Sensor21 got data from BME280
+a42|a2fa|18b6824|25da|2f36|21~
+Sensor21 got data from BME280
+a43|a334|18b69da|2671|2f87|21~
+Sensor21 got data from BME280
+a44|a34c|18b6246|26d4|2fb9|21~
+Sensor21 got data from BME280
+a44|a357|18b6516|2709|2fe1|21~
+Sensor21 got data from BME280
+a43|a34b|18b6630|26eb|2fe0|21~
+Sensor21 got data from BME280
+a42|a2e4|18b6285|26d5|2fcc|21~
+Sensor21 FAIL
+Sensor21 got data from BME280
+a44|a2b8|18b67e5|23b5|2db7|21~
+Sensor21 got data from BME280
+a42|a294|18b6dc4|2268|2cf0|21~
+Sensor21 got data from BME280
+a42|a2ab|18b674a|2503|2eaa|21~
+Sensor21 got data from BME280
+a43|a2c2|18b6bcf|2617|2f4d|21~
+Sensor21 got data from BME280
+a44|a2cf|18b6d85|26a9|2f9f|21~
+Sensor21 got data from BME280
+a43|a2f0|18b6630|26f9|2fd7|21~
+Sensor21 got data from BME280
+a43|a2fb|18b69da|26eb|2fe0|21~
+Sensor21 got data from BME280
+a43|a2b7|18b6630|26d4|2fce|21~
+Sensor21 got data from BME280
+a42|a2a0|18b61aa|26e8|2fd0|21~
+Sensor21 got data from BME280
+a42|a2a0|18b6a19|2712|2fe8|21~
+Sensor21 got data from BME280
+a43|a2b7|18b68ff|270a|2ff7|21~
+Sensor21 got data from BME280
+a42|a2c2|18b6824|26db|2fd8|21~
+Sensor21 FAIL
+Total restart.�start.

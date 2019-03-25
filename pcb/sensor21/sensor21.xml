@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/dariusz/Elektronika/Arduino/nrf24l01-net/pcb/sensor21/sensor21.sch</source>
+    <date>Sat 19 Jan 2019 21:00:43 CET</date>
+    <tool>Eeschema 5.0.2-bee76a0~70~ubuntu18.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>sensor21.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="IC1">
+      <value>ATMEGA8-P</value>
+      <footprint>Housings_DIP:DIP-28_W7.62mm</footprint>
+      <libsource lib="sensor21-rescue" part="ATMEGA8-P" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F6E80</tstamp>
+    </comp>
+    <comp ref="Y1">
+      <value>8Mhz</value>
+      <footprint>Crystals:Crystal_HC49-U_Vertical</footprint>
+      <libsource lib="sensor21-rescue" part="Crystal" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F6F46</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>22n</value>
+      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <libsource lib="sensor21-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F6F9F</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>22n</value>
+      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <libsource lib="sensor21-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F6FEC</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <libsource lib="sensor21-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F7297</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100n</value>
+      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <libsource lib="sensor21-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F7363</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <libsource lib="sensor21-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F744F</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>10u</value>
+      <footprint>Capacitors_ThroughHole:C_Radial_D5_L11_P2</footprint>
+      <libsource lib="sensor21-rescue" part="CP" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F749C</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>10u</value>
+      <footprint>Capacitors_ThroughHole:C_Radial_D5_L11_P2</footprint>
+      <libsource lib="sensor21-rescue" part="CP" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F74CD</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <libsource lib="sensor21-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F753A</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>nRF24L01</value>
+      <footprint>nrf24-connector:Socket_Strip_Straight_2x04_Pitch2.54mm</footprint>
+      <libsource lib="sensor21-rescue" part="CONN_02X04" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F78C1</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>BME280</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x04</footprint>
+      <libsource lib="sensor21-rescue" part="CONN_01X04" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F7940</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>BC548</value>
+      <footprint>TO_SOT_Packages_THT:TO-92_Inline_Wide</footprint>
+      <libsource lib="sensor21-rescue" part="BC548" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F79A7</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>4k7</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <libsource lib="sensor21-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F8C17</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>4k7</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <libsource lib="sensor21-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F8C86</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>470u</value>
+      <footprint>Capacitors_ThroughHole:C_Radial_D8_L13_P3.8</footprint>
+      <libsource lib="sensor21-rescue" part="CP" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4F9535</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>12k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <libsource lib="sensor21-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4FB155</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>33k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <libsource lib="sensor21-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4FB1CA</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>12k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <libsource lib="sensor21-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4FBC17</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>5k-10k</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="sensor21-rescue" part="Photores" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A4FBC88</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>CONN_01X02</value>
+      <footprint>Connect:GTK2400-V2</footprint>
+      <libsource lib="sensor21-rescue" part="CONN_01X02" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A50002A</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>10u</value>
+      <footprint>Capacitors_ThroughHole:C_Radial_D5_L11_P2</footprint>
+      <libsource lib="sensor21-rescue" part="CP" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A74B5E4</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>10u</value>
+      <footprint>Capacitors_ThroughHole:C_Radial_D5_L11_P2</footprint>
+      <libsource lib="sensor21-rescue" part="CP" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A74BCC2</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>HT7333</value>
+      <footprint>TO_SOT_Packages_THT:TO-92_Inline_Wide</footprint>
+      <libsource lib="HT7333" part="HT7333" description="LM2931, 100mA Low drop-out regulator, Fixed Output 3.3V, 5V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A82B5D9</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>100n</value>
+      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <libsource lib="sensor21-rescue" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A8BF023</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>100n</value>
+      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <libsource lib="sensor21-rescue" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A8BF0A3</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="HT7333" part="HT7333">
+      <description>LM2931, 100mA Low drop-out regulator, Fixed Output 3.3V, 5V</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm2931-n.pdf</docs>
+      <footprints>
+        <fp>TO92-123</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">HT7333</field>
+        <field name="Footprint">TO92-123</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_out"/>
+        <pin num="2" name="VIN" type="power_in"/>
+        <pin num="3" name="VOUT" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="ATMEGA8-P">
+      <footprints>
+        <fp>28DIP-ELL600</fp>
+        <fp>28dip600</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">ATMEGA8-P</field>
+        <field name="Footprint">DIL28</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PC6(~RESET~)" type="BiDi"/>
+        <pin num="2" name="(RXD)PD0" type="BiDi"/>
+        <pin num="3" name="(TXD)PD1" type="BiDi"/>
+        <pin num="4" name="(INT0)PD2" type="BiDi"/>
+        <pin num="5" name="(INT1)PD3" type="BiDi"/>
+        <pin num="6" name="(XCK/T0)PD4" type="BiDi"/>
+        <pin num="7" name="VCC" type="power_in"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="PB6(XTAL1/TOSC1)" type="BiDi"/>
+        <pin num="10" name="PB7(XTAL2/TOSC2)" type="BiDi"/>
+        <pin num="11" name="(T1)PD5" type="BiDi"/>
+        <pin num="12" name="(AIN0)PD6" type="BiDi"/>
+        <pin num="13" name="(AIN1)PD7" type="BiDi"/>
+        <pin num="14" name="(ICP)PB0" type="BiDi"/>
+        <pin num="15" name="(OC1A)PB1" type="BiDi"/>
+        <pin num="16" name="(~SS~/OC1B)PB2" type="BiDi"/>
+        <pin num="17" name="(MOSI/OC2)PB3" type="BiDi"/>
+        <pin num="18" name="(MISO)PB4" type="BiDi"/>
+        <pin num="19" name="(SCK)PB5" type="BiDi"/>
+        <pin num="20" name="AVCC" type="power_in"/>
+        <pin num="21" name="AREF" type="BiDi"/>
+        <pin num="22" name="AGND" type="power_in"/>
+        <pin num="23" name="(ADC0)PC0" type="BiDi"/>
+        <pin num="24" name="(ADC1)PC1" type="BiDi"/>
+        <pin num="25" name="(ADC2)PC2" type="BiDi"/>
+        <pin num="26" name="(ADC3)PC3" type="BiDi"/>
+        <pin num="27" name="(ADC4/SDA)PC4" type="BiDi"/>
+        <pin num="28" name="(ADC5/SCL)PC5" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="BC548">
+      <footprints>
+        <fp>TO-92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC548</field>
+        <field name="Footprint">TO-92</field>
+      </fields>
+      <pins>
+        <pin num="1" name="C" type="passive"/>
+        <pin num="2" name="B" type="input"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="C">
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="CONN_01X02">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="CONN_01X04">
+      <footprints>
+        <fp>Pin_Header_Straight_1X04</fp>
+        <fp>Pin_Header_Angled_1X04</fp>
+        <fp>Socket_Strip_Straight_1X04</fp>
+        <fp>Socket_Strip_Angled_1X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="CONN_02X04">
+      <footprints>
+        <fp>Pin_Header_Straight_2X04</fp>
+        <fp>Pin_Header_Angled_2X04</fp>
+        <fp>Socket_Strip_Straight_2X04</fp>
+        <fp>Socket_Strip_Angled_2X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_02X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="CP">
+      <footprints>
+        <fp>CP*</fp>
+        <fp>Elko*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="C_Small">
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="Crystal">
+      <footprints>
+        <fp>Crystal_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="Photores">
+      <footprints>
+        <fp>R?</fp>
+        <fp>R?-*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">Photores</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensor21-rescue" part="R">
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="HT7333">
+      <uri>/home/dariusz/Elektronika/Arduino/nrf24l01-net/pcb/sensor21/HT7333.lib</uri>
+    </library>
+    <library logical="sensor21-rescue">
+      <uri>/home/dariusz/Elektronika/Arduino/nrf24l01-net/pcb/sensor21/sensor21-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="SCL">
+      <node ref="IC1" pin="28"/>
+      <node ref="R6" pin="2"/>
+      <node ref="P2" pin="3"/>
+    </net>
+    <net code="2" name="SDA">
+      <node ref="IC1" pin="27"/>
+      <node ref="P2" pin="4"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="3" name="+3V3">
+      <node ref="C12" pin="1"/>
+      <node ref="U1" pin="3"/>
+      <node ref="IC1" pin="7"/>
+      <node ref="R3" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="R5" pin="1"/>
+      <node ref="C8" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="C10" pin="1"/>
+      <node ref="P2" pin="1"/>
+      <node ref="R7" pin="1"/>
+      <node ref="IC1" pin="20"/>
+      <node ref="P1" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="4" name="PC2">
+      <node ref="R3" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="IC1" pin="25"/>
+    </net>
+    <net code="5" name="Net-(C2-Pad1)">
+      <node ref="IC1" pin="21"/>
+      <node ref="C2" pin="1"/>
+    </net>
+    <net code="6" name="PC1">
+      <node ref="R2" pin="1"/>
+      <node ref="IC1" pin="24"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="7" name="CE">
+      <node ref="P1" pin="3"/>
+      <node ref="IC1" pin="15"/>
+    </net>
+    <net code="8" name="SCK">
+      <node ref="IC1" pin="19"/>
+      <node ref="P1" pin="5"/>
+    </net>
+    <net code="9" name="CSN">
+      <node ref="P1" pin="4"/>
+      <node ref="IC1" pin="16"/>
+    </net>
+    <net code="10" name="MOSI">
+      <node ref="IC1" pin="17"/>
+      <node ref="P1" pin="6"/>
+    </net>
+    <net code="11" name="MISO">
+      <node ref="IC1" pin="18"/>
+      <node ref="P1" pin="7"/>
+    </net>
+    <net code="12" name="INT1">
+      <node ref="P1" pin="8"/>
+      <node ref="IC1" pin="5"/>
+    </net>
+    <net code="13" name="GND">
+      <node ref="IC1" pin="8"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="P3" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="IC1" pin="22"/>
+      <node ref="C8" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="P2" pin="2"/>
+      <node ref="P1" pin="1"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C12" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="U1" pin="1"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="14" name="PD7">
+      <node ref="IC1" pin="13"/>
+      <node ref="Q1" pin="2"/>
+    </net>
+    <net code="15" name="RESET">
+      <node ref="IC1" pin="1"/>
+      <node ref="R7" pin="2"/>
+      <node ref="Q1" pin="1"/>
+    </net>
+    <net code="16" name="Net-(C11-Pad1)">
+      <node ref="U1" pin="2"/>
+      <node ref="C11" pin="1"/>
+      <node ref="P3" pin="2"/>
+      <node ref="C9" pin="1"/>
+    </net>
+    <net code="17" name="Net-(IC1-Pad2)">
+      <node ref="IC1" pin="2"/>
+    </net>
+    <net code="18" name="Net-(IC1-Pad3)">
+      <node ref="IC1" pin="3"/>
+    </net>
+    <net code="19" name="Net-(IC1-Pad26)">
+      <node ref="IC1" pin="26"/>
+    </net>
+    <net code="20" name="Net-(IC1-Pad23)">
+      <node ref="IC1" pin="23"/>
+    </net>
+    <net code="21" name="Net-(IC1-Pad4)">
+      <node ref="IC1" pin="4"/>
+    </net>
+    <net code="22" name="Net-(IC1-Pad14)">
+      <node ref="IC1" pin="14"/>
+    </net>
+    <net code="23" name="Net-(IC1-Pad12)">
+      <node ref="IC1" pin="12"/>
+    </net>
+    <net code="24" name="Net-(IC1-Pad11)">
+      <node ref="IC1" pin="11"/>
+    </net>
+    <net code="25" name="Net-(C1-Pad2)">
+      <node ref="C1" pin="2"/>
+      <node ref="IC1" pin="9"/>
+      <node ref="Y1" pin="2"/>
+    </net>
+    <net code="26" name="Net-(C3-Pad2)">
+      <node ref="C3" pin="2"/>
+      <node ref="Y1" pin="1"/>
+      <node ref="IC1" pin="10"/>
+    </net>
+    <net code="27" name="Net-(IC1-Pad6)">
+      <node ref="IC1" pin="6"/>
+    </net>
+  </nets>
+</export>

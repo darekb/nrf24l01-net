@@ -152,7 +152,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=cmake-avr
+CMAKE_PROJECT_NAME:STATIC=weatherStation-sensor11
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -218,6 +218,12 @@ cmake-avr_BINARY_DIR:STATIC=/home/dariusz/Arduino/nrf24l01-net/sensor11
 //Value Computed by CMake
 cmake-avr_SOURCE_DIR:STATIC=/home/dariusz/Arduino/nrf24l01-net/sensor11
 
+//Value Computed by CMake
+weatherStation-sensor11_BINARY_DIR:STATIC=/home/dariusz/Arduino/nrf24l01-net/sensor11
+
+//Value Computed by CMake
+weatherStation-sensor11_SOURCE_DIR:STATIC=/home/dariusz/Arduino/nrf24l01-net/sensor11
+
 
 ########################
 # INTERNAL cache entries
@@ -230,9 +236,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/dariusz/Arduino/nrf24l01-net/sensor11
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=9
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=10
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=6
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -335,7 +341,7 @@ CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/home/dariusz/bin/clion-2017.2.3/bin/cmake/share/cmake-3.9
+CMAKE_ROOT:INTERNAL=/home/dariusz/bin/clion-2017.2.3/bin/cmake/share/cmake-3.10
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG

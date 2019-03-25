@@ -5,27 +5,24 @@
 #ifndef CMAKE_AVR_SLBME180MEASURE_H
 #define CMAKE_AVR_SLBME180MEASURE_H
 
+#define DATA_UPLOAD_SIZE 17
 
-struct MEASURE {
-    int16_t temperature;
-    uint16_t humidity;
-    int16_t pressure;
-    //(pressure - 1000)*100
+struct measureStruct {
+    int32_t temperature;
+    int32_t humidity;
+    uint32_t pressure;
     uint16_t voltage;
+    uint16_t fotorezistor;
     uint8_t sensorId;
 };
 
-void fillBuferFromMEASURE(const struct MEASURE structure, uint8_t *buffer);
+union MEASURE {
+    struct measureStruct data;
+    uint8_t bytesData[DATA_UPLOAD_SIZE];
+};
 
-struct MEASURE returnMEASUREFromBuffer(uint8_t *buffer);
+void fillBuferFromMEASURE(union MEASURE *structure, uint8_t *buffer);
 
-int16_t calculateTemperature(float temperature);
-
-uint16_t calculateHumidity(float humidity);
-
-int16_t calculatePressure(float pressure);
-
-uint16_t calculateVoltage(float voltage);
-//void testBME180Measure(void);
+union MEASURE returnMEASUREFromBuffer(uint8_t *buffer);
 
 #endif //CMAKE_AVR_SLBME180MEASURE_H

@@ -1,6 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.4)
 
-PROJECT(cmake-avr)
+PROJECT(weatherStation-sensor)
 
 #SET(MCU_SPEED "16000000")
 SET(AVR_MCU "atmega8")

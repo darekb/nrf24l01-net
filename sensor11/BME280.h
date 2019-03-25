@@ -27,7 +27,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 #define _BME280_H_
 
 #ifndef F_CPU
-#define F_CPU 16000000UL
+#define F_CPU 8000000UL
 #endif
 
 #define showDebugDataBME280 0
@@ -41,7 +41,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 #define CTRL_MEAS_REG     0xF4
 #define STATUS_REG        0xF3
 #define CTRL_HUM_REG      0xF2
-#define TEMP_DIG_ADDR      0x88
+#define TEMP_DIG_ADDR  	  0x88
 #define PRESS_DIG_ADDR    0x8E
 #define HUM_DIG_ADDR1     0xA1
 #define HUM_DIG_ADDR2     0xE1
@@ -99,9 +99,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 
 //User API
 uint8_t BME280_Init(uint8_t os_t, uint8_t os_p, uint8_t os_h, uint8_t filter, uint8_t mode, uint8_t t_sb);
-
-uint8_t BME280_ReadAll(float *t, float *p, float *h);
-
+uint8_t BME280_ReadAll(int32_t *t, uint32_t *p, int32_t *h);
 uint8_t BME280_SetMode(uint8_t mode);
 
 #endif /* _BME280_H_ */

@@ -49,7 +49,7 @@ int main(void) {
     slUART_WriteStringNl("Start sensor21");
     #endif
     slI2C_Init();
-    if (BME280_Init(BME280_OS_T_1, BME280_OS_P_1, BME280_OS_H_1, BME280_FILTER_OFF, BME280_MODE_FORCED,
+    if (BME280_Init(BME280_OS_T_SKP, BME280_OS_P_SKP, BME280_OS_H_SKP, BME280_FILTER_OFF, BME280_MODE_FORCED,
                     BME280_TSB_1000)) {
         #if showDebugDataMain == 1
         slUART_WriteString("BMP280 init error.\r\n");
@@ -192,7 +192,7 @@ ISR(TIMER0_OVF_vect) {
         stage = ST_GET_MEASURE;//make measure
     }
     isTimeoutError = isTimeoutError + 1;
-    if (isTimeoutError >= 1250) {//40.96 sek after reset
+    if (isTimeoutError >= 2500) {//40.96 sek after reset
         counter = 0;
         errors = errors + 1;
         isTimeoutError = 0;

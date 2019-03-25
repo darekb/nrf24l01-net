@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/dariusz/Arduino/nrf24l01-net/server/main.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/main.c.o"
-  "/home/dariusz/Arduino/nrf24l01-net/server/main_functions.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/main_functions.c.o"
-  "/home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o"
-  "/home/dariusz/Arduino/nrf24l01-net/server/slNRF24.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slNRF24.c.o"
-  "/home/dariusz/Arduino/nrf24l01-net/server/slPCF8563.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o"
-  "/home/dariusz/Arduino/nrf24l01-net/server/slSPI.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slSPI.c.o"
-  "/home/dariusz/Arduino/nrf24l01-net/server/slUart.c" "/home/dariusz/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slUart.c.o"
+  "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/main.c" "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/main.c.o"
+  "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/main_functions.c" "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/main_functions.c.o"
+  "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slBME180Measure.c" "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o"
+  "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slI2C.c" "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slI2C.c.o"
+  "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slNRF24.c" "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slNRF24.c.o"
+  "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slPCF8563.c" "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slPCF8563.c.o"
+  "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slSPI.c" "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slSPI.c.o"
+  "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slUart.c" "/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/cmake-build-debug/CMakeFiles/atmega328p.elf.dir/slUart.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

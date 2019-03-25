@@ -50,53 +50,53 @@ set(CMAKE_CXX_COMPILER ${AVR_CXX})
 ##########################################################################
 
 # default upload tool
-if(NOT AVR_UPLOADTOOL)
+if (NOT AVR_UPLOADTOOL)
     set(
             AVR_UPLOADTOOL avrdude
             CACHE STRING "Set default upload tool: avrdude"
     )
     find_program(AVR_UPLOADTOOL avrdude)
-endif(NOT AVR_UPLOADTOOL)
+endif (NOT AVR_UPLOADTOOL)
 
 # default upload tool port
-if(NOT AVR_UPLOADTOOL_PORT)
+if (NOT AVR_UPLOADTOOL_PORT)
     set(
             AVR_UPLOADTOOL_PORT usb
             CACHE STRING "Set default upload tool port: usb"
     )
-endif(NOT AVR_UPLOADTOOL_PORT)
+endif (NOT AVR_UPLOADTOOL_PORT)
 
 # default programmer (hardware)
-if(NOT AVR_PROGRAMMER)
+if (NOT AVR_PROGRAMMER)
     set(
             AVR_PROGRAMMER avrispmkII
             CACHE STRING "Set default programmer hardware model: avrispmkII"
     )
-endif(NOT AVR_PROGRAMMER)
+endif (NOT AVR_PROGRAMMER)
 
 # default MCU (chip)
-if(NOT AVR_MCU)
+if (NOT AVR_MCU)
     set(
             AVR_MCU atmega8
             CACHE STRING "Set default MCU: atmega8 (see 'avr-gcc --target-help' for valid values)"
     )
-endif(NOT AVR_MCU)
+endif (NOT AVR_MCU)
 
 #default avr-size args
-if(NOT AVR_SIZE_ARGS)
-    if(APPLE)
+if (NOT AVR_SIZE_ARGS)
+    if (APPLE)
         set(AVR_SIZE_ARGS -B)
-    else(APPLE)
+    else (APPLE)
         set(AVR_SIZE_ARGS -C;--mcu=${AVR_MCU})
-    endif(APPLE)
-endif(NOT AVR_SIZE_ARGS)
+    endif (APPLE)
+endif (NOT AVR_SIZE_ARGS)
 
 ##########################################################################
 # set build type
 ##########################################################################
-if(NOT CMAKE_BUILD_TYPE)
+if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
-endif(NOT CMAKE_BUILD_TYPE)
+endif (NOT CMAKE_BUILD_TYPE)
 
 ##########################################################################
 # status messages for generating
@@ -108,20 +108,20 @@ message(STATUS "Set CMAKE_SYSTEM_LIBRARY_PATH to ${CMAKE_SYSTEM_LIBRARY_PATH}")
 ##########################################################################
 # set compiler options for build types
 ##########################################################################
-if(CMAKE_BUILD_TYPE MATCHES Release)
+if (CMAKE_BUILD_TYPE MATCHES Release)
     set(CMAKE_C_FLAGS_RELEASE "-Os")
     set(CMAKE_CXX_FLAGS_RELEASE "-Os")
-endif(CMAKE_BUILD_TYPE MATCHES Release)
+endif (CMAKE_BUILD_TYPE MATCHES Release)
 
-if(CMAKE_BUILD_TYPE MATCHES RelWithDebInfo)
+if (CMAKE_BUILD_TYPE MATCHES RelWithDebInfo)
     set(CMAKE_C_FLAGS_RELWITHDEBINFO "-Os -save-temps -g -gdwarf-3 -gstrict-dwarf")
     set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-Os -save-temps -g -gdwarf-3 -gstrict-dwarf")
-endif(CMAKE_BUILD_TYPE MATCHES RelWithDebInfo)
+endif (CMAKE_BUILD_TYPE MATCHES RelWithDebInfo)
 
-if(CMAKE_BUILD_TYPE MATCHES Debug)
+if (CMAKE_BUILD_TYPE MATCHES Debug)
     set(CMAKE_C_FLAGS_DEBUG "-O0 -save-temps -g -gdwarf-3 -gstrict-dwarf")
     set(CMAKE_CXX_FLAGS_DEBUG "-O0 -save-temps -g -gdwarf-3 -gstrict-dwarf")
-endif(CMAKE_BUILD_TYPE MATCHES Debug)
+endif (CMAKE_BUILD_TYPE MATCHES Debug)
 
 ##########################################################################
 # avr-gcc: error: unrecognized command line option ‘-rdynamic’
@@ -133,11 +133,11 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 ##########################################################################
 # target file name add-on
 ##########################################################################
-if(WITH_MCU)
+if (WITH_MCU)
     set(MCU_TYPE_FOR_FILENAME "${AVR_MCU}")
-else(WITH_MCU)
+else (WITH_MCU)
     set(MCU_TYPE_FOR_FILENAME "")
-endif(WITH_MCU)
+endif (WITH_MCU)
 
 ##########################################################################
 #
@@ -147,7 +147,7 @@ set(hex_file ${MCU_TYPE_FOR_FILENAME}.hex)
 set(map_file ${MCU_TYPE_FOR_FILENAME}.map)
 set(eeprom_image ${MCU_TYPE_FOR_FILENAME}.eep)
 
-ADD_EXECUTABLE(${elf_file} ${SOURCE_EXE} slUart.c slUart.h slSPI.c slSPI.h slNRF24.c slNRF24.h slBME180Measure.c slBME180Measure.h main_functions.c main_functions.h slPCF8563.c slPCF8563.h)
+ADD_EXECUTABLE(${elf_file} ${SOURCE_EXE} slUart.c slUart.h slSPI.c slSPI.h slI2C.c slI2C.h slNRF24.c slNRF24.h slBME180Measure.c slBME180Measure.h main_functions.c main_functions.h slPCF8563.c slPCF8563.h)
 
 #ADD_LIBRARY(foo STATIC ${SOURCE_LIB})
 #target_link_libraries(${PROJECT_NAME} foo)

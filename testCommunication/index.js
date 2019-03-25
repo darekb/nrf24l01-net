@@ -11,8 +11,7 @@ var _sockedErrorLog = fs.createWriteStream('error.dat', {
 			'flags': 'a'
 		});
 var sensor21 = new SerialPort('/dev/ttyUSB0', {
-				baudrate: 38400,
-				parser: SerialPort.parsers.readline('\n')
+				baudRate: 38400
 });
 sensor21.on('open', function (error) {
 				if (error) {

@@ -1,4 +1,4 @@
-/home/dariusz/bin/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dariusz/Arduino/nrf24l01-net/sensor21
+/home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21
 -- Current uploadtool is: avrdude
 -- Current programmer is: usbasp
 -- Current upload port is: usb
@@ -11,4 +11,4 @@
 -- Set CMAKE_SYSTEM_LIBRARY_PATH to /usr/lib/X11
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/dariusz/Arduino/nrf24l01-net/sensor21/cmake-build-debug
+-- Build files have been written to: /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/cmake-build-debug

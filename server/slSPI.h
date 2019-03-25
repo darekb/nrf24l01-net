@@ -37,7 +37,6 @@
 #define slSPI_SetClockDiv64()   SPCR |= (1<<SPR1); SPCR &= ~(1<<SPR0); SPSR &= ~(1 << SPI2X);
 #define slSPI_SetClockDiv128()  SPCR |= (1<<SPR1) | (1<<SPR0); SPSR |= (1 << SPI2X);
 
-
 #define slSPI_SetLsb()          SPCR |= _BV(DORD)
 #define slSPI_SetMsb()          SPCR &= ~(_BV(DORD))
 

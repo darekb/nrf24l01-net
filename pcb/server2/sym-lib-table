@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name server-rescue)(type Legacy)(uri ${KIPRJMOD}/server-rescue.lib)(options "")(descr ""))
+  (lib (name nRF24L01)(type Legacy)(uri ${KIPRJMOD}/nRF24L01.lib)(options "")(descr ""))
+  (lib (name HT7333)(type Legacy)(uri ${KIPRJMOD}/HT7333.lib)(options "")(descr ""))
+)

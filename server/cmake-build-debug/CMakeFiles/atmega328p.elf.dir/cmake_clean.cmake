@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/atmega328p.elf.dir/main.c.o"
   "CMakeFiles/atmega328p.elf.dir/slUart.c.o"
   "CMakeFiles/atmega328p.elf.dir/slSPI.c.o"
+  "CMakeFiles/atmega328p.elf.dir/slI2C.c.o"
   "CMakeFiles/atmega328p.elf.dir/slNRF24.c.o"
   "CMakeFiles/atmega328p.elf.dir/slBME180Measure.c.o"
   "CMakeFiles/atmega328p.elf.dir/main_functions.c.o"

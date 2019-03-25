@@ -208,6 +208,12 @@
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/slBME180Measure.h">
 			<Option target="atmega328p.elf"/>
 		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/slI2C.c">
+			<Option target="atmega328p.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/slI2C.h">
+			<Option target="atmega328p.elf"/>
+		</Unit>
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/server/slNRF24.c">
 			<Option target="atmega328p.elf"/>
 		</Unit>

@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/atmega8.elf.dir/BME280.c.o"
   "CMakeFiles/atmega8.elf.dir/slI2C.c.o"
   "CMakeFiles/atmega8.elf.dir/slAdc.c.o"
+  "CMakeFiles/atmega8.elf.dir/main_functions.c.o"
   "bin/atmega8.elf.pdb"
   "bin/atmega8.elf"
 )

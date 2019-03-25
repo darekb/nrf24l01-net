@@ -5,7 +5,9 @@
 #ifndef CMAKE_AVR_MAIN_FUNCTIONS_H
 #define CMAKE_AVR_MAIN_FUNCTIONS_H
 
-#define DATA_UPLOAD_SIZE 17
+#include <avr/io.h>
+
+void PCF8563Start();
 
 void nRF24L01Start();
 

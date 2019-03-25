@@ -54,7 +54,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DF_CPU=16000000UL"/>
+					<Add option="-DF_CPU=8000000UL"/>
 					<Add directory="/home/dariusz/Arduino/nrf24l01-net/sensor11/../common"/>
 					<Add directory="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -80,7 +80,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DF_CPU=16000000UL"/>
+					<Add option="-DF_CPU=8000000UL"/>
 					<Add directory="/home/dariusz/Arduino/nrf24l01-net/sensor11/../common"/>
 					<Add directory="/home/dariusz/Arduino/nrf24l01-net/sensor11"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -196,10 +196,19 @@
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/BME280.h">
 			<Option target="atmega8.elf"/>
 		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/globals.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/main.c">
 			<Option target="atmega8.elf"/>
 		</Unit>
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/main.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/main_functions.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/main_functions.h">
 			<Option target="atmega8.elf"/>
 		</Unit>
 		<Unit filename="/home/dariusz/Arduino/nrf24l01-net/sensor11/slAdc.c">

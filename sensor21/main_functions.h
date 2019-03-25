@@ -6,7 +6,6 @@
 #define CMAKE_AVR_MAIN_FUNCTIONS_H
 
 
-#define SENSOR_ID 21
 
 #define DATA_UPLOAD_SIZE 17
 

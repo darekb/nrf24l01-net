@@ -25,11 +25,9 @@
 
 #define showDebugDataSlnRF24 0
 
-
 #define PAYLOAD_SIZE 17
 #define SERVER_ADDR   0xFF
 
-    
 #define CE_PIN        PB1
 #define CE_OUTPUT()   DDRB |= (1 << CE_PIN)
 #define CE_HIGH()     PORTB |= (1 << CE_PIN)//enable RX
@@ -148,7 +146,7 @@ void slNRF24_SetRegister(uint8_t reg, void *dataIn, uint8_t len);
 
 void slNRF24_GetRegister(uint8_t reg, uint8_t *dataIn, uint8_t len);
 
-void slNRF24_Init();
+void slNRF24_Setup();
 
 void slNRF24_Reset(void);
 

@@ -5,8 +5,10 @@
 #ifndef CMAKE_AVR_SLPCF8563_H
 #define CMAKE_AVR_SLPCF8563_H
 
-#define slPCF8563_WRITE_ADDR       0x34
-#define slPCF8563_READ_ADDR        0x31
+#define slPCF8563_ADDRES           0x51
+
+#define slPCF8563_WRITE_ADDR       (slPCF8563_ADDRES << 1)       //0xA2
+#define slPCF8563_READ_ADDR        (slPCF8563_ADDRES << 1) + 1   //0xA3
 
 //registers
 #define slPCF8563_CONTROL_STATUS_1 0x00
@@ -29,10 +31,10 @@
 
 //CONTROL_STATUS_1 bits
 
-#define slPCF8563_CONTROL_STATUS_1_TEST1      0x0<<7  
+#define slPCF8563_CONTROL_STATUS_1_TEST1      0x0<<7
 //Default value. must be set to logic 0 during normal operations
 
-#define slPCF8563_CONTROL_STATUS_1_STOP_ON    0x1<<5  
+#define slPCF8563_CONTROL_STATUS_1_STOP_ON    0x1<<5
 //all RTC divider chain flip-flops are asynchronously set to logic 0; the RTC clock is stopped (CLKOUT at 32.768 kHz is still available)
 #define slPCF8563_CONTROL_STATUS_1_STOP_OFF   0x0<<5  //Default value. 
 //RTC source clock runs
@@ -40,7 +42,7 @@
 
 #define slPCF8563_CONTROL_STATUS_1_TESTC_ON   0x1<<3  //Default value. 
 //Power-On Reset (POR) override may be enabled
-#define slPCF8563_CONTROL_STATUS_1_TESTC_OFF  0x0<<3  
+#define slPCF8563_CONTROL_STATUS_1_TESTC_OFF  0x0<<3
 //Power-On Reset (POR) override facility is disabled; set to logic 0 for normal operation
 
 
@@ -48,7 +50,7 @@
 
 #define slPCF8563_CONTROL_STATUS_2_TI_TP_OFF  0x0<<4  //Default value. 
 //INT is active when TF is active (subject to the status of TIE)
-#define slPCF8563_CONTROL_STATUS_2_TI_TP_ON   0x1<<4  
+#define slPCF8563_CONTROL_STATUS_2_TI_TP_ON   0x1<<4
 //INT pulses active according to Table 7 (subject to the status of TIE);
 
 
@@ -82,10 +84,29 @@
 
 #define slPCF8563_ConvertFromBCD(BCDCode) (((BCDCode & 0xF0) >> 4)*10 + (BCDCode & 0x0F))
 
-void slPCF8563_Init();
+typedef struct {
+  uint8_t min;
+  uint8_t hour;
+  uint8_t day;
+  uint8_t weekday;
+} slPCF8563_Alarm;
 
-void slPCF8563_SetData(uint8_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec);
+typedef struct {
+  uint8_t sec;
+  uint8_t min;
+  uint8_t hour;
+  uint8_t day;
+  uint8_t weekday;
+  uint8_t month;
+  uint16_t year;
+} slPCF8563_DateTime;
 
-void slPCF8563_GetData(uint8_t *year, uint8_t *month, uint8_t *day, uint8_t *hour, uint8_t *min, uint8_t *sec);
+void slPCF8563_Init(uint8_t mode);
+
+void slPCF8563_ResetDateTime(slPCF8563_DateTime *dateTime);
+
+uint8_t slPCF8563_SetData(slPCF8563_DateTime *dateTime);
+
+void slPCF8563_GetData(slPCF8563_DateTime *dateTime);
 
 #endif //CMAKE_AVR_SLPCF8563_H

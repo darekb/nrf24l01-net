@@ -1,0 +1,82 @@
+Sensor12 got data from BME280
+b13|bc65|185113d|b9c|12~
+Sensor12 got data from BME280
+b11|b8b0|1850eb8|ae9|12~
+Sensor12 got data from BME280
+b14|bb3d|18513c3|abc|12~
+Sensor12 nRF24L01 status
+1000010
+Sensor12 got start command from nRF24L01
+Sensor12 got data from BME280
+b13|bad5|185099f|abb|12~
+Sensor12 got data from BME280
+b14|bcfa|1850e1f|aa0|12~
+Sensor12 FAIL
+Sensor12 got data from BME280
+b13|b77e|1850c71|aa4|12~
+Sensor12 got data from BME280
+b15|bc2e|1850758|a9d|12~
+Sensor12 got data from BME280
+b12|b509|1850ac2|a9d|12~
+Sensor12 nRF24L01 status
+1000010
+Sensor12 got start command from nRF24L01
+Sensor12 got data from BME280
+b13|b633|185113d|aa6|12~
+Sensor12 got data from BME280
+b12|b57b|1850ac2|a96|12~
+Sensor12 got data from BME280
+b13|b7d9|1851215|a90|12~
+Sensor12 FAIL
+Sensor12 got data from BME280
+b10|b3ea|1850d09|a8f|12~
+Sensor12 got data from BME280
+b10|ba05|1850d09|a8c|12~
+Sensor12 nRF24L01 status
+1000010
+Sensor12 got start command from nRF24L01
+Sensor12 got data from BME280
+b0d|b4ca|18507f7|aa4|12~
+Sensor12 got data from BME280
+b10|b3a5|1851779|a8e|12~
+Sensor12 got data from BME280
+b0f|b4aa|18512fa|a88|12~
+Sensor12 FAIL
+Sensor12 got data from BME280
+b10|b40c|18512ad|ab1|12~
+Sensor12 nRF24L01 status
+1000010
+Sensor12 got start command from nRF24L01
+Sensor12 got data from BME280
+b12|ba34|1851261|aa5|12~
+Sensor12 got data from BME280
+b13|b314|18516e1|a8c|12~
+Sensor12 got data from BME280
+b13|b974|18517b8|a86|12~
+Sensor12 got data from BME280
+b15|b3ef|185149a|a7a|12~
+Sensor12 FAIL
+Total restart.start.
+BMP280 init done.
+Sensor12 nRF24L01 Reset
+Sensor12 nRF24L01 status
+1000010
+Sensor12 got start command from nRF24L01
+Sensor12 got data from BME280
+b13|b7fb|1851d5b|b3d|12~
+Sensor12 got data from BME280
+b13|b45f|1851215|a8d|12~
+Sensor12 got data from BME280
+b15|b3cd|1851843|a81|12~
+Sensor12 got data from BME280
+b16|b300|185144d|a7a|12~
+Sensor12 got data from BME280
+b16|b30c|185191a|a7c|12~
+Sensor12 nRF24L01 status
+1000010
+Sensor12 got start command from nRF24L01
+Sensor12 FAIL
+Sensor12 got data from BME280
+b14|b455|1851694|aa8|12~
+Sensor12 got data from BME280
+b16|b64d|1851cc3|a84|12~

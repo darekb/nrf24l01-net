@@ -7,7 +7,6 @@
 
 #ifndef SLI2C_H_
 
-
 #ifndef F_CPU
 #define F_CPU 8000000UL
 #endif
@@ -31,24 +30,14 @@
 uint8_t slI2C_readByteValue;
 uint8_t I2C_Error;
 uint8_t slI2C_statusFlags;
-
-uint8_t slI2C_returnReadValue();
-
+uint8_t slI2C_returnReadValue(void);
 uint8_t slI2C_SetSLA(uint8_t slaIn);
-
-void slI2C_Init();
-
-uint8_t slI2C_Start();
-
-uint8_t slI2C_Stop();
-
+void slI2C_Init(void);
+uint8_t slI2C_Start(void);
+uint8_t slI2C_Stop(void);
 uint8_t slI2C_WriteByte(uint8_t byte);
-
 #if compileREadFunctions == 1
-
-uint8_t slI2C_ReadByte_NACK();
-
-uint8_t slI2C_ReadByte_ACK();
-
+uint8_t slI2C_ReadByte_NACK(void);
+uint8_t slI2C_ReadByte_ACK(void);
 #endif
 #endif /* SLI2C_H_ */

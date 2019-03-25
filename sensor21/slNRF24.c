@@ -1,10 +1,9 @@
 #include <avr/io.h>
-#include <stdio.h>
 #include <util/delay.h>
-#include <avr/interrupt.h>
 
 #include "slNRF24.h"
 #include "slSPI.h"
+
 #if showDebugDataSlnRF24 == 1
 #include "slUart.h"
 #endif
@@ -57,6 +56,7 @@ void slNRF24_SetReadingAddress(uint8_t adress, uint8_t payloadSize) {
     val[0] = 0x07;
     slNRF24_SetRegister(EN_RXADDR, val, 1);
 }
+
 void slNRF24_SetWritingAddress(uint8_t adress, uint8_t payloadSize) {
     _delay_ms(100);
     uint8_t val[5];
@@ -90,7 +90,7 @@ void slNRF24_Init(void) {
     slNRF24_SetRegister(SETUP_AW, val, 1);
 
     //RF channel setup - 2,400-2,527GHz 1MHz/chanel
-    val[0] = 108;//2,401Ghz
+    val[0] = 5;//2,401Ghz
     slNRF24_SetRegister(RF_CH, val, 1);
 
     //RF setup	- 250kbps spped and 0dBm
@@ -118,7 +118,7 @@ void slNRF24_Init(void) {
 }
 
 
-void slNRF24_SetPayloadSize(uint8_t playloadSize){
+void slNRF24_SetPayloadSize(uint8_t playloadSize) {
     slNRF24_SetRegister(RX_PW_P0, &playloadSize, 1);
     slNRF24_SetRegister(RX_PW_P1, &playloadSize, 1);
 }
@@ -136,7 +136,7 @@ void slNRF24_Reset(void) {
     CSN_HIGH();
 }
 
-void slNRF24_CE_LOW(){
+void slNRF24_CE_LOW() {
     CE_LOW();
 }
 
@@ -208,6 +208,7 @@ void slNRF24_FlushRx() {
     _delay_us(10);
     CSN_HIGH();
 }
+
 #if showDebugDataSlnRF24 == 1
 void slNRF24_PrintRegisters(){
     uint8_t reg[5];
