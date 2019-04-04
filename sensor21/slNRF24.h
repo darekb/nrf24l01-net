@@ -29,29 +29,29 @@
 
 //spialnia out
 #if SENSOR_ID == 21
-#define SENSOR_ADDR   0x21
+#define SENSOR_ADDR   21
 #endif
 //sypialnia in
 #if SENSOR_ID == 71
-#define SENSOR_ADDR   0x71
+#define SENSOR_ADDR   71
 #endif
 
 //salon out
 #if SENSOR_ID == 22
-#define SENSOR_ADDR   0x22
+#define SENSOR_ADDR   22
 #endif
 //salon in
 #if SENSOR_ID == 72
-#define SENSOR_ADDR   0x72
+#define SENSOR_ADDR   72
 #endif
 
 //dzieciecy
 #if SENSOR_ID == 73
-#define SENSOR_ADDR   0x73
+#define SENSOR_ADDR   73
 #endif
 
 
-#define SERVER_ADDR   0xFF
+#define SERVER_ADDR   0xaa
 
 #define CE_PIN        PB1
 #define CE_OUTPUT()   DDRB |= (1 << CE_PIN)

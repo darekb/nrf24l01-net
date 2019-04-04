@@ -6,39 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/main.c
+/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slNRF24.c
 avr/io.h
 -
-avr/interrupt.h
+stdio.h
 -
 util/delay.h
 -
-slUart.h
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slUart.h
-main.h
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/main.h
+avr/interrupt.h
+-
 slNRF24.h
 /home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slNRF24.h
-main_functions.h
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/main_functions.h
 slSPI.h
 /home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slSPI.h
-slI2C.h
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slI2C.h
-slPCF8563.h
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slPCF8563.h
-
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/main.h
-
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/main_functions.h
-avr/io.h
--
-
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slI2C.h
+slUart.h
+/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slUart.h
 
 /home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slNRF24.h
-
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slPCF8563.h
 
 /home/dariusz/Elektronika/Arduino/nrf24l01-net/server/slSPI.h
 

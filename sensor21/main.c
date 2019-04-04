@@ -5,7 +5,7 @@
 #ifndef F_CPU
 #define F_CPU 8000000UL
 #endif
-#define showDebugDataMain 0
+#define showDebugDataMain 1
 
 #include "main.h"
 #if showDebugDataMain == 1
@@ -18,6 +18,8 @@
 #include "slI2C.h"
 #include "BME280.h"
 #include "slAdc.h"
+#include "sensors.h"
+#include "radio.h"
 
 
 #define ST_START 1
@@ -88,7 +90,7 @@ int main(void) {
                 slUART_WriteStringNl("Sensor21 got start command from nRF24L01");
                 #endif
                 prepeareBuffer();
-                _delay_ms(100);
+                //_delay_ms(100);
                 sendVianRF24L01();
             } else {
                 #if showDebugDataMain == 1

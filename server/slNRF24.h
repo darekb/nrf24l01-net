@@ -26,7 +26,7 @@
 #define showDebugDataSlnRF24 0
 
 #define PAYLOAD_SIZE 17
-#define SERVER_ADDR   0xFF
+#define SERVER_ADDR   0xaa
 
 #define CE_PIN        PB1
 #define CE_OUTPUT()   DDRB |= (1 << CE_PIN)

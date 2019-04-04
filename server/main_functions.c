@@ -104,7 +104,7 @@ void sensorStart() {
   slNRF24_TxPowerUp(sensorsAdresses[(sensorNr - 1)]);
   slNRF24_TransmitPayload(&sensorsStrings[(sensorNr - 1)], PAYLOAD_SIZE);
   _delay_ms(50);
-  resetNRF24L01p();
+  //resetNRF24L01p();
   clearData();
 }
 

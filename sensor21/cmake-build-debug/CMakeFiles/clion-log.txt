@@ -1,4 +1,4 @@
-/home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21
+/home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21
 -- Current uploadtool is: avrdude
 -- Current programmer is: usbasp
 -- Current upload port is: usb

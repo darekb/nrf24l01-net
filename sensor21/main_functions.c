@@ -83,17 +83,12 @@ void clearData() {
 }
 
 uint8_t getDataFromBME280() {
-  int32_t temperature, humidity;
-  uint32_t pressure;
-  if (BME280_ReadAll(&temperature, &pressure, &humidity)) {
+  if (BME280_ReadAll(&BME180measure.data.temperature, &BME180measure.data.pressure, &BME180measure.data.humidity)) {
     #if showDebugDataMainFunctions == 1
     slUART_WriteString("BME280 read error!\r\n");
     #endif
     return 1;
   }
-  BME180measure.data.temperature = temperature;
-  BME180measure.data.humidity = humidity;
-  BME180measure.data.pressure = pressure;
   BME180measure.data.sensorId = SENSOR_ID;
   return 0;
 }
@@ -147,11 +142,11 @@ void resetNRF24L01() {
   _delay_ms(10);
 }
 
-uint8_t isStringMatch(uint8_t *dataFromNRF24L01, char *stringToMatch) {
+uint8_t isStringMatch(const uint8_t *stringFromNRf24L01p, const char *stringToMatch) {
   uint8_t go = 0;
   uint8_t i = 9;//9 znaków kodu startowego
   while (i--) {
-    if (dataFromNRF24L01[i] == stringToMatch[i]) {
+    if (stringFromNRf24L01p[i] == stringToMatch[i]) {
       go++;
     }
   }
@@ -178,14 +173,14 @@ void prepeareBuffer() {
 
 void getDataFromNRF24L01() {
   clearData();
-  slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, PAYLOAD_SIZE);
+  slNRF24_GetRegister(R_RX_PAYLOAD, dataFromNRF24L01, 9);
   slNRF24_Reset();
 }
 
 void resetAfterSendData() {
   slNRF24_FlushRx();
   slNRF24_FlushTx();
-  slNRF24_SetPayloadSize(PAYLOAD_SIZE);
+  slNRF24_SetPayloadSize(9);
   slNRF24_RxPowerUp();
   slNRF24_Reset();
 }
@@ -199,6 +194,6 @@ uint8_t sendVianRF24L01() {
   #endif
   slNRF24_TxPowerUp();
   slNRF24_TransmitPayload(&buffer, PAYLOAD_SIZE);
-  _delay_ms(100);
+  //_delay_ms(100);
   return 0;
 }

@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -174,6 +174,32 @@ CMakeFiles/atmega8.elf.dir/main_functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega8.elf.dir/main_functions.c.s"
 	/usr/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/main_functions.c -o CMakeFiles/atmega8.elf.dir/main_functions.c.s
 
+CMakeFiles/atmega8.elf.dir/sensors.c.o: CMakeFiles/atmega8.elf.dir/flags.make
+CMakeFiles/atmega8.elf.dir/sensors.c.o: ../sensors.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/atmega8.elf.dir/sensors.c.o"
+	/usr/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega8.elf.dir/sensors.c.o   -c /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/sensors.c
+
+CMakeFiles/atmega8.elf.dir/sensors.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega8.elf.dir/sensors.c.i"
+	/usr/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/sensors.c > CMakeFiles/atmega8.elf.dir/sensors.c.i
+
+CMakeFiles/atmega8.elf.dir/sensors.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega8.elf.dir/sensors.c.s"
+	/usr/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/sensors.c -o CMakeFiles/atmega8.elf.dir/sensors.c.s
+
+CMakeFiles/atmega8.elf.dir/radio.c.o: CMakeFiles/atmega8.elf.dir/flags.make
+CMakeFiles/atmega8.elf.dir/radio.c.o: ../radio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/atmega8.elf.dir/radio.c.o"
+	/usr/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega8.elf.dir/radio.c.o   -c /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/radio.c
+
+CMakeFiles/atmega8.elf.dir/radio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega8.elf.dir/radio.c.i"
+	/usr/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/radio.c > CMakeFiles/atmega8.elf.dir/radio.c.i
+
+CMakeFiles/atmega8.elf.dir/radio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega8.elf.dir/radio.c.s"
+	/usr/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/radio.c -o CMakeFiles/atmega8.elf.dir/radio.c.s
+
 # Object files for target atmega8.elf
 atmega8_elf_OBJECTS = \
 "CMakeFiles/atmega8.elf.dir/main.c.o" \
@@ -184,7 +210,9 @@ atmega8_elf_OBJECTS = \
 "CMakeFiles/atmega8.elf.dir/BME280.c.o" \
 "CMakeFiles/atmega8.elf.dir/slI2C.c.o" \
 "CMakeFiles/atmega8.elf.dir/slAdc.c.o" \
-"CMakeFiles/atmega8.elf.dir/main_functions.c.o"
+"CMakeFiles/atmega8.elf.dir/main_functions.c.o" \
+"CMakeFiles/atmega8.elf.dir/sensors.c.o" \
+"CMakeFiles/atmega8.elf.dir/radio.c.o"
 
 # External object files for target atmega8.elf
 atmega8_elf_EXTERNAL_OBJECTS =
@@ -198,9 +226,11 @@ atmega8_elf_EXTERNAL_OBJECTS =
 ../bin/atmega8.elf: CMakeFiles/atmega8.elf.dir/slI2C.c.o
 ../bin/atmega8.elf: CMakeFiles/atmega8.elf.dir/slAdc.c.o
 ../bin/atmega8.elf: CMakeFiles/atmega8.elf.dir/main_functions.c.o
+../bin/atmega8.elf: CMakeFiles/atmega8.elf.dir/sensors.c.o
+../bin/atmega8.elf: CMakeFiles/atmega8.elf.dir/radio.c.o
 ../bin/atmega8.elf: CMakeFiles/atmega8.elf.dir/build.make
 ../bin/atmega8.elf: CMakeFiles/atmega8.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable ../bin/atmega8.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable ../bin/atmega8.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/atmega8.elf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

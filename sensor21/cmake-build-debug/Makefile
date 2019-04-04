@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/cmake
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -70,7 +70,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/dariusz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -334,6 +334,60 @@ main_functions.c.s:
 	$(MAKE) -f CMakeFiles/atmega8.elf.dir/build.make CMakeFiles/atmega8.elf.dir/main_functions.c.s
 .PHONY : main_functions.c.s
 
+radio.o: radio.c.o
+
+.PHONY : radio.o
+
+# target to build an object file
+radio.c.o:
+	$(MAKE) -f CMakeFiles/atmega8.elf.dir/build.make CMakeFiles/atmega8.elf.dir/radio.c.o
+.PHONY : radio.c.o
+
+radio.i: radio.c.i
+
+.PHONY : radio.i
+
+# target to preprocess a source file
+radio.c.i:
+	$(MAKE) -f CMakeFiles/atmega8.elf.dir/build.make CMakeFiles/atmega8.elf.dir/radio.c.i
+.PHONY : radio.c.i
+
+radio.s: radio.c.s
+
+.PHONY : radio.s
+
+# target to generate assembly for a file
+radio.c.s:
+	$(MAKE) -f CMakeFiles/atmega8.elf.dir/build.make CMakeFiles/atmega8.elf.dir/radio.c.s
+.PHONY : radio.c.s
+
+sensors.o: sensors.c.o
+
+.PHONY : sensors.o
+
+# target to build an object file
+sensors.c.o:
+	$(MAKE) -f CMakeFiles/atmega8.elf.dir/build.make CMakeFiles/atmega8.elf.dir/sensors.c.o
+.PHONY : sensors.c.o
+
+sensors.i: sensors.c.i
+
+.PHONY : sensors.i
+
+# target to preprocess a source file
+sensors.c.i:
+	$(MAKE) -f CMakeFiles/atmega8.elf.dir/build.make CMakeFiles/atmega8.elf.dir/sensors.c.i
+.PHONY : sensors.c.i
+
+sensors.s: sensors.c.s
+
+.PHONY : sensors.s
+
+# target to generate assembly for a file
+sensors.c.s:
+	$(MAKE) -f CMakeFiles/atmega8.elf.dir/build.make CMakeFiles/atmega8.elf.dir/sensors.c.s
+.PHONY : sensors.c.s
+
 slAdc.o: slAdc.c.o
 
 .PHONY : slAdc.o
@@ -524,6 +578,12 @@ help:
 	@echo "... main_functions.o"
 	@echo "... main_functions.i"
 	@echo "... main_functions.s"
+	@echo "... radio.o"
+	@echo "... radio.i"
+	@echo "... radio.s"
+	@echo "... sensors.o"
+	@echo "... sensors.i"
+	@echo "... sensors.s"
 	@echo "... slAdc.o"
 	@echo "... slAdc.i"
 	@echo "... slAdc.s"

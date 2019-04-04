@@ -208,6 +208,18 @@
 		<Unit filename="/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/main_functions.h">
 			<Option target="atmega8.elf"/>
 		</Unit>
+		<Unit filename="/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/radio.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/radio.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/sensors.c">
+			<Option target="atmega8.elf"/>
+		</Unit>
+		<Unit filename="/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/sensors.h">
+			<Option target="atmega8.elf"/>
+		</Unit>
 		<Unit filename="/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/slAdc.c">
 			<Option target="atmega8.elf"/>
 		</Unit>

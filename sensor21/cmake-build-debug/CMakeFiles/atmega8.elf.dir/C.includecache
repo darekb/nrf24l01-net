@@ -62,18 +62,6 @@ global_definitions.h
 
 /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/slI2C.h
 
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/slNRF24.c
-avr/io.h
--
-util/delay.h
--
-slNRF24.h
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/slNRF24.h
-slSPI.h
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/slSPI.h
-slUart.h
-/home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/slUart.h
-
 /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/slNRF24.h
 global_definitions.h
 /home/dariusz/Elektronika/Arduino/nrf24l01-net/sensor21/global_definitions.h

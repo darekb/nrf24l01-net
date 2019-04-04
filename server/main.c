@@ -62,7 +62,7 @@ int main(void) {
       slUART_WriteStringNl("server sent ok ");
       #endif
       resetNRF24L01p();
-      _delay_ms(1);
+      //_delay_ms(1);
       stage = ST_WAITING;
       sei();
     }
@@ -73,7 +73,7 @@ int main(void) {
       #endif
       saveDataFromNRF();
       resetNRF24L01p();
-      _delay_ms(1);
+      //_delay_ms(1);
       stage = ST_END_STATE;
       sei();
     }
@@ -89,7 +89,7 @@ int main(void) {
         stage = ST_START;
       }
       resetNRF24L01p();
-      _delay_ms(1000);
+      _delay_ms(2000);
       stage = ST_END_STATE;
       sei();
     }

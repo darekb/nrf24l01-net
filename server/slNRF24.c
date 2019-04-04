@@ -43,44 +43,111 @@ void slNRF24_GetRegister(uint8_t reg, uint8_t *dataIn, uint8_t len) {
   CSN_HIGH();
 }
 
-void slNRF24_SetReadingAddress(uint8_t adress, uint8_t payloadSize) {
+void slNRF24_SetReadingAddress(const uint8_t pipeNr, uint8_t adress, uint8_t payloadSize) {
   _delay_ms(100);
-  uint8_t val[5];
-  for (uint8_t i = 0; i < 5; i++) {
-    val[i] = adress;
+  uint8_t val[5] = {0xB3, 0xB3, 0xB3, 0xB3, 0x00};
+  val[4] = adress;
+  uint8_t rxReg = 0;
+  uint8_t rxPwReg = 0;
+  switch(pipeNr){
+    default:
+      rxReg = RX_ADDR_P1;
+      rxPwReg = RX_PW_P1;
+      break;
+    case 1:
+      rxReg = RX_ADDR_P1;
+      rxPwReg = RX_PW_P1;
+      break;
+    case 2:
+      rxReg = RX_ADDR_P2;
+      rxPwReg = RX_PW_P2;
+      break;
+    case 3:
+      rxReg = RX_ADDR_P3;
+      rxPwReg = RX_PW_P3;
+      break;
+    case 4:
+      rxReg = RX_ADDR_P4;
+      rxPwReg = RX_PW_P4;
+      break;
+    case 5:
+      rxReg = RX_ADDR_P5;
+      rxPwReg = RX_PW_P5;
+      break;
   }
-  slNRF24_SetRegister(RX_ADDR_P1, val, 5);
-  slNRF24_SetRegister(RX_PW_P1, &payloadSize, 1);
-  val[0] = 0x07;
+  slNRF24_SetRegister(rxReg, val, 5);
+  slNRF24_SetRegister(rxPwReg, &payloadSize, 1);
+  val[0] = 0x3f;
   slNRF24_SetRegister(EN_RXADDR, val, 1);
 }
+
+
+void slNRF24_OpenWritingPipe(const uint8_t *address, uint8_t payloadSize) {
+  slNRF24_SetRegister(RX_ADDR_P0, (uint8_t *)address, 5);
+  slNRF24_SetRegister(TX_ADDR, (uint8_t *)address, 5);
+  slNRF24_SetRegister(RX_PW_P0, &payloadSize, 1);
+}
+void slNRF24_OpenReadingPipe(uint8_t child, const uint8_t *address, uint8_t payloadSize) {
+  uint8_t rxReg = 0;
+  uint8_t rxPwReg = 0;
+  switch(child){
+    default:
+      rxReg = RX_ADDR_P1;
+      rxPwReg = RX_PW_P1;
+      break;
+    case 1:
+      rxReg = RX_ADDR_P1;
+      rxPwReg = RX_PW_P1;
+      break;
+    case 2:
+      rxReg = RX_ADDR_P2;
+      rxPwReg = RX_PW_P2;
+      break;
+    case 3:
+      rxReg = RX_ADDR_P3;
+      rxPwReg = RX_PW_P3;
+      break;
+    case 4:
+      rxReg = RX_ADDR_P4;
+      rxPwReg = RX_PW_P4;
+      break;
+    case 5:
+      rxReg = RX_ADDR_P5;
+      rxPwReg = RX_PW_P5;
+      break;
+  }
+  slNRF24_SetRegister(rxReg, (uint8_t *)address, 5);
+  slNRF24_SetRegister(rxPwReg, &payloadSize, 1);
+  uint8_t val = 0x3f;
+  uint8_t *v = &val;
+  slNRF24_SetRegister(EN_RXADDR, v, 1);
+}
+
+
 void slNRF24_SetWritingAddress(uint8_t adress, uint8_t payloadSize) {
   _delay_ms(100);
-  uint8_t val[5];
-  for (uint8_t i = 0; i < 5; i++) {
-    val[i] = adress;
-  }
+  uint8_t val[5] = {0xB3, 0xB3, 0xB3, 0xB3, 0x00};
+  val[4] = adress;
   slNRF24_SetRegister(RX_ADDR_P0, val, 5);
   slNRF24_SetRegister(TX_ADDR, val, 5);
   slNRF24_SetRegister(RX_PW_P0, &payloadSize, 1);
 }
-
 //initierar nrf'en (obs nrfen måste vala i vila när detta sker CE-låg)
 void slNRF24_Setup() {
   _delay_ms(1000); //allow radio to reach power down if shut down
   uint8_t val[5];
 
-  //SETUP_RETR (the setup for "EN_AA")
-  val[0] =
-      0x2F;    //0b0010 00011 "2" sets it up to 750uS delay between every retry (at least 500us at 250kbps and if payload >5bytes in 1Mbps, and if payload >15byte in 2Mbps) "F" is number of retries (1-15, now 15)
+
+  //SETUP_RETR (the setup for "EN_AA") 4000uS 15 retransmit
+  val[0] = 0xFF;    //0b0010 00011 "2" sets it up to 750uS delay between every retry (at least 500us at 250kbps and if payload >5bytes in 1Mbps, and if payload >15byte in 2Mbps) "F" is number of retries (1-15, now 15)
   slNRF24_SetRegister(SETUP_RETR, val, 1);
 
   //Enable ‘Auto Acknowledgment’ Function on data pipe 0 and pipe 1
-  val[0] = 0x01;
+  val[0] = 0x07;
   slNRF24_SetRegister(EN_AA, val, 1);
 
   //enable data pipe 1 for RX
-  val[0] = 0x03;
+  val[0] = 0x07;
   slNRF24_SetRegister(EN_RXADDR, val, 1);
 
   //Setup of Address Widths 5 bytes
@@ -88,11 +155,11 @@ void slNRF24_Setup() {
   slNRF24_SetRegister(SETUP_AW, val, 1);
 
   //RF channel setup - 2,400-2,527GHz 1MHz/chanel
-  val[0] = 0x05;//2,401Ghz
+  val[0] = 127;//2,401Ghz
   slNRF24_SetRegister(RF_CH, val, 1);
 
-  //RF setup  - 250kbps spped and 0dBm
-  val[0] = 0x07;
+  //RF setup  - 1Mbps spped and 0dBm
+  val[0] = 0x06;
   slNRF24_SetRegister(RF_SETUP, val, 1);
 
   val[0] = PAYLOAD_SIZE;
